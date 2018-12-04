@@ -99,6 +99,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#ds" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -412,11 +416,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
-      SZU OnlineJudge
+      SZU ONLINEJUDGE
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
-        SZU OnlineJudge
+        SZU ONLINEJUDGE
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -453,10 +457,83 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        DS链表—学生宿舍管理
+      </label>
     
     <a href="./" title="DS链表—学生宿舍管理" class="md-nav__link md-nav__link--active">
       DS链表—学生宿舍管理
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="题目描述" class="md-nav__link">
+    题目描述
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="输入" class="md-nav__link">
+    输入
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="输出" class="md-nav__link">
+    输出
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="样例输入" class="md-nav__link">
+    样例输入
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="样例输出" class="md-nav__link">
+    样例输出
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" title="提示" class="md-nav__link">
+    提示
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -514,6 +591,79 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="题目描述" class="md-nav__link">
+    题目描述
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="输入" class="md-nav__link">
+    输入
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="输出" class="md-nav__link">
+    输出
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="样例输入" class="md-nav__link">
+    样例输入
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="样例输出" class="md-nav__link">
+    样例输出
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" title="提示" class="md-nav__link">
+    提示
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -522,9 +672,136 @@
                   <a href="https://github.com/szu17dmy/szu17dmy.github.io/edit/master/docs/szu_oj/ds/1245.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>DS链表—学生宿舍管理</h1>
-                
-                
+                <h1 id="ds">DS链表—学生宿舍管理</h1>
+<p>时间限制: 1 Sec  内存限制: 128 MB</p>
+<h2 id="_1">题目描述</h2>
+<p>假设某校有20间宿舍，宿舍编号101，102，...,120。每间只住一名学生。初始部分宿舍已用。用两个链表（已用宿舍链表和可用宿舍链表）维护宿舍的管理，实现宿舍分配、宿舍交回。</p>
+<p>约定已用宿舍链表按宿舍号升序链接。初始可用宿舍链表也按宿舍号升序链接。</p>
+<p>宿舍分配从可用宿舍链表中摘取第一间宿舍分配给学生。学生交回的宿舍挂在可用宿舍链表最后。</p>
+<p>备注：使用list容器或静态链表。不用考虑宿舍分配和交回不成功的情况。</p>
+<h2 id="_2">输入</h2>
+<p>初始宿舍状态，第一行输入n，表示已用宿舍n间</p>
+<p>后跟n行数据，每行格式为：宿舍号 学生姓名</p>
+<p>操作次数m，后跟m行操作，操作格式如下：</p>
+<p>assign 学生  //为学生分配宿舍，从可用宿舍链表头摘取一间宿舍，
+//按宿舍号升序挂在已用宿舍链表中。</p>
+<p>return  宿舍号   //学生退宿舍，删除已用宿舍链表中对应结点，
+//挂在可用宿舍链表尾部。</p>
+<p>display_free   //输出可用宿舍链表信息。</p>
+<p>display_used   //输出已用宿舍链表信息。</p>
+<h2 id="_3">输出</h2>
+<p>display_free依次输出当前可用宿舍链表中的宿舍号，具体格式见样例。</p>
+<p>display_used依次输出当前已用宿舍链表中的学生和宿舍号，具体格式见样例。</p>
+<h2 id="_4">样例输入</h2>
+<pre><code>5
+李明  103
+张三  106
+王五  107
+钱伟  112
+章立  118
+8
+assign 李四
+assign 赵六
+return 118
+return 101
+assign 马山
+display_used
+assign 林立
+display_free
+</code></pre>
+<h2 id="_5">样例输出</h2>
+<pre><code>赵六(102)-李明(103)-马山(104)-张三(106)-王五(107)-钱伟(112)
+108-109-110-111-113-114-115-116-117-119-120-118-101
+</code></pre>
+<h2 id="_6">提示</h2>
+<h2 id="_7">解决方案</h2>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;list&gt;
+#include &lt;string&gt;
+#include &lt;algorithm&gt;
+
+class Student {
+public:
+    std::string name;
+    int room;
+    Student(std::string &amp;name, int room) : name(name), room(room) {}
+};
+
+class DormMgr {
+public:
+    DormMgr() {
+        for (int i = 101; i &lt;= 120; ++i) {
+            freeDorm.push_back(i);
+        }
+    }
+    void initialize() {
+        std::string name;
+        int room;
+        std::cin &gt;&gt; name &gt;&gt; room;
+        freeDorm.remove(room);
+        usedDorm.push_back(Student(name, room));
+    }
+    void operate() {
+        std::string operation;
+        std::cin &gt;&gt; operation;
+        if (operation == "assign") {
+            std::string name;
+            std::cin &gt;&gt; name;
+            int room = freeDorm.front();
+            freeDorm.pop_front();
+            usedDorm.push_back(Student(name, room));
+            usedDorm.sort();
+        } else if (operation == "return") {
+            int room;
+            std::cin &gt;&gt; room;
+            for (std::list&lt;Student&gt;::iterator it = usedDorm.begin(); it != usedDorm.end(); ++it) {
+                if (room == it-&gt;room) {
+                    usedDorm.erase(it);
+                    freeDorm.push_back(room);
+                    break;
+                }
+            }
+        } else if (operation == "display_free") {
+            std::cout &lt;&lt; freeDorm.front();
+            for (std::list&lt;int&gt;::iterator it = ++freeDorm.begin(); it != freeDorm.end(); ++it) {
+                std::cout &lt;&lt; '-' &lt;&lt; *it;
+            }
+            std::cout &lt;&lt; std::endl;
+        } else if (operation == "display_used") {
+            std::cout &lt;&lt; usedDorm.front().name &lt;&lt; '(' &lt;&lt; usedDorm.front().room &lt;&lt; ')';
+            for (std::list&lt;Student&gt;::iterator it = ++usedDorm.begin(); it != usedDorm.end(); ++it) {
+                std::cout &lt;&lt; '-' &lt;&lt; it-&gt;name &lt;&lt; '(' &lt;&lt; it-&gt;room &lt;&lt; ')';
+            }
+            std::cout &lt;&lt; std::endl;
+        }
+    }
+
+private:
+    std::list&lt;int&gt; freeDorm;
+    std::list&lt;Student&gt; usedDorm;
+
+};
+
+bool operator&lt;(const Student &amp;lhs, const Student &amp;rhs) {
+    return lhs.room &lt; rhs.room;
+}
+
+int main() {
+
+    class DormMgr dormMgr;
+    int ctrl;
+    std::cin &gt;&gt; ctrl;
+    while (ctrl--) {
+        dormMgr.initialize();
+    }
+    std::cin &gt;&gt; ctrl;
+    while (ctrl--) {
+        dormMgr.operate();
+    }
+
+    return 0;
+}
+</code></pre>
                 
                   
                 
