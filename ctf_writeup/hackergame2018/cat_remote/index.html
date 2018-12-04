@@ -622,63 +622,63 @@
 <p>附件是树莓派上留下的调试输出信息，我们赶到现场时只剩下这个了。</p>
 <h2 id="_3">解法</h2>
 <p>打开文档发现为四个方向的字母，猜想画出该路线即可获得flag。这里使用OpenCV辅助画图，作图后即可发现flag。</p>
-<pre><code>#include &lt;iostream&gt;
-#include &lt;fstream&gt;
-#include &lt;opencv2/opencv.hpp&gt;
+<div class="codehilite"><pre><span></span><span class="p">#</span><span class="nn">include</span> <span class="o">&amp;</span><span class="nt">lt</span><span class="o">;</span><span class="nt">iostream</span><span class="o">&amp;</span><span class="nt">gt</span><span class="o">;</span>
+<span class="p">#</span><span class="nn">include</span> <span class="o">&amp;</span><span class="nt">lt</span><span class="o">;</span><span class="nt">fstream</span><span class="o">&amp;</span><span class="nt">gt</span><span class="o">;</span>
+<span class="p">#</span><span class="nn">include</span> <span class="o">&amp;</span><span class="nt">lt</span><span class="o">;</span><span class="nt">opencv2</span><span class="o">/</span><span class="nt">opencv</span><span class="p">.</span><span class="nc">hpp</span><span class="o">&amp;</span><span class="nt">gt</span><span class="o">;</span>
 
-int main() {
-    cv::Mat map(256, 768, CV_8UC1);
-    std::ifstream inputFileStream("seq.txt");
-    int row = 50, col = 128;
-    map.at&lt;uchar&gt;(row, col) = 255;
-    std::string line;
-    inputFileStream &gt;&gt; line;
+<span class="nt">int</span> <span class="nt">main</span><span class="o">()</span> <span class="p">{</span>
+    <span class="n">cv</span><span class="p">:</span><span class="o">:</span><span class="n">Mat</span> <span class="nf">map</span><span class="p">(</span><span class="mi">256</span><span class="p">,</span> <span class="mi">768</span><span class="p">,</span> <span class="n">CV_8UC1</span><span class="p">);</span>
+    <span class="n">std</span><span class="p">:</span><span class="o">:</span><span class="n">ifstream</span> <span class="nf">inputFileStream</span><span class="p">(</span><span class="s2">&quot;seq.txt&quot;</span><span class="p">);</span>
+    <span class="err">int</span> <span class="err">row</span> <span class="err">=</span> <span class="err">50,</span> <span class="err">col</span> <span class="err">=</span> <span class="err">128</span><span class="p">;</span>
+    <span class="err">map.at&amp;lt</span><span class="p">;</span><span class="err">uchar&amp;gt</span><span class="p">;</span><span class="err">(row,</span> <span class="err">col)</span> <span class="err">=</span> <span class="err">255</span><span class="p">;</span>
+    <span class="n">std</span><span class="p">:</span><span class="o">:</span><span class="n">string</span> <span class="n">line</span><span class="p">;</span>
+    <span class="err">inputFileStream</span> <span class="err">&amp;gt</span><span class="p">;</span><span class="err">&amp;gt</span><span class="p">;</span> <span class="err">line</span><span class="p">;</span>
 
-    for (auto i : line) {
-        switch (i) {
-            case 'U':
-                row -= 1;
-                for (int ir = -1; ir &lt; 1; ++ir) {
-                    for (int ic = -1; ic &lt; 1; ++ic) {
-                        map.at&lt;uchar&gt;(row + ir, col + ic) = 255;
-                    }
-                }
-                break;
-            case 'D':
-                row += 1;
-                for (int ir = -1; ir &lt; 1; ++ir) {
-                    for (int ic = -1; ic &lt; 1; ++ic) {
-                        map.at&lt;uchar&gt;(row + ir, col + ic) = 255;
-                    }
-                }
-                break;
-            case 'L':
-                col -= 1;
-                for (int ir = -1; ir &lt; 1; ++ir) {
-                    for (int ic = -1; ic &lt; 1; ++ic) {
-                        map.at&lt;uchar&gt;(row + ir, col + ic) = 255;
-                    }
-                }
-                break;
-            case 'R':
-                col += 1;
-                for (int ir = -1; ir &lt; 1; ++ir) {
-                    for (int ic = -1; ic &lt; 1; ++ic) {
-                        map.at&lt;uchar&gt;(row + ir, col + ic) = 255;
-                    }
-                }
-                break;
-            default:;
-        }
-        cv::waitKey(1);
-        cv::imshow("MAP", map);
-    }
-    cv::imshow("MAP", map);
+    <span class="err">for</span> <span class="err">(auto</span> <span class="n">i</span> <span class="p">:</span> <span class="n">line</span><span class="p">)</span> <span class="err">{</span>
+        <span class="n">switch</span> <span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="err">{</span>
+            <span class="n">case</span> <span class="s1">&#39;U&#39;</span><span class="o">:</span>
+                <span class="kc">row</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span>
+                <span class="err">for</span> <span class="err">(int</span> <span class="err">ir</span> <span class="err">=</span> <span class="err">-1</span><span class="p">;</span> <span class="err">ir</span> <span class="err">&amp;lt</span><span class="p">;</span> <span class="err">1</span><span class="p">;</span> <span class="err">++ir)</span> <span class="err">{</span>
+                    <span class="err">for</span> <span class="err">(int</span> <span class="err">ic</span> <span class="err">=</span> <span class="err">-1</span><span class="p">;</span> <span class="err">ic</span> <span class="err">&amp;lt</span><span class="p">;</span> <span class="err">1</span><span class="p">;</span> <span class="err">++ic)</span> <span class="err">{</span>
+                        <span class="err">map.at&amp;lt</span><span class="p">;</span><span class="err">uchar&amp;gt</span><span class="p">;</span><span class="err">(row</span> <span class="err">+</span> <span class="err">ir,</span> <span class="err">col</span> <span class="err">+</span> <span class="err">ic)</span> <span class="err">=</span> <span class="err">255</span><span class="p">;</span>
+                    <span class="p">}</span>
+                <span class="err">}</span>
+                <span class="nt">break</span><span class="o">;</span>
+            <span class="nt">case</span> <span class="s1">&#39;D&#39;</span><span class="o">:</span>
+                <span class="nt">row</span> <span class="o">+=</span> <span class="nt">1</span><span class="o">;</span>
+                <span class="nt">for</span> <span class="o">(</span><span class="nt">int</span> <span class="nt">ir</span> <span class="o">=</span> <span class="nt">-1</span><span class="o">;</span> <span class="nt">ir</span> <span class="o">&amp;</span><span class="nt">lt</span><span class="o">;</span> <span class="nt">1</span><span class="o">;</span> <span class="o">++</span><span class="nt">ir</span><span class="o">)</span> <span class="p">{</span>
+                    <span class="err">for</span> <span class="err">(int</span> <span class="err">ic</span> <span class="err">=</span> <span class="err">-1</span><span class="p">;</span> <span class="err">ic</span> <span class="err">&amp;lt</span><span class="p">;</span> <span class="err">1</span><span class="p">;</span> <span class="err">++ic)</span> <span class="err">{</span>
+                        <span class="err">map.at&amp;lt</span><span class="p">;</span><span class="err">uchar&amp;gt</span><span class="p">;</span><span class="err">(row</span> <span class="err">+</span> <span class="err">ir,</span> <span class="err">col</span> <span class="err">+</span> <span class="err">ic)</span> <span class="err">=</span> <span class="err">255</span><span class="p">;</span>
+                    <span class="p">}</span>
+                <span class="err">}</span>
+                <span class="nt">break</span><span class="o">;</span>
+            <span class="nt">case</span> <span class="s1">&#39;L&#39;</span><span class="o">:</span>
+                <span class="nt">col</span> <span class="nt">-</span><span class="o">=</span> <span class="nt">1</span><span class="o">;</span>
+                <span class="nt">for</span> <span class="o">(</span><span class="nt">int</span> <span class="nt">ir</span> <span class="o">=</span> <span class="nt">-1</span><span class="o">;</span> <span class="nt">ir</span> <span class="o">&amp;</span><span class="nt">lt</span><span class="o">;</span> <span class="nt">1</span><span class="o">;</span> <span class="o">++</span><span class="nt">ir</span><span class="o">)</span> <span class="p">{</span>
+                    <span class="err">for</span> <span class="err">(int</span> <span class="err">ic</span> <span class="err">=</span> <span class="err">-1</span><span class="p">;</span> <span class="err">ic</span> <span class="err">&amp;lt</span><span class="p">;</span> <span class="err">1</span><span class="p">;</span> <span class="err">++ic)</span> <span class="err">{</span>
+                        <span class="err">map.at&amp;lt</span><span class="p">;</span><span class="err">uchar&amp;gt</span><span class="p">;</span><span class="err">(row</span> <span class="err">+</span> <span class="err">ir,</span> <span class="err">col</span> <span class="err">+</span> <span class="err">ic)</span> <span class="err">=</span> <span class="err">255</span><span class="p">;</span>
+                    <span class="p">}</span>
+                <span class="err">}</span>
+                <span class="nt">break</span><span class="o">;</span>
+            <span class="nt">case</span> <span class="s1">&#39;R&#39;</span><span class="o">:</span>
+                <span class="nt">col</span> <span class="o">+=</span> <span class="nt">1</span><span class="o">;</span>
+                <span class="nt">for</span> <span class="o">(</span><span class="nt">int</span> <span class="nt">ir</span> <span class="o">=</span> <span class="nt">-1</span><span class="o">;</span> <span class="nt">ir</span> <span class="o">&amp;</span><span class="nt">lt</span><span class="o">;</span> <span class="nt">1</span><span class="o">;</span> <span class="o">++</span><span class="nt">ir</span><span class="o">)</span> <span class="p">{</span>
+                    <span class="err">for</span> <span class="err">(int</span> <span class="err">ic</span> <span class="err">=</span> <span class="err">-1</span><span class="p">;</span> <span class="err">ic</span> <span class="err">&amp;lt</span><span class="p">;</span> <span class="err">1</span><span class="p">;</span> <span class="err">++ic)</span> <span class="err">{</span>
+                        <span class="err">map.at&amp;lt</span><span class="p">;</span><span class="err">uchar&amp;gt</span><span class="p">;</span><span class="err">(row</span> <span class="err">+</span> <span class="err">ir,</span> <span class="err">col</span> <span class="err">+</span> <span class="err">ic)</span> <span class="err">=</span> <span class="err">255</span><span class="p">;</span>
+                    <span class="p">}</span>
+                <span class="err">}</span>
+                <span class="nt">break</span><span class="o">;</span>
+            <span class="nt">default</span><span class="o">:;</span>
+        <span class="err">}</span>
+        <span class="nt">cv</span><span class="p">::</span><span class="nd">waitKey</span><span class="o">(</span><span class="nt">1</span><span class="o">);</span>
+        <span class="nt">cv</span><span class="p">::</span><span class="nd">imshow</span><span class="o">(</span><span class="s2">&quot;MAP&quot;</span><span class="o">,</span> <span class="nt">map</span><span class="o">);</span>
+    <span class="err">}</span>
+    <span class="nt">cv</span><span class="p">::</span><span class="nd">imshow</span><span class="o">(</span><span class="s2">&quot;MAP&quot;</span><span class="o">,</span> <span class="nt">map</span><span class="o">);</span>
 
-    cv::waitKey(0);
-    return 0;
-}
-</code></pre>
+    <span class="nt">cv</span><span class="p">::</span><span class="nd">waitKey</span><span class="o">(</span><span class="nt">0</span><span class="o">);</span>
+    <span class="nt">return</span> <span class="nt">0</span><span class="o">;</span>
+<span class="err">}</span>
+</pre></div>
                 
                   
                 

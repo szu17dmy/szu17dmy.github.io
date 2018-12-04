@@ -693,7 +693,7 @@
 <p>display_free依次输出当前可用宿舍链表中的宿舍号，具体格式见样例。</p>
 <p>display_used依次输出当前已用宿舍链表中的学生和宿舍号，具体格式见样例。</p>
 <h2 id="_4">样例输入</h2>
-<pre><code>5
+<div class="codehilite"><pre><span></span>5
 李明  103
 张三  106
 王五  107
@@ -708,100 +708,104 @@ assign 马山
 display_used
 assign 林立
 display_free
-</code></pre>
+</pre></div>
+
+
 <h2 id="_5">样例输出</h2>
-<pre><code>赵六(102)-李明(103)-马山(104)-张三(106)-王五(107)-钱伟(112)
+<div class="codehilite"><pre><span></span>赵六(102)-李明(103)-马山(104)-张三(106)-王五(107)-钱伟(112)
 108-109-110-111-113-114-115-116-117-119-120-118-101
-</code></pre>
+</pre></div>
+
+
 <h2 id="_6">提示</h2>
 <h2 id="_7">解决方案</h2>
-<pre><code>#include &lt;iostream&gt;
-#include &lt;list&gt;
-#include &lt;string&gt;
-#include &lt;algorithm&gt;
+<div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;list&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp"></span>
 
-class Student {
-public:
-    std::string name;
-    int room;
-    Student(std::string &amp;name, int room) : name(name), room(room) {}
-};
+<span class="k">class</span> <span class="nc">Student</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">room</span><span class="p">;</span>
+    <span class="n">Student</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">room</span><span class="p">)</span> <span class="o">:</span> <span class="n">name</span><span class="p">(</span><span class="n">name</span><span class="p">),</span> <span class="n">room</span><span class="p">(</span><span class="n">room</span><span class="p">)</span> <span class="p">{}</span>
+<span class="p">};</span>
 
-class DormMgr {
-public:
-    DormMgr() {
-        for (int i = 101; i &lt;= 120; ++i) {
-            freeDorm.push_back(i);
-        }
-    }
-    void initialize() {
-        std::string name;
-        int room;
-        std::cin &gt;&gt; name &gt;&gt; room;
-        freeDorm.remove(room);
-        usedDorm.push_back(Student(name, room));
-    }
-    void operate() {
-        std::string operation;
-        std::cin &gt;&gt; operation;
-        if (operation == "assign") {
-            std::string name;
-            std::cin &gt;&gt; name;
-            int room = freeDorm.front();
-            freeDorm.pop_front();
-            usedDorm.push_back(Student(name, room));
-            usedDorm.sort();
-        } else if (operation == "return") {
-            int room;
-            std::cin &gt;&gt; room;
-            for (std::list&lt;Student&gt;::iterator it = usedDorm.begin(); it != usedDorm.end(); ++it) {
-                if (room == it-&gt;room) {
-                    usedDorm.erase(it);
-                    freeDorm.push_back(room);
-                    break;
-                }
-            }
-        } else if (operation == "display_free") {
-            std::cout &lt;&lt; freeDorm.front();
-            for (std::list&lt;int&gt;::iterator it = ++freeDorm.begin(); it != freeDorm.end(); ++it) {
-                std::cout &lt;&lt; '-' &lt;&lt; *it;
-            }
-            std::cout &lt;&lt; std::endl;
-        } else if (operation == "display_used") {
-            std::cout &lt;&lt; usedDorm.front().name &lt;&lt; '(' &lt;&lt; usedDorm.front().room &lt;&lt; ')';
-            for (std::list&lt;Student&gt;::iterator it = ++usedDorm.begin(); it != usedDorm.end(); ++it) {
-                std::cout &lt;&lt; '-' &lt;&lt; it-&gt;name &lt;&lt; '(' &lt;&lt; it-&gt;room &lt;&lt; ')';
-            }
-            std::cout &lt;&lt; std::endl;
-        }
-    }
+<span class="k">class</span> <span class="nc">DormMgr</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="n">DormMgr</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">101</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">120</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">freeDorm</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="kt">void</span> <span class="n">initialize</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">room</span><span class="p">;</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">name</span> <span class="o">&gt;&gt;</span> <span class="n">room</span><span class="p">;</span>
+        <span class="n">freeDorm</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">room</span><span class="p">);</span>
+        <span class="n">usedDorm</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">Student</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">room</span><span class="p">));</span>
+    <span class="p">}</span>
+    <span class="kt">void</span> <span class="n">operate</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">operation</span><span class="p">;</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">operation</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">operation</span> <span class="o">==</span> <span class="s">&quot;assign&quot;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span><span class="p">;</span>
+            <span class="n">std</span><span class="o">::</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">name</span><span class="p">;</span>
+            <span class="kt">int</span> <span class="n">room</span> <span class="o">=</span> <span class="n">freeDorm</span><span class="p">.</span><span class="n">front</span><span class="p">();</span>
+            <span class="n">freeDorm</span><span class="p">.</span><span class="n">pop_front</span><span class="p">();</span>
+            <span class="n">usedDorm</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">Student</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">room</span><span class="p">));</span>
+            <span class="n">usedDorm</span><span class="p">.</span><span class="n">sort</span><span class="p">();</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">operation</span> <span class="o">==</span> <span class="s">&quot;return&quot;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">room</span><span class="p">;</span>
+            <span class="n">std</span><span class="o">::</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">room</span><span class="p">;</span>
+            <span class="k">for</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">list</span><span class="o">&lt;</span><span class="n">Student</span><span class="o">&gt;::</span><span class="n">iterator</span> <span class="n">it</span> <span class="o">=</span> <span class="n">usedDorm</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span> <span class="n">it</span> <span class="o">!=</span> <span class="n">usedDorm</span><span class="p">.</span><span class="n">end</span><span class="p">();</span> <span class="o">++</span><span class="n">it</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">room</span> <span class="o">==</span> <span class="n">it</span><span class="o">-&gt;</span><span class="n">room</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="n">usedDorm</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">it</span><span class="p">);</span>
+                    <span class="n">freeDorm</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">room</span><span class="p">);</span>
+                    <span class="k">break</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">operation</span> <span class="o">==</span> <span class="s">&quot;display_free&quot;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">freeDorm</span><span class="p">.</span><span class="n">front</span><span class="p">();</span>
+            <span class="k">for</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">list</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">iterator</span> <span class="n">it</span> <span class="o">=</span> <span class="o">++</span><span class="n">freeDorm</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span> <span class="n">it</span> <span class="o">!=</span> <span class="n">freeDorm</span><span class="p">.</span><span class="n">end</span><span class="p">();</span> <span class="o">++</span><span class="n">it</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;-&#39;</span> <span class="o">&lt;&lt;</span> <span class="o">*</span><span class="n">it</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">operation</span> <span class="o">==</span> <span class="s">&quot;display_used&quot;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">usedDorm</span><span class="p">.</span><span class="n">front</span><span class="p">().</span><span class="n">name</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;(&#39;</span> <span class="o">&lt;&lt;</span> <span class="n">usedDorm</span><span class="p">.</span><span class="n">front</span><span class="p">().</span><span class="n">room</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;)&#39;</span><span class="p">;</span>
+            <span class="k">for</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">list</span><span class="o">&lt;</span><span class="n">Student</span><span class="o">&gt;::</span><span class="n">iterator</span> <span class="n">it</span> <span class="o">=</span> <span class="o">++</span><span class="n">usedDorm</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span> <span class="n">it</span> <span class="o">!=</span> <span class="n">usedDorm</span><span class="p">.</span><span class="n">end</span><span class="p">();</span> <span class="o">++</span><span class="n">it</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;-&#39;</span> <span class="o">&lt;&lt;</span> <span class="n">it</span><span class="o">-&gt;</span><span class="n">name</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;(&#39;</span> <span class="o">&lt;&lt;</span> <span class="n">it</span><span class="o">-&gt;</span><span class="n">room</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;)&#39;</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
 
-private:
-    std::list&lt;int&gt; freeDorm;
-    std::list&lt;Student&gt; usedDorm;
+<span class="k">private</span><span class="o">:</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">list</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">freeDorm</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">list</span><span class="o">&lt;</span><span class="n">Student</span><span class="o">&gt;</span> <span class="n">usedDorm</span><span class="p">;</span>
 
-};
+<span class="p">};</span>
 
-bool operator&lt;(const Student &amp;lhs, const Student &amp;rhs) {
-    return lhs.room &lt; rhs.room;
-}
+<span class="kt">bool</span> <span class="k">operator</span><span class="o">&lt;</span><span class="p">(</span><span class="k">const</span> <span class="n">Student</span> <span class="o">&amp;</span><span class="n">lhs</span><span class="p">,</span> <span class="k">const</span> <span class="n">Student</span> <span class="o">&amp;</span><span class="n">rhs</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">lhs</span><span class="p">.</span><span class="n">room</span> <span class="o">&lt;</span> <span class="n">rhs</span><span class="p">.</span><span class="n">room</span><span class="p">;</span>
+<span class="p">}</span>
 
-int main() {
+<span class="kt">int</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
 
-    class DormMgr dormMgr;
-    int ctrl;
-    std::cin &gt;&gt; ctrl;
-    while (ctrl--) {
-        dormMgr.initialize();
-    }
-    std::cin &gt;&gt; ctrl;
-    while (ctrl--) {
-        dormMgr.operate();
-    }
+    <span class="k">class</span> <span class="nc">DormMgr</span> <span class="n">dormMgr</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">ctrl</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">ctrl</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">ctrl</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">dormMgr</span><span class="p">.</span><span class="n">initialize</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">ctrl</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">ctrl</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">dormMgr</span><span class="p">.</span><span class="n">operate</span><span class="p">();</span>
+    <span class="p">}</span>
 
-    return 0;
-}
-</code></pre>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
                 
                   
                 

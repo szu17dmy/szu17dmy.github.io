@@ -683,50 +683,54 @@
 <p>最大值</p>
 <p>最小值</p>
 <h2 id="_5">样例输入</h2>
-<pre><code>3 3
+<div class="codehilite"><pre><span></span>3 3
 1 2 3
 4 5 6
 7 8 9
-</code></pre>
+</pre></div>
+
+
 <h2 id="_6">样例输出</h2>
-<pre><code>9
+<div class="codehilite"><pre><span></span>9
 1
-</code></pre>
+</pre></div>
+
+
 <h2 id="_7">提示</h2>
 <h2 id="_8">解决方案</h2>
-<pre><code>#include &lt;iostream&gt;
+<div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
 
-void findMinAndMaxValues(int *ptr, int row, int col);
+<span class="kt">void</span> <span class="nf">findMinAndMaxValues</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">ptr</span><span class="p">,</span> <span class="kt">int</span> <span class="n">row</span><span class="p">,</span> <span class="kt">int</span> <span class="n">col</span><span class="p">);</span>
 
-int main() {
-    int row, col;
-    std::cin &gt;&gt; row &gt;&gt; col;
-    int mat[row][col];
-    for (int ir = 0; ir &lt; row; ++ir) {
-        for (int ic = 0; ic &lt; col; ++ic) {
-            std::cin &gt;&gt; mat[ir][ic];
-        }
-    }
-    findMinAndMaxValues(&amp;mat[0][0], row, col);
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">row</span> <span class="o">&gt;&gt;</span> <span class="n">col</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">mat</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">];</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">ir</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">ir</span> <span class="o">&lt;</span> <span class="n">row</span><span class="p">;</span> <span class="o">++</span><span class="n">ir</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">ic</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">ic</span> <span class="o">&lt;</span> <span class="n">col</span><span class="p">;</span> <span class="o">++</span><span class="n">ic</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">std</span><span class="o">::</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">mat</span><span class="p">[</span><span class="n">ir</span><span class="p">][</span><span class="n">ic</span><span class="p">];</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">findMinAndMaxValues</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mat</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">);</span>
 
-    return 0;
-}
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
 
-void findMinAndMaxValues(int *ptr, int row, int col) {
-    int min = *ptr, max = *ptr;
-    for (int ir = 0; ir &lt; row; ++ir) {
-        for (int ic = 0; ic &lt; col; ++ic) {
-            if (ptr[ir * col + ic] &lt; min) {
-                min = ptr[ir * col + ic];
-            }
-            if (ptr[ir * col + ic] &gt; max) {
-                max = ptr[ir * col + ic];
-            }
-        }
-    }
-    std::cout &lt;&lt; max &lt;&lt; std::endl &lt;&lt; min &lt;&lt; std::endl;
-}
-</code></pre>
+<span class="kt">void</span> <span class="nf">findMinAndMaxValues</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">ptr</span><span class="p">,</span> <span class="kt">int</span> <span class="n">row</span><span class="p">,</span> <span class="kt">int</span> <span class="n">col</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">min</span> <span class="o">=</span> <span class="o">*</span><span class="n">ptr</span><span class="p">,</span> <span class="n">max</span> <span class="o">=</span> <span class="o">*</span><span class="n">ptr</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">ir</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">ir</span> <span class="o">&lt;</span> <span class="n">row</span><span class="p">;</span> <span class="o">++</span><span class="n">ir</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">ic</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">ic</span> <span class="o">&lt;</span> <span class="n">col</span><span class="p">;</span> <span class="o">++</span><span class="n">ic</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">ptr</span><span class="p">[</span><span class="n">ir</span> <span class="o">*</span> <span class="n">col</span> <span class="o">+</span> <span class="n">ic</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">min</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">min</span> <span class="o">=</span> <span class="n">ptr</span><span class="p">[</span><span class="n">ir</span> <span class="o">*</span> <span class="n">col</span> <span class="o">+</span> <span class="n">ic</span><span class="p">];</span>
+            <span class="p">}</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">ptr</span><span class="p">[</span><span class="n">ir</span> <span class="o">*</span> <span class="n">col</span> <span class="o">+</span> <span class="n">ic</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">max</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">max</span> <span class="o">=</span> <span class="n">ptr</span><span class="p">[</span><span class="n">ir</span> <span class="o">*</span> <span class="n">col</span> <span class="o">+</span> <span class="n">ic</span><span class="p">];</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">max</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span> <span class="o">&lt;&lt;</span> <span class="n">min</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
                 
                   
                 
