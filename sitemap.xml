@@ -2,72 +2,77 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://szu17dmy.github.io/</loc>
-     <lastmod>2018-12-05</lastmod>
+     <lastmod>2018-12-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://szu17dmy.github.io/about/</loc>
-     <lastmod>2018-12-05</lastmod>
+     <lastmod>2018-12-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://szu17dmy.github.io/ctf_writeup/hackergame2018/cat_remote/</loc>
-     <lastmod>2018-12-05</lastmod>
+     <lastmod>2018-12-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://szu17dmy.github.io/ctf_writeup/cg_ctf/easyweb/</loc>
-     <lastmod>2018-12-05</lastmod>
+     <lastmod>2018-12-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://szu17dmy.github.io/szu_oj/ds/1245/</loc>
-     <lastmod>2018-12-05</lastmod>
+     <lastmod>2018-12-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://szu17dmy.github.io/szu_oj/cpp/1084/</loc>
-     <lastmod>2018-12-05</lastmod>
+     <lastmod>2018-12-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://szu17dmy.github.io/szu_oj/cpp/1295/</loc>
-     <lastmod>2018-12-05</lastmod>
+     <lastmod>2018-12-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://szu17dmy.github.io/szu_oj/cpp/1341/</loc>
-     <lastmod>2018-12-05</lastmod>
+     <lastmod>2018-12-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://szu17dmy.github.io/uooc/java/5/</loc>
+     <lastmod>2018-12-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://szu17dmy.github.io/uooc/java/6/</loc>
-     <lastmod>2018-12-05</lastmod>
+     <lastmod>2018-12-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://szu17dmy.github.io/uooc/java/7/</loc>
-     <lastmod>2018-12-05</lastmod>
+     <lastmod>2018-12-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://szu17dmy.github.io/uooc/java/8/</loc>
-     <lastmod>2018-12-05</lastmod>
+     <lastmod>2018-12-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://szu17dmy.github.io/uooc/java/9/</loc>
-     <lastmod>2018-12-05</lastmod>
+     <lastmod>2018-12-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://szu17dmy.github.io/uooc/java/10/</loc>
-     <lastmod>2018-12-05</lastmod>
+     <lastmod>2018-12-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://szu17dmy.github.io/uooc/java/11/</loc>
-     <lastmod>2018-12-05</lastmod>
+     <lastmod>2018-12-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
