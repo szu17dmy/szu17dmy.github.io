@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://szu17dmy.github.io/szu_oj/cpp/1341/">
+        <link rel="canonical" href="https://szu17dmy.github.io/szu_oj/uooc/1334/">
       
       
       
@@ -38,7 +38,7 @@
     
     
       
-        <title>计算字符串的长度 - Keep Evolving</title>
+        <title>分类排序(函数) - Keep Evolving</title>
       
     
     
@@ -127,7 +127,7 @@
                 Keep Evolving
               </span>
               <span class="md-header-nav__topic">
-                计算字符串的长度
+                分类排序(函数)
               </span>
             
           
@@ -563,12 +563,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
     
     <label class="md-nav__link" for="nav-3-2">
       程序设计基础
@@ -586,7 +584,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../1084/" title="求矩阵的最大和最小值" class="md-nav__link">
+    <a href="../../cpp/1084/" title="求矩阵的最大和最小值" class="md-nav__link">
       求矩阵的最大和最小值
     </a>
   </li>
@@ -598,11 +596,49 @@
 
 
   <li class="md-nav__item">
-    <a href="../1295/" title="单词统计" class="md-nav__link">
+    <a href="../../cpp/1295/" title="单词统计" class="md-nav__link">
       单词统计
     </a>
   </li>
 
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cpp/1341/" title="计算字符串的长度" class="md-nav__link">
+      计算字符串的长度
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3" checked>
+    
+    <label class="md-nav__link" for="nav-3-3">
+      程序设计基础 UOOC
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        程序设计基础 UOOC
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
         
           
           
@@ -619,11 +655,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        计算字符串的长度
+        分类排序(函数)
       </label>
     
-    <a href="./" title="计算字符串的长度" class="md-nav__link md-nav__link--active">
-      计算字符串的长度
+    <a href="./" title="分类排序(函数)" class="md-nav__link md-nav__link--active">
+      分类排序(函数)
     </a>
     
       
@@ -696,49 +732,13 @@
   </li>
 
         
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
-    
-    <label class="md-nav__link" for="nav-3-3">
-      程序设计基础 UOOC
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-3">
-        程序设计基础 UOOC
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
           
           
           
 
 
   <li class="md-nav__item">
-    <a href="../../uooc/1334/" title="分类排序(函数)" class="md-nav__link">
-      分类排序(函数)
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../uooc/1438/" title="鸡蛋队列（数组，函数）" class="md-nav__link">
+    <a href="../1438/" title="鸡蛋队列（数组，函数）" class="md-nav__link">
       鸡蛋队列（数组，函数）
     </a>
   </li>
@@ -1019,45 +1019,162 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/szu17dmy/szu17dmy.github.io/edit/master/docs/szu_oj/cpp/1341.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/szu17dmy/szu17dmy.github.io/edit/master/docs/szu_oj/uooc/1334.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="_1">计算字符串的长度</h1>
+                <h1 id="_1">分类排序(函数)</h1>
 <p>时间限制: 1 Sec  内存限制: 128 MB</p>
 <h2 id="_2">题目描述</h2>
-<p>计算字符串S的长度，功能与strlen函数相同，但不能调用库函数strlen，否则不给分。输入的字符串不包含空格。</p>
+<p>从键盘输入10个整数（10个整数均不相同）， 然后再从键盘中输入一个整数a，如果该整数a为奇数， 且与这10个整数中的任一个数相同，则删掉与a相同的 这个数，并将剩下的9个数按升序排序输出；若a为偶数， 且与这10个数都不同，则加入a，并将这11个数降序排 序输出；否则，则将这10个数奇数在前，偶数在后， 降序排列输出。例如，10个数分别为6，89，34，12， 0，-8，78，15，9，3.若a为9，则输出为：-8，0，3， 6，12，15，34，78，89.若a为2，则输出为：89，78， 34，15，12，9，6，3，2，0，-8.若a为7或者12，则 输出为：89，15，9，3，78，34，12，6，0，-8.</p>
+<p>要求：使用函数解决本题，至少编写以下几个函数，</p>
+<p>1、升序排序函数void sort(int a[], int n)；</p>
+<p>2、查找函数int find(int a[],int n,int value)----在大小为n的a数组中查找值为value的元素，找到就返回元素的下标，找不到，就返回-1；</p>
+<p>3、输出函数display(int a[], int n)---逐个输出数组a的元素；</p>
+<p>4、反转数组函数void reverse(int a[], int n)----将数组逆序。</p>
 <h2 id="_3">输入</h2>
-<p>输入测试组数t</p>
-<p>对于每组测试，输入字符串S（长度&lt;=30）</p>
+<p>测试数据的组数n</p>
+<p>第一组测试数据的10个整数</p>
+<p>第一组的整数a</p>
+<p>第二组测试数据的10个整数</p>
+<p>第二组的整数a</p>
+<p>......</p>
+<p>第n组测试数据的10个整数</p>
+<p>第n组的整数a</p>
 <h2 id="_4">输出</h2>
-<p>对于每组测试，输出S的长度</p>
+<p>第一组数据排序输出</p>
+<p>第二组数据排序输出</p>
+<p>.......</p>
+<p>第n组数据排序输出</p>
 <h2 id="_5">样例输入</h2>
-<div class="codehilite"><pre><span></span>1
-hehe
+<div class="codehilite"><pre><span></span>3
+6 89 34 12 0 -8 78 15 9 3
+9
+6 89 34 12 0 -8 78 15 9 3
+2
+6 89 34 12 0 -8 78 15 9 3
+7
 </pre></div>
 
 
 <h2 id="_6">样例输出</h2>
-<div class="codehilite"><pre><span></span>4
+<div class="codehilite"><pre><span></span>-8 0 3 6 12 15 34 78 89
+89 78 34 15 12 9 6 3 2 0 -8
+89 15 9 3 78 34 12 6 0 -8
 </pre></div>
 
 
 <h2 id="_7">提示</h2>
 <h2 id="_8">解决方案</h2>
-<div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="cp">#define FAILED_FIND_IN_ARRAY -1</span>
+
+<span class="k">struct</span> <span class="n">Array</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">data</span><span class="p">[</span><span class="mi">16</span><span class="p">];</span>
+    <span class="kt">int</span> <span class="n">size</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kt">void</span> <span class="nf">scanToArray</span><span class="p">(</span><span class="k">struct</span> <span class="n">Array</span> <span class="o">*</span><span class="n">array</span><span class="p">);</span>
+<span class="kt">int</span> <span class="nf">findInArray</span><span class="p">(</span><span class="k">struct</span> <span class="n">Array</span> <span class="o">*</span><span class="n">array</span><span class="p">,</span> <span class="kt">int</span> <span class="n">data</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">sortArray</span><span class="p">(</span><span class="k">struct</span> <span class="n">Array</span> <span class="o">*</span><span class="n">array</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">reverseArray</span><span class="p">(</span><span class="k">struct</span> <span class="n">Array</span> <span class="o">*</span><span class="n">array</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">sortArrayInOddAndEven</span><span class="p">(</span><span class="k">struct</span> <span class="n">Array</span> <span class="o">*</span><span class="n">array</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">printArray</span><span class="p">(</span><span class="k">struct</span> <span class="n">Array</span> <span class="o">*</span><span class="n">array</span><span class="p">);</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
     <span class="kt">int</span> <span class="n">ctrl</span><span class="p">;</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">ctrl</span><span class="p">;</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ctrl</span><span class="p">);</span>
+
     <span class="k">while</span> <span class="p">(</span><span class="n">ctrl</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kt">char</span> <span class="n">str</span><span class="p">[</span><span class="mi">64</span><span class="p">]</span> <span class="o">=</span> <span class="p">{};</span>
-        <span class="n">std</span><span class="o">::</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">str</span><span class="p">;</span>
-        <span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="k">while</span> <span class="p">(</span><span class="n">str</span><span class="p">[</span><span class="o">++</span><span class="n">length</span><span class="p">]</span> <span class="o">!=</span> <span class="sc">&#39;\0&#39;</span><span class="p">);</span>
-        <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">length</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+        <span class="k">struct</span> <span class="n">Array</span> <span class="n">array</span> <span class="o">=</span> <span class="p">{};</span>
+        <span class="n">scanToArray</span><span class="p">(</span><span class="o">&amp;</span><span class="n">array</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">number</span><span class="p">;</span>
+        <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">number</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">number</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">findInArray</span><span class="p">(</span><span class="o">&amp;</span><span class="n">array</span><span class="p">,</span> <span class="n">number</span><span class="p">)</span> <span class="o">!=</span> <span class="n">FAILED_FIND_IN_ARRAY</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">array</span><span class="p">.</span><span class="n">size</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">findInArray</span><span class="p">(</span><span class="o">&amp;</span><span class="n">array</span><span class="p">,</span> <span class="n">number</span><span class="p">);</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">array</span><span class="p">.</span><span class="n">size</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">array</span><span class="p">.</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">array</span><span class="p">.</span><span class="n">data</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">];</span>
+            <span class="p">}</span>
+            <span class="n">sortArray</span><span class="p">(</span><span class="o">&amp;</span><span class="n">array</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">number</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">findInArray</span><span class="p">(</span><span class="o">&amp;</span><span class="n">array</span><span class="p">,</span> <span class="n">number</span><span class="p">)</span> <span class="o">==</span> <span class="n">FAILED_FIND_IN_ARRAY</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">array</span><span class="p">.</span><span class="n">data</span><span class="p">[</span><span class="n">array</span><span class="p">.</span><span class="n">size</span><span class="p">]</span> <span class="o">=</span> <span class="n">number</span><span class="p">;</span>
+            <span class="n">array</span><span class="p">.</span><span class="n">size</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">sortArray</span><span class="p">(</span><span class="o">&amp;</span><span class="n">array</span><span class="p">);</span>
+            <span class="n">reverseArray</span><span class="p">(</span><span class="o">&amp;</span><span class="n">array</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="n">sortArrayInOddAndEven</span><span class="p">(</span><span class="o">&amp;</span><span class="n">array</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">printArray</span><span class="p">(</span><span class="o">&amp;</span><span class="n">array</span><span class="p">);</span>
     <span class="p">}</span>
 
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">scanToArray</span><span class="p">(</span><span class="k">struct</span> <span class="n">Array</span> <span class="o">*</span><span class="n">array</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">array</span><span class="o">-&gt;</span><span class="n">size</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">array</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">array</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">findInArray</span><span class="p">(</span><span class="k">struct</span> <span class="n">Array</span> <span class="o">*</span><span class="n">array</span><span class="p">,</span> <span class="kt">int</span> <span class="n">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">array</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">array</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">data</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">i</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">sortArray</span><span class="p">(</span><span class="k">struct</span> <span class="n">Array</span> <span class="o">*</span><span class="n">array</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i1</span> <span class="o">&lt;</span> <span class="n">array</span><span class="o">-&gt;</span><span class="n">size</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="o">++</span><span class="n">i1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i2</span> <span class="o">&lt;</span> <span class="n">array</span><span class="o">-&gt;</span><span class="n">size</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">i1</span><span class="p">;</span> <span class="o">++</span><span class="n">i2</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">array</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">[</span><span class="n">i2</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">array</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">[</span><span class="n">i2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span> <span class="p">{</span>
+                <span class="kt">int</span> <span class="n">data</span> <span class="o">=</span> <span class="n">array</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">[</span><span class="n">i2</span><span class="p">];</span>
+                <span class="n">array</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">[</span><span class="n">i2</span><span class="p">]</span> <span class="o">=</span> <span class="n">array</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">[</span><span class="n">i2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">];</span>
+                <span class="n">array</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">[</span><span class="n">i2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">reverseArray</span><span class="p">(</span><span class="k">struct</span> <span class="n">Array</span> <span class="o">*</span><span class="n">array</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">array</span><span class="o">-&gt;</span><span class="n">size</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">data</span> <span class="o">=</span> <span class="n">array</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+        <span class="n">array</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">array</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">[</span><span class="n">array</span><span class="o">-&gt;</span><span class="n">size</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">i</span><span class="p">];</span>
+        <span class="n">array</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">[</span><span class="n">array</span><span class="o">-&gt;</span><span class="n">size</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">sortArrayInOddAndEven</span><span class="p">(</span><span class="k">struct</span> <span class="n">Array</span> <span class="o">*</span><span class="n">array</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">struct</span> <span class="n">Array</span> <span class="n">odd</span> <span class="o">=</span> <span class="p">{},</span> <span class="n">even</span> <span class="o">=</span> <span class="p">{};</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">array</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">array</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">even</span><span class="p">.</span><span class="n">data</span><span class="p">[</span><span class="n">even</span><span class="p">.</span><span class="n">size</span><span class="p">]</span> <span class="o">=</span> <span class="n">array</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+            <span class="n">even</span><span class="p">.</span><span class="n">size</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="n">odd</span><span class="p">.</span><span class="n">data</span><span class="p">[</span><span class="n">odd</span><span class="p">.</span><span class="n">size</span><span class="p">]</span> <span class="o">=</span> <span class="n">array</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+            <span class="n">odd</span><span class="p">.</span><span class="n">size</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">sortArray</span><span class="p">(</span><span class="o">&amp;</span><span class="n">odd</span><span class="p">);</span>
+    <span class="n">reverseArray</span><span class="p">(</span><span class="o">&amp;</span><span class="n">odd</span><span class="p">);</span>
+    <span class="n">sortArray</span><span class="p">(</span><span class="o">&amp;</span><span class="n">even</span><span class="p">);</span>
+    <span class="n">reverseArray</span><span class="p">(</span><span class="o">&amp;</span><span class="n">even</span><span class="p">);</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">odd</span><span class="p">.</span><span class="n">size</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">array</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">odd</span><span class="p">.</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="p">}</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">even</span><span class="p">.</span><span class="n">size</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">array</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="n">odd</span><span class="p">.</span><span class="n">size</span><span class="p">]</span> <span class="o">=</span> <span class="n">even</span><span class="p">.</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">printArray</span><span class="p">(</span><span class="k">struct</span> <span class="n">Array</span> <span class="o">*</span><span class="n">array</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="n">array</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">array</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot; %d&quot;</span><span class="p">,</span> <span class="n">array</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+    <span class="p">}</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
                 
@@ -1080,7 +1197,7 @@ hehe
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../1295/" title="单词统计" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../cpp/1341/" title="计算字符串的长度" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1089,19 +1206,19 @@ hehe
                 <span class="md-footer-nav__direction">
                   后退
                 </span>
-                单词统计
+                计算字符串的长度
               </span>
             </div>
           </a>
         
         
-          <a href="../../uooc/1334/" title="分类排序(函数)" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../1438/" title="鸡蛋队列（数组，函数）" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   前进
                 </span>
-                分类排序(函数)
+                鸡蛋队列（数组，函数）
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
