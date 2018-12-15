@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://szu17dmy.github.io/szu_oj/cpp/1295/">
+        <link rel="canonical" href="https://szu17dmy.github.io/szu_oj/uooc/1438/">
       
       
       
@@ -38,7 +38,7 @@
     
     
       
-        <title>单词统计 - Keep Evolving</title>
+        <title>鸡蛋队列（数组，函数） - Keep Evolving</title>
       
     
     
@@ -127,7 +127,7 @@
                 Keep Evolving
               </span>
               <span class="md-header-nav__topic">
-                单词统计
+                鸡蛋队列（数组，函数）
               </span>
             
           
@@ -563,12 +563,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
     
     <label class="md-nav__link" for="nav-3-2">
       程序设计基础
@@ -586,11 +584,61 @@
 
 
   <li class="md-nav__item">
-    <a href="../1084/" title="求矩阵的最大和最小值" class="md-nav__link">
+    <a href="../../cpp/1084/" title="求矩阵的最大和最小值" class="md-nav__link">
       求矩阵的最大和最小值
     </a>
   </li>
 
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cpp/1295/" title="单词统计" class="md-nav__link">
+      单词统计
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cpp/1341/" title="计算字符串的长度" class="md-nav__link">
+      计算字符串的长度
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3" checked>
+    
+    <label class="md-nav__link" for="nav-3-3">
+      程序设计基础 UOOC
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        程序设计基础 UOOC
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
         
           
           
@@ -607,11 +655,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        单词统计
+        鸡蛋队列（数组，函数）
       </label>
     
-    <a href="./" title="单词统计" class="md-nav__link md-nav__link--active">
-      单词统计
+    <a href="./" title="鸡蛋队列（数组，函数）" class="md-nav__link md-nav__link--active">
+      鸡蛋队列（数组，函数）
     </a>
     
       
@@ -681,54 +729,6 @@
   
 </nav>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../1341/" title="计算字符串的长度" class="md-nav__link">
-      计算字符串的长度
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
-    
-    <label class="md-nav__link" for="nav-3-3">
-      程序设计基础 UOOC
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-3">
-        程序设计基础 UOOC
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../uooc/1438/" title="鸡蛋队列（数组，函数）" class="md-nav__link">
-      鸡蛋队列（数组，函数）
-    </a>
   </li>
 
         
@@ -1007,75 +1007,110 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/szu17dmy/szu17dmy.github.io/edit/master/docs/szu_oj/cpp/1295.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/szu17dmy/szu17dmy.github.io/edit/master/docs/szu_oj/uooc/1438.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="_1">单词统计</h1>
+                <h1 id="_1">鸡蛋队列（数组，函数）</h1>
 <p>时间限制: 1 Sec  内存限制: 128 MB</p>
 <h2 id="_2">题目描述</h2>
-<p>编写一个程序，根据单词的出现频率降序打印出所输入的的各个单词。每个单词前标有它的计数值。</p>
+<p>将两根筷子平行的放在一起，就构成了一个队列。将带有编号的鸡蛋放到两根筷子之间叫做入队(push)，将筷子之间的鸡蛋拿出来叫做出队(pop)。但这两种方式有特殊的定义，对于入队，只能将鸡蛋从队列的尾部向里放入；对于出队，只能将鸡蛋从队列的头部向外将鸡蛋拿出来。</p>
+<p>将①、②入队：</p>
+<div class="codehilite"><pre><span></span>头____________尾                         _____________                           ______________
+           ← ①   ←  ②                   ①            ←    ②                    ①      ②              
+______________                           _____________                           ______________
+</pre></div>
+
+
+<p>将①、②出队：</p>
+<div class="codehilite"><pre><span></span>头____________尾                         ______________                         ______________
+    ←  ①  ←  ②                   ①           ←      ②                   ①    ②      
+ ______________                           ______________                         ______________
+</pre></div>
+
+
 <h2 id="_3">输入</h2>
-<p>各个单词，输入0则表示单词结束</p>
+<p>第一行输入一个数T，表示有T组数据
+第二行输入一个数N，表示有N(N&lt;=10)种操作
+接下来N行，每行一种操作，push表示将编号为x的鸡蛋放入队列中，pop表示拿走队列头部的一个鸡蛋。
+数据输入保证合法,队列中没有鸡蛋时不会有出队操作！</p>
 <h2 id="_4">输出</h2>
-<p>降序打印单词出现的频率和单词。单词频度相同，按出现顺序输出。</p>
+<p>输出N种操作完之后，队列中蛋蛋的编号，如果没蛋了，就输出"no eggs!"(不包括引号)每组输出占一行。</p>
 <h2 id="_5">样例输入</h2>
-<div class="codehilite"><pre><span></span>bad
-good
-bad
-cute
-how
-good
-good
-0
+<div class="codehilite"><pre><span></span>2
+3
+push 1 
+push 2
+push 3
+2
+push 1
+pop
 </pre></div>
 
 
 <h2 id="_6">样例输出</h2>
-<div class="codehilite"><pre><span></span>3 good
-2 bad
-1 cute
-1 how
+<div class="codehilite"><pre><span></span>1 2 3
+no eggs!
 </pre></div>
 
 
 <h2 id="_7">提示</h2>
+<p>数组模拟队列，用下标记录对头、队尾位置。</p>
 <h2 id="_8">解决方案</h2>
-<div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp"></span>
+<div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
-<span class="k">struct</span> <span class="n">Pair</span> <span class="p">{</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">string</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="n">count</span><span class="p">;</span>
-    <span class="n">Pair</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">string</span><span class="p">,</span> <span class="kt">int</span> <span class="n">count</span><span class="p">)</span> <span class="o">:</span> <span class="n">string</span><span class="p">(</span><span class="n">string</span><span class="p">),</span> <span class="n">count</span><span class="p">(</span><span class="n">count</span><span class="p">)</span> <span class="p">{}</span>
+<span class="k">struct</span> <span class="n">Queue</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">data</span><span class="p">[</span><span class="mi">32</span><span class="p">];</span>
+    <span class="kt">int</span> <span class="n">head</span><span class="p">,</span> <span class="n">tail</span><span class="p">;</span>
 <span class="p">};</span>
-<span class="kt">bool</span> <span class="k">operator</span><span class="o">==</span><span class="p">(</span><span class="n">Pair</span> <span class="o">&amp;</span><span class="n">pair</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">string</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="n">pair</span><span class="p">.</span><span class="n">string</span> <span class="o">==</span> <span class="n">string</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="kt">bool</span> <span class="k">operator</span><span class="o">&lt;</span><span class="p">(</span><span class="k">const</span> <span class="n">Pair</span> <span class="o">&amp;</span><span class="n">lhs</span><span class="p">,</span> <span class="k">const</span> <span class="n">Pair</span> <span class="o">&amp;</span><span class="n">rhs</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="n">lhs</span><span class="p">.</span><span class="n">count</span> <span class="o">&gt;</span> <span class="n">rhs</span><span class="p">.</span><span class="n">count</span><span class="p">;</span> <span class="c1">// NG</span>
-<span class="p">}</span>
 
-<span class="kt">int</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Pair</span><span class="o">&gt;</span> <span class="n">vector</span><span class="p">;</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">string</span><span class="p">;</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">string</span><span class="p">;</span>
-    <span class="k">while</span> <span class="p">(</span><span class="n">string</span> <span class="o">!=</span> <span class="s">&quot;0&quot;</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Pair</span><span class="o">&gt;::</span><span class="n">iterator</span> <span class="n">it</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">find</span><span class="p">(</span><span class="n">vector</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">vector</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="n">string</span><span class="p">);</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">it</span> <span class="o">!=</span> <span class="n">vector</span><span class="p">.</span><span class="n">end</span><span class="p">())</span> <span class="p">{</span>
-            <span class="n">it</span><span class="o">-&gt;</span><span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
-        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-            <span class="n">vector</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">Pair</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="mi">1</span><span class="p">));</span>
+<span class="kt">void</span> <span class="nf">push</span><span class="p">(</span><span class="k">struct</span> <span class="n">Queue</span> <span class="o">*</span><span class="n">queue</span><span class="p">,</span> <span class="kt">int</span> <span class="n">data</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">pop</span><span class="p">(</span><span class="k">struct</span> <span class="n">Queue</span> <span class="o">*</span><span class="n">queue</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">show</span><span class="p">(</span><span class="k">struct</span> <span class="n">Queue</span> <span class="o">*</span><span class="n">queue</span><span class="p">);</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">ctrl</span><span class="p">;</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ctrl</span><span class="p">);</span>
+
+    <span class="k">while</span> <span class="p">(</span><span class="n">ctrl</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">struct</span> <span class="n">Queue</span> <span class="n">queue</span> <span class="o">=</span> <span class="p">{};</span>
+        <span class="kt">int</span> <span class="n">time</span><span class="p">;</span>
+        <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">time</span><span class="p">);</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">time</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">char</span> <span class="n">operation</span><span class="p">[</span><span class="mi">8</span><span class="p">];</span>
+            <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span> <span class="n">operation</span><span class="p">);</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">operation</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="sc">&#39;u&#39;</span><span class="p">)</span> <span class="p">{</span>
+                <span class="kt">int</span> <span class="n">data</span><span class="p">;</span>
+                <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">data</span><span class="p">);</span>
+                <span class="n">push</span><span class="p">(</span><span class="o">&amp;</span><span class="n">queue</span><span class="p">,</span> <span class="n">data</span><span class="p">);</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="n">pop</span><span class="p">(</span><span class="o">&amp;</span><span class="n">queue</span><span class="p">);</span>
+            <span class="p">}</span>
         <span class="p">}</span>
-        <span class="n">std</span><span class="o">::</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">string</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">sort</span><span class="p">(</span><span class="n">vector</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">vector</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">vector</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">vector</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">count</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39; &#39;</span> <span class="o">&lt;&lt;</span> <span class="n">vector</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">string</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+        <span class="n">show</span><span class="p">(</span><span class="o">&amp;</span><span class="n">queue</span><span class="p">);</span>
     <span class="p">}</span>
 
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">push</span><span class="p">(</span><span class="k">struct</span> <span class="n">Queue</span> <span class="o">*</span><span class="n">queue</span><span class="p">,</span> <span class="kt">int</span> <span class="n">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">queue</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">[</span><span class="n">queue</span><span class="o">-&gt;</span><span class="n">tail</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">;</span>
+    <span class="n">queue</span><span class="o">-&gt;</span><span class="n">tail</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">pop</span><span class="p">(</span><span class="k">struct</span> <span class="n">Queue</span> <span class="o">*</span><span class="n">queue</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">queue</span><span class="o">-&gt;</span><span class="n">head</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">show</span><span class="p">(</span><span class="k">struct</span> <span class="n">Queue</span> <span class="o">*</span><span class="n">queue</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">queue</span><span class="o">-&gt;</span><span class="n">head</span> <span class="o">==</span> <span class="n">queue</span><span class="o">-&gt;</span><span class="n">tail</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;no eggs!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="n">queue</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">[</span><span class="n">queue</span><span class="o">-&gt;</span><span class="n">head</span><span class="p">]);</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">queue</span><span class="o">-&gt;</span><span class="n">head</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">queue</span><span class="o">-&gt;</span><span class="n">tail</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&quot; %d&quot;</span><span class="p">,</span> <span class="n">queue</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+        <span class="p">}</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
                 
@@ -1098,7 +1133,7 @@ good
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../1084/" title="求矩阵的最大和最小值" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../cpp/1341/" title="计算字符串的长度" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1107,19 +1142,19 @@ good
                 <span class="md-footer-nav__direction">
                   后退
                 </span>
-                求矩阵的最大和最小值
+                计算字符串的长度
               </span>
             </div>
           </a>
         
         
-          <a href="../1341/" title="计算字符串的长度" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../../uooc/java/1/" title="1 概述" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   前进
                 </span>
-                计算字符串的长度
+                1 概述
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
