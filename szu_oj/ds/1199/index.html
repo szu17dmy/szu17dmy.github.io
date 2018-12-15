@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://szu17dmy.github.io/szu_oj/ds/1217/">
+        <link rel="canonical" href="https://szu17dmy.github.io/szu_oj/ds/1199/">
       
       
       
@@ -38,7 +38,7 @@
     
     
       
-        <title>DS二叉树——二叉树之数组存储 - Keep Evolving</title>
+        <title>DS单链表--类实现 - Keep Evolving</title>
       
     
     
@@ -101,7 +101,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#ds" tabindex="1" class="md-skip">
+      <a href="#ds-" tabindex="1" class="md-skip">
         跳转至
       </a>
     
@@ -127,7 +127,7 @@
                 Keep Evolving
               </span>
               <span class="md-header-nav__topic">
-                DS二叉树——二叉树之数组存储
+                DS单链表--类实现
               </span>
             
           
@@ -452,18 +452,6 @@
           
           
 
-
-  <li class="md-nav__item">
-    <a href="../1199/" title="DS单链表--类实现" class="md-nav__link">
-      DS单链表--类实现
-    </a>
-  </li>
-
-        
-          
-          
-          
-
   
 
 
@@ -475,11 +463,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        DS二叉树——二叉树之数组存储
+        DS单链表--类实现
       </label>
     
-    <a href="./" title="DS二叉树——二叉树之数组存储" class="md-nav__link md-nav__link--active">
-      DS二叉树——二叉树之数组存储
+    <a href="./" title="DS单链表--类实现" class="md-nav__link md-nav__link--active">
+      DS单链表--类实现
     </a>
     
       
@@ -549,6 +537,18 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1217/" title="DS二叉树——二叉树之数组存储" class="md-nav__link">
+      DS二叉树——二叉树之数组存储
+    </a>
   </li>
 
         
@@ -1031,76 +1031,186 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/szu17dmy/szu17dmy.github.io/edit/master/docs/szu_oj/ds/1217.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/szu17dmy/szu17dmy.github.io/edit/master/docs/szu_oj/ds/1199.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="ds">DS二叉树——二叉树之数组存储</h1>
+                <h1 id="ds-">DS单链表--类实现</h1>
 <p>时间限制: 1 Sec  内存限制: 128 MB</p>
 <h2 id="_1">题目描述</h2>
-<p>二叉树可以采用数组的方法进行存储，把数组中的数据依次自上而下,自左至右存储到二叉树结点中，一般二叉树与完全二叉树对比，比完全二叉树缺少的结点就在数组中用0来表示。，如下图所示</p>
-<p><img alt="DS-1217" src="../img/DS-1217.bmp" /></p>
-<p>从上图可以看出，右边的是一颗普通的二叉树，当它与左边的完全二叉树对比，发现它比完全二叉树少了第5号结点，所以在数组中用0表示，同样它还少了完全二叉树中的第10、11号结点，所以在数组中也用0表示。</p>
-<p>结点存储的数据均为非负整数</p>
+<p>用C++语言和类实现单链表，含头结点</p>
+<p>属性包括：data数据域、next指针域</p>
+<p>操作包括：插入、删除、查找</p>
+<p>注意：单链表不是数组，所以位置从1开始对应首结点，头结点不放数据</p>
+<p>类定义参考</p>
+<p><img alt="DS-1199.jpg" src="../img/DS-1199.jpg" /></p>
 <h2 id="_2">输入</h2>
-<p>第一行输入一个整数t，表示有t个二叉树</p>
-<p>第二行起，每行输入一个数组，先输入数组长度，再输入数组内数据，每个数据之间用空格隔开，输入的数据都是非负整数</p>
-<p>连续输入t行</p>
+<p>第1行先输入n表示有n个数据，接着输入n个数据</p>
+<p>第2行输入要插入的位置和新数据</p>
+<p>第3行输入要插入的位置和新数据</p>
+<p>第4行输入要删除的位置</p>
+<p>第5行输入要删除的位置</p>
+<p>第6行输入要查找的位置</p>
+<p>第7行输入要查找的位置</p>
 <h2 id="_3">输出</h2>
-<p>每行输出一个示例的先序遍历结果，每个结点之间用空格隔开</p>
+<p>数据之间用空格隔开，</p>
+<p>第1行输出创建后的单链表的数据</p>
+<p>每成功执行一次操作（插入或删除），输出执行后的单链表数据</p>
+<p>每成功执行一次查找，输出查找到的数据</p>
+<p>如果执行操作失败（包括插入、删除、查找等失败），输出字符串error，不必输出单链表</p>
 <h2 id="_4">样例输入</h2>
-<div class="codehilite"><pre><span></span>3
-3 1 2 3
-5 1 2 3 0 4
-13 1 2 3 4 0 5 6 7 8 0 0 9 10
+<div class="codehilite"><pre><span></span>6 11 22 33 44 55 66
+3 777
+1 888
+1
+11
+0
+5
 </pre></div>
 
 
 <h2 id="_5">样例输出</h2>
-<div class="codehilite"><pre><span></span>1 2 3 
-1 2 4 3 
-1 2 4 7 8 3 5 9 10 6
+<div class="codehilite"><pre><span></span>11 22 33 44 55 66 
+11 22 777 33 44 55 66 
+888 11 22 777 33 44 55 66 
+11 22 777 33 44 55 66 
+error
+error
+44
 </pre></div>
 
 
 <h2 id="_6">提示</h2>
-<p>注意从数组位置和二叉树深度、结点位置进行关联，或者父子结点在数组中的位置存在某种管理，例如i, i+1, i/2,  i+1/2........或者2i, 2i+1.......仔细观察哦</p>
 <h2 id="_7">解决方案</h2>
 <div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdexcept&gt;</span><span class="cp"></span>
 
-<span class="k">class</span> <span class="nc">BiTree</span> <span class="p">{</span>
+<span class="k">class</span> <span class="nc">List</span> <span class="p">{</span>
 <span class="k">public</span><span class="o">:</span>
-    <span class="k">explicit</span> <span class="n">BiTree</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">size</span><span class="p">)</span> <span class="o">:</span> <span class="n">arr_</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{}</span>
-    <span class="kt">void</span> <span class="n">setFromCin</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">arr_</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">std</span><span class="o">::</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">arr_</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="n">List</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">vector</span><span class="p">)</span> <span class="o">:</span> <span class="n">root_</span><span class="p">(</span><span class="k">new</span> <span class="n">Node</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Node</span> <span class="o">*</span><span class="n">node</span> <span class="o">=</span> <span class="n">root_</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">vector</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="o">++</span><span class="n">i</span><span class="p">,</span> <span class="n">node</span> <span class="o">=</span> <span class="n">node</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">node</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Node</span><span class="p">(</span><span class="n">vector</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
         <span class="p">}</span>
     <span class="p">}</span>
-    <span class="kt">void</span> <span class="n">preOrderTraverse</span><span class="p">()</span> <span class="p">{</span>
-        <span class="n">preOrderTraverse</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+    <span class="o">~</span><span class="n">List</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">Node</span> <span class="o">*</span><span class="n">node</span> <span class="o">=</span> <span class="n">root_</span><span class="p">,</span> <span class="o">*</span><span class="n">next</span><span class="p">;</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">node</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">next</span> <span class="o">=</span> <span class="n">node</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+            <span class="k">delete</span> <span class="n">node</span><span class="p">;</span>
+            <span class="n">node</span> <span class="o">=</span> <span class="n">next</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="kt">int</span> <span class="n">at</span><span class="p">(</span><span class="kt">int</span> <span class="n">index</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="n">Node</span> <span class="o">*</span><span class="n">node</span> <span class="o">=</span> <span class="n">root_</span><span class="p">;</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">node</span> <span class="o">=</span> <span class="n">node</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">count</span> <span class="o">==</span> <span class="n">index</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="n">node</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">throw</span> <span class="n">std</span><span class="o">::</span><span class="n">out_of_range</span><span class="p">(</span><span class="s">&quot;UPPER_LIMIT&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kt">void</span> <span class="n">insert</span><span class="p">(</span><span class="kt">int</span> <span class="n">index</span><span class="p">,</span> <span class="kt">int</span> <span class="n">data</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="n">Node</span> <span class="o">*</span><span class="n">node</span> <span class="o">=</span> <span class="n">root_</span><span class="p">;</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">!=</span> <span class="nb">NULL</span> <span class="o">||</span> <span class="p">(</span><span class="n">count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="n">index</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">count</span> <span class="o">==</span> <span class="n">index</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">Node</span> <span class="o">*</span><span class="n">tmp</span> <span class="o">=</span> <span class="n">node</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+                <span class="n">node</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Node</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">tmp</span><span class="p">);</span>
+                <span class="k">return</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="n">node</span> <span class="o">=</span> <span class="n">node</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">throw</span> <span class="n">std</span><span class="o">::</span><span class="n">out_of_range</span><span class="p">(</span><span class="s">&quot;UPPER_LIMIT&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kt">void</span> <span class="n">erase</span><span class="p">(</span><span class="kt">int</span> <span class="n">index</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="n">Node</span> <span class="o">*</span><span class="n">node</span> <span class="o">=</span> <span class="n">root_</span><span class="p">;</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">count</span> <span class="o">==</span> <span class="n">index</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">Node</span> <span class="o">*</span><span class="n">tmp</span> <span class="o">=</span> <span class="n">node</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+                <span class="n">node</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">node</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+                <span class="k">delete</span> <span class="n">tmp</span><span class="p">;</span>
+                <span class="k">return</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="n">node</span> <span class="o">=</span> <span class="n">node</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">throw</span> <span class="n">std</span><span class="o">::</span><span class="n">out_of_range</span><span class="p">(</span><span class="s">&quot;UPPER_LIMIT&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kt">int</span> <span class="n">length</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="n">Node</span> <span class="o">*</span><span class="n">node</span> <span class="o">=</span> <span class="n">root_</span><span class="p">;</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">node</span> <span class="o">=</span> <span class="n">node</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+            <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">count</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kt">void</span> <span class="n">print</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">Node</span> <span class="o">*</span><span class="n">node</span> <span class="o">=</span> <span class="n">root_</span><span class="p">;</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">node</span> <span class="o">=</span> <span class="n">node</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+            <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">node</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39; &#39;</span><span class="p">;</span>
+        <span class="p">}</span>
         <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
     <span class="p">}</span>
+
 <span class="k">private</span><span class="o">:</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">arr_</span><span class="p">;</span>
-    <span class="kt">void</span> <span class="nf">preOrderTraverse</span><span class="p">(</span><span class="kt">int</span> <span class="n">index</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">index</span> <span class="o">&lt;</span> <span class="n">arr_</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="n">arr_</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">arr_</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39; &#39;</span><span class="p">;</span>
-            <span class="n">preOrderTraverse</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
-            <span class="n">preOrderTraverse</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">index</span> <span class="o">+</span> <span class="mi">2</span><span class="p">);</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
+    <span class="k">struct</span> <span class="n">Node</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">data</span><span class="p">;</span>
+        <span class="n">Node</span> <span class="o">*</span><span class="n">next</span><span class="p">;</span>
+        <span class="n">Node</span><span class="p">()</span> <span class="o">:</span> <span class="n">data</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">next</span><span class="p">(</span><span class="nb">NULL</span><span class="p">)</span> <span class="p">{}</span>
+        <span class="n">Node</span><span class="p">(</span><span class="kt">int</span> <span class="n">data</span><span class="p">)</span> <span class="o">:</span> <span class="n">data</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="p">{}</span>
+        <span class="n">Node</span><span class="p">(</span><span class="kt">int</span> <span class="n">data</span><span class="p">,</span> <span class="n">Node</span> <span class="o">*</span><span class="n">next</span><span class="p">)</span> <span class="o">:</span> <span class="n">data</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="n">next</span><span class="p">(</span><span class="n">next</span><span class="p">)</span> <span class="p">{}</span>
+    <span class="p">};</span>
+    <span class="n">Node</span> <span class="o">*</span><span class="n">root_</span><span class="p">;</span>
 <span class="p">};</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kt">int</span> <span class="n">ctrl</span><span class="p">;</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">ctrl</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">size</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">size</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">vector</span><span class="p">(</span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">size_t</span> <span class="o">&gt;</span><span class="p">(</span><span class="n">size</span><span class="p">));</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">size</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">vector</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="p">}</span>
+    <span class="n">List</span> <span class="n">list</span><span class="p">(</span><span class="n">vector</span><span class="p">);</span>
+    <span class="n">list</span><span class="p">.</span><span class="n">print</span><span class="p">();</span>
 
-    <span class="k">while</span> <span class="p">(</span><span class="n">ctrl</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kt">size_t</span> <span class="n">size</span><span class="p">;</span>
-        <span class="n">std</span><span class="o">::</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">size</span><span class="p">;</span>
-        <span class="k">class</span> <span class="nc">BiTree</span> <span class="n">biTree</span><span class="p">(</span><span class="n">size</span><span class="p">);</span>
-        <span class="n">biTree</span><span class="p">.</span><span class="n">setFromCin</span><span class="p">();</span>
-        <span class="n">biTree</span><span class="p">.</span><span class="n">preOrderTraverse</span><span class="p">();</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">index</span><span class="p">,</span> <span class="n">number</span><span class="p">;</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">index</span> <span class="o">&gt;&gt;</span> <span class="n">number</span><span class="p">;</span>
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="n">list</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">number</span><span class="p">);</span>
+            <span class="n">list</span><span class="p">.</span><span class="n">print</span><span class="p">();</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">out_of_range</span> <span class="o">&amp;</span><span class="n">out_of_range</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;error&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">index</span><span class="p">;</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">index</span><span class="p">;</span>
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="n">list</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">index</span><span class="p">);</span>
+            <span class="n">list</span><span class="p">.</span><span class="n">print</span><span class="p">();</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">out_of_range</span> <span class="o">&amp;</span><span class="n">out_of_range</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;error&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">index</span><span class="p">;</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">index</span><span class="p">;</span>
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">list</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">index</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">out_of_range</span> <span class="o">&amp;</span><span class="n">out_of_range</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;error&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+        <span class="p">}</span>
     <span class="p">}</span>
 
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
@@ -1126,7 +1236,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../1199/" title="DS单链表--类实现" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../../ctf_writeup/cg_ctf/easyweb/" title="签到题" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1135,19 +1245,19 @@
                 <span class="md-footer-nav__direction">
                   后退
                 </span>
-                DS单链表--类实现
+                签到题
               </span>
             </div>
           </a>
         
         
-          <a href="../1239/" title="DS哈希查找--链地址法" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../1217/" title="DS二叉树——二叉树之数组存储" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   前进
                 </span>
-                DS哈希查找--链地址法
+                DS二叉树——二叉树之数组存储
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
