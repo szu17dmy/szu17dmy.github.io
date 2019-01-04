@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://szu17dmy.github.io/szu_oj/ds/1239/">
+        <link rel="canonical" href="https://szu17dmy.github.io/szu_oj/ds/1250/">
       
       
       
@@ -38,7 +38,7 @@
     
     
       
-        <title>DS哈希查找--链地址法 - Keep Evolving</title>
+        <title>DS二叉树——Huffman编码与解码 - Keep Evolving</title>
       
     
     
@@ -101,7 +101,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#ds-" tabindex="1" class="md-skip">
+      <a href="#dshuffman" tabindex="1" class="md-skip">
         跳转至
       </a>
     
@@ -127,7 +127,7 @@
                 Keep Evolving
               </span>
               <span class="md-header-nav__topic">
-                DS哈希查找--链地址法
+                DS二叉树——Huffman编码与解码
               </span>
             
           
@@ -572,6 +572,42 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../1239/" title="DS哈希查找--链地址法" class="md-nav__link">
+      DS哈希查找--链地址法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1241/" title="DS排序--快速排序" class="md-nav__link">
+      DS排序--快速排序
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1245/" title="DS链表—学生宿舍管理" class="md-nav__link">
+      DS链表—学生宿舍管理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -583,11 +619,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        DS哈希查找--链地址法
+        DS二叉树——Huffman编码与解码
       </label>
     
-    <a href="./" title="DS哈希查找--链地址法" class="md-nav__link md-nav__link--active">
-      DS哈希查找--链地址法
+    <a href="./" title="DS二叉树——Huffman编码与解码" class="md-nav__link md-nav__link--active">
+      DS二叉树——Huffman编码与解码
     </a>
     
       
@@ -657,42 +693,6 @@
   
 </nav>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../1241/" title="DS排序--快速排序" class="md-nav__link">
-      DS排序--快速排序
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../1245/" title="DS链表—学生宿舍管理" class="md-nav__link">
-      DS链表—学生宿舍管理
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../1250/" title="DS二叉树——Huffman编码与解码" class="md-nav__link">
-      DS二叉树——Huffman编码与解码
-    </a>
   </li>
 
         
@@ -1151,115 +1151,196 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/szu17dmy/szu17dmy.github.io/edit/master/docs/szu_oj/ds/1239.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/szu17dmy/szu17dmy.github.io/edit/master/docs/szu_oj/ds/1250.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="ds-">DS哈希查找--链地址法</h1>
+                <h1 id="dshuffman">DS二叉树——Huffman编码与解码</h1>
 <p>时间限制: 1 Sec  内存限制: 128 MB</p>
 <h2 id="_1">题目描述</h2>
-<p>给出一个数据序列，建立哈希表，采用求余法作为哈希函数，模数为11，哈希冲突用链地址法和表头插入</p>
-<p>如果首次查找失败，就把数据插入到相应的位置中</p>
-<p>实现哈希查找功能</p>
+<p>1、问题描述</p>
+<p>给定n个字符及其对应的权值，构造Huffman树，并进行huffman编码和译（解）码。</p>
+<p>构造Huffman树时，要求左子树根的权值小于、等于右子树根的权值。</p>
+<p>进行Huffman编码时，假定Huffman树的左分支上编码为‘0’，右分支上编码为‘1’。</p>
+<p>2、算法</p>
+<p>构造Huffman树算法：</p>
+<p>⑴ 根据给定的n个权值(w1, w2, …, wn)构成n棵二叉树的集合F={T1, T2, …, Tn}，其中每棵二叉树Ti中只有一个权值为wi的根结点。</p>
+<p>⑵ 在F中选取两棵根结点的权值最小的树，作为左、右子树构造一棵新的二叉树，且置其根结点的权值为其左、右子树权值之和。</p>
+<p>⑶ 在F中删除这两棵树，同时将新得到的二叉树加入F中。</p>
+<p>(4) 重复⑵, ⑶，直到F只含一棵树为止。</p>
+<p>3、Huffman编码算法：</p>
+<p>⑴ 从Huffman树的每一个叶子结点开始。</p>
+<p>⑵ 依次沿结点到根的路径，判断该结点是父亲结点的左孩子还是右孩子，如果是左孩子则得到编码‘0’，否则得到编码‘1’，先得到的编码放在后面。</p>
+<p>⑶ 直到到达根结点，编码序列即为该叶子结点对应的Huffman编码。</p>
+<p>4、Huffman译（解）码算法：</p>
+<p>⑴ 指针指向Huffman树的根结点，取第一个Huffman码。</p>
+<p>⑵ 如果Huffman码为‘0’，将指针指向当前结点的左子树的根结点；如果Huffman码为‘1’，将指针指向当前结点的右子树的根结点。</p>
+<p>⑶ 如果指针指向的当前结点为叶子结点，则输出叶子结点对应的字符；否则，取下一个Huffman码，并返回⑵。</p>
+<p>⑷ 如果Huffman码序列未结束，则返回⑴继续译码。</p>
 <h2 id="_2">输入</h2>
-<p>第一行输入n，表示有n个数据</p>
-<p>第二行输入n个数据，都是自然数且互不相同，数据之间用空格隔开</p>
-<p>第三行输入t，表示要查找t个数据</p>
-<p>从第四行起，每行输入一个要查找的数据，都是正整数</p>
+<p>第一行测试次数</p>
+<p>第2行：第一组测试数据的字符个数n，后跟n个字符</p>
+<p>第3行：第一组测试数据的字符权重</p>
+<p>待编码的字符串s1</p>
+<p>编码串s2</p>
+<p>其它组测试数据类推</p>
 <h2 id="_3">输出</h2>
-<p>每行输出对应数据的查找结果</p>
+<p>第一行~第n行,第一组测试数据各字符编码值</p>
+<p>第n+1行，串s1的编码值</p>
+<p>第n+2行，串s2的解码值，若解码不成功，输出error!</p>
+<p>其它组测试数据类推</p>
 <h2 id="_4">样例输入</h2>
-<div class="codehilite"><pre><span></span>6
-11 23 39 48 75 62
-6
-39
-52
-52
-63
-63
-52
+<div class="codehilite"><pre><span></span>2
+5 A B C D E
+15 4 4 3 2
+ABDEC
+00000101100
+4 A B C D
+7 5 2 4
+ABAD
+1110110
 </pre></div>
 
 
 <h2 id="_5">样例输出</h2>
-<div class="codehilite"><pre><span></span>6 1
-error
-8 1
-error
-8 1
-8 2
+<div class="codehilite"><pre><span></span><span class="n">A</span> <span class="o">:</span><span class="mi">1</span>
+<span class="n">B</span> <span class="o">:</span><span class="mi">010</span>
+<span class="n">C</span> <span class="o">:</span><span class="mi">011</span>
+<span class="n">D</span> <span class="o">:</span><span class="mi">001</span>
+<span class="n">E</span> <span class="o">:</span><span class="mi">000</span>
+<span class="mi">1010001000011</span>
+<span class="n">error</span><span class="o">!</span>
+<span class="n">A</span> <span class="o">:</span><span class="mi">0</span>
+<span class="n">B</span> <span class="o">:</span><span class="mi">10</span>
+<span class="n">C</span> <span class="o">:</span><span class="mi">110</span>
+<span class="n">D</span> <span class="o">:</span><span class="mi">111</span>
+<span class="mi">0100111</span>
+<span class="n">DAC</span>
 </pre></div>
 
 
 <h2 id="_6">提示</h2>
-<p>注意，当两次输入要相同的查找数据，如果第一次查找不成功就会执行插入，那么第二次查找必然成功，且查找次数为1次（因为做表头插入）</p>
-<p>例如示例数据中输入两次52，第一次查找失败就把52插入到位置8，第二次查找就成功了，所以第一次输出error，第二次就输出8 1</p>
-<p>为什么第三次输入52会输出8 2</p>
-<blockquote>
-<p>63插入于52前</p>
-</blockquote>
 <h2 id="_7">解决方案</h2>
 <div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp"></span>
 
 <span class="k">struct</span> <span class="n">Node</span> <span class="p">{</span>
-    <span class="kt">int</span> <span class="n">data</span><span class="p">;</span>
-    <span class="n">Node</span> <span class="o">*</span><span class="n">next</span><span class="p">;</span>
-    <span class="n">Node</span><span class="p">()</span> <span class="o">:</span> <span class="n">data</span><span class="p">(),</span> <span class="n">next</span><span class="p">(</span><span class="nb">NULL</span><span class="p">)</span> <span class="p">{}</span>
+    <span class="kt">char</span> <span class="n">data</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">freq</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">pattern</span><span class="p">;</span>
+    <span class="n">Node</span> <span class="o">*</span><span class="n">left</span><span class="p">,</span> <span class="o">*</span><span class="n">right</span><span class="p">;</span>
+
+    <span class="n">Node</span><span class="p">()</span> <span class="o">:</span> <span class="n">data</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">freq</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">left</span><span class="p">(</span><span class="nb">NULL</span><span class="p">),</span> <span class="n">right</span><span class="p">(</span><span class="nb">NULL</span><span class="p">)</span> <span class="p">{}</span>
+
+    <span class="n">Node</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="n">data</span><span class="p">,</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">freq</span><span class="p">)</span> <span class="o">:</span> <span class="n">data</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="n">freq</span><span class="p">(</span><span class="n">freq</span><span class="p">),</span> <span class="n">left</span><span class="p">(</span><span class="nb">NULL</span><span class="p">),</span> <span class="n">right</span><span class="p">(</span><span class="nb">NULL</span><span class="p">)</span> <span class="p">{}</span>
 <span class="p">};</span>
 
-<span class="k">class</span> <span class="nc">HashTable</span> <span class="p">{</span>
+<span class="kt">bool</span> <span class="nf">compare</span><span class="p">(</span><span class="k">const</span> <span class="n">Node</span> <span class="o">*</span><span class="n">lhs</span><span class="p">,</span> <span class="k">const</span> <span class="n">Node</span> <span class="o">*</span><span class="n">rhs</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">lhs</span><span class="o">-&gt;</span><span class="n">freq</span> <span class="o">&lt;</span> <span class="n">rhs</span><span class="o">-&gt;</span><span class="n">freq</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">class</span> <span class="nc">Huffman</span> <span class="p">{</span>
 <span class="k">public</span><span class="o">:</span>
-    <span class="n">HashTable</span><span class="p">()</span> <span class="o">:</span> <span class="n">hash_</span><span class="p">(</span><span class="n">P</span><span class="p">)</span> <span class="p">{}</span>
-    <span class="kt">void</span> <span class="n">insert</span><span class="p">(</span><span class="kt">int</span> <span class="n">data</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kt">int</span> <span class="n">index</span> <span class="o">=</span> <span class="n">data</span> <span class="o">%</span> <span class="n">P</span><span class="p">;</span>
-        <span class="n">Node</span> <span class="o">*</span><span class="n">node</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Node</span><span class="p">();</span>
-        <span class="n">node</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">;</span>
-        <span class="n">node</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">hash_</span><span class="p">[</span><span class="n">index</span><span class="p">].</span><span class="n">next</span><span class="p">;</span>
-        <span class="n">hash_</span><span class="p">[</span><span class="n">index</span><span class="p">].</span><span class="n">next</span> <span class="o">=</span> <span class="n">node</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="kt">void</span> <span class="n">searchOrInsertThenPrint</span><span class="p">(</span><span class="kt">int</span> <span class="n">data</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="n">search</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">result</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;error&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-            <span class="n">insert</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
-        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-            <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">data</span> <span class="o">%</span> <span class="n">P</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39; &#39;</span> <span class="o">&lt;&lt;</span> <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+    <span class="k">explicit</span> <span class="n">Huffman</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Node</span> <span class="o">*&gt;</span> <span class="o">&amp;</span><span class="n">elements</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Node</span> <span class="o">*&gt;</span> <span class="n">elements_</span><span class="p">;</span>
+        <span class="n">elements_</span><span class="p">.</span><span class="n">assign</span><span class="p">(</span><span class="n">elements</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">elements</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+        <span class="k">this</span><span class="o">-&gt;</span><span class="n">elements_</span> <span class="o">=</span> <span class="n">elements</span><span class="p">;</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">elements_</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">std</span><span class="o">::</span><span class="n">sort</span><span class="p">(</span><span class="n">elements_</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">elements_</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="n">compare</span><span class="p">);</span>
+            <span class="n">Node</span> <span class="o">*</span><span class="n">leftChild</span> <span class="o">=</span> <span class="n">elements_</span><span class="p">.</span><span class="n">front</span><span class="p">();</span>
+            <span class="n">elements_</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">elements_</span><span class="p">.</span><span class="n">begin</span><span class="p">());</span>
+            <span class="n">Node</span> <span class="o">*</span><span class="n">rightChild</span> <span class="o">=</span> <span class="n">elements_</span><span class="p">.</span><span class="n">front</span><span class="p">();</span>
+            <span class="n">elements_</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">elements_</span><span class="p">.</span><span class="n">begin</span><span class="p">());</span>
+            <span class="n">Node</span> <span class="o">*</span><span class="n">node</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Node</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">leftChild</span><span class="o">-&gt;</span><span class="n">freq</span> <span class="o">+</span> <span class="n">rightChild</span><span class="o">-&gt;</span><span class="n">freq</span><span class="p">);</span>
+            <span class="n">node</span><span class="o">-&gt;</span><span class="n">left</span> <span class="o">=</span> <span class="n">leftChild</span><span class="p">;</span>
+            <span class="n">node</span><span class="o">-&gt;</span><span class="n">right</span> <span class="o">=</span> <span class="n">rightChild</span><span class="p">;</span>
+            <span class="n">elements_</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">node</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">root_</span> <span class="o">=</span> <span class="n">elements_</span><span class="p">.</span><span class="n">front</span><span class="p">();</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">pattern</span><span class="p">;</span>
+        <span class="n">generate</span><span class="p">(</span><span class="n">root_</span><span class="p">,</span> <span class="n">pattern</span><span class="p">);</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">elements_</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">elements_</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; :&quot;</span> <span class="o">&lt;&lt;</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">elements_</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">pattern</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
         <span class="p">}</span>
     <span class="p">}</span>
-    <span class="kt">int</span> <span class="n">search</span><span class="p">(</span><span class="kt">int</span> <span class="n">data</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kt">int</span> <span class="n">index</span> <span class="o">=</span> <span class="n">data</span> <span class="o">%</span> <span class="n">P</span><span class="p">;</span>
-        <span class="n">Node</span> <span class="o">*</span><span class="n">ptr</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">hash_</span><span class="p">[</span><span class="n">index</span><span class="p">];</span>
-        <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="k">while</span> <span class="p">(</span><span class="n">ptr</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">ptr</span> <span class="o">=</span> <span class="n">ptr</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
-            <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">ptr</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">==</span> <span class="n">data</span><span class="p">)</span> <span class="p">{</span>
-                <span class="k">return</span> <span class="n">count</span><span class="p">;</span>
+
+    <span class="kt">void</span> <span class="n">encode</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">string</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">encode</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i1</span> <span class="o">&lt;</span> <span class="n">string</span><span class="p">.</span><span class="n">length</span><span class="p">();</span> <span class="o">++</span><span class="n">i1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i2</span> <span class="o">&lt;</span> <span class="n">elements_</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="o">++</span><span class="n">i2</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">elements_</span><span class="p">[</span><span class="n">i2</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">==</span> <span class="n">string</span><span class="p">[</span><span class="n">i1</span><span class="p">])</span> <span class="p">{</span>
+                    <span class="n">encode</span> <span class="o">+=</span> <span class="n">elements_</span><span class="p">[</span><span class="n">i2</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">pattern</span><span class="p">;</span>
+                <span class="p">}</span>
             <span class="p">}</span>
         <span class="p">}</span>
-        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">encode</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
     <span class="p">}</span>
+
+    <span class="kt">void</span> <span class="n">decode</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">string</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">decode</span><span class="p">;</span>
+        <span class="n">Node</span> <span class="o">*</span><span class="n">ptr</span> <span class="o">=</span> <span class="n">root_</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i1</span> <span class="o">&lt;</span> <span class="n">string</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="o">++</span><span class="n">i1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">string</span><span class="p">[</span><span class="n">i1</span><span class="p">]</span> <span class="o">==</span> <span class="sc">&#39;0&#39;</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">ptr</span> <span class="o">=</span> <span class="n">ptr</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">;</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="n">ptr</span> <span class="o">=</span> <span class="n">ptr</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">ptr</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;error!&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+                <span class="k">return</span><span class="p">;</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">ptr</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">decode</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">ptr</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">);</span>
+                <span class="n">ptr</span> <span class="o">=</span> <span class="n">root_</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">ptr</span> <span class="o">==</span> <span class="n">root_</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">decode</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;error!&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
 <span class="k">private</span><span class="o">:</span>
-    <span class="k">static</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">P</span> <span class="o">=</span> <span class="mi">11</span><span class="p">;</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span> <span class="n">hash_</span><span class="p">;</span>
+    <span class="n">Node</span> <span class="o">*</span><span class="n">root_</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Node</span> <span class="o">*&gt;</span> <span class="n">elements_</span><span class="p">;</span>
+
+    <span class="kt">void</span> <span class="nf">generate</span><span class="p">(</span><span class="n">Node</span> <span class="o">*</span><span class="n">node</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">pattern</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">node</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">node</span><span class="o">-&gt;</span><span class="n">pattern</span><span class="p">.</span><span class="n">assign</span><span class="p">(</span><span class="n">pattern</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="n">pattern</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="sc">&#39;0&#39;</span><span class="p">);</span>
+            <span class="n">generate</span><span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">,</span> <span class="n">pattern</span><span class="p">);</span>
+            <span class="n">pattern</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">pattern</span><span class="p">.</span><span class="n">end</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+            <span class="n">pattern</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="sc">&#39;1&#39;</span><span class="p">);</span>
+            <span class="n">generate</span><span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">,</span> <span class="n">pattern</span><span class="p">);</span>
+            <span class="n">pattern</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">pattern</span><span class="p">.</span><span class="n">end</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
 <span class="p">};</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kt">size_t</span> <span class="n">size</span><span class="p">;</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">size</span><span class="p">;</span>
-    <span class="k">class</span> <span class="nc">HashTable</span> <span class="n">hashTable</span><span class="p">;</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">size</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kt">int</span> <span class="n">number</span><span class="p">;</span>
-        <span class="n">std</span><span class="o">::</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">number</span><span class="p">;</span>
-        <span class="n">hashTable</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">number</span><span class="p">);</span>
-    <span class="p">}</span>
+    <span class="kt">int</span> <span class="n">ctrl</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">ctrl</span><span class="p">;</span>
 
-    <span class="kt">size_t</span> <span class="n">time</span><span class="p">;</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">time</span><span class="p">;</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">time</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kt">int</span> <span class="n">number</span><span class="p">;</span>
-        <span class="n">std</span><span class="o">::</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">number</span><span class="p">;</span>
-        <span class="n">hashTable</span><span class="p">.</span><span class="n">searchOrInsertThenPrint</span><span class="p">(</span><span class="n">number</span><span class="p">);</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">ctrl</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">size</span><span class="p">;</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">size</span><span class="p">;</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Node</span> <span class="o">*&gt;</span> <span class="n">elements</span><span class="p">(</span><span class="n">size</span><span class="p">);</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">size</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">elements</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Node</span><span class="p">();</span>
+            <span class="n">std</span><span class="o">::</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">elements</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">size</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">std</span><span class="o">::</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">elements</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">freq</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">class</span> <span class="nc">Huffman</span> <span class="n">huffman</span><span class="p">(</span><span class="n">elements</span><span class="p">);</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">string</span><span class="p">;</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">string</span><span class="p">;</span>
+        <span class="n">huffman</span><span class="p">.</span><span class="n">encode</span><span class="p">(</span><span class="n">string</span><span class="p">);</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">string</span><span class="p">;</span>
+        <span class="n">huffman</span><span class="p">.</span><span class="n">decode</span><span class="p">(</span><span class="n">string</span><span class="p">);</span>
     <span class="p">}</span>
 
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
@@ -1285,7 +1366,7 @@ error
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../1217/" title="DS二叉树——二叉树之数组存储" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../1245/" title="DS链表—学生宿舍管理" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1294,19 +1375,19 @@ error
                 <span class="md-footer-nav__direction">
                   后退
                 </span>
-                DS二叉树——二叉树之数组存储
+                DS链表—学生宿舍管理
               </span>
             </div>
           </a>
         
         
-          <a href="../1241/" title="DS排序--快速排序" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../1260/" title="哈希查找与增补" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   前进
                 </span>
-                DS排序--快速排序
+                哈希查找与增补
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
