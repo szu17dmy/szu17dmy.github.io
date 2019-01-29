@@ -1,0 +1,85 @@
+site_name: 'Keep Evolving'
+site_url: https://szu17dmy.github.io/
+
+repo_name: 'szu17dmy.github.io'
+repo_url: 'https://github.com/szu17dmy/szu17dmy.github.io'
+
+nav:
+  - HOMEPAGE:
+    - HOME: index.md
+    - ABOUT: about.md
+  - CTF WRITEUP:
+    - Hackergame 2018:
+      - 猫咪遥控器: ctf_writeup/hackergame2018/cat_remote.md
+    - CG-CTF:
+      - Web:
+        - 签到题: ctf_writeup/cg_ctf/easyweb.md
+  - SZU COURSES:
+    - 程序设计基础:
+      - 前言: szu_courses/cpp/1.md
+      - 一些C语言相关的书目: szu_courses/cpp/2.md
+      - JetBrains CLion 安装与配置: szu_courses/cpp/3.md
+  - SZU ONLINEJUDGE:
+    - 数据结构:
+      - DS单链表--类实现: szu_oj/ds/1199.md
+      - DS堆栈--逆序输出（STL栈使用）: szu_oj/ds/1202.md
+      - DS堆栈--行编辑: szu_oj/ds/1204.md
+      - DS堆栈--括号匹配: szu_oj/ds/1205.md
+      - DS队列之银行排队: szu_oj/ds/1207.md
+      - DS二叉树--二叉树构建与遍历: szu_oj/ds/1213.md
+      - DS二叉树--叶子数量: szu_oj/ds/1214.md
+      - DS二叉树--左叶子数量: szu_oj/ds/1215.md
+      - DS二叉树——二叉树之父子结点: szu_oj/ds/1216.md
+      - DS二叉树——二叉树之数组存储: szu_oj/ds/1217.md
+      - DS图遍历--深度优先搜索: szu_oj/ds/1223.md
+      - DS图遍历--广度优先搜索: szu_oj/ds/1224.md
+      - DS哈希查找--链地址法: szu_oj/ds/1239.md
+      - DS排序--快速排序: szu_oj/ds/1241.md
+      - DS链表—学生宿舍管理: szu_oj/ds/1245.md
+      - DS二叉树——Huffman编码与解码: szu_oj/ds/1250.md
+      - DS图—图的邻接矩阵存储及度计算: szu_oj/ds/1253.md
+      - 哈希查找与增补: szu_oj/ds/1260.md
+      - DS内排—直插排序: szu_oj/ds/1264.md
+      - DS内排—2-路归并排序: szu_oj/ds/1268.md
+      - DS哈希查找—线性探测再散列: szu_oj/ds/1269.md
+      - 冒泡排序 (Ver. I): szu_oj/ds/1309.md
+      - DS哈希查找—二次探测再散列: szu_oj/ds/1318.md
+    - 程序设计基础:
+      - 求矩阵的最大和最小值: szu_oj/cpp/1084.md
+      - 单词统计: szu_oj/cpp/1295.md
+      - 计算字符串的长度: szu_oj/cpp/1341.md
+    - 程序设计基础 UOOC:
+      - 分类排序(函数): szu_oj/uooc/1334.md
+      - 鸡蛋队列（数组，函数）: szu_oj/uooc/1438.md
+  - UOOC:
+    - Java:
+      - 1 概述: uooc/java/1.md
+      - 2 数据类型、运算符、表达式和跳转语句: uooc/java/2.md
+      - 3 类和对象: uooc/java/3.md
+      - 4 继承与接口: uooc/java/4.md
+      - 5 字符串及其应用: uooc/java/5.md
+      - 6 泛型与集合: uooc/java/6.md
+      - 7 例外处理: uooc/java/7.md
+      - 8 File类与输入输出流: uooc/java/8.md
+      - 9 图形用户界面设计: uooc/java/9.md
+      - 10 线程: uooc/java/10.md
+      - 11 Java网络编程: uooc/java/11.md
+
+theme:
+  custom_dir: custom_theme/
+  favicon: 'img/favicon.ico'
+  language: 'zh'
+  logo:
+    icon: 'code'
+  name: 'material'
+  palette:
+    primary: 'cyan'
+    accent: 'cyan'
+
+extra:
+  social:
+    - type: 'github'
+      link: 'https://github.com/szu17dmy'
+
+markdown_extensions:
+  - codehilite
