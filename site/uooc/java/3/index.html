@@ -1,0 +1,3308 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+        <link rel="canonical" href="https://szu17dmy.github.io/uooc/java/3/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.1.0">
+    
+    
+      
+        <title>3 类和对象 - Keep Evolving</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.11e41852.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#00bcd4">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.20ef595d.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="cyan" data-md-color-accent="cyan">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#32" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://szu17dmy.github.io/" title="Keep Evolving" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">code</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Keep Evolving
+              </span>
+              <span class="md-header-nav__topic">
+                3 类和对象
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/szu17dmy/szu17dmy.github.io/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      szu17dmy.github.io
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://szu17dmy.github.io/" title="Keep Evolving" class="md-nav__button md-logo">
+      
+        <i class="md-icon">code</i>
+      
+    </a>
+    Keep Evolving
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/szu17dmy/szu17dmy.github.io/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      szu17dmy.github.io
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      HOMEPAGE
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        HOMEPAGE
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="HOME" class="md-nav__link">
+      HOME
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../about/" title="ABOUT" class="md-nav__link">
+      ABOUT
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      CTF WRITEUP
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        CTF WRITEUP
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+    
+    <label class="md-nav__link" for="nav-2-1">
+      Hackergame 2018
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        Hackergame 2018
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../ctf_writeup/hackergame2018/cat_remote/" title="猫咪遥控器" class="md-nav__link">
+      猫咪遥控器
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
+    
+    <label class="md-nav__link" for="nav-2-2">
+      CG-CTF
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-2">
+        CG-CTF
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2-1" type="checkbox" id="nav-2-2-1">
+    
+    <label class="md-nav__link" for="nav-2-2-1">
+      Web
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-2-1">
+        Web
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../ctf_writeup/cg_ctf/easyweb/" title="签到题" class="md-nav__link">
+      签到题
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      SZU COURSES
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        SZU COURSES
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      程序设计基础
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        程序设计基础
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_courses/cpp/1/" title="前言" class="md-nav__link">
+      前言
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_courses/cpp/2/" title="一些C语言相关的书目" class="md-nav__link">
+      一些C语言相关的书目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_courses/cpp/3/" title="JetBrains CLion 安装与配置" class="md-nav__link">
+      JetBrains CLion 安装与配置
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      SZU ONLINEJUDGE
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        SZU ONLINEJUDGE
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+    
+    <label class="md-nav__link" for="nav-4-1">
+      数据结构
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        数据结构
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_oj/ds/1199/" title="DS单链表--类实现" class="md-nav__link">
+      DS单链表--类实现
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_oj/ds/1202/" title="DS堆栈--逆序输出（STL栈使用）" class="md-nav__link">
+      DS堆栈--逆序输出（STL栈使用）
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_oj/ds/1204/" title="DS堆栈--行编辑" class="md-nav__link">
+      DS堆栈--行编辑
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_oj/ds/1205/" title="DS堆栈--括号匹配" class="md-nav__link">
+      DS堆栈--括号匹配
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_oj/ds/1207/" title="DS队列之银行排队" class="md-nav__link">
+      DS队列之银行排队
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_oj/ds/1213/" title="DS二叉树--二叉树构建与遍历" class="md-nav__link">
+      DS二叉树--二叉树构建与遍历
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_oj/ds/1214/" title="DS二叉树--叶子数量" class="md-nav__link">
+      DS二叉树--叶子数量
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_oj/ds/1215/" title="DS二叉树--左叶子数量" class="md-nav__link">
+      DS二叉树--左叶子数量
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_oj/ds/1216/" title="DS二叉树——二叉树之父子结点" class="md-nav__link">
+      DS二叉树——二叉树之父子结点
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_oj/ds/1217/" title="DS二叉树——二叉树之数组存储" class="md-nav__link">
+      DS二叉树——二叉树之数组存储
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_oj/ds/1223/" title="DS图遍历--深度优先搜索" class="md-nav__link">
+      DS图遍历--深度优先搜索
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_oj/ds/1224/" title="DS图遍历--广度优先搜索" class="md-nav__link">
+      DS图遍历--广度优先搜索
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_oj/ds/1239/" title="DS哈希查找--链地址法" class="md-nav__link">
+      DS哈希查找--链地址法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_oj/ds/1241/" title="DS排序--快速排序" class="md-nav__link">
+      DS排序--快速排序
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_oj/ds/1245/" title="DS链表—学生宿舍管理" class="md-nav__link">
+      DS链表—学生宿舍管理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_oj/ds/1250/" title="DS二叉树——Huffman编码与解码" class="md-nav__link">
+      DS二叉树——Huffman编码与解码
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_oj/ds/1253/" title="DS图—图的邻接矩阵存储及度计算" class="md-nav__link">
+      DS图—图的邻接矩阵存储及度计算
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_oj/ds/1260/" title="哈希查找与增补" class="md-nav__link">
+      哈希查找与增补
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_oj/ds/1264/" title="DS内排—直插排序" class="md-nav__link">
+      DS内排—直插排序
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_oj/ds/1268/" title="DS内排—2-路归并排序" class="md-nav__link">
+      DS内排—2-路归并排序
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_oj/ds/1269/" title="DS哈希查找—线性探测再散列" class="md-nav__link">
+      DS哈希查找—线性探测再散列
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_oj/ds/1309/" title="冒泡排序 (Ver. I)" class="md-nav__link">
+      冒泡排序 (Ver. I)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_oj/ds/1318/" title="DS哈希查找—二次探测再散列" class="md-nav__link">
+      DS哈希查找—二次探测再散列
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      程序设计基础
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        程序设计基础
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_oj/cpp/1084/" title="求矩阵的最大和最小值" class="md-nav__link">
+      求矩阵的最大和最小值
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_oj/cpp/1295/" title="单词统计" class="md-nav__link">
+      单词统计
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_oj/cpp/1341/" title="计算字符串的长度" class="md-nav__link">
+      计算字符串的长度
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+    
+    <label class="md-nav__link" for="nav-4-3">
+      程序设计基础 UOOC
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        程序设计基础 UOOC
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_oj/uooc/1334/" title="分类排序(函数)" class="md-nav__link">
+      分类排序(函数)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_oj/uooc/1438/" title="鸡蛋队列（数组，函数）" class="md-nav__link">
+      鸡蛋队列（数组，函数）
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      UOOC
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        UOOC
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1" checked>
+    
+    <label class="md-nav__link" for="nav-5-1">
+      Java
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-1">
+        Java
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1/" title="1 概述" class="md-nav__link">
+      1 概述
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2/" title="2 数据类型、运算符、表达式和跳转语句" class="md-nav__link">
+      2 数据类型、运算符、表达式和跳转语句
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        3 类和对象
+      </label>
+    
+    <a href="./" title="3 类和对象" class="md-nav__link md-nav__link--active">
+      3 类和对象
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#32" title="3.2 类的基本架构介绍" class="md-nav__link">
+    3.2 类的基本架构介绍
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" title="下列哪个类声明是正确的？" class="md-nav__link">
+    下列哪个类声明是正确的？
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="以下选项符合对象和类的关系的是：" class="md-nav__link">
+    以下选项符合对象和类的关系的是：
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java" title="下面关于java中类的说法哪个是不正确的？" class="md-nav__link">
+    下面关于java中类的说法哪个是不正确的？
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java_1" title="下面哪个单词是Java语言的关键字？" class="md-nav__link">
+    下面哪个单词是Java语言的关键字？
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java_2" title="下列哪项是Java编程所必须的默认引用包？" class="md-nav__link">
+    下列哪项是Java编程所必须的默认引用包？
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java_3" title="以下哪个是Java的关键字？" class="md-nav__link">
+    以下哪个是Java的关键字？
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java_4" title="下面哪个是Java语言中正确的标识符？" class="md-nav__link">
+    下面哪个是Java语言中正确的标识符？
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" title="数组中可以包含什么类型的元素？" class="md-nav__link">
+    数组中可以包含什么类型的元素？
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#javamain" title="在Java中函数main()的返回值是：" class="md-nav__link">
+    在Java中函数main()的返回值是：
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java_5" title="Java应用在消费电子市场上开发平台名称为:" class="md-nav__link">
+    Java应用在消费电子市场上开发平台名称为:
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34" title="3.4 使用对象" class="md-nav__link">
+    3.4 使用对象
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" title="构造方法何时被调用？" class="md-nav__link">
+    构造方法何时被调用？
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java-application" title="在编写Java Application程序时，若需要使用到标准输入输出语句，必须在程序的开头写上以下哪条语句？" class="md-nav__link">
+    在编写Java Application程序时，若需要使用到标准输入输出语句，必须在程序的开头写上以下哪条语句？
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" title="认真阅读代码，选择正确的选项" class="md-nav__link">
+    认真阅读代码，选择正确的选项
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java_6" title="在Java中，一个类可以同时定义许多同名的方法，这些方法的形式参数的个数、类型或顺序各不相同，传回的值也可以不相同。这种面向对象程序特性称为：" class="md-nav__link">
+    在Java中，一个类可以同时定义许多同名的方法，这些方法的形式参数的个数、类型或顺序各不相同，传回的值也可以不相同。这种面向对象程序特性称为：
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" title="下面关于构造函数的说法不正确的是：" class="md-nav__link">
+    下面关于构造函数的说法不正确的是：
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#javac-verbose" title="命令javac  -verbose中选项的作用是:" class="md-nav__link">
+    命令javac  -verbose中选项的作用是:
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" title="给出类的定义如下:" class="md-nav__link">
+    给出类的定义如下:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" title="下列哪个选项正确？" class="md-nav__link">
+    下列哪个选项正确？
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_25" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" title="编译及运行以下代码，下列选项哪个是正确的？" class="md-nav__link">
+    编译及运行以下代码，下列选项哪个是正确的？
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_27" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java-application_1" title="编译Java Application源程序文件将产生相应的字节码文件，这些字节码文件的扩展名为" class="md-nav__link">
+    编译Java Application源程序文件将产生相应的字节码文件，这些字节码文件的扩展名为
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_28" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#36" title="3.6 类方法/参数传递" class="md-nav__link">
+    3.6 类方法/参数传递
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#static" title="关于static修饰符，以下哪个选项是正确的？" class="md-nav__link">
+    关于static修饰符，以下哪个选项是正确的？
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_29" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" title="以下对方法内的变量描述正确的是：" class="md-nav__link">
+    以下对方法内的变量描述正确的是：
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_31" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" title="给出如下代码:" class="md-nav__link">
+    给出如下代码:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mfun" title="如何使成员变量m被函数fun()直接访问？" class="md-nav__link">
+    如何使成员变量m被函数fun()直接访问？
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_33" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#joptionpane" title="类JOptionPane提供了几个产生标准对话框的方法，它们能够给用户提供有用的信息，其中包括：" class="md-nav__link">
+    类JOptionPane提供了几个产生标准对话框的方法，它们能够给用户提供有用的信息，其中包括：
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_34" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" title="运行下列程序，会产生什么结果：" class="md-nav__link">
+    运行下列程序，会产生什么结果：
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_36" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_37" title="编译及运行以下代码，下列选项哪个是正确的？" class="md-nav__link">
+    编译及运行以下代码，下列选项哪个是正确的？
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_38" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#38" title="3.8 访问权限" class="md-nav__link">
+    3.8 访问权限
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#this" title="this关键字指的是？" class="md-nav__link">
+    this关键字指的是？
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_39" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_40" title="如果类中的成员变量仅仅可以被同一包中其他类访问，则使用如下哪个约束符?" class="md-nav__link">
+    如果类中的成员变量仅仅可以被同一包中其他类访问，则使用如下哪个约束符?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_41" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" title="如果任何包中的子类都能访问超类中的成员，那么超类中的成员使用哪个限定词最好？" class="md-nav__link">
+    如果任何包中的子类都能访问超类中的成员，那么超类中的成员使用哪个限定词最好？
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_43" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_44" title="不允许作为类及类成员的访问控制符的是:" class="md-nav__link">
+    不允许作为类及类成员的访问控制符的是:
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_45" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_46" title="下面哪个修饰符修饰的方法只能被本类中的其他方法使用" class="md-nav__link">
+    下面哪个修饰符修饰的方法只能被本类中的其他方法使用
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_47" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_48" title="某个类的成员变量可以被同一个包中的子类访问，但不能被另一个包中的类（含子类）访问，该如何定义？" class="md-nav__link">
+    某个类的成员变量可以被同一个包中的子类访问，但不能被另一个包中的类（含子类）访问，该如何定义？
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_49" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#private" title="关于被私有访问控制符private修饰的成员变量，以下说法正确的是：" class="md-nav__link">
+    关于被私有访问控制符private修饰的成员变量，以下说法正确的是：
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_50" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#39" title="3.9 内部类简介" class="md-nav__link">
+    3.9 内部类简介
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a" title="考虑类A:" class="md-nav__link">
+    考虑类A:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" title="以下哪个选项程序代码段不会输出4？" class="md-nav__link">
+    以下哪个选项程序代码段不会输出4？
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_51" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#310" title="3.10 包的应用" class="md-nav__link">
+    3.10 包的应用
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_52" title="以下哪几段代码可以成功编译？" class="md-nav__link">
+    以下哪几段代码可以成功编译？
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_53" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mypackage" title="创建一个名为MyPackage包的语句正确的是：" class="md-nav__link">
+    创建一个名为MyPackage包的语句正确的是：
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_54" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../4/" title="4 继承与接口" class="md-nav__link">
+      4 继承与接口
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../5/" title="5 字符串及其应用" class="md-nav__link">
+      5 字符串及其应用
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../6/" title="6 泛型与集合" class="md-nav__link">
+      6 泛型与集合
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../7/" title="7 例外处理" class="md-nav__link">
+      7 例外处理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../8/" title="8 File类与输入输出流" class="md-nav__link">
+      8 File类与输入输出流
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../9/" title="9 图形用户界面设计" class="md-nav__link">
+      9 图形用户界面设计
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../10/" title="10 线程" class="md-nav__link">
+      10 线程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../11/" title="11 Java网络编程" class="md-nav__link">
+      11 Java网络编程
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#32" title="3.2 类的基本架构介绍" class="md-nav__link">
+    3.2 类的基本架构介绍
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" title="下列哪个类声明是正确的？" class="md-nav__link">
+    下列哪个类声明是正确的？
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="以下选项符合对象和类的关系的是：" class="md-nav__link">
+    以下选项符合对象和类的关系的是：
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java" title="下面关于java中类的说法哪个是不正确的？" class="md-nav__link">
+    下面关于java中类的说法哪个是不正确的？
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java_1" title="下面哪个单词是Java语言的关键字？" class="md-nav__link">
+    下面哪个单词是Java语言的关键字？
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java_2" title="下列哪项是Java编程所必须的默认引用包？" class="md-nav__link">
+    下列哪项是Java编程所必须的默认引用包？
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java_3" title="以下哪个是Java的关键字？" class="md-nav__link">
+    以下哪个是Java的关键字？
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java_4" title="下面哪个是Java语言中正确的标识符？" class="md-nav__link">
+    下面哪个是Java语言中正确的标识符？
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" title="数组中可以包含什么类型的元素？" class="md-nav__link">
+    数组中可以包含什么类型的元素？
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#javamain" title="在Java中函数main()的返回值是：" class="md-nav__link">
+    在Java中函数main()的返回值是：
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java_5" title="Java应用在消费电子市场上开发平台名称为:" class="md-nav__link">
+    Java应用在消费电子市场上开发平台名称为:
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34" title="3.4 使用对象" class="md-nav__link">
+    3.4 使用对象
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" title="构造方法何时被调用？" class="md-nav__link">
+    构造方法何时被调用？
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java-application" title="在编写Java Application程序时，若需要使用到标准输入输出语句，必须在程序的开头写上以下哪条语句？" class="md-nav__link">
+    在编写Java Application程序时，若需要使用到标准输入输出语句，必须在程序的开头写上以下哪条语句？
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" title="认真阅读代码，选择正确的选项" class="md-nav__link">
+    认真阅读代码，选择正确的选项
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java_6" title="在Java中，一个类可以同时定义许多同名的方法，这些方法的形式参数的个数、类型或顺序各不相同，传回的值也可以不相同。这种面向对象程序特性称为：" class="md-nav__link">
+    在Java中，一个类可以同时定义许多同名的方法，这些方法的形式参数的个数、类型或顺序各不相同，传回的值也可以不相同。这种面向对象程序特性称为：
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" title="下面关于构造函数的说法不正确的是：" class="md-nav__link">
+    下面关于构造函数的说法不正确的是：
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#javac-verbose" title="命令javac  -verbose中选项的作用是:" class="md-nav__link">
+    命令javac  -verbose中选项的作用是:
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" title="给出类的定义如下:" class="md-nav__link">
+    给出类的定义如下:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" title="下列哪个选项正确？" class="md-nav__link">
+    下列哪个选项正确？
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_25" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" title="编译及运行以下代码，下列选项哪个是正确的？" class="md-nav__link">
+    编译及运行以下代码，下列选项哪个是正确的？
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_27" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java-application_1" title="编译Java Application源程序文件将产生相应的字节码文件，这些字节码文件的扩展名为" class="md-nav__link">
+    编译Java Application源程序文件将产生相应的字节码文件，这些字节码文件的扩展名为
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_28" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#36" title="3.6 类方法/参数传递" class="md-nav__link">
+    3.6 类方法/参数传递
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#static" title="关于static修饰符，以下哪个选项是正确的？" class="md-nav__link">
+    关于static修饰符，以下哪个选项是正确的？
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_29" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" title="以下对方法内的变量描述正确的是：" class="md-nav__link">
+    以下对方法内的变量描述正确的是：
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_31" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" title="给出如下代码:" class="md-nav__link">
+    给出如下代码:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mfun" title="如何使成员变量m被函数fun()直接访问？" class="md-nav__link">
+    如何使成员变量m被函数fun()直接访问？
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_33" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#joptionpane" title="类JOptionPane提供了几个产生标准对话框的方法，它们能够给用户提供有用的信息，其中包括：" class="md-nav__link">
+    类JOptionPane提供了几个产生标准对话框的方法，它们能够给用户提供有用的信息，其中包括：
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_34" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" title="运行下列程序，会产生什么结果：" class="md-nav__link">
+    运行下列程序，会产生什么结果：
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_36" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_37" title="编译及运行以下代码，下列选项哪个是正确的？" class="md-nav__link">
+    编译及运行以下代码，下列选项哪个是正确的？
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_38" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#38" title="3.8 访问权限" class="md-nav__link">
+    3.8 访问权限
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#this" title="this关键字指的是？" class="md-nav__link">
+    this关键字指的是？
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_39" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_40" title="如果类中的成员变量仅仅可以被同一包中其他类访问，则使用如下哪个约束符?" class="md-nav__link">
+    如果类中的成员变量仅仅可以被同一包中其他类访问，则使用如下哪个约束符?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_41" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" title="如果任何包中的子类都能访问超类中的成员，那么超类中的成员使用哪个限定词最好？" class="md-nav__link">
+    如果任何包中的子类都能访问超类中的成员，那么超类中的成员使用哪个限定词最好？
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_43" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_44" title="不允许作为类及类成员的访问控制符的是:" class="md-nav__link">
+    不允许作为类及类成员的访问控制符的是:
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_45" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_46" title="下面哪个修饰符修饰的方法只能被本类中的其他方法使用" class="md-nav__link">
+    下面哪个修饰符修饰的方法只能被本类中的其他方法使用
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_47" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_48" title="某个类的成员变量可以被同一个包中的子类访问，但不能被另一个包中的类（含子类）访问，该如何定义？" class="md-nav__link">
+    某个类的成员变量可以被同一个包中的子类访问，但不能被另一个包中的类（含子类）访问，该如何定义？
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_49" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#private" title="关于被私有访问控制符private修饰的成员变量，以下说法正确的是：" class="md-nav__link">
+    关于被私有访问控制符private修饰的成员变量，以下说法正确的是：
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_50" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#39" title="3.9 内部类简介" class="md-nav__link">
+    3.9 内部类简介
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a" title="考虑类A:" class="md-nav__link">
+    考虑类A:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" title="以下哪个选项程序代码段不会输出4？" class="md-nav__link">
+    以下哪个选项程序代码段不会输出4？
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_51" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#310" title="3.10 包的应用" class="md-nav__link">
+    3.10 包的应用
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_52" title="以下哪几段代码可以成功编译？" class="md-nav__link">
+    以下哪几段代码可以成功编译？
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_53" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mypackage" title="创建一个名为MyPackage包的语句正确的是：" class="md-nav__link">
+    创建一个名为MyPackage包的语句正确的是：
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_54" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/szu17dmy/szu17dmy.github.io/edit/master/docs/uooc/java/3.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>3 类和对象</h1>
+                
+                <h2 id="32">3.2 类的基本架构介绍</h2>
+<h3 id="_1">下列哪个类声明是正确的？</h3>
+<p>A. abstract final class H1{}</p>
+<p>B. abstract private move(){}</p>
+<p>C. protected private number;</p>
+<p>D. public abstract class Car{}</p>
+<h4 id="_2">解决方案</h4>
+<p>D</p>
+<hr />
+<h3 id="_3">以下选项符合对象和类的关系的是：</h3>
+<p>A. 人和老虎</p>
+<p>B. 书和汽车</p>
+<p>C. 父亲和儿子</p>
+<p>D. 汽车和交通工具</p>
+<h4 id="_4">解决方案</h4>
+<p>D</p>
+<hr />
+<h3 id="java">下面关于java中类的说法哪个是不正确的？</h3>
+<p>A. 类体中只能有变量定义、常量定义和成员方法的定义，不能包含“x=3;”这样的语句。</p>
+<p>B. 构造函数是类中的特殊方法</p>
+<p>C. 主类一定要声明为public。</p>
+<p>D. 一个java文件中可以有多个class定义。</p>
+<h4 id="_5">解决方案</h4>
+<p>C</p>
+<hr />
+<h3 id="java_1">下面哪个单词是Java语言的关键字？</h3>
+<p>A. Float</p>
+<p>B. this</p>
+<p>C. string</p>
+<p>D. unsigned</p>
+<h4 id="_6">解决方案</h4>
+<p>B</p>
+<hr />
+<h3 id="java_2">下列哪项是Java编程所必须的默认引用包？</h3>
+<p>A. java.sys包</p>
+<p>B. java.lang包</p>
+<p>C. java.net包　</p>
+<p>D. 以上都不是</p>
+<h4 id="_7">解决方案</h4>
+<p>B</p>
+<hr />
+<h3 id="java_3">以下哪个是Java的关键字？</h3>
+<p>A. NULL</p>
+<p>B. new</p>
+<p>C. instanceOf</p>
+<p>D. wend</p>
+<h4 id="_8">解决方案</h4>
+<p>B</p>
+<hr />
+<h3 id="java_4">下面哪个是Java语言中正确的标识符？</h3>
+<p>A. 3com</p>
+<p>B. import</p>
+<p>C. that</p>
+<p>D. this</p>
+<h4 id="_9">解决方案</h4>
+<p>C</p>
+<hr />
+<h3 id="_10">数组中可以包含什么类型的元素？</h3>
+<p>A. int型</p>
+<p>B. String型</p>
+<p>C. 数组</p>
+<p>D. 以上都可以</p>
+<h4 id="_11">解决方案</h4>
+<p>D</p>
+<hr />
+<h3 id="javamain">在Java中函数main()的返回值是：</h3>
+<p>A. String</p>
+<p>B. int</p>
+<p>C. char</p>
+<p>D. void</p>
+<h4 id="_12">解决方案</h4>
+<p>D</p>
+<hr />
+<h3 id="java_5">Java应用在消费电子市场上开发平台名称为:</h3>
+<p>A. JDK</p>
+<p>B. J2ME</p>
+<p>C. J2SE</p>
+<p>D. J2EE</p>
+<h4 id="_13">解决方案</h4>
+<p>B</p>
+<hr />
+<h2 id="34">3.4 使用对象</h2>
+<h3 id="_14">构造方法何时被调用？</h3>
+<p>A. 类定义时</p>
+<p>B. 创建对象时</p>
+<p>C. 调用对象方法时</p>
+<p>D. 使用对象的变量时</p>
+<h4 id="_15">解决方案</h4>
+<p>B</p>
+<hr />
+<h3 id="java-application">在编写Java Application程序时，若需要使用到标准输入输出语句，必须在程序的开头写上以下哪条语句？</h3>
+<p>A. import java.awt.*;</p>
+<p>B. import java.applet.Applet;</p>
+<p>C. import java.io.*;</p>
+<p>D. import java.awt.Graphis;</p>
+<h4 id="_16">解决方案</h4>
+<p>C</p>
+<hr />
+<h3 id="_17">认真阅读代码，选择正确的选项</h3>
+<div class="codehilite"><pre><span></span><span class="kd">public</span>  <span class="kd">class</span>  <span class="nc">MyClass</span>  <span class="o">{</span>
+    <span class="kd">public</span>  <span class="kd">static</span>  <span class="kt">void</span>  <span class="nf">main</span><span class="o">(</span><span class="n">String</span>  <span class="n">arguments</span><span class="o">[])</span>  <span class="o">{</span>
+        <span class="n">amethod</span><span class="o">(</span><span class="n">arguments</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span>  <span class="kt">void</span>  <span class="nf">amethod</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span>  <span class="n">arguments</span><span class="o">)</span>  <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">arguments</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+
+
+<p>A. 这段代码是错误的，main方法不能接受字符串参数</p>
+<p>B. 这段代码是错误的，amethod方法中的字符串数组尚未初始化</p>
+<p>C. 这段代码是错误的，main方法不能调用实例方法</p>
+<p>D. 这段代码是正确的</p>
+<h4 id="_18">解决方案</h4>
+<p>C</p>
+<hr />
+<h3 id="java_6">在Java中，一个类可以同时定义许多同名的方法，这些方法的形式参数的个数、类型或顺序各不相同，传回的值也可以不相同。这种面向对象程序特性称为：</h3>
+<p>A. 隐藏</p>
+<p>B. 覆盖</p>
+<p>C. 重载</p>
+<p>D. Java不支持此特性</p>
+<h4 id="_19">解决方案</h4>
+<p>C</p>
+<hr />
+<h3 id="_20">下面关于构造函数的说法不正确的是：</h3>
+<p>A. 构造函数也属于类的方法，用于创建对象的时候给成员变量赋值。</p>
+<p>B. 构造函数不可以重载。</p>
+<p>C. 构造函数没有返回值。</p>
+<p>D. 构造函数一定要和类名相同</p>
+<h4 id="_21">解决方案</h4>
+<p>B</p>
+<hr />
+<h3 id="javac-verbose">命令javac  -verbose中选项的作用是:</h3>
+<p>A. 显示JVM加载class的过程</p>
+<p>B. 显示JVM的版本</p>
+<p>C. 显示JVM调用内存的情况</p>
+<p>D. 显示JVM的错误跟踪过程</p>
+<h4 id="_22">解决方案</h4>
+<p>A</p>
+<hr />
+<h3 id="_23">给出类的定义如下:</h3>
+<div class="codehilite"><pre><span></span><span class="kd">class</span> <span class="nc">Test</span><span class="o">{</span> 
+    <span class="kt">void</span> <span class="nf">test</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">){</span> 
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;I am an int.&quot;</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="kt">void</span> <span class="nf">test</span><span class="o">(</span><span class="n">String</span> <span class="n">s</span><span class="o">){</span>        
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;I am a string.&quot;</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span> <span class="n">args</span><span class="o">[])</span> <span class="o">{</span> 
+        <span class="n">Test</span> <span class="n">t</span><span class="o">=</span><span class="k">new</span> <span class="n">Test</span><span class="o">();</span>
+        <span class="kt">char</span> <span class="n">ch</span><span class="o">=</span><span class="sc">&#39;y&#39;</span><span class="o">;</span>
+        <span class="n">t</span><span class="o">.</span><span class="na">test</span><span class="o">(</span><span class="n">ch</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+
+
+<h3 id="_24">下列哪个选项正确？</h3>
+<p>A. 程序将不会编译，因为空的方法不能被覆盖。</p>
+<p>B. 命令行t.test(ch); 将不会编译，因为没有对应的方法。</p>
+<p>C. 代码将编译并输出以下结果： I am an int.</p>
+<p>D. 代码将编译并输出以下结果： I am a string.</p>
+<h4 id="_25">解决方案</h4>
+<p>C</p>
+<hr />
+<h3 id="_26">编译及运行以下代码，下列选项哪个是正确的？</h3>
+<div class="codehilite"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Sandys</span><span class="o">{</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">court</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span> <span class="n">argv</span><span class="o">[]){</span>
+        <span class="n">Sandys</span> <span class="n">s</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Sandys</span><span class="o">(</span><span class="mi">99</span><span class="o">);</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">s</span><span class="o">.</span><span class="na">court</span><span class="o">);</span>
+
+    <span class="o">}</span>   
+    <span class="n">Sandys</span><span class="o">(</span><span class="kt">int</span> <span class="n">ballcount</span><span class="o">){</span>
+        <span class="n">court</span><span class="o">=</span><span class="n">ballcount</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+
+
+<p>A. 编译错误：the variable court is defined as private</p>
+<p>B. 编译错误：s is not initialized when the System.out method is called</p>
+<p>C. 编译通过，没有输出</p>
+<p>D. 编译通过，输出99</p>
+<h4 id="_27">解决方案</h4>
+<p>D</p>
+<hr />
+<h3 id="java-application_1">编译Java Application源程序文件将产生相应的字节码文件，这些字节码文件的扩展名为</h3>
+<p>A. .java</p>
+<p>B. .class</p>
+<p>C. .html</p>
+<p>D. .exe</p>
+<h4 id="_28">解决方案</h4>
+<p>B</p>
+<hr />
+<h2 id="36">3.6 类方法/参数传递</h2>
+<h3 id="static">关于static修饰符，以下哪个选项是正确的？</h3>
+<p>A. 被static修饰符修饰的成员变量不能被修改。</p>
+<p>B. 在方法中创建的static变量，每次方法调用中对它的值做的修改都不能保留下来。</p>
+<p>C. 一个类的所有类对象共享这个类的static变量。</p>
+<p>D. static修饰符只能用于修饰基本类型变量。</p>
+<h4 id="_29">解决方案</h4>
+<p>C</p>
+<hr />
+<h3 id="_30">以下对方法内的变量描述正确的是：</h3>
+<p>A. 一定在方法内所有位置可见</p>
+<p>B. 可能在方法内局部可见</p>
+<p>C. 可以在方法外可见</p>
+<p>D. 方法外也可用</p>
+<h4 id="_31">解决方案</h4>
+<p>B</p>
+<hr />
+<h3 id="_32">给出如下代码:</h3>
+<div class="codehilite"><pre><span></span><span class="kd">class</span> <span class="nc">Test</span><span class="o">{</span> 
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">m</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">fun</span><span class="o">()</span>
+    <span class="o">{</span> 
+        <span class="c1">//    some    code... 　　     </span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+
+
+<h3 id="mfun">如何使成员变量m被函数fun()直接访问？</h3>
+<p>A. 将private int m 改为 protected int m</p>
+<p>B. 将private int m 改为 public int m</p>
+<p>C. 将private int m 改为 static int m</p>
+<p>D. 将private int m 改为 int m</p>
+<h4 id="_33">解决方案</h4>
+<p>C</p>
+<hr />
+<h3 id="joptionpane">类JOptionPane提供了几个产生标准对话框的方法，它们能够给用户提供有用的信息，其中包括：</h3>
+<p>A. closeDialog()</p>
+<p>B. openDialog()</p>
+<p>C. showInputDialog()</p>
+<p>D. outputDialog()</p>
+<h4 id="_34">解决方案</h4>
+<p>C</p>
+<hr />
+<h3 id="_35">运行下列程序，会产生什么结果：</h3>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">java.io.*</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span>  <span class="nc">Outer1</span><span class="o">{</span>  
+    <span class="kd">private</span>  <span class="kt">int</span>  <span class="n">a</span><span class="o">;</span>  
+    <span class="kt">void</span>  <span class="nf">foo</span><span class="o">(</span><span class="kt">double</span>  <span class="n">d</span><span class="o">,</span><span class="kd">final</span>  <span class="kt">float</span>  <span class="n">f</span><span class="o">){</span>  
+        <span class="n">String</span>  <span class="n">s</span><span class="o">;</span> 
+        <span class="kd">final</span>  <span class="kt">boolean</span>  <span class="n">b</span><span class="o">;</span>  
+        <span class="kd">class</span>  <span class="nc">Inner</span><span class="o">{</span>  
+            <span class="kt">void</span>  <span class="nf">methodInner</span><span class="o">(){</span>  
+                <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;in  the  Inner&quot;</span><span class="o">);</span>  
+            <span class="o">}</span> 
+        <span class="o">}</span>  
+    <span class="o">}</span>  
+
+    <span class="kd">public</span>  <span class="kd">static</span>  <span class="kt">void</span>  <span class="nf">main</span><span class="o">(</span><span class="n">String</span>  <span class="n">args</span><span class="o">[])</span>
+    <span class="o">{</span>
+        <span class="n">Outer1</span>  <span class="n">me</span><span class="o">=</span><span class="k">new</span>  <span class="n">Outer1</span><span class="o">();</span>
+        <span class="n">me</span><span class="o">.</span><span class="na">foo</span><span class="o">(</span><span class="mi">123</span><span class="o">,</span><span class="mi">123</span><span class="o">);</span> 
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;outer&quot;</span><span class="o">);</span> 
+    <span class="o">}</span>  
+<span class="o">}</span>  
+</pre></div>
+
+
+<p>A. in the Inner outer</p>
+<p>B. outer</p>
+<p>C. in the Inner</p>
+<p>D. 编译不通过</p>
+<h4 id="_36">解决方案</h4>
+<p>B</p>
+<hr />
+<h3 id="_37">编译及运行以下代码，下列选项哪个是正确的？</h3>
+<div class="codehilite"><pre><span></span><span class="kd">public</span>  <span class="kd">class</span>  <span class="nc">Ref</span><span class="o">{</span>
+    <span class="kd">public</span>  <span class="kd">static</span>  <span class="kt">void</span>  <span class="nf">main</span><span class="o">(</span><span class="n">String</span>  <span class="n">argv</span><span class="o">[]){</span>
+        <span class="n">Ref</span>  <span class="n">r</span>  <span class="o">=</span>  <span class="k">new</span>  <span class="n">Ref</span><span class="o">();</span>
+        <span class="n">r</span><span class="o">.</span><span class="na">amethod</span><span class="o">(</span><span class="n">r</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="kd">public</span>  <span class="kt">void</span>  <span class="nf">amethod</span><span class="o">(</span><span class="n">Ref</span>  <span class="n">r</span><span class="o">){</span>
+        <span class="kt">int</span>  <span class="n">i</span><span class="o">=</span><span class="mi">99</span><span class="o">;</span>
+        <span class="n">multi</span><span class="o">(</span><span class="n">r</span><span class="o">);</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="kd">public</span>  <span class="kt">void</span>  <span class="nf">multi</span><span class="o">(</span><span class="n">Ref</span>  <span class="n">r</span><span class="o">){</span>
+        <span class="n">r</span><span class="o">.</span><span class="na">i</span>  <span class="o">=</span>  <span class="n">r</span><span class="o">.</span><span class="na">i</span><span class="o">*</span><span class="mi">2</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+
+
+<p>A. 编译错误</p>
+<p>B. 输出99</p>
+<p>C. 输出198</p>
+<p>D. 运行时出错</p>
+<h4 id="_38">解决方案</h4>
+<p>A</p>
+<hr />
+<h2 id="38">3.8 访问权限</h2>
+<h3 id="this">this关键字指的是？</h3>
+<p>A. 当前对象指针</p>
+<p>B. 当前类的实例对象</p>
+<p>C. 当前对象引用</p>
+<p>D. 当前类的方法</p>
+<h4 id="_39">解决方案</h4>
+<p>B</p>
+<hr />
+<h3 id="_40">如果类中的成员变量仅仅可以被同一包中其他类访问，则使用如下哪个约束符?</h3>
+<p>A. private</p>
+<p>B. public</p>
+<p>C. protected</p>
+<p>D. no modifier</p>
+<h4 id="_41">解决方案</h4>
+<p>D</p>
+<hr />
+<h3 id="_42">如果任何包中的子类都能访问超类中的成员，那么超类中的成员使用哪个限定词最好？</h3>
+<p>A. public</p>
+<p>B. private</p>
+<p>C. protected</p>
+<p>D. transient</p>
+<h4 id="_43">解决方案</h4>
+<p>C</p>
+<hr />
+<h3 id="_44">不允许作为类及类成员的访问控制符的是:</h3>
+<p>A. public</p>
+<p>B. private</p>
+<p>C. static</p>
+<p>D. protected</p>
+<h4 id="_45">解决方案</h4>
+<p>C</p>
+<hr />
+<h3 id="_46">下面哪个修饰符修饰的方法只能被本类中的其他方法使用</h3>
+<p>A. protected</p>
+<p>B. static</p>
+<p>C. private</p>
+<p>D. public</p>
+<h4 id="_47">解决方案</h4>
+<p>C</p>
+<hr />
+<h3 id="_48">某个类的成员变量可以被同一个包中的子类访问，但不能被另一个包中的类（含子类）访问，该如何定义？</h3>
+<p>A. 变量应该用public做修饰。</p>
+<p>B. 变量应该用private做修饰。</p>
+<p>C. 变量应该用protected做修饰。</p>
+<p>D. 变量不需做任何修饰。</p>
+<h4 id="_49">解决方案</h4>
+<p>D</p>
+<hr />
+<h3 id="private">关于被私有访问控制符private修饰的成员变量，以下说法正确的是：</h3>
+<p>A. 可以被三种类所引用：该类自身、与它在同一个包中的其他类、在其他包中的该类的子类</p>
+<p>B. 可以被两种类访问和引用：该类本身、该类的所有子类</p>
+<p>C. 只能被该类自身所访问和修改</p>
+<p>D. 只能被同一个包中的类访问</p>
+<h4 id="_50">解决方案</h4>
+<p>C</p>
+<hr />
+<h2 id="39">3.9 内部类简介</h2>
+<h3 id="a">考虑类A:</h3>
+<div class="codehilite"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">A</span><span class="o">{</span> 
+    <span class="kd">public</span> <span class="kt">int</span> <span class="n">x</span><span class="o">=</span><span class="mi">1</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">increaseBy</span><span class="o">(</span><span class="kt">int</span>  <span class="n">n</span><span class="o">){</span> 
+        <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="o">+</span><span class="n">n</span><span class="o">;</span> 
+    <span class="o">}</span> 
+<span class="o">}</span> 
+</pre></div>
+
+
+<h3 id="4">以下哪个选项程序代码段不会输出4？</h3>
+<div class="codehilite"><pre><span></span><span class="n">A</span><span class="o">.</span>
+<span class="n">A</span> <span class="n">a</span> <span class="o">=</span> <span class="k">new</span> <span class="n">A</span><span class="o">();</span> 
+<span class="n">a</span><span class="o">.</span><span class="na">x</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">+</span> <span class="n">a</span><span class="o">.</span><span class="na">x</span><span class="o">;</span> 
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">a</span><span class="o">.</span><span class="na">x</span><span class="o">);</span>
+
+<span class="n">B</span><span class="o">.</span>
+<span class="n">A</span> <span class="n">a</span> <span class="o">=</span> <span class="k">new</span> <span class="n">A</span><span class="o">();</span> 
+<span class="n">a</span><span class="o">.</span><span class="na">increaseBy</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span> 
+<span class="n">a</span><span class="o">.</span><span class="na">increaseBy</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span> 
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">a</span><span class="o">.</span><span class="na">x</span><span class="o">);</span>  
+
+<span class="n">C</span><span class="o">.</span>
+<span class="n">A</span> <span class="n">a</span> <span class="o">=</span> <span class="k">new</span> <span class="n">A</span><span class="o">(){</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">increaseBy</span> <span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kd">super</span><span class="o">.</span><span class="na">increaseBy</span><span class="o">(</span><span class="n">n</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">};</span> 
+<span class="n">a</span><span class="o">.</span><span class="na">increaseBy</span><span class="o">(</span><span class="mi">4</span><span class="o">);</span> 
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">a</span><span class="o">.</span><span class="na">x</span><span class="o">);</span> 
+
+<span class="n">D</span><span class="o">.</span>
+<span class="n">A</span> <span class="n">a</span> <span class="o">=</span> <span class="k">new</span> <span class="n">A</span><span class="o">();</span> 
+<span class="n">a</span><span class="o">.</span><span class="na">increaseBy</span><span class="o">(</span><span class="mi">3</span><span class="o">);</span> 
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">a</span><span class="o">.</span><span class="na">x</span><span class="o">);</span>
+</pre></div>
+
+
+<h4 id="_51">解决方案</h4>
+<p>C</p>
+<hr />
+<h2 id="310">3.10 包的应用</h2>
+<h3 id="_52">以下哪几段代码可以成功编译？</h3>
+<div class="codehilite"><pre><span></span><span class="mi">1</span><span class="o">)</span>
+<span class="kn">import</span>  <span class="nn">java.awt.*</span><span class="o">;</span>
+<span class="kn">package</span>  <span class="nn">Mypackage</span><span class="o">;</span>
+<span class="kd">class</span>  <span class="nc">Myclass</span>  <span class="o">{}</span>
+
+<span class="mi">2</span><span class="o">)</span>
+<span class="kn">package</span>  <span class="nn">MyPackage</span><span class="o">;</span>
+<span class="kn">import</span>  <span class="nn">java.awt.*</span><span class="o">;</span>
+<span class="kd">class</span>  <span class="nc">MyClass</span><span class="o">{}</span>
+
+<span class="mi">3</span><span class="o">)</span>
+<span class="cm">/*This  is  a  comment  */</span>
+<span class="kn">package</span>  <span class="nn">MyPackage</span><span class="o">;</span>
+<span class="kn">import</span>  <span class="nn">java.awt.*</span><span class="o">;</span>
+<span class="kd">class</span>  <span class="nc">MyClass</span><span class="o">{}</span>
+</pre></div>
+
+
+<p>A. 1）和2）</p>
+<p>B. 2）和3）</p>
+<p>C. 1）和3）</p>
+<p>D. 1）、2）和3）</p>
+<h4 id="_53">解决方案</h4>
+<p>B</p>
+<hr />
+<h3 id="mypackage">创建一个名为MyPackage包的语句正确的是：</h3>
+<p>A. import MyPackage ;</p>
+<p>B. import package MyPackage ;</p>
+<p>C. package MyPackage ;</p>
+<p>D. package import MyPackage ;</p>
+<h4 id="_54">解决方案</h4>
+<p>C</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../2/" title="2 数据类型、运算符、表达式和跳转语句" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                2 数据类型、运算符、表达式和跳转语句
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../4/" title="4 继承与接口" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前进
+                </span>
+                4 继承与接口
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/szu17dmy" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.9e1f3b71.js"></script>
+      
+        
+        
+          
+          <script src="../../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../../../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../../../assets/javascripts/lunr/lunr.jp.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
