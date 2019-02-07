@@ -10,6 +10,7 @@ nav:
     - ABOUT: about.md
   - CTF WRITEUP:
     - Hackergame 2018:
+      - 签到题: ctf_writeup/hackergame2018/helloworld.md
       - 猫咪遥控器: ctf_writeup/hackergame2018/cat_remote.md
     - CG-CTF:
       - Web:

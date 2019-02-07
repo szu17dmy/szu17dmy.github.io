@@ -90,4 +90,4 @@ int main() {
 }
 
 ```
-![CAT-REMOTE](./img/HG2018-CAT-REMOTE.png)
+![CAT-REMOTE](./img/CAT-REMOTE.png)
