@@ -20,21 +20,21 @@ SOURCE: [https://hack2018.lug.ustc.edu.cn/#ustcquiz](https://hack2018.lug.ustc.e
 
 ![USTC-QUIZ-2](./img/USTC-QUIZ-2.png)
 
-好，1958。
+好，**1958**。
 
 ![USTC-QUIZ-3](./img/USTC-QUIZ-3.png)
 
-好，9211B026。
+好，**9211B026**。
 
-视频的话...反正我数了一次之后竟然不对，直接爆破吧。应该是9来着。
+视频的话...反正我数了一次之后竟然不对，直接爆破吧。应该是**9**来着。
 
 ![USTC-QUIZ-4](./img/USTC-QUIZ-4.png)
 
-好，TP311.1/94。
+好，**TP311.1/94**。
 
 ![USTC-QUIZ-5](./img/USTC-QUIZ-5.png)
 
-好，3A202。
+好，**3A202**。
 
 ![USTC-QUIZ-6](./img/USTC-QUIZ-6.png)
 
