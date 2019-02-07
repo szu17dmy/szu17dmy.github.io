@@ -1226,7 +1226,8 @@
 <p>为了报复猫咪把自己的代码打乱（见：猫咪与键盘），D 同学把猫咪遥控器绑在可以上（UP）下（DOWN）左（LEFT）右（RIGHT）移动的三轴机械臂上，开始使用树莓派（一款基于 Linux 的单片机计算机）控制三轴机械臂，进而控制猫咪在草地上跑来跑去。</p>
 <p>附件是树莓派上留下的调试输出信息，我们赶到现场时只剩下这个了。</p>
 <h2 id="_3">解决方案</h2>
-<p>打开文档发现为四个方向的字母，猜想画出该路线即可获得flag。这里使用OpenCV辅助画图，作图后即可发现flag。</p>
+<p>打开文档发现为四个方向的字母，猜想画出该路线即可获得flag。很多工具可以实现这一功能，这里使用OpenCV辅助画图，作图后即可发现flag。</p>
+<p>其中，变量map构造函数参数是画布的大小等属性，变量row和col是起始的位置坐标。其次，switch语句中的双层循环是为了让线条更粗一些，延时则是为了展示动画效果。</p>
 <div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;opencv2/opencv.hpp&gt;</span><span class="cp"></span>
