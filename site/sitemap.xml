@@ -11,7 +11,12 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://blog.52szu.tech/ctf_writeup/hackergame2018/helloworld/</loc>
+     <loc>https://blog.52szu.tech/ctf_writeup/hackergame2018/hello_world/</loc>
+     <lastmod>2019-02-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://blog.52szu.tech/ctf_writeup/hackergame2018/ustc_quiz/</loc>
      <lastmod>2019-02-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
