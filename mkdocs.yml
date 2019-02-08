@@ -13,6 +13,7 @@ nav:
       - 签到题: ctf_writeup/hackergame2018/hello_world.md
       - 猫咪问答: ctf_writeup/hackergame2018/ustc_quiz.md
       - 猫咪遥控器: ctf_writeup/hackergame2018/cat_remote.md
+      - 猫咪克星: ctf_writeup/hackergame2018/python_simulator.md
     - CG-CTF:
       - Web:
         - 签到题: ctf_writeup/cg_ctf/easyweb.md
