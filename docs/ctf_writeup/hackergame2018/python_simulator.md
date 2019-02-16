@@ -1,6 +1,8 @@
 # 猫咪克星
 
 ## 题目
+SOURCE: [https://hack2018.lug.ustc.edu.cn/#python_simulator](https://hack2018.lug.ustc.edu.cn/#python_simulator)
+
 通知：已发布备用地址。
 
 众所周知，猫怕黄瓜

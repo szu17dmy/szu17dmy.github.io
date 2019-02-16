@@ -75,8 +75,8 @@ theme:
     icon: 'code'
   name: 'material'
   palette:
-    primary: 'cyan'
-    accent: 'cyan'
+    primary: 'teal'
+    accent: 'teal'
 
 extra:
   social:

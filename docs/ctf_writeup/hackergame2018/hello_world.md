@@ -6,7 +6,7 @@ SOURCE: [https://hack2018.lug.ustc.edu.cn/#qiandao](https://hack2018.lug.ustc.ed
 不用找了！签到题我已经放这里了！
 
 ## 解决方案
-教学题，打开题目页面后，按照题目描述，提交**hackergame2018**即可获得flag。
+教学题，打开题目页面后，按照题目描述，提交hackergame2018即可获得flag。
 
 ![HELLO-WORLD-1](./img/HELLO-WORLD-1.png)
 
@@ -14,7 +14,7 @@ SOURCE: [https://hack2018.lug.ustc.edu.cn/#qiandao](https://hack2018.lug.ustc.ed
 
 ![HELLO-WORLD-2](./img/HELLO-WORLD-2.png)
 
-直接双击**maxlength**将其删除，即可输入剩余的**8**。
+直接双击maxlength将其删除，即可输入剩余的8。
 
 ![HELLO-WORLD-3](./img/HELLO-WORLD-3.png)
 

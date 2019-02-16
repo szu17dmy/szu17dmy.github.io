@@ -49,7 +49,7 @@
       
         
         
-        <meta name="theme-color" content="#00bcd4">
+        <meta name="theme-color" content="#009688">
       
     
     
@@ -73,7 +73,7 @@
   
     
     
-    <body dir="ltr" data-md-color-primary="cyan" data-md-color-accent="cyan">
+    <body dir="ltr" data-md-color-primary="teal" data-md-color-accent="teal">
   
     <svg class="md-svg">
       <defs>
@@ -276,9 +276,58 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        HOME
+      </label>
+    
     <a href="." title="HOME" class="md-nav__link md-nav__link--active">
       HOME
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#color-palette" title="Color Palette 调色板" class="md-nav__link">
+    Color Palette 调色板
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#primary-colors" title="Primary Colors 主色" class="md-nav__link">
+    Primary Colors 主色
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accent-colors" title="Accent Colors 辅助色" class="md-nav__link">
+    Accent Colors 辅助色
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -1169,6 +1218,42 @@
     
   
   
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#color-palette" title="Color Palette 调色板" class="md-nav__link">
+    Color Palette 调色板
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#primary-colors" title="Primary Colors 主色" class="md-nav__link">
+    Primary Colors 主色
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accent-colors" title="Accent Colors 辅助色" class="md-nav__link">
+    Accent Colors 辅助色
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1184,6 +1269,70 @@
                 
                 <h1 id="_1">首页</h1>
 <p>伤痕累累，痛苦焦虑却不甘平庸。</p>
+<h2 id="color-palette">Color Palette 调色板</h2>
+<p>你可以在这里更改网站主题的颜色。</p>
+<h3 id="primary-colors">Primary Colors 主色</h3>
+<blockquote>
+<p>默认是 <code>teal</code></p>
+</blockquote>
+<p>点按色块以更换主题的主色</p>
+<p><button data-md-color-primary="red">Red</button>
+<button data-md-color-primary="pink">Pink</button>
+<button data-md-color-primary="purple">Purple</button>
+<button data-md-color-primary="deep-purple">Deep Purple</button>
+<button data-md-color-primary="indigo">Indigo</button>
+<button data-md-color-primary="blue">Blue</button>
+<button data-md-color-primary="light-blue">Light Blue</button>
+<button data-md-color-primary="cyan">Cyan</button>
+<button data-md-color-primary="teal">Teal</button>
+<button data-md-color-primary="green">Green</button>
+<button data-md-color-primary="light-green">Light Green</button>
+<button data-md-color-primary="lime">Lime</button>
+<button data-md-color-primary="yellow">Yellow</button>
+<button data-md-color-primary="amber">Amber</button>
+<button data-md-color-primary="orange">Orange</button>
+<button data-md-color-primary="deep-orange">Deep Orange</button>
+<button data-md-color-primary="brown">Brown</button>
+<button data-md-color-primary="grey">Grey</button>
+<button data-md-color-primary="blue-grey">Blue Grey</button>
+<button data-md-color-primary="white">White</button></p>
+<script>
+  var buttons = document.querySelectorAll("button[data-md-color-primary]");
+  Array.prototype.forEach.call(buttons, function(button) {
+    button.addEventListener("click", function() {
+      document.body.dataset.mdColorPrimary = this.dataset.mdColorPrimary;
+    })
+  })
+</script></p>
+<h3 id="accent-colors">Accent Colors 辅助色</h3>
+<blockquote>
+<p>默认是 <code>teal</code></p>
+</blockquote>
+<p>点按色块以更换主题的辅助色</p>
+<p><button data-md-color-accent="red">Red</button>
+<button data-md-color-accent="pink">Pink</button>
+<button data-md-color-accent="purple">Purple</button>
+<button data-md-color-accent="deep-purple">Deep Purple</button>
+<button data-md-color-accent="indigo">Indigo</button>
+<button data-md-color-accent="blue">Blue</button>
+<button data-md-color-accent="light-blue">Light Blue</button>
+<button data-md-color-accent="cyan">Cyan</button>
+<button data-md-color-accent="teal">Teal</button>
+<button data-md-color-accent="green">Green</button>
+<button data-md-color-accent="light-green">Light Green</button>
+<button data-md-color-accent="lime">Lime</button>
+<button data-md-color-accent="yellow">Yellow</button>
+<button data-md-color-accent="amber">Amber</button>
+<button data-md-color-accent="orange">Orange</button>
+<button data-md-color-accent="deep-orange">Deep Orange</button></p>
+<script>
+  var buttons = document.querySelectorAll("button[data-md-color-accent]");
+  Array.prototype.forEach.call(buttons, function(button) {
+    button.addEventListener("click", function() {
+      document.body.dataset.mdColorAccent = this.dataset.mdColorAccent;
+    })
+  })
+</script></p>
                 
                   
                 
