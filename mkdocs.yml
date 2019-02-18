@@ -22,6 +22,8 @@ nav:
       - 前言: szu_courses/cpp/1.md
       - 一些C语言相关的书目: szu_courses/cpp/2.md
       - JetBrains CLion 安装与配置: szu_courses/cpp/3.md
+      - 一些使用CLion的技巧: szu_courses/cpp/4.md
+      - 浅谈vector容器: szu_courses/cpp/5.md
   - SZU ONLINEJUDGE:
     - 数据结构:
       - DS单链表--类实现: szu_oj/ds/1199.md
@@ -67,6 +69,8 @@ nav:
       - 9 图形用户界面设计: uooc/java/9.md
       - 10 线程: uooc/java/10.md
       - 11 Java网络编程: uooc/java/11.md
+  - MISC:
+    - CMake指定源码目录和构建目录: misc/cmake_source_and_binary_directory.md
 
 theme:
   favicon: 'img/favicon.ico'
