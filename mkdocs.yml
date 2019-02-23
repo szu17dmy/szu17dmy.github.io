@@ -8,6 +8,8 @@ nav:
   - HOMEPAGE:
     - HOME: index.md
     - ABOUT: about.md
+  - CTF TOOLS:
+    - BASE64: ctf_tools/base64.md
   - CTF WRITEUP:
     - Hackergame 2018:
       - 签到题: ctf_writeup/hackergame2018/hello_world.md
@@ -24,6 +26,9 @@ nav:
       - JetBrains CLion 安装与配置: szu_courses/cpp/3.md
       - 一些使用CLion的技巧: szu_courses/cpp/4.md
       - 浅谈vector容器: szu_courses/cpp/5.md
+    - Web开发及人机交互导论:
+      - 前言: szu_courses/web/first.md
+      - 工欲善其事: szu_courses/web/tools.md
   - SZU ONLINEJUDGE:
     - 数据结构:
       - DS单链表--类实现: szu_oj/ds/1199.md
