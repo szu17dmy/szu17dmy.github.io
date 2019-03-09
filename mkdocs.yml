@@ -14,6 +14,7 @@ nav:
     - Hackergame 2018:
       - 签到题: ctf_writeup/hackergame2018/hello_world.md
       - 猫咪问答: ctf_writeup/hackergame2018/ustc_quiz.md
+      - 游园会的集章卡片: ctf_writeup/hackergame2018/card.md
       - 猫咪遥控器: ctf_writeup/hackergame2018/cat_remote.md
       - 猫咪克星: ctf_writeup/hackergame2018/python_simulator.md
     - CG-CTF:
@@ -76,6 +77,7 @@ nav:
       - 11 Java网络编程: uooc/java/11.md
   - MISC:
     - CMake指定源码目录和构建目录: misc/cmake_source_and_binary_directory.md
+    - Python SimpleHTTPServer: misc/python_http_server.md
 
 theme:
   favicon: 'img/favicon.ico'

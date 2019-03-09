@@ -10,7 +10,7 @@
 ### Primary Colors 主色
 > 默认是 `teal`
 
-点按色块以更换主题的主色
+点按色块以更改主题的主色
 
 <button data-md-color-primary="red">Red</button>
 <button data-md-color-primary="pink">Pink</button>
@@ -45,7 +45,7 @@
 ### Accent Colors 辅助色
 > 默认是 `teal`
 
-点按色块以更换主题的辅助色
+点按色块以更改主题的辅助色
 
 <button data-md-color-accent="red">Red</button>
 <button data-md-color-accent="pink">Pink</button>

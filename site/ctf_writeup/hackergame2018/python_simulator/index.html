@@ -397,6 +397,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../card/" title="游园会的集章卡片" class="md-nav__link">
+      游园会的集章卡片
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../cat_remote/" title="猫咪遥控器" class="md-nav__link">
       猫咪遥控器
     </a>
@@ -1329,6 +1341,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../misc/python_http_server/" title="Python SimpleHTTPServer" class="md-nav__link">
+      Python SimpleHTTPServer
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1402,8 +1426,12 @@
 <p>备用地址：nc 202.38.95.47 12009</p>
 <h2 id="_3">解决方案</h2>
 <p>nc后发现是需要在30秒内求解多个表达式的值，决定直接eval()解决。随后发现有表达式夹带了一些干扰的函数，需要在运算前先过滤掉。</p>
-<p>使用了pwntools，事实上可以直接写好之后nc：</p>
+<p>这里使用了pwntools，事实上也可以不用它，写好之后利用nc：</p>
 <p><img alt="PYTHON-SIMULATOR-2" src="../img/PYTHON-SIMULATOR-2.png" /></p>
+<blockquote>
+<p>将以上代码保存为 sol.py 然后执行 nc -e ./sol.py 202.38.95.46 12009 或者 socat exec:./sol.py tcp:202.38.95.46:12009</p>
+<p>-- <a href="https://github.com/ustclug/hackergame2018-writeups/blob/master/official/python_simulator/README.md">hackergame2018-writeups_README.md at master · ustclug_hackergame2018-writeups</a></p>
+</blockquote>
 <p>这里是代码，环境是Windows 10 + IntelliJ IDEA (with Python plugin) + Kali Linux (WSL)：</p>
 <div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">pwn</span> <span class="kn">import</span> <span class="o">*</span>
 

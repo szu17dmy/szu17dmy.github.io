@@ -26,9 +26,13 @@ SOURCE: [https://hack2018.lug.ustc.edu.cn/#python_simulator](https://hack2018.lu
 ## 解决方案
 nc后发现是需要在30秒内求解多个表达式的值，决定直接eval()解决。随后发现有表达式夹带了一些干扰的函数，需要在运算前先过滤掉。
 
-使用了pwntools，事实上可以直接写好之后nc：
+这里使用了pwntools，事实上也可以不用它，写好之后利用nc：
 
 ![PYTHON-SIMULATOR-2](./img/PYTHON-SIMULATOR-2.png)
+
+> 将以上代码保存为 sol.py 然后执行 nc -e ./sol.py 202.38.95.46 12009 或者 socat exec:./sol.py tcp:202.38.95.46:12009
+> 
+> -- [hackergame2018-writeups_README.md at master · ustclug_hackergame2018-writeups](https://github.com/ustclug/hackergame2018-writeups/blob/master/official/python_simulator/README.md)
 
 这里是代码，环境是Windows 10 + IntelliJ IDEA (with Python plugin) + Kali Linux (WSL)：
 
