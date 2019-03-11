@@ -11,6 +11,8 @@ nav:
   - CTF TOOLS:
     - BASE64: ctf_tools/base64.md
   - CTF WRITEUP:
+    - Pragyan CTF 19:
+      - Welcome: ctf_writeup/pctf2019/welcome.md
     - Hackergame 2018:
       - 签到题: ctf_writeup/hackergame2018/hello_world.md
       - 猫咪问答: ctf_writeup/hackergame2018/ustc_quiz.md
@@ -22,11 +24,12 @@ nav:
         - 签到题: ctf_writeup/cg_ctf/easyweb.md
   - SZU COURSES:
     - 程序设计基础:
-      - 前言: szu_courses/cpp/1.md
-      - 一些C语言相关的书目: szu_courses/cpp/2.md
-      - JetBrains CLion 安装与配置: szu_courses/cpp/3.md
-      - 一些使用CLion的技巧: szu_courses/cpp/4.md
-      - 浅谈vector容器: szu_courses/cpp/5.md
+      - 前言: szu_courses/cpp/first.md
+      - 一些C语言相关的书目: szu_courses/cpp/books.md
+      - JetBrains CLion 安装与配置: szu_courses/cpp/clion_conf.md
+      - 一些使用CLion的技巧: szu_courses/cpp/clion_hotkeys.md
+      - 浅谈vector容器: szu_courses/cpp/vector.md
+      - 《征服C指针》读书笔记: szu_courses/cpp/pointer.md
     - Web开发及人机交互导论:
       - 前言: szu_courses/web/first.md
       - 工欲善其事: szu_courses/web/tools.md

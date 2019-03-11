@@ -1,6 +1,8 @@
 # 游园会的集章卡片
 
 ## 题目
+SOURCE: [https://hack2018.lug.ustc.edu.cn/#card](https://hack2018.lug.ustc.edu.cn/#card)
+
 提示：flag 仅由 0154agflPYHMGRCNE_{} 这些字符组成。
 
 我们经常被问一个问题：你们是从什么时候开始为 Hackergame 出题的？
