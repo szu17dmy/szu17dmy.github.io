@@ -16,6 +16,7 @@ nav:
         - Welcome: ctf_writeup/pctf2019/welcome.md
         - Magic PNGs: ctf_writeup/pctf2019/magic_pngs.md
         - Slow Realization: ctf_writeup/pctf2019/slow_realization.md
+        - Late PR: ctf_writeup/pctf2019/late_pr.md
       - Miscellaneous:
         - EXORcism: ctf_writeup/pctf2019/exorcism.md
       - Web:
