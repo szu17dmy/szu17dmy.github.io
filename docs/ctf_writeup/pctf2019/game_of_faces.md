@@ -1,3 +1,9 @@
+## 题目
+The Game of Faces, welcomes you. In this era, where AIs generate a lot of faces, we would like you to contribute to the same by uploading your image. Thank you for contributing, to continue.
+
+http://159.89.166.12:15000/
+
+## 解决方案
 打开网页，有三个色块，暂时看不到其它内容。Ctrl+U查看源码，有发现：
 
 ``` html

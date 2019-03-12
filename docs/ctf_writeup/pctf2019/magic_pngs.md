@@ -1,3 +1,15 @@
+## 题目
+Magic PNGs:
+
+Can you help me open this zip file? I seem to have forgotten its password. I think the image file has something to do with it.
+
+Hint: You may have to hash the secret word to get the flag...
+
+[tryme.zip](./problems/tryme.zip)
+
+[you_cant_see_me.png](./problems/you_cant_see_me.png)
+
+## 解决方案
 下载到一个tryme.zip和一个you_cant_see_me.png，压缩包内含flag.txt但是被加密了；png打不开，还嘲讽我（？），先看一下十六进制：
 
     vim -b you_cant_see_me.png

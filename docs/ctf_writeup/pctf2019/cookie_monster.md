@@ -1,3 +1,9 @@
+## 题目
+Do prepare to see cookies lurking everywhere.
+
+http://159.89.166.12:13500/
+
+## 解决方案
 打开网页后，感觉都在提Cookie，F12打开开发者工具看看Cookie。能发现响应头的Set-Cookie在变化，并且查到前两个分别是pc和tf的哈希值：
 
 > bc54f4d60f1cec0f9a6cb70e13f2127a
