@@ -38,7 +38,7 @@
     
     
       
-        <title>Cookie monster - Keep Evolving</title>
+        <title>Cookie Monster - Keep Evolving</title>
       
     
     
@@ -126,7 +126,7 @@
                 Keep Evolving
               </span>
               <span class="md-header-nav__topic">
-                Cookie monster
+                Cookie Monster
               </span>
             
           
@@ -325,10 +325,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       CTF WRITEUP
@@ -344,10 +346,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1" checked>
     
     <label class="md-nav__link" for="nav-3-1">
       Pragyan CTF 19
@@ -447,10 +451,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1-3" type="checkbox" id="nav-3-1-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1-3" type="checkbox" id="nav-3-1-3" checked>
     
     <label class="md-nav__link" for="nav-3-1-3">
       Web
@@ -461,6 +467,25 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+    <a href="./" title="Cookie Monster" class="md-nav__link md-nav__link--active">
+      Cookie Monster
+    </a>
+    
+  </li>
+
         
           
           
@@ -1512,9 +1537,62 @@
                   <a href="https://github.com/szu17dmy/szu17dmy.github.io/edit/master/docs/ctf_writeup/pctf2019/cookie_monster.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Cookie monster</h1>
+                  <h1>Cookie Monster</h1>
                 
-                
+                <p>打开网页后，感觉都在提Cookie，F12打开开发者工具看看Cookie。能发现响应头的Set-Cookie在变化，并且查到前两个分别是pc和tf的哈希值：</p>
+<blockquote>
+<p>bc54f4d60f1cec0f9a6cb70e13f2127a</p>
+<p>114d6a415b3d04db792ca7c0da0c7a55</p>
+</blockquote>
+<p>应该是flag每两个字符去哈希，然后每次响应头的Set-Cookie，是请求头的Cookie对应两位字符的后两位字符的哈希，也就是说只要不断拿返回的新Cookie去请求，就可以拿到全部（我在说什么玩意儿）。</p>
+<p>...我还是重新说一遍吧，刚开始没有Cookie，服务器会返回Set-Cookie是pc的哈希值（bc54开头的），然后浏览器再次请求这个页面就会带上bc54开头的Cookie，这时候服务器就会返回pc的后两位也就是tf的哈希值（114d开头的），以此类推，直到又出现pc的哈希值就可以停下了。</p>
+<p>于是乎：</p>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Cookie&#39;</span><span class="p">:</span> <span class="s1">&#39;flag=bc54f4d60f1cec0f9a6cb70e13f2127a&#39;</span>
+<span class="p">}</span>
+
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">headers</span><span class="p">[</span><span class="s1">&#39;Cookie&#39;</span><span class="p">])</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;http://159.89.166.12:13500/&#39;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+    <span class="n">headers</span><span class="p">[</span><span class="s1">&#39;Cookie&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s1">&#39;Set-Cookie&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">headers</span><span class="p">[</span><span class="s1">&#39;Cookie&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;flag=bc54f4d60f1cec0f9a6cb70e13f2127a&#39;</span><span class="p">:</span>
+        <span class="k">break</span>
+</pre></div>
+
+
+<p>应该能得到：</p>
+<div class="codehilite"><pre><span></span>flag=bc54f4d60f1cec0f9a6cb70e13f2127a
+flag=114d6a415b3d04db792ca7c0da0c7a55
+flag=b2984e12969ad3a3a2a4d334b8fb385a
+flag=6f570c477ab64d17825ef2d2dfcb6fe4
+flag=988287f7a1eb966ffc4e19bdbdeec7c3
+flag=0d4896d431044c92de2840ed53b6fbbd
+flag=f355d719add62ceea8c150e5fbfae819
+flag=12eccbdd9b32918131341f38907cbbb5
+flag=639307d281416ad0642faeaae1f098c4
+flag=96bc320e4d72edda450c7a9abc8a214f
+flag=c716fb29298ad96a3b31757ec9755763
+flag=51de5514f3c808babd19f42217fcba49
+flag=05cb7dc333ca611d0a8969704e39a9f0
+flag=bc781c76baf5589eef4fb7b9247b89a0
+flag=ff108b961a844f859bd7c203b7366f8e
+flag=2349277280263dff980b0c8a4a10674b
+flag=0b1cdc9fe1f929e469c5a54ffe0b2ed5
+flag=364641d04574146d9f88001e66b4410f
+flag=c758807125330006a4375357104f9a82
+flag=fcfdc12fb4030a8c8a2e19cf7b075926
+flag=440c5c247c708c6e46783e47e3986889
+flag=97a7bf81a216e803adfed8bd013f4b85
+flag=c1d12de20210d8c1b35c367536e1c255
+flag=a8655da06c5080d3f1eb6af7b514e309
+</pre></div>
+
+
+<p>一个个去搜好像也不是什么大问题，但是也可以写个脚本生成字典，毕竟都是两位字符的哈希值。最后得到：</p>
+<div class="codehilite"><pre><span></span>pctf{c0oki3s_@re_yUm_bUt_tHEy_@ls0_r3vEaL_@_l0t}
+</pre></div>
                 
                   
                 
@@ -1551,6 +1629,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../exorcism/" title="EXORcism" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                EXORcism
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../game_of_faces/" title="Game of Faces" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前进
+                </span>
+                Game of Faces
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

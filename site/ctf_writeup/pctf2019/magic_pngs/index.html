@@ -481,6 +481,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../cookie_monster/" title="Cookie Monster" class="md-nav__link">
+      Cookie Monster
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../game_of_faces/" title="Game of Faces" class="md-nav__link">
       Game of Faces
     </a>
@@ -1536,6 +1548,11 @@
 <p>然后发现文件头有问题；而且竟然没有IDAT，估计是被破坏了，不过竟然能搜到一个小写的idat，确认过眼神，是应该改的地方。改回来保存看看：</p>
 <p><img alt="MAGIC_PNGS-1.png" src="../img/MAGIC_PNGS-1.png" /></p>
 <p><img alt="MAGIC_PNGS-2.png" src="../img/MAGIC_PNGS-2.png" /></p>
+<div class="codehilite"><pre><span></span>:%!xxd -r
+:wq
+</pre></div>
+
+
 <p>已经可以预览图片了：</p>
 <p><img alt="MAGIC_PNGS-3.png" src="../img/MAGIC_PNGS-3.png" /></p>
 <p>打开：</p>
@@ -1552,7 +1569,7 @@
 </pre></div>
 
 
-<p>成功get到flag：</p>
+<p>解压flag.txt成功get到flag：</p>
 <div class="codehilite"><pre><span></span>pctf{y0u_s33_m33_n0w!}
 </pre></div>
                 

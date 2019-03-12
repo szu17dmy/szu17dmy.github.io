@@ -18,6 +18,7 @@ nav:
       - Miscellaneous:
         - EXORcism: ctf_writeup/pctf2019/exorcism.md
       - Web:
+        - Cookie Monster: ctf_writeup/pctf2019/cookie_monster.md
         - Game of Faces: ctf_writeup/pctf2019/game_of_faces.md
     - Hackergame 2018:
       - 签到题: ctf_writeup/hackergame2018/hello_world.md

@@ -9,6 +9,9 @@
 
 ![MAGIC_PNGS-2.png](./img/MAGIC_PNGS-2.png)
 
+    :%!xxd -r
+    :wq
+
 已经可以预览图片了：
 
 ![MAGIC_PNGS-3.png](./img/MAGIC_PNGS-3.png)
@@ -29,6 +32,6 @@
 
     2c919f82ee2ed6985d5c5e275d67e4f8
 
-成功get到flag：
+解压flag.txt成功get到flag：
 
     pctf{y0u_s33_m33_n0w!}
