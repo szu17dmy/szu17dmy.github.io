@@ -11,6 +11,9 @@ nav:
   - CTF TOOLS:
     - BASE64: ctf_tools/base64.md
   - CTF WRITEUP:
+    - BugKu:
+      - MISC:
+        - MISC 50: ctf_writeup/bugku/misc_50.md
     - Pragyan CTF 19:
       - Forensics:
         - Welcome: ctf_writeup/pctf2019/welcome.md
