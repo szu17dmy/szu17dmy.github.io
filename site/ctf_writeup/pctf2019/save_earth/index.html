@@ -38,7 +38,7 @@
     
     
       
-        <title>Save earth - Keep Evolving</title>
+        <title>Save Earth - Keep Evolving</title>
       
     
     
@@ -130,7 +130,7 @@
                 Keep Evolving
               </span>
               <span class="md-header-nav__topic">
-                Save earth
+                Save Earth
               </span>
             
           
@@ -329,10 +329,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       CTF WRITEUP
@@ -348,10 +350,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1" checked>
     
     <label class="md-nav__link" for="nav-3-1">
       Pragyan CTF 19
@@ -367,10 +371,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1-1" type="checkbox" id="nav-3-1-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1-1" type="checkbox" id="nav-3-1-1" checked>
     
     <label class="md-nav__link" for="nav-3-1-1">
       Forensics
@@ -403,6 +409,59 @@
     <a href="../magic_pngs/" title="Magic PNGs" class="md-nav__link">
       Magic PNGs
     </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Save Earth
+      </label>
+    
+    <a href="./" title="Save Earth" class="md-nav__link md-nav__link--active">
+      Save Earth
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="题目" class="md-nav__link">
+    题目
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -1562,6 +1621,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_2" title="解决方案" class="md-nav__link">
+    解决方案
+  </a>
+  
+</li>
+      
       
       
       
@@ -1581,13 +1647,93 @@
                   <a href="https://github.com/szu17dmy/szu17dmy.github.io/edit/master/docs/ctf_writeup/pctf2019/save_earth.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Save earth</h1>
+                  <h1>Save Earth</h1>
                 
                 <h2 id="_1">题目</h2>
 <p>In the mid 21st century, Ex-NASA pilot Cooper leaves his little daughter and goes an interstellar journey around the space to find an alternative planet (PLAN A) or to capture gravitational data and send it back to earth, which Scientists will use to save Earth. However Cooper finds himself stuck in a tesseract that spans across time, there is only one way he could transmit the data to his little girl.</p>
 <p>We have obtained parts of what Cooper sent to his daughter, can you find the flag and save the earth?</p>
 <p>Note: This question does not follow the flag format</p>
 <p><a href="../problems/SaveEarth.pcap">SaveEarth.pcap</a></p>
+<h2 id="_2">解决方案</h2>
+<p>我已经不知道该怎么解释了，反正我做不出来...翻过协议的文档，也尝试过各种办法都没有收获。赛后看别人的文章，发现需要关注数据包中的Leftover Capture Data。于是：</p>
+<div class="codehilite"><pre><span></span>tshark -r /mnt/c/Users/domain/CTF/pctf2019/SaveEarth.pcap -V | grep &quot;Leftover Capture Data&quot;
+</pre></div>
+
+
+<p>就可以得到：</p>
+<div class="codehilite"><pre><span></span>Leftover Capture Data: 0102000000000000
+Leftover Capture Data: 0104000000000000
+Leftover Capture Data: 0102000000000000
+Leftover Capture Data: 0104000000000000
+Leftover Capture Data: 0101000000000000
+Leftover Capture Data: 0102000000000000
+Leftover Capture Data: 0101000000000000
+Leftover Capture Data: 0104000000000000
+Leftover Capture Data: 0104000000000000
+Leftover Capture Data: 0102000000000000
+Leftover Capture Data: 0104000000000000
+Leftover Capture Data: 0101000000000000
+Leftover Capture Data: 0104000000000000
+Leftover Capture Data: 0104000000000000
+Leftover Capture Data: 0104000000000000
+Leftover Capture Data: 0101000000000000
+Leftover Capture Data: 0104000000000000
+Leftover Capture Data: 0104000000000000
+Leftover Capture Data: 0104000000000000
+Leftover Capture Data: 0104000000000000
+Leftover Capture Data: 0102000000000000
+Leftover Capture Data: 0101000000000000
+Leftover Capture Data: 0104000000000000
+Leftover Capture Data: 0104000000000000
+Leftover Capture Data: 0104000000000000
+Leftover Capture Data: 0102000000000000
+Leftover Capture Data: 0101000000000000
+Leftover Capture Data: 0104000000000000
+Leftover Capture Data: 0104000000000000
+Leftover Capture Data: 0104000000000000
+Leftover Capture Data: 0102000000000000
+Leftover Capture Data: 0102000000000000
+</pre></div>
+
+
+<p>可以尝试摩斯电码，于是把上文中的0101当作空格，把0102当作-，把0104当作.：</p>
+<div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="p">.</span><span class="n">eof</span><span class="p">())</span> <span class="p">{</span>
+        <span class="kt">char</span> <span class="n">buf</span><span class="p">[</span><span class="mi">64</span><span class="p">]</span> <span class="o">=</span> <span class="p">{};</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="p">.</span><span class="n">getline</span><span class="p">(</span><span class="n">buf</span><span class="p">,</span> <span class="mi">64</span><span class="p">);</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">string</span><span class="p">(</span><span class="n">buf</span><span class="p">);</span>
+        <span class="k">switch</span> <span class="p">(</span><span class="n">string</span><span class="p">[</span><span class="mi">26</span><span class="p">])</span> <span class="p">{</span>
+            <span class="k">case</span> <span class="sc">&#39;1&#39;</span><span class="o">:</span>
+                <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39; &#39;</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="sc">&#39;2&#39;</span><span class="o">:</span>
+                <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;-&#39;</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="sc">&#39;4&#39;</span><span class="o">:</span>
+                <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;.&#39;</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">default</span><span class="o">:</span> <span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>可以得到：</p>
+<div class="codehilite"><pre><span></span>-.-. - ..-. ... ....- ...- ...--
+</pre></div>
+
+
+<p>解得：</p>
+<div class="codehilite"><pre><span></span>CTFS4V3
+</pre></div>
+
+
+<p>这个...毕竟是赛后复现，没有提交过，要是出现什么差错麻烦告诉我...</p>
                 
                   
                 
@@ -1624,6 +1770,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../magic_pngs/" title="Magic PNGs" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                Magic PNGs
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../slow_realization/" title="Slow Realization" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前进
+                </span>
+                Slow Realization
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
