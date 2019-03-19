@@ -1,5 +1,4 @@
 ## 签到题
-### 题目
 关注微信公众号：Bugku
 即可获取flag
 
@@ -9,7 +8,6 @@
     flag{BugKu-Sec-pwn!}
     
 ## 这是一张单纯的图片
-### 题目
 [http://123.206.87.240:8002/misc/1.jpg](http://123.206.87.240:8002/misc/1.jpg)
 
 存档：[1.jpg](./problems/1.jpg)
@@ -32,7 +30,6 @@ FLAG在哪里？？
     key{you are right}    
 
 ## 隐写
-### 题目
 [2.rar](https://ctf.bugku.com/files/f8da9b5979e89e91d083c7accdea4427/2.rar)
 
 存档：[2.rar](./problems/2.rar)
@@ -51,7 +48,6 @@ FLAG在哪里？？
 ![misc_50-4.png](./img/misc_50-4.png)
 
 ## telnet
-### 题目
 [http://123.206.87.240:8002/misc/telnet/1.zip](http://123.206.87.240:8002/misc/telnet/1.zip)
 
 key格式flag{xxxxxxxxxxxxxxxxxxxxxxxxxxx}
@@ -64,7 +60,6 @@ key格式flag{xxxxxxxxxxxxxxxxxxxxxxxxxxx}
 ![misc_50-5.png](./img/misc_50-5.png)
 
 ## 眼见非实(ISCCCTF)
-### 题目
 [zip](https://ctf.bugku.com/files/919ee4ea1658c3e3ef8b59b67f298470/zip)
 
 存档：[zip](./problems/zip)
@@ -77,7 +72,6 @@ key格式flag{xxxxxxxxxxxxxxxxxxxxxxxxxxx}
 应该不用我再说一遍了...
 
 ## 啊哒
-### 题目
 有趣的表情包
 
 来源：第七届山东省大学生网络安全技能大赛
