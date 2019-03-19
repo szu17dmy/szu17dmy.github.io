@@ -103,6 +103,8 @@ BASE64解开：
 
 [http://123.206.87.240:8002/misc/3.zip](http://123.206.87.240:8002/misc/3.zip)
 
+存档：[3.zip](./problems/3.zip)
+
 ### 解决方案
 直接：
 
@@ -121,5 +123,28 @@ BASE64解开：
     KEY{dca57f966e4e4e31fd5b15417da63269}
     
 ## 闪的好快
+有空补代码
 
-## 
+## come_game
+有空补上
+
+## 白哥的鸽子
+咕咕咕
+
+[jpg](https://ctf.bugku.com/files/57c79d5b04e18a4bf8995d2721d76d5c/jpg)
+
+存档：[jpg](./problems/jpg)
+### 解决方案
+废话少说，上各种套路：
+
+    strings jpg
+
+末尾可疑：
+
+    fg2ivyo}l{2s3_o@aw__rcl@
+
+看起来像是被打乱了顺序，栅栏密码每组3个，毕竟研表究明，汉字序顺并不定一影阅响读：
+
+    flag{w22_is_v3ry_cool}@@
+    
+提交竟然挂了...删掉@@就OK
