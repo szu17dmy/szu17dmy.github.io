@@ -16,6 +16,10 @@ nav:
       - MISC:
         - MISC 50: ctf_writeup/bugku/misc_50.md
         - MISC 60: ctf_writeup/bugku/misc_60.md
+        - MISC 80: ctf_writeup/bugku/misc_80.md
+        - 细心的大象: ctf_writeup/bugku/细心的大象.md
+        - 普通的二维码: ctf_writeup/bugku/普通的二维码.md
+        - 乌云邀请码: ctf_writeup/bugku/乌云邀请码.md
     - Pragyan CTF 19:
       - Forensics:
         - Welcome: ctf_writeup/pctf2019/welcome.md
@@ -37,6 +41,10 @@ nav:
     - CG-CTF:
       - Web:
         - 签到题: ctf_writeup/cg_ctf/easyweb.md
+  - READING NOTES:
+    - 《征服C指针》读书笔记:
+      - 第0章 本书的目标与结构——引言: reading_notes/pointer/0.md
+      - 第1章 从基础开始——预备知识和复习: reading_notes/pointer/1.md
   - SZU COURSES:
     - 程序设计基础:
       - 前言: szu_courses/cpp/first.md
@@ -44,7 +52,6 @@ nav:
       - JetBrains CLion 安装与配置: szu_courses/cpp/clion_conf.md
       - 一些使用CLion的技巧: szu_courses/cpp/clion_hotkeys.md
       - 浅谈vector容器: szu_courses/cpp/vector.md
-      - 《征服C指针》读书笔记: szu_courses/cpp/pointer.md
     - Web开发及人机交互导论:
       - 前言: szu_courses/web/first.md
       - 工欲善其事: szu_courses/web/tools.md

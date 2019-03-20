@@ -137,7 +137,7 @@ BASE64解开：
 ### 解决方案
 废话少说，上各种套路：
 
-    strings jpg
+    strings ./jpg
 
 末尾可疑：
 

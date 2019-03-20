@@ -80,7 +80,7 @@ Process finished with exit code 0
 ```
 
 ## 学会使用一些算法
-使用一些排序等算法：
+后来是会使用一些排序等算法：
 ``` cpp
 #include <iostream>
 #include <vector>
