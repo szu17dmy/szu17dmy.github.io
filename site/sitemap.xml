@@ -36,6 +36,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://blog.52szu.tech/ctf_writeup/bugku/想蹭网先解开密码/</loc>
+     <lastmod>2019-03-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://blog.52szu.tech/ctf_writeup/bugku/细心的大象/</loc>
      <lastmod>2019-03-22</lastmod>
      <changefreq>daily</changefreq>
@@ -57,6 +62,11 @@
     </url>
     <url>
      <loc>https://blog.52szu.tech/ctf_writeup/bugku/convert/</loc>
+     <lastmod>2019-03-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://blog.52szu.tech/ctf_writeup/bugku/听首音乐/</loc>
      <lastmod>2019-03-22</lastmod>
      <changefreq>daily</changefreq>
     </url>

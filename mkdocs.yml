@@ -17,11 +17,13 @@ nav:
         - MISC 50: ctf_writeup/bugku/misc_50.md
         - MISC 60: ctf_writeup/bugku/misc_60.md
         - MISC 80: ctf_writeup/bugku/misc_80.md
+        - 想蹭网先解开密码: ctf_writeup/bugku/想蹭网先解开密码.md
         - 细心的大象: ctf_writeup/bugku/细心的大象.md
         - 普通的二维码: ctf_writeup/bugku/普通的二维码.md
         - 乌云邀请码: ctf_writeup/bugku/乌云邀请码.md
         - 图穷匕见: ctf_writeup/bugku/图穷匕见.md
         - convert: ctf_writeup/bugku/convert.md
+        - 听首音乐: ctf_writeup/bugku/听首音乐.md
         - 好多数值: ctf_writeup/bugku/好多数值.md
     - Pragyan CTF 19:
       - Forensics:
