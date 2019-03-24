@@ -30,6 +30,6 @@ Do you think this is a normal image? No! Dig deeper to find out more.....
 >
 > the password is: h3110_th3r3!
 
-拿去解压a.zip，成功得到一个a.png，启动StegSolver就很容易看到FLAG：
+拿去解压a.zip，成功得到一个a.png，启动StegSolve就很容易看到FLAG：
 
 ![WELCOME-6.png](./img/WELCOME-6.png)

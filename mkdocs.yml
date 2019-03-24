@@ -26,6 +26,7 @@ nav:
         - convert: ctf_writeup/bugku/convert.md
         - 听首音乐: ctf_writeup/bugku/听首音乐.md
         - 好多数值: ctf_writeup/bugku/好多数值.md
+        - color: ctf_writeup/bugku/color.md
     - Pragyan CTF 19:
       - Forensics:
         - Welcome: ctf_writeup/pctf2019/welcome.md
@@ -48,6 +49,8 @@ nav:
       - Web:
         - 签到题: ctf_writeup/cg_ctf/easyweb.md
   - READING NOTES:
+    - 《揭秘家用路由器0day漏洞挖掘技术》读书笔记:
+      - 第1章 基础准备与工具: reading_notes/routers/1.md
     - 《征服C指针》读书笔记:
       - 第0章 本书的目标与结构——引言: reading_notes/pointer/0.md
       - 第1章 从基础开始——预备知识和复习: reading_notes/pointer/1.md

@@ -35,7 +35,7 @@ FLAG在哪里？？
 存档：[2.rar](./problems/2.rar)
 
 ### 解决方案
-解压后发现一个2.png，启动StegSolver后每个图层看不出有什么异常，于是试试TweakPNG。打开图片时发现：
+解压后发现一个2.png，启动StegSolve后每个图层看不出有什么异常，于是试试TweakPNG。打开图片时发现：
 
 ![misc_50-2.png](./img/misc_50-2.png)
 
