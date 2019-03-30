@@ -26,7 +26,6 @@ nav:
         - convert: ctf_writeup/bugku/convert.md
         - 听首音乐: ctf_writeup/bugku/听首音乐.md
         - 好多数值: ctf_writeup/bugku/好多数值.md
-        - color: ctf_writeup/bugku/color.md
     - Pragyan CTF 19:
       - Forensics:
         - Welcome: ctf_writeup/pctf2019/welcome.md
@@ -48,7 +47,11 @@ nav:
     - CG-CTF:
       - Web:
         - 签到题: ctf_writeup/cg_ctf/easyweb.md
+  - EMBEDDED:
+    - 尝鲜CLion 2019.1（Windows）: embedded/clion-2019.1.md
   - READING NOTES:
+    - 《Docker经典实例》:
+      - 第1章 Docker入门: reading_notes/docker_cookbook/1.md
     - 《揭秘家用路由器0day漏洞挖掘技术》读书笔记:
       - 第1章 基础准备与工具: reading_notes/routers/1.md
     - 《征服C指针》读书笔记:
@@ -65,6 +68,20 @@ nav:
       - 前言: szu_courses/web/first.md
       - 工欲善其事: szu_courses/web/tools.md
   - SZU ONLINEJUDGE:
+    - 专题 What's wrong with my code?:
+      - 前言: szu_oj/what_s_wrong_with_my_code/first.md
+      - 初始化的姿势: szu_oj/what_s_wrong_with_my_code/initialize.md
+    - 面向对象程序设计:
+      - 三串合一（指针与字符数组）: szu_oj/oop/1038.md
+      - 动态矩阵（指针与堆内存分配）: szu_oj/oop/1044.md
+      - 扑克牌排序（结构体）: szu_oj/oop/1190.md
+    - 程序设计基础:
+      - 求矩阵的最大和最小值: szu_oj/cpp/1084.md
+      - 单词统计: szu_oj/cpp/1295.md
+      - 计算字符串的长度: szu_oj/cpp/1341.md
+    - 程序设计基础 UOOC:
+      - 分类排序(函数): szu_oj/uooc/1334.md
+      - 鸡蛋队列（数组，函数）: szu_oj/uooc/1438.md
     - 数据结构:
       - DS单链表--类实现: szu_oj/ds/1199.md
       - DS堆栈--逆序输出（STL栈使用）: szu_oj/ds/1202.md
@@ -89,16 +106,6 @@ nav:
       - DS哈希查找—线性探测再散列: szu_oj/ds/1269.md
       - 冒泡排序 (Ver. I): szu_oj/ds/1309.md
       - DS哈希查找—二次探测再散列: szu_oj/ds/1318.md
-    - 面向对象程序设计:
-      - 三串合一（指针与字符数组）: szu_oj/oop/1038.md
-      - 动态矩阵（指针与堆内存分配）: szu_oj/oop/1044.md
-    - 程序设计基础:
-      - 求矩阵的最大和最小值: szu_oj/cpp/1084.md
-      - 单词统计: szu_oj/cpp/1295.md
-      - 计算字符串的长度: szu_oj/cpp/1341.md
-    - 程序设计基础 UOOC:
-      - 分类排序(函数): szu_oj/uooc/1334.md
-      - 鸡蛋队列（数组，函数）: szu_oj/uooc/1438.md
   - UOOC:
     - Java:
       - 1 概述: uooc/java/1.md

@@ -1,6 +1,6 @@
 # 首页
 
-伤痕累累，痛苦焦虑却不甘平庸。
+一些工程记录和知识库。
 
 网站基于[Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)构建，评论功能使用了[Gitalk](https://github.com/gitalk/gitalk)。主要内容是关于一些学习过程中的记录，CTF Writeup，还有学校课程的相关内容，还在逐步更新。
 
