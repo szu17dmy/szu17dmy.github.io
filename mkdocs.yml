@@ -10,7 +10,8 @@ nav:
     - ABOUT: about.md
     - LINKS: links.md
   - CTF TOOLS:
-    - BASE64: ctf_tools/base64.md
+    - Windows下利用WSL使用pwntools: ctf_tools/pwntools.md
+    - 在线BASE64加解密（实验性）: ctf_tools/base64.md
   - CTF WRITEUP:
     - BugKu:
       - MISC:
@@ -127,7 +128,7 @@ theme:
   favicon: 'img/favicon.ico'
   language: 'zh'
   logo:
-    icon: 'code'
+    icon: 'flight_takeoff'
   name: 'material'
   palette:
     primary: 'teal'
