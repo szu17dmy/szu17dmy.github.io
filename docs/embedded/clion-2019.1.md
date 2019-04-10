@@ -69,6 +69,8 @@
     
 如果你在这里遇到了网络问题，那么你可能需要代理，或者利用镜像站，比如[清华大学开源软件镜像站 | Tsinghua Open Source Mirror](https://mirrors.tuna.tsinghua.edu.cn/)或者[USTC Open Source Software Mirror](http://mirrors.ustc.edu.cn/)。
 
+**似乎存在问题，请先不要参考下文**
+
 安装完成后，回到CLion，在CMake的错误信息左侧找到**Reload CMake Project**，应该不会有问题了。至于OpenOCD，浏览了一下官网，似乎没有提供Windows下的预编译的包。不过有非官方的预编译包的链接，下载一份解压好，然后编辑Run Configuration，指定好路径和Board config file，就可以Build了。完成后，可以在cmake-build-debug里找到hex文件。
 
 对于这块开发板，应该使用FlyMCU的第三方ISP烧入即可。开头说好了，我还没有测试这一步，不知道会有什么问题，不过我尽快把这个坑填上...

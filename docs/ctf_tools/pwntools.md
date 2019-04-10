@@ -95,4 +95,4 @@
 ...不知道该说什么好了...
 
 ## 另外
-对了，别忘了**Add Python Interpreter**里还有很多选项，你也可以利用它们来实现在Windows下玩pwntools，各位就自行发挥好啦！
+对了，别忘了**Add Python Interpreter**里还有很多选项，你也可以利用它们来实现在Windows下玩pwntools，而且**SSH Interpreter**也不一定要连WSL，各位就自行发挥好啦！
