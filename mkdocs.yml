@@ -122,6 +122,7 @@ nav:
       - 11 Java网络编程: uooc/java/11.md
   - MISC:
     - CMake指定源码目录和构建目录: misc/cmake_source_and_binary_directory.md
+    - git clone 通过ssh: misc/git_clone_via_ssh.md
     - Python SimpleHTTPServer: misc/python_http_server.md
 
 theme:
