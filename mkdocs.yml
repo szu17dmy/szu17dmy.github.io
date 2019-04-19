@@ -124,6 +124,7 @@ nav:
     - CMake指定源码目录和构建目录: misc/cmake_source_and_binary_directory.md
     - git clone 通过ssh: misc/git_clone_via_ssh.md
     - Python SimpleHTTPServer: misc/python_http_server.md
+    - 在开放的校园无线网络中加密自己的数据传输: misc/secure_public_wireless_network_at_school_szu.md
 
 theme:
   favicon: 'img/favicon.ico'
