@@ -2046,6 +2046,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tmin-return-minimum-twos-complement-integer" title="tmin - return minimum two's complement integer" class="md-nav__link">
+    tmin - return minimum two's complement integer
+  </a>
+  
+</li>
+      
       
       
       
@@ -2080,16 +2087,19 @@
 </pre></div>
 
 
-<p>/<em>
- * tmin - return minimum two's complement integer 
- *   Legal ops: ! ~ &amp; ^ | + &lt;&lt; &gt;&gt;
- *   Max ops: 4
- *   Rating: 1
- </em>/
-int tmin(void) {
-    return (1U &lt;&lt; 31U);
-}
-//2
+<h2 id="tmin-return-minimum-twos-complement-integer">tmin - return minimum two's complement integer</h2>
+<ul>
+<li>Legal ops: ! ~ &amp; ^ | + &lt;&lt; &gt;&gt;</li>
+<li>Max ops: 4</li>
+<li>Rating: 1</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">tmin</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span><span class="mi">1U</span> <span class="o">&lt;&lt;</span> <span class="mi">31U</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>//2
 /<em>
  * isTmax - returns 1 if x is the maximum, two's complement number,
  *     and 0 otherwise 
