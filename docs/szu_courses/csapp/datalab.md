@@ -10,15 +10,18 @@ int bitXor(int x, int y) {
 }
 ```
 
-/*
- * tmin - return minimum two's complement integer 
- *   Legal ops: ! ~ & ^ | + << >>
- *   Max ops: 4
- *   Rating: 1
- */
+
+## tmin - return minimum two's complement integer 
++ Legal ops: ! ~ & ^ | + << >>
++ Max ops: 4
++ Rating: 1
+
+``` c
 int tmin(void) {
     return (1U << 31U);
 }
+```
+
 //2
 /*
  * isTmax - returns 1 if x is the maximum, two's complement number,
