@@ -3,7 +3,7 @@ Ryan's friend has hidden something in this image and challenged his to find it o
 
 Hint: Dont look around, look closer. . . slowly . . .
 
-[recover.zip](./problems/recover.zip)
+题目存档：[recover.zip](./problems/recover.zip)
 
 ## 解决方案
 解压后有一个被加密的flag.pdf和一个scenery.jpeg，注意到图片文件大小和分辨率不是很匹配，图片可能还含有其他文件。不过binwalk并没有发现更多文件。尝试用foremost提取：

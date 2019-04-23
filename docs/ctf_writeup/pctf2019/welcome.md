@@ -1,7 +1,7 @@
 ## 题目
 Do you think this is a normal image? No! Dig deeper to find out more.....
 
-[welcome.jpeg](./problems/welcome.jpeg)
+题目存档：[welcome.jpeg](./problems/welcome.jpeg)
 
 ## 解决方案
 下载到一个welcome.jpeg，尝试binwalk。

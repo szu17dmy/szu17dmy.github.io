@@ -3,7 +3,7 @@ My friend Alex needs your help very fast. He has been possessed by a ghost and t
 
 Hint: We need a very quick response from you so that you can save him from the ghost by exorcizing it with the flag.
 
-[encoded.txt](./problems/encoded.txt)
+题目存档：[encoded.txt](./problems/encoded.txt)
 
 ## 解决方案
 下载到一个只有0和1的文本文档，刚好10000行，猜测可能是100×100的字符画。于是使用OpenCV画图：

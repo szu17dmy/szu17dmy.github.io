@@ -13,6 +13,11 @@ nav:
     - Windows下利用WSL使用pwntools: ctf_tools/pwntools.md
     - 在线BASE64加解密（实验性）: ctf_tools/base64.md
   - CTF WRITEUP:
+    - CISCN 2019:
+      - MISC:
+        - 签到: ctf_writeup/ciscn2019/qiandao.md
+        - saleae: ctf_writeup/ciscn2019/saleae.md
+        - 24c: ctf_writeup/ciscn2019/24c.md
     - BugKu:
       - MISC:
         - MISC 50: ctf_writeup/bugku/misc_50.md
@@ -51,6 +56,8 @@ nav:
   - EMBEDDED:
     - 尝鲜CLion 2019.1（Windows）: embedded/clion-2019.1.md
   - READING NOTES:
+    - 《深入理解计算机系统》:
+      - 第3章 程序的机器级表示: reading_notes/computer_systems_a_programmer_s_perspective/machine-level_representation_of_programs.md
     - 《Docker经典实例》:
       - 第1章 Docker入门: reading_notes/docker_cookbook/1.md
     - 《揭秘家用路由器0day漏洞挖掘技术》读书笔记:
@@ -68,6 +75,9 @@ nav:
     - Web开发及人机交互导论:
       - 前言: szu_courses/web/first.md
       - 工欲善其事: szu_courses/web/tools.md
+    - 计算机系统:
+      - Data Lab: szu_courses/csapp/datalab.md
+      - Bomb Lab: szu_courses/csapp/bomblab.md
   - SZU ONLINEJUDGE:
     - 专题 What's wrong with my code?:
       - 前言: szu_oj/what_s_wrong_with_my_code/first.md

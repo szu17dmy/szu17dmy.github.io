@@ -1,3 +1,5 @@
+慢慢完善这里
+
 ## bitXor - x^y using only ~ and & 
 + Example: bitXor(4, 5) = 1
 + Legal ops: ~ &
@@ -10,6 +12,7 @@ int bitXor(int x, int y) {
 }
 ```
 
+根据[Exclusive or](https://en.wikipedia.org/wiki/Exclusive_or)
 
 ## tmin - return minimum two's complement integer 
 + Legal ops: ! ~ & ^ | + << >>
@@ -18,7 +21,7 @@ int bitXor(int x, int y) {
 
 ``` c
 int tmin(void) {
-    return (1U << 31U);
+    return (1 << 31);
 }
 ```
 
