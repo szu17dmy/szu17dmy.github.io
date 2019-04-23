@@ -1359,7 +1359,7 @@ LABEL_8:
 
     600
 
-## secret_phase()
+## secret_phase
 其实在IDA左侧栏能看到一个隐藏关`secret_phase()`，双击它，然后按X查找引用。可以看到，在每关`phase_defused()`时都会检查是否触发隐藏关：
 
 ``` asm
@@ -1526,7 +1526,7 @@ Science isn't about why, it's about why not?
 
 完结撒花...
 
-> 图片来源 [不觉哓哓-蜜桃猫](https://www.weibo.com/u/3540182725)
+> 图片来源：[不觉晓晓-蜜桃猫](https://www.weibo.com/u/3540182725)
 
 ![MITAO.jpg](./img/MITAO.jpg)
 
