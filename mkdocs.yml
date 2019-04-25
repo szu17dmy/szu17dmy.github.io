@@ -78,6 +78,10 @@ nav:
     - 计算机系统:
       - Data Lab: szu_courses/csapp/datalab.md
       - Bomb Lab: szu_courses/csapp/bomblab.md
+    - 计算机网络:
+      - 实验:
+        - VLAN Lab: szu_courses/cn/vlan_lab.md
+      - 传输层: szu_courses/cn/transport_layer.md
   - SZU ONLINEJUDGE:
     - 专题 What's wrong with my code?:
       - 前言: szu_oj/what_s_wrong_with_my_code/first.md
@@ -152,4 +156,5 @@ extra:
       link: 'https://github.com/szu17dmy'
 
 markdown_extensions:
-  - codehilite
+  - codehilite:
+      linenums: true

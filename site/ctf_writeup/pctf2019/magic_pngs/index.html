@@ -1439,6 +1439,78 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-4" type="checkbox" id="nav-6-4">
+    
+    <label class="md-nav__link" for="nav-6-4">
+      计算机网络
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-4">
+        计算机网络
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-4-1" type="checkbox" id="nav-6-4-1">
+    
+    <label class="md-nav__link" for="nav-6-4-1">
+      实验
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-4-1">
+        实验
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_courses/cn/vlan_lab/" title="VLAN Lab" class="md-nav__link">
+      VLAN Lab
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_courses/cn/transport_layer/" title="传输层" class="md-nav__link">
+      传输层
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2298,18 +2370,20 @@
 <p><a href="../problems/you_cant_see_me.png">you_cant_see_me.png</a></p>
 <h2 id="_2">解决方案</h2>
 <p>下载到一个tryme.zip和一个you_cant_see_me.png，压缩包内含flag.txt但是被加密了；png打不开，还嘲讽我（？），先看一下十六进制：</p>
-<div class="codehilite"><pre><span></span>vim -b you_cant_see_me.png
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>vim -b you_cant_see_me.png
 :%!xxd
 </pre></div>
-
+</td></tr></table>
 
 <p>然后发现文件头有问题；而且竟然没有IDAT，估计是被破坏了，不过竟然能搜到一个小写的idat，确认过眼神，是应该改的地方。改回来保存看看：</p>
 <p><img alt="MAGIC_PNGS-1.png" src="../img/MAGIC_PNGS-1.png" /></p>
 <p><img alt="MAGIC_PNGS-2.png" src="../img/MAGIC_PNGS-2.png" /></p>
-<div class="codehilite"><pre><span></span>:%!xxd -r
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>:%!xxd -r
 :wq
 </pre></div>
-
+</td></tr></table>
 
 <p>已经可以预览图片了：</p>
 <p><img alt="MAGIC_PNGS-3.png" src="../img/MAGIC_PNGS-3.png" /></p>
@@ -2318,18 +2392,19 @@
 <p>行吧旋转一下：</p>
 <p><img alt="MAGIC_PNGS-5.png" src="../img/MAGIC_PNGS-5.png" /></p>
 <p>懒得写个镜像了，直接拿手机前摄拍了一张就可以看到正的了：</p>
-<div class="codehilite"><pre><span></span>h4CK3RM4n
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>h4CK3RM4n
 </pre></div>
-
+</td></tr></table>
 
 <p>题目hint表示应该先哈希一下再try一下：</p>
-<div class="codehilite"><pre><span></span>2c919f82ee2ed6985d5c5e275d67e4f8
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>2c919f82ee2ed6985d5c5e275d67e4f8
 </pre></div>
-
+</td></tr></table>
 
 <p>解压flag.txt成功get到flag：</p>
-<div class="codehilite"><pre><span></span>pctf{y0u_s33_m33_n0w!}
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pctf{y0u_s33_m33_n0w!}
 </pre></div>
+</td></tr></table>
                 
                   
                 

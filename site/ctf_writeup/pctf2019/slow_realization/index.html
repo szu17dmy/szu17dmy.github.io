@@ -1439,6 +1439,78 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-4" type="checkbox" id="nav-6-4">
+    
+    <label class="md-nav__link" for="nav-6-4">
+      计算机网络
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-4">
+        计算机网络
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-4-1" type="checkbox" id="nav-6-4-1">
+    
+    <label class="md-nav__link" for="nav-6-4-1">
+      实验
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-4-1">
+        实验
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_courses/cn/vlan_lab/" title="VLAN Lab" class="md-nav__link">
+      VLAN Lab
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_courses/cn/transport_layer/" title="传输层" class="md-nav__link">
+      传输层
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2295,9 +2367,9 @@
 <p>题目存档：<a href="../problems/recover.zip">recover.zip</a></p>
 <h2 id="_2">解决方案</h2>
 <p>解压后有一个被加密的flag.pdf和一个scenery.jpeg，注意到图片文件大小和分辨率不是很匹配，图片可能还含有其他文件。不过binwalk并没有发现更多文件。尝试用foremost提取：</p>
-<div class="codehilite"><pre><span></span>foremost scenery.jpeg
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>foremost scenery.jpeg
 </pre></div>
-
+</td></tr></table>
 
 <p><img alt="SLOW_REALISATION-1.png" src="../img/SLOW_REALIZATION-1.png" /></p>
 <p>提取到一个大小正常的jpeg图片，于是和原文件十六进制对比，发现图片是从原文件头部提取出来的。直接把原文件头部是提取出的jpeg的部分删除。保存后，发现新文件的头部特征很像MP3，尝试用播放器打开，能听到是OneRepublic - Counting Stars的片段，中间夹杂了一段蜂鸣音，猜测是摩斯电码：</p>
@@ -2307,14 +2379,14 @@
 <p>PATIENCE IS THE KEY PCTF N0T H3R3</p>
 </blockquote>
 <p>然后我们就卡在这里了，不管是看蜂鸣音中间的一小段疑似人声的片段的频谱还是其它思路都没有结果。赛后看到有些队伍直接用pdfcrack爆破，似乎用的是Kali Linux中的词典rockyou.txt，结果是：</p>
-<div class="codehilite"><pre><span></span>congratulations
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>congratulations
 </pre></div>
-
+</td></tr></table>
 
 <p>于是就能解开：</p>
-<div class="codehilite"><pre><span></span>pctf{y0u_h34rd_m3_r1ght}
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pctf{y0u_h34rd_m3_r1ght}
 </pre></div>
-
+</td></tr></table>
 
 <p>后续找到非爆破的解法再更新这里。附上提取出的似乎是mp3的<a href="../problems/back.mp3">文件</a>。</p>
                 

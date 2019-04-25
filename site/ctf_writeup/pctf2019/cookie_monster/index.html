@@ -1439,6 +1439,78 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-4" type="checkbox" id="nav-6-4">
+    
+    <label class="md-nav__link" for="nav-6-4">
+      计算机网络
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-4">
+        计算机网络
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-4-1" type="checkbox" id="nav-6-4-1">
+    
+    <label class="md-nav__link" for="nav-6-4-1">
+      实验
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-4-1">
+        实验
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_courses/cn/vlan_lab/" title="VLAN Lab" class="md-nav__link">
+      VLAN Lab
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_courses/cn/transport_layer/" title="传输层" class="md-nav__link">
+      传输层
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2301,7 +2373,18 @@
 <p>应该是flag每两个字符去哈希，然后每次响应头的Set-Cookie，是请求头的Cookie对应两位字符的后两位字符的哈希，也就是说只要不断拿返回的新Cookie去请求，就可以拿到全部（我在说什么玩意儿）。</p>
 <p>...我还是重新说一遍吧，刚开始没有Cookie，服务器会返回Set-Cookie是pc的哈希值（bc54开头的），然后浏览器再次请求这个页面就会带上bc54开头的Cookie，这时候服务器就会返回pc的后两位也就是tf的哈希值（114d开头的），以此类推，直到又出现pc的哈希值就可以停下了。</p>
 <p>于是乎：</p>
-<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
 
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;Cookie&#39;</span><span class="p">:</span> <span class="s1">&#39;flag=bc54f4d60f1cec0f9a6cb70e13f2127a&#39;</span>
@@ -2314,10 +2397,33 @@
     <span class="k">if</span> <span class="n">headers</span><span class="p">[</span><span class="s1">&#39;Cookie&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;flag=bc54f4d60f1cec0f9a6cb70e13f2127a&#39;</span><span class="p">:</span>
         <span class="k">break</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>应该能得到：</p>
-<div class="codehilite"><pre><span></span>flag=bc54f4d60f1cec0f9a6cb70e13f2127a
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>flag=bc54f4d60f1cec0f9a6cb70e13f2127a
 flag=114d6a415b3d04db792ca7c0da0c7a55
 flag=b2984e12969ad3a3a2a4d334b8fb385a
 flag=6f570c477ab64d17825ef2d2dfcb6fe4
@@ -2342,11 +2448,12 @@ flag=97a7bf81a216e803adfed8bd013f4b85
 flag=c1d12de20210d8c1b35c367536e1c255
 flag=a8655da06c5080d3f1eb6af7b514e309
 </pre></div>
-
+</td></tr></table>
 
 <p>一个个去搜好像也不是什么大问题，但是也可以写个脚本生成字典，毕竟都是两位字符的哈希值。最后得到：</p>
-<div class="codehilite"><pre><span></span>pctf{c0oki3s_@re_yUm_bUt_tHEy_@ls0_r3vEaL_@_l0t}
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pctf{c0oki3s_@re_yUm_bUt_tHEy_@ls0_r3vEaL_@_l0t}
 </pre></div>
+</td></tr></table>
                 
                   
                 

@@ -1392,6 +1392,78 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-4" type="checkbox" id="nav-6-4">
+    
+    <label class="md-nav__link" for="nav-6-4">
+      计算机网络
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-4">
+        计算机网络
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-4-1" type="checkbox" id="nav-6-4-1">
+    
+    <label class="md-nav__link" for="nav-6-4-1">
+      实验
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-4-1">
+        实验
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_courses/cn/vlan_lab/" title="VLAN Lab" class="md-nav__link">
+      VLAN Lab
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_courses/cn/transport_layer/" title="传输层" class="md-nav__link">
+      传输层
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2366,18 +2438,22 @@
 <h2 id="_2">题目描述</h2>
 <p>将两根筷子平行的放在一起，就构成了一个队列。将带有编号的鸡蛋放到两根筷子之间叫做入队(push)，将筷子之间的鸡蛋拿出来叫做出队(pop)。但这两种方式有特殊的定义，对于入队，只能将鸡蛋从队列的尾部向里放入；对于出队，只能将鸡蛋从队列的头部向外将鸡蛋拿出来。</p>
 <p>将①、②入队：</p>
-<div class="codehilite"><pre><span></span>头____________尾                         _____________                           ______________
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>头____________尾                         _____________                           ______________
            ← ①   ←  ②                   ①            ←    ②                    ①      ②              
 ______________                           _____________                           ______________
 </pre></div>
-
+</td></tr></table>
 
 <p>将①、②出队：</p>
-<div class="codehilite"><pre><span></span>头____________尾                         ______________                         ______________
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>头____________尾                         ______________                         ______________
     ←  ①  ←  ②                   ①           ←      ②                   ①    ②      
  ______________                           ______________                         ______________
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="_3">输入</h2>
 <p>第一行输入一个数T，表示有T组数据
@@ -2387,7 +2463,14 @@ ______________                           _____________                          
 <h2 id="_4">输出</h2>
 <p>输出N种操作完之后，队列中蛋蛋的编号，如果没蛋了，就输出"no eggs!"(不包括引号)每组输出占一行。</p>
 <h2 id="_5">样例输入</h2>
-<div class="codehilite"><pre><span></span>2
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>2
 3
 push 1 
 push 2
@@ -2396,18 +2479,74 @@ push 3
 push 1
 pop
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="_6">样例输出</h2>
-<div class="codehilite"><pre><span></span>1 2 3
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>1 2 3
 no eggs!
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="_7">提示</h2>
 <p>数组模拟队列，用下标记录对头、队尾位置。</p>
 <h2 id="_8">解决方案</h2>
-<div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
 <span class="k">struct</span> <span class="n">Queue</span> <span class="p">{</span>
     <span class="kt">int</span> <span class="n">data</span><span class="p">[</span><span class="mi">32</span><span class="p">];</span>
@@ -2464,6 +2603,7 @@ no eggs!
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
                 
                   
                 

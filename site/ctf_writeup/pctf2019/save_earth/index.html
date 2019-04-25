@@ -1439,6 +1439,78 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-4" type="checkbox" id="nav-6-4">
+    
+    <label class="md-nav__link" for="nav-6-4">
+      计算机网络
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-4">
+        计算机网络
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-4-1" type="checkbox" id="nav-6-4-1">
+    
+    <label class="md-nav__link" for="nav-6-4-1">
+      实验
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-4-1">
+        实验
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_courses/cn/vlan_lab/" title="VLAN Lab" class="md-nav__link">
+      VLAN Lab
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_courses/cn/transport_layer/" title="传输层" class="md-nav__link">
+      传输层
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2296,12 +2368,43 @@
 <p>题目存档：<a href="../problems/SaveEarth.pcap">SaveEarth.pcap</a></p>
 <h2 id="_2">解决方案</h2>
 <p>我已经不知道该怎么解释了，反正我做不出来...翻过协议的文档，也尝试过各种办法都没有收获。赛后看别人的文章，发现需要关注数据包中的Leftover Capture Data。于是：</p>
-<div class="codehilite"><pre><span></span>tshark -r /mnt/c/Users/domain/CTF/pctf2019/SaveEarth.pcap -V | grep &quot;Leftover Capture Data&quot;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>tshark -r /mnt/c/Users/domain/CTF/pctf2019/SaveEarth.pcap -V | grep &quot;Leftover Capture Data&quot;
 </pre></div>
-
+</td></tr></table>
 
 <p>就可以得到：</p>
-<div class="codehilite"><pre><span></span>Leftover Capture Data: 0102000000000000
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Leftover Capture Data: 0102000000000000
 Leftover Capture Data: 0104000000000000
 Leftover Capture Data: 0102000000000000
 Leftover Capture Data: 0104000000000000
@@ -2334,10 +2437,32 @@ Leftover Capture Data: 0104000000000000
 Leftover Capture Data: 0102000000000000
 Leftover Capture Data: 0102000000000000
 </pre></div>
-
+</td></tr></table>
 
 <p>可以尝试摩斯电码，于是把上文中的0101当作空格，把0102当作-，把0104当作.：</p>
-<div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
     <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="p">.</span><span class="n">eof</span><span class="p">())</span> <span class="p">{</span>
@@ -2361,17 +2486,17 @@ Leftover Capture Data: 0102000000000000
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>可以得到：</p>
-<div class="codehilite"><pre><span></span>-.-. - ..-. ... ....- ...- ...--
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>-.-. - ..-. ... ....- ...- ...--
 </pre></div>
-
+</td></tr></table>
 
 <p>解得：</p>
-<div class="codehilite"><pre><span></span>CTFS4V3
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>CTFS4V3
 </pre></div>
-
+</td></tr></table>
 
 <p>这个...毕竟是赛后复现，没有提交过，要是出现什么差错麻烦告诉我...</p>
                 

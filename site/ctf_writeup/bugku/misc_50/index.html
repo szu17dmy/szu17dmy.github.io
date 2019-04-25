@@ -1545,6 +1545,78 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-4" type="checkbox" id="nav-6-4">
+    
+    <label class="md-nav__link" for="nav-6-4">
+      计算机网络
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-4">
+        计算机网络
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-4-1" type="checkbox" id="nav-6-4-1">
+    
+    <label class="md-nav__link" for="nav-6-4-1">
+      实验
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-4-1">
+        实验
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_courses/cn/vlan_lab/" title="VLAN Lab" class="md-nav__link">
+      VLAN Lab
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_courses/cn/transport_layer/" title="传输层" class="md-nav__link">
+      传输层
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2506,9 +2578,9 @@
 即可获取flag</p>
 <p>下面也有二维码</p>
 <h3 id="_2">解决方案</h3>
-<div class="codehilite"><pre><span></span>flag{BugKu-Sec-pwn!}
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>flag{BugKu-Sec-pwn!}
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="_3">这是一张单纯的图片</h2>
 <p><a href="http://123.206.87.240:8002/misc/1.jpg">http://123.206.87.240:8002/misc/1.jpg</a></p>
@@ -2516,20 +2588,20 @@
 <p>FLAG在哪里？？</p>
 <h3 id="_4">解决方案</h3>
 <p>看看文件末尾：</p>
-<div class="codehilite"><pre><span></span>hexdump -C ./1.jpg
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hexdump -C ./1.jpg
 </pre></div>
-
+</td></tr></table>
 
 <p><img alt="misc_50.png" src="../img/misc_50-1.png" /></p>
 <p>有一串HTML编码：</p>
-<div class="codehilite"><pre><span></span><span class="ni">&amp;#107;&amp;#101;&amp;#121;&amp;#123;&amp;#121;&amp;#111;&amp;#117;&amp;#32;&amp;#97;&amp;#114;&amp;#101;&amp;#32;&amp;#114;&amp;#105;&amp;#103;&amp;#104;&amp;#116;&amp;#125;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="ni">&amp;#107;&amp;#101;&amp;#121;&amp;#123;&amp;#121;&amp;#111;&amp;#117;&amp;#32;&amp;#97;&amp;#114;&amp;#101;&amp;#32;&amp;#114;&amp;#105;&amp;#103;&amp;#104;&amp;#116;&amp;#125;</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>解码就得到：</p>
-<div class="codehilite"><pre><span></span>key{you are right}
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>key{you are right}
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="_5">隐写</h2>
 <p><a href="https://ctf.bugku.com/files/f8da9b5979e89e91d083c7accdea4427/2.rar">2.rar</a></p>
@@ -2564,18 +2636,19 @@
 <p>解压后得到一个ada.jpg，binwalk发现内含其它文件，然后foremost尝试将其分离，得到一个加密了的压缩包。其实zip可以尝试爆破的，但我们还是来找一下密码：</p>
 <p><img alt="misc_50-7.png" src="../img/misc_50-7.png" /></p>
 <p>奇怪的相机型号：</p>
-<div class="codehilite"><pre><span></span>73646E6973635F32303138
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>73646E6973635F32303138
 </pre></div>
-
+</td></tr></table>
 
 <p>把它16进制转字符：</p>
-<div class="codehilite"><pre><span></span>sdnisc_2018
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sdnisc_2018
 </pre></div>
-
+</td></tr></table>
 
 <p>拿去解压刚刚的zip：</p>
-<div class="codehilite"><pre><span></span>flag{3XiF_iNf0rM@ti0n}
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>flag{3XiF_iNf0rM@ti0n}
 </pre></div>
+</td></tr></table>
                 
                   
                 

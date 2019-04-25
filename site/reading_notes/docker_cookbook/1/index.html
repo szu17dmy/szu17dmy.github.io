@@ -1491,6 +1491,78 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-4" type="checkbox" id="nav-6-4">
+    
+    <label class="md-nav__link" for="nav-6-4">
+      计算机网络
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-4">
+        计算机网络
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-4-1" type="checkbox" id="nav-6-4-1">
+    
+    <label class="md-nav__link" for="nav-6-4-1">
+      实验
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-4-1">
+        实验
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_courses/cn/vlan_lab/" title="VLAN Lab" class="md-nav__link">
+      VLAN Lab
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_courses/cn/transport_layer/" title="传输层" class="md-nav__link">
+      传输层
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2404,17 +2476,17 @@
 <blockquote>
 <p>你已经见过了</p>
 </blockquote>
-<div class="codehilite"><pre><span></span>docker ps
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>docker ps
 </pre></div>
-
+</td></tr></table>
 
 <blockquote>
 <p>命令，该命令用于列出所有运行中的容器。</p>
 <p>首先，你想启动一个容器。让我们立即开始，执行docker run命令，如下所示。</p>
 </blockquote>
-<div class="codehilite"><pre><span></span>docker run busybox echo hello world
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>docker run busybox echo hello world
 </pre></div>
-
+</td></tr></table>
 
 <blockquote>
 <p>容器来源于镜像。docker run命令与需要一个参数来指定使用哪个镜像。</p>
@@ -2423,40 +2495,40 @@
 <blockquote>
 <p>如果列出运行中的容器，你会发现没有容器正在运行。这是因为容器一旦完成了它的工作（输出hello world），就停止了。但是容器并没有完全消失，你可以通过</p>
 </blockquote>
-<div class="codehilite"><pre><span></span>docker ps -a
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>docker ps -a
 </pre></div>
-
+</td></tr></table>
 
 <blockquote>
 <p>命令看到这个容器。</p>
 <p>你可以通过</p>
 </blockquote>
-<div class="codehilite"><pre><span></span>docker rm 8f7089b187e8
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>docker rm 8f7089b187e8
 </pre></div>
-
+</td></tr></table>
 
 <blockquote>
 <p>命令将这个容器永久删除。该容器使用的镜像已经被下载到了本地，</p>
 </blockquote>
-<div class="codehilite"><pre><span></span>docker image
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>docker image
 </pre></div>
-
+</td></tr></table>
 
 <blockquote>
 <p>命令将会输出这个镜像的信息。</p>
 <p>如果任何运行中或者已经停止的容器都没有使用这个镜像，你就可以通过</p>
 </blockquote>
-<div class="codehilite"><pre><span></span>docker rmi busybox
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>docker rmi busybox
 </pre></div>
-
+</td></tr></table>
 
 <blockquote>
 <p>命令来删除这个镜像。</p>
 <p>运行echo命令虽然很有趣，但是获得一个终端会话会更好。要想在容器中运行/bin/bash，你需要使用-t和-i参数来获得一个交互式会话，下面以使用Ubuntu镜像为例进行说明。</p>
 </blockquote>
-<div class="codehilite"><pre><span></span>docker run -t -i ubuntu:14.04 /bin/bash
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>docker run -t -i ubuntu:14.04 /bin/bash
 </pre></div>
-
+</td></tr></table>
 
 <blockquote>
 <p>你会看到Docker下载的ubuntu:14.04镜像由多个层组成，然后你得到了一个容器中root权限的会话。提示符也显示了这个容器的ID。一旦你推出这个终端，该容器就会停止运行，就像我们前面的hello world例子一样。</p>
@@ -2471,16 +2543,17 @@
 <p>使用docker run的-d选项。</p>
 <p>运行下面的命令，将会在容器中启动一个简单的基于Python的HTTP服务器。</p>
 </blockquote>
-<div class="codehilite"><pre><span></span>docker run -d -p 1234:1234 python:2.7 python -m SimpleHTTPServer 1234
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>docker run -d -p 1234:1234 python:2.7 python -m SimpleHTTPServer 1234
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="1123">1.12.3 讨论</h3>
 <blockquote>
 <p>这个-d参数会让容器在后台运行。你可以通过运行exec命令来启动一个bash shell，再次进入到该容器中，如下所示。</p>
 </blockquote>
-<div class="codehilite"><pre><span></span>docker exec -ti 9d7cebd75dcf /bin/bash
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>docker exec -ti 9d7cebd75dcf /bin/bash
 </pre></div>
+</td></tr></table>
                 
                   
                 

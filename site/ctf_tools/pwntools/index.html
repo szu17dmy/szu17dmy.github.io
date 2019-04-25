@@ -1476,6 +1476,78 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-4" type="checkbox" id="nav-6-4">
+    
+    <label class="md-nav__link" for="nav-6-4">
+      计算机网络
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-4">
+        计算机网络
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-4-1" type="checkbox" id="nav-6-4-1">
+    
+    <label class="md-nav__link" for="nav-6-4-1">
+      实验
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-4-1">
+        实验
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_courses/cn/vlan_lab/" title="VLAN Lab" class="md-nav__link">
+      VLAN Lab
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_courses/cn/transport_layer/" title="传输层" class="md-nav__link">
+      传输层
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2373,9 +2445,9 @@
 <h2 id="ide">如果你不打算用IDE...</h2>
 <p>那似乎并不需要看我下面在废话什么了...你只需要：</p>
 <p>1、在<strong>控制面板-&gt;程序-&gt;启用或关闭Windows功能</strong>里选上<strong>适用于Linux的Windows子系统</strong>，或是直接：</p>
-<div class="codehilite"><pre><span></span>Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 </pre></div>
-
+</td></tr></table>
 
 <p>2、可以到<strong>Microsoft Store</strong>搜索WSL，然后下载安装一个适合你的Linux发行版。</p>
 <p>3、在WSL中安装你所需要的工具，例如python、nano，当然还有pwntools。</p>
@@ -2392,14 +2464,14 @@
 <p>这个时候你应该保证WSL上已经开启了SSH服务：</p>
 <p><img alt="PWNTOOLS-2.png" src="../img/PWNTOOLS-2.png" /></p>
 <p>如果没有，你应当检查：是否已经安装了例如openssh-server、是否没有启动服务</p>
-<div class="codehilite"><pre><span></span>sudo service ssh start
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo service ssh start
 </pre></div>
-
+</td></tr></table>
 
 <p>、或是配置文件存在问题</p>
-<div class="codehilite"><pre><span></span>sudo nano /etc/ssh/sshd_config
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo nano /etc/ssh/sshd_config
 </pre></div>
-
+</td></tr></table>
 
 <p>？我觉得你可以通过搜索引擎来解决这些问题。</p>
 <p>这些都准备就绪了你就可以将这些信息填入刚刚打开的窗口中，就像这样：</p>
@@ -2415,9 +2487,9 @@
 <h2 id="unresolved-reference-pwn">Unresolved reference 'pwn'</h2>
 <p>不知道你是否会遇到这个问题。至少，我被困扰了很久并且找不到解决方法以至于有一段时间都没有使用它（好吧其实我早就该去论坛问问的）。</p>
 <p>这个问题的具体表现应该是，例如</p>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">pwn</span> <span class="kn">import</span> <span class="o">*</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">pwn</span> <span class="kn">import</span> <span class="o">*</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>会有错误产生：</p>
 <blockquote>

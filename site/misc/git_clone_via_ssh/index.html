@@ -1392,6 +1392,78 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-4" type="checkbox" id="nav-6-4">
+    
+    <label class="md-nav__link" for="nav-6-4">
+      计算机网络
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-4">
+        计算机网络
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-4-1" type="checkbox" id="nav-6-4-1">
+    
+    <label class="md-nav__link" for="nav-6-4-1">
+      实验
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-4-1">
+        实验
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_courses/cn/vlan_lab/" title="VLAN Lab" class="md-nav__link">
+      VLAN Lab
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_courses/cn/transport_layer/" title="传输层" class="md-nav__link">
+      传输层
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2307,37 +2379,40 @@
 <h2 id="ssh-key">如果你还没有添加SSH key</h2>
 <p>如果你的管理员已经为用户（你）提供了private key，请妥善保管，然后跳过这一章节。</p>
 <p>如果你是管理员并且你的organization还没有添加public key，请根据上述<a href="https://docs.microsoft.com/en-us/azure/devops/repos/git/use-ssh-keys-to-authenticate?view=azure-devops#step-1-create-your-ssh-keys">文档中的第一步</a>，使用</p>
-<div class="codehilite"><pre><span></span>ssh-keygen
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ssh-keygen
 </pre></div>
-
+</td></tr></table>
 
 <p>来生成密钥对。拥有.pub后缀的文件是你的public key，请根据<a href="https://docs.microsoft.com/en-us/azure/devops/repos/git/use-ssh-keys-to-authenticate?view=azure-devops#step-2--add-the-public-key-to-azure-devops-servicestfs">文档中的第二步</a>来将它上传到服务器上。</p>
 <p>好了，我们可以准备来连接了。</p>
 <h2 id="git-clone">git clone</h2>
 <p>// 我猜这个时候已经有同学去直接去git clone了然后发现还是要输入密码（或者报一些奇奇怪怪的错）...</p>
 <p>现在我们来把private key的路径填入ssh的一个配置文件。但在这之前，我们需要来保证private key的权限是仅有自己可读的，否则你应该会得到一个错误提示private key权限不安全。你可以通过</p>
-<div class="codehilite"><pre><span></span>ls -l
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ls -l
 </pre></div>
-
+</td></tr></table>
 
 <p>来查看当前目录下文件的权限，然后通过</p>
-<div class="codehilite"><pre><span></span>chmod 600 filename
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>chmod 600 filename
 </pre></div>
-
+</td></tr></table>
 
 <p>来把某个文件（应该不用我说上面的filename要改成你想改的文件的文件名吧）的权限改为仅owner可读可写。</p>
 <p>然后我们就可以来把路径填到配置文件里了，你可以通过nano来编辑：</p>
-<div class="codehilite"><pre><span></span>nano ~/.ssh/config
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>nano ~/.ssh/config
 </pre></div>
-
+</td></tr></table>
 
 <p>然后加入如下内容，比如这样：</p>
-<div class="codehilite"><pre><span></span>Host ssh.dev.azure.com
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Host ssh.dev.azure.com
     Hostname ssh.dev.azure.com
     User git
     IdentityFile private_key_path
 </pre></div>
-
+</td></tr></table>
 
 <p>这个可就要根据实际情况灵活变通了，可别照抄出了问题。如果你使用的是nano，你可以<strong>Ctrl+X</strong>退出，然后<strong>y</strong>确认保存，<strong>Enter</strong>写入。</p>
 <p>这个时候，你应该可以正常地进行git clone（通过SSH）了。</p>
