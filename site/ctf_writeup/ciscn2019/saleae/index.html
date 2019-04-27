@@ -2371,7 +2371,18 @@
 <p><img alt="SALEAE-1.png" src="../img/SALEAE-1.png" /></p>
 <p>放大仔细看看规律：</p>
 <p><img alt="SALEAE-2.png" src="../img/SALEAE-2.png" /></p>
-<p>看起来像是每个周期有8个高电平脉冲，先看看前两个周期的取值：</p>
+<p>看起来像是每个周期有8个高电平脉冲，先看看前几个周期的取值：</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>0110 0110 ==&gt; 0x66 ==&gt; f
+0110 1100 ==&gt; 0x6C ==&gt; l
+0110 0001 ==&gt; 0x61 ==&gt; a
+0110 0111 ==&gt; 0x67 ==&gt; g
+</pre></div>
+</td></tr></table>
+
+<p>没错了，直接搞出来：</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -2413,9 +2424,7 @@
 39
 40
 41
-42
-43
-44</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>0110 0110
+42</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>0110 0110
 0110 1100
 0110 0001
 0110 0111
@@ -2457,10 +2466,15 @@
 0011 0000
 0011 0111
 0111 1101
-
-flag{12071397-19d1-48e6-be8c-784b89a95e07}
 </pre></div>
 </td></tr></table>
+
+<p>转换一下就可以了：</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>flag{12071397-19d1-48e6-be8c-784b89a95e07}
+</pre></div>
+</td></tr></table>
+
+<p>事实上这个应该添加一个SPI的Analyser，直接就可以看到了，然后导出就OK。</p>
                 
                   
                 

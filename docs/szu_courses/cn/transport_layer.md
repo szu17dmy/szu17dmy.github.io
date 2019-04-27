@@ -6,10 +6,13 @@
 > [1] [RFC 1122](https://tools.ietf.org/html/rfc1122)
 
 ## 套接字
->
+
+## 端口
+> [Port (computer networking)](https://en.wikipedia.org/wiki/Port_\(computer_networking\))
 >
 > The port numbers are divided into three ranges: the *well-known ports*, the *registered ports*, and the *dynamic* or *private ports*.
->
+
+### 熟知端口
 > The well-known ports (also known as system ports) are those from 0 through 1023. The requirements for new assignments in this range are stricter than for other registrations,[2] examples include:
   
 + 20: File Transfer Protocol (FTP) Data Transfer
