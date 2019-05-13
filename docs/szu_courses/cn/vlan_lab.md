@@ -59,6 +59,8 @@ PPT里的示例使用的是超级终端，不过我使用的是Xshell，像这�
 
 ![VLAN_LAB_8.png](./img/VLAN_LAB_8.png)
 
+>:warning: 怀疑文章有问题之前最好先确认一下自己是否已经读了上述文章
+
 接下来我们该来配置一下VLAN了。根据要求，把Ethernet 0/0/3包含到VLAN2中，把Ethernet 0/0/4包含到VLAN3中：
 
 ![VLAN_LAB_9.jpg](./img/VLAN_LAB_9.jpg)

@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://blog.52szu.tech/reading_notes/docker_cookbook/1/">
+        <link rel="canonical" href="https://blog.52szu.tech/reading_notes/tcp_ip_illustrated/user_datagram_protocol_and_ip_fragmentation/">
       
       
       
@@ -34,15 +34,15 @@
         <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
       
       <link rel="shortcut icon" href="../../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.1">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.2.0">
     
     
       
-        <title>第1章 Docker入门 - Keep Evolving</title>
+        <title>第10章 用户数据报协议和IP分片 - Keep Evolving</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/application.3020aac5.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.750b69bd.css">
       
         <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.224b79ff.css">
       
@@ -53,7 +53,7 @@
       
     
     
-      <script src="../../../assets/javascripts/modernizr.01ccdecf.js"></script>
+      <script src="../../../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
@@ -104,7 +104,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#111-dockerhello-world" tabindex="1" class="md-skip">
+      <a href="#101" tabindex="1" class="md-skip">
         跳转至
       </a>
     
@@ -129,7 +129,7 @@
               Keep Evolving
             </span>
             <span class="md-header-nav__topic">
-              第1章 Docker入门
+              第10章 用户数据报协议和IP分片
             </span>
           
         </div>
@@ -1044,11 +1044,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
     
     <label class="md-nav__link" for="nav-5-1">
-      《深入理解计算机系统》
+      《深入理解计算机系统》读书笔记
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
       <label class="md-nav__title" for="nav-5-1">
-        《深入理解计算机系统》
+        《深入理解计算机系统》读书笔记
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -1074,19 +1074,76 @@
           
           
 
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-2" type="checkbox" id="nav-5-2">
+    
+    <label class="md-nav__link" for="nav-5-2">
+      《Docker经典实例》读书笔记
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-2">
+        《Docker经典实例》读书笔记
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../docker_cookbook/getting_started_with_docker/" title="第1章 Docker入门" class="md-nav__link">
+      第1章 Docker入门
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-2" type="checkbox" id="nav-5-2" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3" checked>
     
-    <label class="md-nav__link" for="nav-5-2">
-      《Docker经典实例》
+    <label class="md-nav__link" for="nav-5-3">
+      《TCP/IP详解》读书笔记
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-5-2">
-        《Docker经典实例》
+      <label class="md-nav__title" for="nav-5-3">
+        《TCP/IP详解》读书笔记
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3-1" type="checkbox" id="nav-5-3-1" checked>
+    
+    <label class="md-nav__link" for="nav-5-3-1">
+      卷1：协议
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-5-3-1">
+        卷1：协议
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -1104,11 +1161,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        第1章 Docker入门
+        第10章 用户数据报协议和IP分片
       </label>
     
-    <a href="./" title="第1章 Docker入门" class="md-nav__link md-nav__link--active">
-      第1章 Docker入门
+    <a href="./" title="第10章 用户数据报协议和IP分片" class="md-nav__link md-nav__link--active">
+      第10章 用户数据报协议和IP分片
     </a>
     
       
@@ -1120,70 +1177,9 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#111-dockerhello-world" title="1.11 在docker中运行Hello World" class="md-nav__link">
-    1.11 在docker中运行Hello World
+  <a href="#101" title="10.1 引言" class="md-nav__link">
+    10.1 引言
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1111" title="1.11.1 问题" class="md-nav__link">
-    1.11.1 问题
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1112" title="1.11.2 解决方案" class="md-nav__link">
-    1.11.2 解决方案
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1113" title="1.11.3 讨论" class="md-nav__link">
-    1.11.3 讨论
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#112-docker" title="1.12 以后台方式运行docker容器" class="md-nav__link">
-    1.12 以后台方式运行docker容器
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1121" title="1.12.1 问题" class="md-nav__link">
-    1.12.1 问题
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1122" title="1.12.2 解决方案" class="md-nav__link">
-    1.12.2 解决方案
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1123" title="1.12.3 讨论" class="md-nav__link">
-    1.12.3 讨论
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1200,37 +1196,6 @@
         
       </ul>
     </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3">
-    
-    <label class="md-nav__link" for="nav-5-3">
-      《揭秘家用路由器0day漏洞挖掘技术》读书笔记
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-5-3">
-        《揭秘家用路由器0day漏洞挖掘技术》读书笔记
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../routers/1/" title="第1章 基础准备与工具" class="md-nav__link">
-      第1章 基础准备与工具
-    </a>
   </li>
 
         
@@ -1278,6 +1243,42 @@
   <li class="md-nav__item">
     <a href="../../pointer/1/" title="第1章 从基础开始——预备知识和复习" class="md-nav__link">
       第1章 从基础开始——预备知识和复习
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-5" type="checkbox" id="nav-5-5">
+    
+    <label class="md-nav__link" for="nav-5-5">
+      《揭秘家用路由器0day漏洞挖掘技术》读书笔记
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-5">
+        《揭秘家用路由器0day漏洞挖掘技术》读书笔记
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../routers/1/" title="第1章 基础准备与工具" class="md-nav__link">
+      第1章 基础准备与工具
     </a>
   </li>
 
@@ -2379,70 +2380,9 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#111-dockerhello-world" title="1.11 在docker中运行Hello World" class="md-nav__link">
-    1.11 在docker中运行Hello World
+  <a href="#101" title="10.1 引言" class="md-nav__link">
+    10.1 引言
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1111" title="1.11.1 问题" class="md-nav__link">
-    1.11.1 问题
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1112" title="1.11.2 解决方案" class="md-nav__link">
-    1.11.2 解决方案
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1113" title="1.11.3 讨论" class="md-nav__link">
-    1.11.3 讨论
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#112-docker" title="1.12 以后台方式运行docker容器" class="md-nav__link">
-    1.12 以后台方式运行docker容器
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1121" title="1.12.1 问题" class="md-nav__link">
-    1.12.1 问题
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1122" title="1.12.2 解决方案" class="md-nav__link">
-    1.12.2 解决方案
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1123" title="1.12.3 讨论" class="md-nav__link">
-    1.12.3 讨论
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2462,98 +2402,19 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/szu17dmy/szu17dmy.github.io/edit/master/docs/reading_notes/docker_cookbook/1.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/szu17dmy/szu17dmy.github.io/edit/master/docs/reading_notes/tcp_ip_illustrated/user_datagram_protocol_and_ip_fragmentation.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>第1章 Docker入门</h1>
+                  <h1>第10章 用户数据报协议和IP分片</h1>
                 
-                <h2 id="111-dockerhello-world">1.11 在docker中运行Hello World</h2>
-<h3 id="1111">1.11.1 问题</h3>
+                <h2 id="101">10.1 引言</h2>
 <blockquote>
-<p>你已经拥有一台Docker主机，想运行你的第一个容器。你想学习容器的不同生命周期。比如，你想运行一个容器并在其中打印hello world。</p>
+<p>UDP是一种保留消息边界的简单的面向数据报的传输层协议。它不提供差错纠正、队列管理、重复消除、流量控制和拥塞控制。它提供差错检测，包含我们在传输层中碰到的第一个真实的<em>端到端</em>（end-to-end）校验和。</p>
+<p>一般来说，每个被应用程序请求的UDP输出操作只产生一个UDP数据报，从而发送一个IP数据报。</p>
+<p>[RFC0768]是UDP的正式规范，它至今仍然是一个标准，30多年来没有做过重大的修改。如前所述，UDP不提供差错纠正：它把应用程序传给IP层的数据发送出去，但是并不保证它们能够到达目的地。另外，没有协议机制防止高速UDP流量对其他网络用户的消极影响。</p>
+<p>因为它的无连接特征，它要比其他的传输协议使用更少的开销。另外，广播和组播操作（见第9章）更多直接使用像UDP这样的无连接传输。</p>
+<p>图10-1显示了一个UDP数据报作为单个IPv4数据报的封装。</p>
 </blockquote>
-<h3 id="1112">1.11.2 解决方案</h3>
-<blockquote>
-<p>你已经见过了</p>
-</blockquote>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>docker ps
-</pre></div>
-</td></tr></table>
-
-<blockquote>
-<p>命令，该命令用于列出所有运行中的容器。</p>
-<p>首先，你想启动一个容器。让我们立即开始，执行docker run命令，如下所示。</p>
-</blockquote>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>docker run busybox echo hello world
-</pre></div>
-</td></tr></table>
-
-<blockquote>
-<p>容器来源于镜像。docker run命令与需要一个参数来指定使用哪个镜像。</p>
-</blockquote>
-<h3 id="1113">1.11.3 讨论</h3>
-<blockquote>
-<p>如果列出运行中的容器，你会发现没有容器正在运行。这是因为容器一旦完成了它的工作（输出hello world），就停止了。但是容器并没有完全消失，你可以通过</p>
-</blockquote>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>docker ps -a
-</pre></div>
-</td></tr></table>
-
-<blockquote>
-<p>命令看到这个容器。</p>
-<p>你可以通过</p>
-</blockquote>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>docker rm 8f7089b187e8
-</pre></div>
-</td></tr></table>
-
-<blockquote>
-<p>命令将这个容器永久删除。该容器使用的镜像已经被下载到了本地，</p>
-</blockquote>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>docker image
-</pre></div>
-</td></tr></table>
-
-<blockquote>
-<p>命令将会输出这个镜像的信息。</p>
-<p>如果任何运行中或者已经停止的容器都没有使用这个镜像，你就可以通过</p>
-</blockquote>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>docker rmi busybox
-</pre></div>
-</td></tr></table>
-
-<blockquote>
-<p>命令来删除这个镜像。</p>
-<p>运行echo命令虽然很有趣，但是获得一个终端会话会更好。要想在容器中运行/bin/bash，你需要使用-t和-i参数来获得一个交互式会话，下面以使用Ubuntu镜像为例进行说明。</p>
-</blockquote>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>docker run -t -i ubuntu:14.04 /bin/bash
-</pre></div>
-</td></tr></table>
-
-<blockquote>
-<p>你会看到Docker下载的ubuntu:14.04镜像由多个层组成，然后你得到了一个容器中root权限的会话。提示符也显示了这个容器的ID。一旦你推出这个终端，该容器就会停止运行，就像我们前面的hello world例子一样。</p>
-</blockquote>
-<h2 id="112-docker">1.12 以后台方式运行docker容器</h2>
-<h3 id="1121">1.12.1 问题</h3>
-<blockquote>
-<p>你已经知道如何以交互方式启动一个容器，但是你想以后台方式运行一个服务。</p>
-</blockquote>
-<h3 id="1122">1.12.2 解决方案</h3>
-<blockquote>
-<p>使用docker run的-d选项。</p>
-<p>运行下面的命令，将会在容器中启动一个简单的基于Python的HTTP服务器。</p>
-</blockquote>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>docker run -d -p 1234:1234 python:2.7 python -m SimpleHTTPServer 1234
-</pre></div>
-</td></tr></table>
-
-<h3 id="1123">1.12.3 讨论</h3>
-<blockquote>
-<p>这个-d参数会让容器在后台运行。你可以通过运行exec命令来启动一个bash shell，再次进入到该容器中，如下所示。</p>
-</blockquote>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>docker exec -ti 9d7cebd75dcf /bin/bash
-</pre></div>
-</td></tr></table>
                 
                   
                 
@@ -2562,26 +2423,6 @@
                 
 
 
-
-<h2 id="__comments">评论</h2>
-<form id="gitalk-form" onsubmit="return false;">
-    <div id="gitalk-container"></div>
-</form>
-<link rel="stylesheet" href="https://blog.52szu.tech/css/gitalk.css">
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-<script src="https://blog.52szu.tech/js/md5.min.js"></script>
-<script>
-    const gitalk = new Gitalk({
-        clientID: '47cbdcb78708efcedf52',
-        clientSecret: 'e22cda14ad8bb219e7f4f1619bc6fcf5b66e22ef',
-        repo: 'comments',
-        owner: 'szu17dmy',
-        admin: ['szu17dmy'],
-        id: md5(location.pathname), // Ensure uniqueness and length less than 50
-        distractionFreeMode: false // Facebook-like distraction free mode
-    })
-    gitalk.render('gitalk-container')
-</script>
               
             </article>
           </div>
@@ -2594,7 +2435,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../computer_systems_a_programmer_s_perspective/machine-level_representation_of_programs/" title="第3章 程序的机器级表示" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../docker_cookbook/getting_started_with_docker/" title="第1章 Docker入门" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -2603,19 +2444,19 @@
                 <span class="md-footer-nav__direction">
                   后退
                 </span>
-                第3章 程序的机器级表示
+                第1章 Docker入门
               </span>
             </div>
           </a>
         
         
-          <a href="../../routers/1/" title="第1章 基础准备与工具" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../pointer/0/" title="第0章 本书的目标与结构——引言" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   前进
                 </span>
-                第1章 基础准备与工具
+                第0章 本书的目标与结构——引言
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -2650,7 +2491,7 @@
       
     </div>
     
-      <script src="../../../assets/javascripts/application.dc02f8ce.js"></script>
+      <script src="../../../assets/javascripts/application.39abc4af.js"></script>
       
         
         
@@ -2670,6 +2511,8 @@
         
       
       <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      
+        <script src="../../../js/extra.js"></script>
       
     
   </body>

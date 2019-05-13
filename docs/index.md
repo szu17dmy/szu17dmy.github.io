@@ -31,16 +31,16 @@
 <button data-md-color-primary="brown">Brown</button>
 <button data-md-color-primary="grey">Grey</button>
 <button data-md-color-primary="blue-grey">Blue Grey</button>
-<button data-md-color-primary="white">White</button></p>
+<button data-md-color-primary="white">White</button>
 <script>
   var buttons = document.querySelectorAll("button[data-md-color-primary]");
   Array.prototype.forEach.call(buttons, function(button) {
     button.addEventListener("click", function() {
       document.body.dataset.mdColorPrimary = this.dataset.mdColorPrimary;
+      localStorage.setItem("data-md-color-primary", document.body.dataset.mdColorPrimary);
     })
   })
 </script>
-
 
 ### Accent Colors 辅助色
 > 默认是 `teal`
@@ -62,12 +62,13 @@
 <button data-md-color-accent="yellow">Yellow</button>
 <button data-md-color-accent="amber">Amber</button>
 <button data-md-color-accent="orange">Orange</button>
-<button data-md-color-accent="deep-orange">Deep Orange</button></p>
+<button data-md-color-accent="deep-orange">Deep Orange</button>
 <script>
   var buttons = document.querySelectorAll("button[data-md-color-accent]");
   Array.prototype.forEach.call(buttons, function(button) {
     button.addEventListener("click", function() {
       document.body.dataset.mdColorAccent = this.dataset.mdColorAccent;
+      localStorage.setItem("data-md-color-accent", document.body.dataset.mdColorAccent);
     })
   })
 </script>
