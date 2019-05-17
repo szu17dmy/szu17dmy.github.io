@@ -204,3 +204,6 @@ Destination/Mask    Proto   Pre  Cost      Flags NextHop         Interface
 [RouterB]ip route-static 10.1.30.0 24 10.1.0.33
 [RouterB]ip route-static 10.1.20.0 24 GigabitEthernet0/0/1
 ```
+
+## 关键词
+实验报告 路由器与静态路由配置 计算机网络
