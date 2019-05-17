@@ -1,0 +1,1035 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f7fadf15-9a4e-436f-a63f-e9707723dbd9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/docs/reading_notes/tcp_ip_illustrated/the_transmission_control_protocol_preliminaries.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/szu_courses/cn/router_lab.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/reading_notes/tcp_ip_illustrated/img/10_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/reading_notes/tcp_ip_illustrated/img/10_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/reading_notes/tcp_ip_illustrated/user_datagram_protocol_and_ip_fragmentation.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/reading_notes/tcp_ip_illustrated/user_datagram_protocol_and_ip_fragmentation.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mkdocs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mkdocs.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/about/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/about/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/ctf_tools/base64/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/ctf_tools/base64/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/ctf_tools/binwalk/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/ctf_tools/binwalk/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/ctf_tools/fcrackzip/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/ctf_tools/fcrackzip/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/ctf_tools/foremost/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/ctf_tools/foremost/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/ctf_tools/pwntools/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/ctf_tools/pwntools/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/ctf_writeup/bugku/Linux2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/ctf_writeup/bugku/Linux2/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/ctf_writeup/bugku/color/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/ctf_writeup/bugku/color/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/ctf_writeup/bugku/convert/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/ctf_writeup/bugku/convert/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/ctf_writeup/bugku/misc_50/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/ctf_writeup/bugku/misc_50/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/ctf_writeup/bugku/misc_60/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/ctf_writeup/bugku/misc_60/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/ctf_writeup/bugku/misc_80/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/ctf_writeup/bugku/misc_80/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/ctf_writeup/bugku/乌云邀请码/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/ctf_writeup/bugku/乌云邀请码/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/ctf_writeup/bugku/听首音乐/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/ctf_writeup/bugku/听首音乐/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/ctf_writeup/bugku/图穷匕见/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/ctf_writeup/bugku/图穷匕见/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/ctf_writeup/bugku/好多数值/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/ctf_writeup/bugku/好多数值/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/ctf_writeup/bugku/想蹭网先解开密码/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/ctf_writeup/bugku/想蹭网先解开密码/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/ctf_writeup/bugku/普通的二维码/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/ctf_writeup/bugku/普通的二维码/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/ctf_writeup/bugku/猫片(安恒)/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/ctf_writeup/bugku/猫片(安恒)/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/ctf_writeup/bugku/细心的大象/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/ctf_writeup/bugku/细心的大象/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/ctf_writeup/cg_ctf/easyweb/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/ctf_writeup/cg_ctf/easyweb/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/ctf_writeup/ciscn2019/24c/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/ctf_writeup/ciscn2019/24c/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/ctf_writeup/ciscn2019/qiandao/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/ctf_writeup/ciscn2019/qiandao/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/ctf_writeup/ciscn2019/saleae/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/ctf_writeup/ciscn2019/saleae/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/ctf_writeup/ciscn2019/usbasp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/ctf_writeup/ciscn2019/usbasp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/ctf_writeup/hackergame2018/card/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/ctf_writeup/hackergame2018/card/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/ctf_writeup/hackergame2018/cat_remote/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/ctf_writeup/hackergame2018/cat_remote/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/ctf_writeup/hackergame2018/hello_world/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/ctf_writeup/hackergame2018/hello_world/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/ctf_writeup/hackergame2018/python_simulator/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/ctf_writeup/hackergame2018/python_simulator/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/ctf_writeup/hackergame2018/ustc_quiz/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/ctf_writeup/hackergame2018/ustc_quiz/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/ctf_writeup/pctf2019/cookie_monster/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/ctf_writeup/pctf2019/cookie_monster/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/ctf_writeup/pctf2019/exorcism/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/ctf_writeup/pctf2019/exorcism/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/ctf_writeup/pctf2019/game_of_faces/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/ctf_writeup/pctf2019/game_of_faces/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/ctf_writeup/pctf2019/late_pr/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/ctf_writeup/pctf2019/late_pr/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/ctf_writeup/pctf2019/magic_pngs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/ctf_writeup/pctf2019/magic_pngs/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/ctf_writeup/pctf2019/save_earth/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/ctf_writeup/pctf2019/save_earth/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/ctf_writeup/pctf2019/slow_realization/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/ctf_writeup/pctf2019/slow_realization/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/ctf_writeup/pctf2019/welcome/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/ctf_writeup/pctf2019/welcome/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/embedded/clion-2019.1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/embedded/clion-2019.1/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/links/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/links/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/misc/cmake_source_and_binary_directory/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/misc/cmake_source_and_binary_directory/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/misc/git_clone_via_ssh/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/misc/git_clone_via_ssh/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/misc/python_http_server/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/misc/python_http_server/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/misc/secure_public_wireless_network_at_school_szu/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/misc/secure_public_wireless_network_at_school_szu/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/reading_notes/computer_systems_a_programmer_s_perspective/machine-level_representation_of_programs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/reading_notes/computer_systems_a_programmer_s_perspective/machine-level_representation_of_programs/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/reading_notes/docker_cookbook/getting_started_with_docker/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/reading_notes/docker_cookbook/getting_started_with_docker/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/reading_notes/pointer/0/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/reading_notes/pointer/0/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/reading_notes/pointer/1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/reading_notes/pointer/1/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/reading_notes/routers/1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/reading_notes/routers/1/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/reading_notes/tcp_ip_illustrated/img/10_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/site/reading_notes/tcp_ip_illustrated/img/10_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/reading_notes/tcp_ip_illustrated/user_datagram_protocol_and_ip_fragmentation/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/reading_notes/tcp_ip_illustrated/user_datagram_protocol_and_ip_fragmentation/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/reading_notes/understanding_and_using_c_pointers/introduction/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/reading_notes/understanding_and_using_c_pointers/introduction/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/search/search_index.json" beforeDir="false" afterPath="$PROJECT_DIR$/site/search/search_index.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/site/sitemap.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/sitemap.xml.gz" beforeDir="false" afterPath="$PROJECT_DIR$/site/sitemap.xml.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_courses/cn/transport_layer/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_courses/cn/transport_layer/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_courses/cn/vlan_lab/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_courses/cn/vlan_lab/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_courses/cpp/books/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_courses/cpp/books/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_courses/cpp/clion_conf/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_courses/cpp/clion_conf/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_courses/cpp/clion_hotkeys/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_courses/cpp/clion_hotkeys/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_courses/cpp/first/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_courses/cpp/first/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_courses/cpp/vector/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_courses/cpp/vector/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_courses/csapp/bomblab/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_courses/csapp/bomblab/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_courses/csapp/datalab/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_courses/csapp/datalab/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_courses/web/first/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_courses/web/first/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_courses/web/tools/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_courses/web/tools/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_oj/cpp/1084/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_oj/cpp/1084/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_oj/cpp/1295/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_oj/cpp/1295/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_oj/cpp/1341/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_oj/cpp/1341/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_oj/ds/1199/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_oj/ds/1199/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_oj/ds/1202/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_oj/ds/1202/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_oj/ds/1204/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_oj/ds/1204/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_oj/ds/1205/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_oj/ds/1205/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_oj/ds/1207/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_oj/ds/1207/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_oj/ds/1213/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_oj/ds/1213/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_oj/ds/1214/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_oj/ds/1214/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_oj/ds/1215/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_oj/ds/1215/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_oj/ds/1216/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_oj/ds/1216/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_oj/ds/1217/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_oj/ds/1217/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_oj/ds/1223/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_oj/ds/1223/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_oj/ds/1224/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_oj/ds/1224/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_oj/ds/1239/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_oj/ds/1239/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_oj/ds/1241/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_oj/ds/1241/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_oj/ds/1245/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_oj/ds/1245/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_oj/ds/1250/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_oj/ds/1250/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_oj/ds/1253/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_oj/ds/1253/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_oj/ds/1260/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_oj/ds/1260/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_oj/ds/1264/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_oj/ds/1264/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_oj/ds/1268/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_oj/ds/1268/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_oj/ds/1269/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_oj/ds/1269/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_oj/ds/1309/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_oj/ds/1309/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_oj/ds/1318/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_oj/ds/1318/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_oj/oop/1038/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_oj/oop/1038/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_oj/oop/1044/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_oj/oop/1044/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_oj/oop/1190/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_oj/oop/1190/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_oj/uooc/1334/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_oj/uooc/1334/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_oj/uooc/1438/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_oj/uooc/1438/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_oj/what_s_wrong_with_my_code/first/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_oj/what_s_wrong_with_my_code/first/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_oj/what_s_wrong_with_my_code/initialize/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_oj/what_s_wrong_with_my_code/initialize/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/uooc/java/1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/uooc/java/1/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/uooc/java/10/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/uooc/java/10/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/uooc/java/11/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/uooc/java/11/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/uooc/java/2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/uooc/java/2/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/uooc/java/3/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/uooc/java/3/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/uooc/java/4/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/uooc/java/4/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/uooc/java/5/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/uooc/java/5/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/uooc/java/6/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/uooc/java/6/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/uooc/java/7/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/uooc/java/7/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/uooc/java/8/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/uooc/java/8/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/uooc/java/9/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/uooc/java/9/index.html" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mkdocs.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1827">
+              <caret line="87" column="50" selection-start-line="87" selection-start-column="50" selection-end-line="87" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/reading_notes/understanding_and_using_c_pointers/introduction.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="21">
+                <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/szu_courses/csapp/datalab.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="294">
+                <caret line="14" column="60" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/ctf_writeup/ciscn2019/24c.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="630">
+                <caret line="30" selection-start-line="30" selection-end-line="30" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/szu_courses/cn/transport_layer.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="714">
+                <caret line="34" selection-start-line="34" selection-end-line="34" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/reading_notes/tcp_ip_illustrated/user_datagram_protocol_and_ip_fragmentation.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="903">
+                <caret line="43" column="2" selection-start-line="43" selection-start-column="2" selection-end-line="43" selection-end-column="2" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/szu_courses/cn/router_lab.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="281">
+                <caret line="43" selection-start-line="43" selection-end-line="43" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/reading_notes/tcp_ip_illustrated/the_transmission_control_protocol_preliminaries.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="126">
+                <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/reading_notes/computer_systems_a_programmer_s_perspective/machine-level_representation_of_programs.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="378">
+                <caret line="18" selection-start-line="18" selection-end-line="18" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>：</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SET_USER_NAME_GLOBALLY" value="false" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/docs/misc/git_clone_via_ssh.md" />
+        <option value="$PROJECT_DIR$/docs/embedded/clion-2019.1.md" />
+        <option value="$PROJECT_DIR$/docs/misc/secure_public_wireless_network_at_school_szu.md" />
+        <option value="$PROJECT_DIR$/docs/szu_courses/csapp/datalab.md" />
+        <option value="$PROJECT_DIR$/docs/reading_notes/computer_systems_a_programmer_s_perspective/machine-level_representation_of_programs.md" />
+        <option value="$PROJECT_DIR$/docs/ctf_writeup/pctf2019/exorcism.md" />
+        <option value="$PROJECT_DIR$/docs/ctf_writeup/pctf2019/magic_pngs.md" />
+        <option value="$PROJECT_DIR$/docs/ctf_writeup/pctf2019/save_earth.md" />
+        <option value="$PROJECT_DIR$/docs/ctf_writeup/pctf2019/slow_realization.md" />
+        <option value="$PROJECT_DIR$/docs/ctf_writeup/pctf2019/welcome.md" />
+        <option value="$PROJECT_DIR$/docs/ctf_writeup/ciscn2019/qiandao.md" />
+        <option value="$PROJECT_DIR$/docs/szu_courses/csapp/bomblab.md" />
+        <option value="$PROJECT_DIR$/docs/ctf_writeup/ciscn2019/saleae.md" />
+        <option value="$PROJECT_DIR$/docs/szu_courses/cn/transport_layer.md" />
+        <option value="$PROJECT_DIR$/docs/ctf_writeup/ciscn2019/24c.md" />
+        <option value="$PROJECT_DIR$/docs/ctf_writeup/ciscn2019/usbasp.md" />
+        <option value="$PROJECT_DIR$/docs/links.md" />
+        <option value="$PROJECT_DIR$/docs/szu_courses/cn/vlan_lab.md" />
+        <option value="$PROJECT_DIR$/docs/reading_notes/understanding_and_using_c_pointers/introduction.md" />
+        <option value="$PROJECT_DIR$/docs/reading_notes/docker_cookbook/getting_started_with_docker.md" />
+        <option value="$PROJECT_DIR$/docs/js/extra.js" />
+        <option value="$PROJECT_DIR$/docs/index.md" />
+        <option value="$PROJECT_DIR$/docs/reading_notes/tcp_ip_illustrated/user_datagram_protocol_and_ip_fragmentation.md" />
+        <option value="$PROJECT_DIR$/docs/reading_notes/tcp_ip_illustrated/the_transmission_control_protocol_preliminaries.md" />
+        <option value="$PROJECT_DIR$/mkdocs.yml" />
+        <option value="$PROJECT_DIR$/docs/szu_courses/cn/router_lab.md" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="535" />
+    <option name="y" value="68" />
+    <option name="width" value="1490" />
+    <option name="height" value="848" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="szu17dmy.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="szu17dmy.github.io" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="szu17dmy.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="szu17dmy.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="szu17dmy.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="szu17dmy.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="embedded" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="szu17dmy.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="szu17dmy.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="szu17dmy.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="szu17dmy.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="misc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="szu17dmy.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="szu17dmy.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="reading_notes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="szu17dmy.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="szu17dmy.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="reading_notes" type="462c0819:PsiDirectoryNode" />
+              <item name="docker_cookbook" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="szu17dmy.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="szu17dmy.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="reading_notes" type="462c0819:PsiDirectoryNode" />
+              <item name="pointer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="szu17dmy.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="szu17dmy.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="reading_notes" type="462c0819:PsiDirectoryNode" />
+              <item name="tcp_ip_illustrated" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="szu17dmy.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="szu17dmy.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="reading_notes" type="462c0819:PsiDirectoryNode" />
+              <item name="understanding_and_using_c_pointers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="szu17dmy.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="szu17dmy.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="szu_courses" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="szu17dmy.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="szu17dmy.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="szu_courses" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="szu17dmy.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="szu17dmy.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="szu_courses" type="462c0819:PsiDirectoryNode" />
+              <item name="csapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../wxBot/venv" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f7fadf15-9a4e-436f-a63f-e9707723dbd9" name="Default Changelist" comment="" />
+      <created>1554810858905</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1554810858905</updated>
+      <workItem from="1554810860944" duration="5762000" />
+      <workItem from="1554865606421" duration="7627000" />
+      <workItem from="1554894288139" duration="272000" />
+      <workItem from="1554894608776" duration="1397000" />
+      <workItem from="1554898494162" duration="1768000" />
+      <workItem from="1554905840039" duration="1799000" />
+      <workItem from="1554952573614" duration="836000" />
+      <workItem from="1554993442815" duration="878000" />
+      <workItem from="1555034777347" duration="281000" />
+      <workItem from="1555334179955" duration="5858000" />
+      <workItem from="1555499469165" duration="996000" />
+      <workItem from="1555506031167" duration="439000" />
+      <workItem from="1555553992648" duration="1916000" />
+      <workItem from="1555566030290" duration="1513000" />
+      <workItem from="1555575495260" duration="380000" />
+      <workItem from="1555575973646" duration="3730000" />
+      <workItem from="1555589733010" duration="1953000" />
+      <workItem from="1555637705495" duration="161000" />
+      <workItem from="1555638549864" duration="656000" />
+      <workItem from="1555639412199" duration="28566000" />
+      <workItem from="1555686612302" duration="155000" />
+      <workItem from="1555751907515" duration="725000" />
+      <workItem from="1555752912481" duration="5198000" />
+      <workItem from="1555825961485" duration="16345000" />
+      <workItem from="1555864409514" duration="1509000" />
+      <workItem from="1555899608656" duration="831000" />
+      <workItem from="1555938237657" duration="6551000" />
+      <workItem from="1555953619966" duration="1644000" />
+      <workItem from="1555985445939" duration="5685000" />
+      <workItem from="1556024533781" duration="784000" />
+      <workItem from="1556172514239" duration="633000" />
+      <workItem from="1556173383992" duration="3510000" />
+      <workItem from="1556193290450" duration="11822000" />
+      <workItem from="1556347133939" duration="2782000" />
+      <workItem from="1556352638256" duration="1449000" />
+      <workItem from="1556359073562" duration="1313000" />
+      <workItem from="1557133491603" duration="87000" />
+      <workItem from="1557393161896" duration="1071000" />
+      <workItem from="1557581991300" duration="159000" />
+      <workItem from="1557582184657" duration="4930000" />
+      <workItem from="1557625487831" duration="6415000" />
+      <workItem from="1557649951200" duration="3633000" />
+      <workItem from="1557714402884" duration="19000" />
+      <workItem from="1557714470500" duration="1515000" />
+      <workItem from="1557726511578" duration="1003000" />
+      <workItem from="1557729840046" duration="8680000" />
+      <workItem from="1557751528420" duration="1256000" />
+      <workItem from="1557988474178" duration="3971000" />
+      <workItem from="1558010322183" duration="2213000" />
+      <workItem from="1558013590587" duration="1266000" />
+      <workItem from="1558020429045" duration="2678000" />
+      <workItem from="1558057582584" duration="15860000" />
+    </task>
+    <task id="LOCAL-00001" summary="ADD misc/git_clone_via_ssh">
+      <created>1554895305064</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1554895305064</updated>
+    </task>
+    <task id="LOCAL-00002" summary="MODIFIED embedded/clion">
+      <created>1554895407278</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1554895407278</updated>
+    </task>
+    <task id="LOCAL-00003" summary="ADD misc/secure_public_wireless_network_at_school_szu">
+      <created>1555653485860</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1555653485861</updated>
+    </task>
+    <task id="LOCAL-00004" summary="ADD misc/secure_public_wireless_network_at_school_szu">
+      <created>1555653741684</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1555653741684</updated>
+    </task>
+    <task id="LOCAL-00005" summary="ADD misc/secure_public_wireless_network_at_school_szu">
+      <created>1555654064293</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1555654064293</updated>
+    </task>
+    <task id="LOCAL-00006" summary="ADD misc/secure_public_wireless_network_at_school_szu">
+      <created>1555655135631</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1555655135631</updated>
+    </task>
+    <task id="LOCAL-00007" summary="ADD misc/secure_public_wireless_network_at_school_szu">
+      <created>1555655174310</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1555655174310</updated>
+    </task>
+    <task id="LOCAL-00008" summary="ADD /szu_courses/csapp/bomblab.md">
+      <created>1555990531259</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1555990531260</updated>
+    </task>
+    <task id="LOCAL-00009" summary="ADD /szu_courses/csapp/bomblab.md">
+      <created>1555991275628</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1555991275628</updated>
+    </task>
+    <task id="LOCAL-00010" summary="ADD /szu_courses/csapp/bomblab.md">
+      <created>1555991735442</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1555991735442</updated>
+    </task>
+    <task id="LOCAL-00011" summary="ADD /szu_courses/csapp/bomblab.md">
+      <created>1556024688719</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1556024688719</updated>
+    </task>
+    <task id="LOCAL-00012" summary="ADD /szu_courses/cn/vlan_lab.md">
+      <created>1556205101064</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1556205101064</updated>
+    </task>
+    <task id="LOCAL-00013" summary="ADD /szu_courses/cn/vlan_lab.md">
+      <created>1556353720144</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1556353720144</updated>
+    </task>
+    <task id="LOCAL-00014" summary="FIX palette">
+      <created>1557732094778</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1557732094778</updated>
+    </task>
+    <task id="LOCAL-00015" summary="FIX gitalk">
+      <created>1557732697212</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1557732697212</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="182480000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="535" y="68" width="1490" height="848" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15745856" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3297546" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49075976" visible="true" weight="0.24157304" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50924027" side_tool="true" weight="0.6400966" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Maven" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="SciView" order="8" />
+      <window_info anchor="right" id="Database" order="9" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="ADD misc/git_clone_via_ssh" />
+    <MESSAGE value="MODIFIED embedded/clion" />
+    <MESSAGE value="ADD misc/secure_public_wireless_network_at_school_szu" />
+    <MESSAGE value="ADD /szu_courses/csapp/bomblab.md" />
+    <MESSAGE value="ADD /szu_courses/cn/vlan_lab.md" />
+    <MESSAGE value="FIX palette" />
+    <MESSAGE value="FIX gitalk" />
+    <option name="LAST_COMMIT_MESSAGE" value="FIX gitalk" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/docs/embedded/clion-2019.1.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="75">
+            <caret line="78" selection-start-line="78" selection-end-line="78" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/misc/git_clone_via_ssh.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="172">
+            <caret line="51" selection-start-line="51" selection-end-line="51" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/szu_courses/cn.md" />
+    <entry file="file://$PROJECT_DIR$/docs/misc/secure_public_wireless_network_at_school_szu.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="343">
+            <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/ctf_writeup/pctf2019/cookie_monster.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/ctf_writeup/pctf2019/game_of_faces.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/ctf_writeup/pctf2019/exorcism.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="105">
+            <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/ctf_writeup/pctf2019/late_pr.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/ctf_writeup/pctf2019/magic_pngs.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="147">
+            <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/ctf_writeup/pctf2019/save_earth.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="147">
+            <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/ctf_writeup/pctf2019/slow_realization.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="105">
+            <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/ctf_writeup/pctf2019/welcome.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="63">
+            <caret line="3" column="44" lean-forward="true" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/ctf_writeup/ciscn2019/qiandao.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="210">
+            <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/szu_courses/csapp/bomblab.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor>
+            <caret lean-forward="true" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/ctf_writeup/ciscn2019/saleae.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="183">
+            <caret line="75" selection-start-line="75" selection-end-line="75" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/ctf_writeup/ciscn2019/usbasp.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="63">
+            <caret line="3" selection-start-line="3" selection-end-line="3" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pipfile" />
+    <entry file="file://$PROJECT_DIR$/Pipfile.lock" />
+    <entry file="file://$PROJECT_DIR$/docs/reading_notes/pointer/0.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/reading_notes/pointer/1.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-5583" />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/reading_notes/docker_cookbook/getting_started_with_docker.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="347">
+            <caret line="203" lean-forward="true" selection-start-line="203" selection-end-line="203" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/links.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="252">
+            <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/szu_courses/cn/vlan_lab.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="605">
+            <caret line="62" selection-start-line="62" selection-end-line="62" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib64/python3.7/site-packages/material/partials/integrations/disqus.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/js/extra.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/index.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="267">
+            <caret line="74" selection-start-line="74" selection-end-line="74" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mkdocs.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1827">
+          <caret line="87" column="50" selection-start-line="87" selection-start-column="50" selection-end-line="87" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/reading_notes/understanding_and_using_c_pointers/introduction.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="21">
+            <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/szu_courses/csapp/datalab.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="294">
+            <caret line="14" column="60" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/ctf_writeup/ciscn2019/24c.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="630">
+            <caret line="30" selection-start-line="30" selection-end-line="30" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/szu_courses/cn/transport_layer.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="714">
+            <caret line="34" selection-start-line="34" selection-end-line="34" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/reading_notes/tcp_ip_illustrated/user_datagram_protocol_and_ip_fragmentation.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="903">
+            <caret line="43" column="2" selection-start-line="43" selection-start-column="2" selection-end-line="43" selection-end-column="2" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/reading_notes/computer_systems_a_programmer_s_perspective/machine-level_representation_of_programs.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="378">
+            <caret line="18" selection-start-line="18" selection-end-line="18" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/reading_notes/tcp_ip_illustrated/the_transmission_control_protocol_preliminaries.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="126">
+            <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/szu_courses/cn/router_lab.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="281">
+            <caret line="43" selection-start-line="43" selection-end-line="43" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>Python 3.7 (szu17dmy.github.io)</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>szu17dmy.github.io</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

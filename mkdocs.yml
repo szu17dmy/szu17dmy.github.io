@@ -63,6 +63,7 @@ nav:
     - 《TCP/IP详解》读书笔记:
       - 卷1：协议:
         - 第10章 用户数据报协议和IP分片: reading_notes/tcp_ip_illustrated/user_datagram_protocol_and_ip_fragmentation.md
+        - 第12章 TCP：传输控制协议（初步）: reading_notes/tcp_ip_illustrated/the_transmission_control_protocol_preliminaries.md
     - 《征服C指针》读书笔记:
       - 第0章 本书的目标与结构——引言: reading_notes/pointer/0.md
       - 第1章 从基础开始——预备知识和复习: reading_notes/pointer/1.md
@@ -84,6 +85,7 @@ nav:
     - 计算机网络:
       - 实验:
         - VLAN Lab: szu_courses/cn/vlan_lab.md
+        - Router Lab: szu_courses/cn/router_lab.md
       - 传输层: szu_courses/cn/transport_layer.md
   - SZU ONLINEJUDGE:
     - 专题 What's wrong with my code?:
@@ -157,6 +159,8 @@ extra:
   social:
     - type: 'github'
       link: 'https://github.com/szu17dmy'
+    - type: 'telegram'
+      link: 'https://t.me/szu17dmy'
 
 extra_javascript:
   - 'js/extra.js'
