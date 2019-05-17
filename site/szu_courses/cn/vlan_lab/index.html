@@ -1537,8 +1537,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#console" title="CONSOLE方式登录" class="md-nav__link">
-    CONSOLE方式登录
+  <a href="#console" title="CONSOLE登录" class="md-nav__link">
+    CONSOLE登录
   </a>
   
 </li>
@@ -1558,7 +1558,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" title="关键词" class="md-nav__link">
+  <a href="#_1" title="控制台记录" class="md-nav__link">
+    控制台记录
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="关键词" class="md-nav__link">
     关键词
   </a>
   
@@ -2425,8 +2432,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#console" title="CONSOLE方式登录" class="md-nav__link">
-    CONSOLE方式登录
+  <a href="#console" title="CONSOLE登录" class="md-nav__link">
+    CONSOLE登录
   </a>
   
 </li>
@@ -2446,7 +2453,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" title="关键词" class="md-nav__link">
+  <a href="#_1" title="控制台记录" class="md-nav__link">
+    控制台记录
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="关键词" class="md-nav__link">
     关键词
   </a>
   
@@ -2481,7 +2495,7 @@
 <li>Quidway S5700系列交换机1台，Quidway S3700系列交换机1台。</li>
 </ul>
 <p>...并不是我故意找了两台不一样的，而是我所在的位置上的柜子里就是这样的。这样的情况带来的问题就是有些命令不大一样，需要先翻手册才知道。当然你要是因为这个就黑说老师的PPT不对就有点过了，PPT上面的内容个人认为最多算是启发性质的、大方向上的教程，并且针对的交换机型号、硬件版本、固件版本不能总是和你所在的环境一样，更多的细节上的问题你总是需要自己想办法去解决和适应。</p>
-<h2 id="console">CONSOLE方式登录</h2>
+<h2 id="console">CONSOLE登录</h2>
 <p>正常情况下，你应该可以看到交换机上面的CONSOLE口有一根线连到了某台电脑的RS-232（这个是我瞎说的）口上，这个时候就用这台电脑来配置交换机吧。</p>
 <p>PPT里的示例使用的是超级终端，不过我使用的是Xshell，像这样子新建一个连接，然后选择<strong>串口SERIAL</strong>：</p>
 <p><img alt="VLAN_LAB_1.jpg" src="../img/VLAN_LAB_1.jpg" /></p>
@@ -2579,7 +2593,71 @@
 <p>附加一个PC2和PC3：</p>
 <p><img alt="VLAN_LAB_25.jpg" src="../img/VLAN_LAB_25.jpg" /></p>
 <p>大概这样子就圆满完成了。不过走之前别忘了删掉VLAN，网线插回原位之类的扫尾工作哈。</p>
-<h2 id="_1">关键词</h2>
+<h2 id="_1">控制台记录</h2>
+<p>一些控制台记录，仅供参考，并且有我瞎玩的记录。请务必记得看文档。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>&lt;Quidway&gt;system-view 
+<span class="o">[</span>Quidway<span class="o">]</span>interface Vlanif <span class="m">2</span>
+Error: The VLAN does not exist.
+<span class="o">[</span>Quidway<span class="o">]</span>vlan <span class="m">2</span> 
+<span class="o">[</span>Quidway-vlan2<span class="o">]</span>quit
+<span class="o">[</span>Quidway<span class="o">]</span>interface Vlanif <span class="m">2</span>
+<span class="o">[</span>Quidway-Vlanif2<span class="o">]</span>ip address <span class="m">10</span>.110.10.3 <span class="m">255</span>.255.255.0
+<span class="o">[</span>Quidway<span class="o">]</span>undo vlan <span class="m">2</span>
+Error: The VLAN has a L3 interface. Please delete it first.
+<span class="o">[</span>Quidway<span class="o">]</span>vlan <span class="m">2</span> 
+<span class="o">[</span>Quidway-vlan2<span class="o">]</span>port Ethernet0/0/3
+Error: Trunk or Hybrid port<span class="o">(</span>s<span class="o">)</span> cannot be added or deleted in this manner.
+<span class="o">[</span>Quidway<span class="o">]</span>interface Ethernet0/0/3
+<span class="o">[</span>Quidway-Ethernet0/0/3<span class="o">]</span>port link-type access
+<span class="o">[</span>Quidway-Ethernet0/0/3<span class="o">]</span>port default vlan <span class="m">2</span>
+<span class="o">[</span>Quidway-Ethernet0/0/3<span class="o">]</span>display vlan <span class="m">2</span>
+* : management-vlan
+---------------------
+VLAN ID Type         Status   MAC Learning Broadcast/Multicast/Unicast Property 
+--------------------------------------------------------------------------------
+<span class="m">2</span>       common       <span class="nb">enable</span>   <span class="nb">enable</span>       forward   forward   forward default  
+----------------
+Untagged   Port: Ethernet0/0/3               
+----------------
+Interface                   Physical 
+Ethernet0/0/3               UP      
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">[</span>Quidway<span class="o">]</span>interface GigabitEthernet0/0/23
+<span class="o">[</span>Quidway-GigabitEthernet0/0/23<span class="o">]</span>port link-type trunk
+<span class="o">[</span>Quidway-GigabitEthernet0/0/23<span class="o">]</span>port trunk allow-pass vlan all 
+</pre></div>
+</td></tr></table>
+
+<h2 id="_2">关键词</h2>
 <p>实验报告 交换机与虚拟局域网 计算机网络</p>
                 
                   

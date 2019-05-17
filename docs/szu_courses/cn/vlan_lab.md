@@ -9,7 +9,7 @@
 
 ...并不是我故意找了两台不一样的，而是我所在的位置上的柜子里就是这样的。这样的情况带来的问题就是有些命令不大一样，需要先翻手册才知道。当然你要是因为这个就黑说老师的PPT不对就有点过了，PPT上面的内容个人认为最多算是启发性质的、大方向上的教程，并且针对的交换机型号、硬件版本、固件版本不能总是和你所在的环境一样，更多的细节上的问题你总是需要自己想办法去解决和适应。
 
-## CONSOLE方式登录
+## CONSOLE登录
 正常情况下，你应该可以看到交换机上面的CONSOLE口有一根线连到了某台电脑的RS-232（这个是我瞎说的）口上，这个时候就用这台电脑来配置交换机吧。
 
 PPT里的示例使用的是超级终端，不过我使用的是Xshell，像这样子新建一个连接，然后选择**串口SERIAL**：
@@ -169,6 +169,44 @@ PC2和PC4之间能否ping成功：
 ![VLAN_LAB_25.jpg](./img/VLAN_LAB_25.jpg)
 
 大概这样子就圆满完成了。不过走之前别忘了删掉VLAN，网线插回原位之类的扫尾工作哈。
+
+## 控制台记录
+一些控制台记录，仅供参考，并且有我瞎玩的记录。请务必记得看文档。
+
+``` bash
+<Quidway>system-view 
+[Quidway]interface Vlanif 2
+Error: The VLAN does not exist.
+[Quidway]vlan 2 
+[Quidway-vlan2]quit
+[Quidway]interface Vlanif 2
+[Quidway-Vlanif2]ip address 10.110.10.3 255.255.255.0
+[Quidway]undo vlan 2
+Error: The VLAN has a L3 interface. Please delete it first.
+[Quidway]vlan 2 
+[Quidway-vlan2]port Ethernet0/0/3
+Error: Trunk or Hybrid port(s) cannot be added or deleted in this manner.
+[Quidway]interface Ethernet0/0/3
+[Quidway-Ethernet0/0/3]port link-type access
+[Quidway-Ethernet0/0/3]port default vlan 2
+[Quidway-Ethernet0/0/3]display vlan 2
+* : management-vlan
+---------------------
+VLAN ID Type         Status   MAC Learning Broadcast/Multicast/Unicast Property 
+--------------------------------------------------------------------------------
+2       common       enable   enable       forward   forward   forward default  
+----------------
+Untagged   Port: Ethernet0/0/3               
+----------------
+Interface                   Physical 
+Ethernet0/0/3               UP      
+```
+
+``` bash
+[Quidway]interface GigabitEthernet0/0/23
+[Quidway-GigabitEthernet0/0/23]port link-type trunk
+[Quidway-GigabitEthernet0/0/23]port trunk allow-pass vlan all 
+```
 
 ## 关键词
 实验报告 交换机与虚拟局域网 计算机网络
