@@ -1608,7 +1608,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../szu_courses/csapp/datalab/" title="Data Lab" class="md-nav__link">
+    <a href="../../../szu_courses/csapp/data_lab/" title="Data Lab" class="md-nav__link">
       Data Lab
     </a>
   </li>
@@ -1620,8 +1620,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../szu_courses/csapp/bomblab/" title="Bomb Lab" class="md-nav__link">
+    <a href="../../../szu_courses/csapp/bomb_lab/" title="Bomb Lab" class="md-nav__link">
       Bomb Lab
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_courses/csapp/buffer_lab/" title="Buffer Lab" class="md-nav__link">
+      Buffer Lab
     </a>
   </li>
 
@@ -1668,6 +1680,18 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_courses/cn/socket_lab/" title="Socket Lab" class="md-nav__link">
+      Socket Lab
+    </a>
+  </li>
+
         
           
           
@@ -2735,8 +2759,8 @@
 <p>下载到的文件，属性里似乎有提示，</p>
 <p><img alt="misc_60-3.png" src="../img/misc_60-3.png" /></p>
 <p>完全没看懂，直接binwalk看看。内含zip文件，foremost提取，解压zip后有flag.rar和提示.jpg。好吧提示也没看懂，我就看懂了密码是3位数字，那就直接爆破好了。</p>
-<p>生成一下三位数字的字典：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<p>生成一下三位数字的字典：
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2763,8 +2787,7 @@
 <span class="p">}</span>
 </pre></div>
 </td></tr></table>
-
-<p>然后：</p>
+然后：</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">fcrackzip</span> <span class="o">-</span><span class="n">b</span> <span class="o">-</span><span class="n">D</span> <span class="o">-</span><span class="n">p</span> <span class="p">.</span><span class="o">/</span><span class="n">dict_3numbers</span><span class="p">.</span><span class="n">txt</span> <span class="p">.</span><span class="o">/</span><span class="n">flag</span><span class="p">.</span><span class="n">rar</span>
 </pre></div>
 </td></tr></table>

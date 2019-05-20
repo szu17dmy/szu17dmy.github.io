@@ -1443,7 +1443,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../csapp/datalab/" title="Data Lab" class="md-nav__link">
+    <a href="../../csapp/data_lab/" title="Data Lab" class="md-nav__link">
       Data Lab
     </a>
   </li>
@@ -1455,8 +1455,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../csapp/bomblab/" title="Bomb Lab" class="md-nav__link">
+    <a href="../../csapp/bomb_lab/" title="Bomb Lab" class="md-nav__link">
       Bomb Lab
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../csapp/buffer_lab/" title="Buffer Lab" class="md-nav__link">
+      Buffer Lab
     </a>
   </li>
 
@@ -1507,6 +1519,18 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../socket_lab/" title="Socket Lab" class="md-nav__link">
+      Socket Lab
+    </a>
+  </li>
+
         
           
           
@@ -2536,7 +2560,7 @@
 <p><a href="https://www.zhihu.com/question/51517961">交换机要ip有什么用？</a></p>
 <p><img alt="VLAN_LAB_8.png" src="../img/VLAN_LAB_8.png" /></p>
 <blockquote>
-<p>:warning: 怀疑文章有问题之前最好先确认一下自己是否已经读了上述文章</p>
+<p><img alt="⚠" class="emojione" src="https://cdn.jsdelivr.net/emojione/assets/svg/26a0.svg" title=":warning:" /> 怀疑文章有问题之前最好先确认一下自己是否已经读了上述文章</p>
 </blockquote>
 <p>接下来我们该来配置一下VLAN了。根据要求，把Ethernet 0/0/3包含到VLAN2中，把Ethernet 0/0/4包含到VLAN3中：</p>
 <p><img alt="VLAN_LAB_9.jpg" src="../img/VLAN_LAB_9.jpg" /></p>
@@ -2575,11 +2599,11 @@
 <ol>
 <li>将Ethernet 0/0/3添加到VLAN3中；</li>
 <li>将Ethernet 0/0/12添加到VLAN2中；</li>
-<li>将Ethernet 0/0/23配置为trunk并允许VLAN2/3的流量通过。</li>
+<li>将Ethernet 0/0/23配置为trunk并允许VLAN&#8532;的流量通过。</li>
 </ol>
 <p>这台交换机的端口就不像想象中的那样了：</p>
 <p><img alt="VLAN_LAB_18.png" src="../img/VLAN_LAB_18.png" /></p>
-<p>好吧...原来是<code>GigabitEthernet0/0/1</code>，原谅我这种只会用网件那种有配置程序的交换机的人TAB了半天...</p>
+<p>好吧...原来是<code class="codehilite"><span class="n">GigabitEthernet0</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">1</span></code>，原谅我这种只会用网件那种有配置程序的交换机的人TAB了半天...</p>
 <p>这里添加各端口到VLAN中的命令大家应该都清楚了，不再挂图了...看看trunk：</p>
 <p><img alt="VLAN_LAB_19.png" src="../img/VLAN_LAB_19.png" /></p>
 <p>别忘了还要允许流量通过：</p>
@@ -2590,7 +2614,7 @@
 <ol>
 <li>将Ethernet0/0/13添加到VLAN3中；</li>
 <li>将Ethernet0/0/20添加到VLAN2中；</li>
-<li>将Ethernet0/0/23配置为trunk并允许VLAN2/3的流量通过。</li>
+<li>将Ethernet0/0/23配置为trunk并允许VLAN&#8532;的流量通过。</li>
 </ol>
 <p>跟上面差不多，我就不累死累活上图了。如果两台都配置好了之后就可以来测试了！根据实验要求：</p>
 <p>PC1和PC2之间能否ping成功：</p>
@@ -2607,7 +2631,7 @@
 <p>大概这样子就圆满完成了。不过走之前别忘了删掉VLAN，网线插回原位之类的扫尾工作哈。</p>
 <h2 id="_1">控制台记录</h2>
 <p>一些控制台记录，仅供参考，并且有我瞎玩的记录。请务必记得看文档。</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2661,7 +2685,7 @@ Ethernet0/0/3               UP
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">[</span>Quidway<span class="o">]</span>interface GigabitEthernet0/0/23
 <span class="o">[</span>Quidway-GigabitEthernet0/0/23<span class="o">]</span>port link-type trunk
@@ -2711,7 +2735,7 @@ Ethernet0/0/3               UP
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../csapp/bomblab/" title="Bomb Lab" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../socket_lab/" title="Socket Lab" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -2720,7 +2744,7 @@ Ethernet0/0/3               UP
                 <span class="md-footer-nav__direction">
                   后退
                 </span>
-                Bomb Lab
+                Socket Lab
               </span>
             </div>
           </a>

@@ -1,4 +1,4 @@
-这回我们来讨论一下Linux下通过SSH来git clone。还是写给小白看的，大佬可以无视了。
+这回我们来讨论一下Linux下通过SSH来git clone。还是写给小白看的，大佬们可以无视了。
 
 现在的环境是openSUSE Tumbleweed（其实这并不重要，也适用于macOS等操作系统），代码托管站点是Azure DevOps（每个站点的具体操作应该大同小异，网站一般会提供相应的文档）。另外，如果你在使用一些利用SSH key进行连接的主机上遇到问题，可能也可以参考这里。
 
@@ -20,7 +20,9 @@
 好了，我们可以准备来连接了。
 
 ## git clone
-// 我猜这个时候已经有同学去直接去git clone了然后发现还是要输入密码（或者报一些奇奇怪怪的错）...
+
+!!! failure
+    我猜这个时候已经有同学去直接去git clone了然后发现还是要输入密码（或者报一些奇奇怪怪的错）...
 
 现在我们来把private key的路径填入ssh的一个配置文件。但在这之前，我们需要来保证private key的权限是仅有自己可读的，否则你应该会得到一个错误提示private key权限不安全。你可以通过
 
@@ -48,4 +50,4 @@
 这个时候，你应该可以正常地进行git clone（通过SSH）了。
 
 ## 最后的废话
-如果你对密码学感兴趣的话，有很多不错的资料，比如...[图解密码技术](https://item.jd.com/11942019.html)，[密码学简介 - CTF Wiki](https://ctf-wiki.github.io/ctf-wiki/crypto/introduction/)之类的，想了解更多请去找优秀的资料，最好别在这里看我瞎扯...（虽然好像也没啥关联）
+如果你对密码学感兴趣的话，有很多不错的资料，比如...[图解密码技术](https://item.jd.com/11942019.html)，[密码学简介 - CTF Wiki](https://ctf-wiki.github.io/ctf-wiki/crypto/introduction/)之类的，想了解更多请去找优秀的资料，最好别在这里看我瞎扯...（虽然好像和本文没啥关联）

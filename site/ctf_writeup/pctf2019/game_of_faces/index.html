@@ -1488,7 +1488,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../szu_courses/csapp/datalab/" title="Data Lab" class="md-nav__link">
+    <a href="../../../szu_courses/csapp/data_lab/" title="Data Lab" class="md-nav__link">
       Data Lab
     </a>
   </li>
@@ -1500,8 +1500,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../szu_courses/csapp/bomblab/" title="Bomb Lab" class="md-nav__link">
+    <a href="../../../szu_courses/csapp/bomb_lab/" title="Bomb Lab" class="md-nav__link">
       Bomb Lab
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_courses/csapp/buffer_lab/" title="Buffer Lab" class="md-nav__link">
+      Buffer Lab
     </a>
   </li>
 
@@ -1548,6 +1560,18 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_courses/cn/socket_lab/" title="Socket Lab" class="md-nav__link">
+      Socket Lab
+    </a>
+  </li>
+
         
           
           
@@ -2459,10 +2483,10 @@
                 
                 <h2 id="_1">题目</h2>
 <p>The Game of Faces, welcomes you. In this era, where AIs generate a lot of faces, we would like you to contribute to the same by uploading your image. Thank you for contributing, to continue.</p>
-<p>http://159.89.166.12:15000/</p>
+<p><a href="http://159.89.166.12:15000/">http://159.89.166.12:15000/</a></p>
 <h2 id="_2">解决方案</h2>
 <p>打开网页，有三个色块，暂时看不到其它内容。Ctrl+U查看源码，有发现：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&#39;#&#39;</span> <span class="na">method </span><span class="o">=</span> <span class="s">&quot;GET&quot;</span> <span class="na">target</span><span class="o">=</span><span class="s">&quot;resultFrame&quot;</span><span class="p">&gt;</span>
@@ -2475,9 +2499,9 @@
 <p>竟然有个上传文件的表单。随便选了个文件上传，跳转到一个新页面，有个字符串：</p>
 <blockquote>
 <p>VGhlX3Njcm9sbF9zYXlzPXRoZV9uaWdodF9raW5nVlN2YWx5cmlhbi50eHQ==</p>
-<p>The_scroll_says=the_night_kingVSvalyrian.txt</p>
+<p>The<em>scroll</em>says=the<em>night</em>kingVSvalyrian.txt</p>
 </blockquote>
-<p>尝试请求the_night_kingVSvalyrian.txt：</p>
+<p>尝试请求the<em>night</em>kingVSvalyrian.txt：</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">pctf</span><span class="err">{</span><span class="n">You_L00K_Wi3Rd_IN_H3R3</span><span class="err">}</span>
 </pre></div>
 </td></tr></table>

@@ -1488,7 +1488,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../szu_courses/csapp/datalab/" title="Data Lab" class="md-nav__link">
+    <a href="../../../szu_courses/csapp/data_lab/" title="Data Lab" class="md-nav__link">
       Data Lab
     </a>
   </li>
@@ -1500,8 +1500,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../szu_courses/csapp/bomblab/" title="Bomb Lab" class="md-nav__link">
+    <a href="../../../szu_courses/csapp/bomb_lab/" title="Bomb Lab" class="md-nav__link">
       Bomb Lab
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_courses/csapp/buffer_lab/" title="Buffer Lab" class="md-nav__link">
+      Buffer Lab
     </a>
   </li>
 
@@ -1548,6 +1560,18 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_courses/cn/socket_lab/" title="Socket Lab" class="md-nav__link">
+      Socket Lab
+    </a>
+  </li>
+
         
           
           
@@ -2459,7 +2483,7 @@
                 
                 <h2 id="_1">题目</h2>
 <p>Do prepare to see cookies lurking everywhere.</p>
-<p>http://159.89.166.12:13500/</p>
+<p><a href="http://159.89.166.12:13500/">http://159.89.166.12:13500/</a></p>
 <h2 id="_2">解决方案</h2>
 <p>打开网页后，感觉都在提Cookie，F12打开开发者工具看看Cookie。能发现响应头的Set-Cookie在变化，并且查到前两个分别是pc和tf的哈希值：</p>
 <blockquote>
@@ -2469,7 +2493,7 @@
 <p>应该是flag每两个字符去哈希，然后每次响应头的Set-Cookie，是请求头的Cookie对应两位字符的后两位字符的哈希，也就是说只要不断拿返回的新Cookie去请求，就可以拿到全部（我在说什么玩意儿）。</p>
 <p>...我还是重新说一遍吧，刚开始没有Cookie，服务器会返回Set-Cookie是pc的哈希值（bc54开头的），然后浏览器再次请求这个页面就会带上bc54开头的Cookie，这时候服务器就会返回pc的后两位也就是tf的哈希值（114d开头的），以此类推，直到又出现pc的哈希值就可以停下了。</p>
 <p>于是乎：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2495,8 +2519,8 @@
 </pre></div>
 </td></tr></table>
 
-<p>应该能得到：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<p>应该能得到：
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2544,8 +2568,7 @@
 <span class="n">flag</span><span class="o">=</span><span class="n">c1d12de20210d8c1b35c367536e1c255</span>
 <span class="n">flag</span><span class="o">=</span><span class="n">a8655da06c5080d3f1eb6af7b514e309</span>
 </pre></div>
-</td></tr></table>
-
+</td></tr></table></p>
 <p>一个个去搜好像也不是什么大问题，但是也可以写个脚本生成字典，毕竟都是两位字符的哈希值。最后得到：</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">pctf</span><span class="err">{</span><span class="n">c0oki3s_</span><span class="nv">@re_yUm_bUt_tHEy_@ls0_r3vEaL_@_l0t</span><span class="err">}</span><span class="w"></span>
 </pre></div>

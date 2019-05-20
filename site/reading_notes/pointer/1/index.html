@@ -1659,7 +1659,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../szu_courses/csapp/datalab/" title="Data Lab" class="md-nav__link">
+    <a href="../../../szu_courses/csapp/data_lab/" title="Data Lab" class="md-nav__link">
       Data Lab
     </a>
   </li>
@@ -1671,8 +1671,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../szu_courses/csapp/bomblab/" title="Bomb Lab" class="md-nav__link">
+    <a href="../../../szu_courses/csapp/bomb_lab/" title="Bomb Lab" class="md-nav__link">
       Bomb Lab
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_courses/csapp/buffer_lab/" title="Buffer Lab" class="md-nav__link">
+      Buffer Lab
     </a>
   </li>
 
@@ -1719,6 +1731,18 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_courses/cn/socket_lab/" title="Socket Lab" class="md-nav__link">
+      Socket Lab
+    </a>
+  </li>
+
         
           
           
@@ -2818,32 +2842,28 @@
 </blockquote>
 </blockquote>
 <p>来讨论一下这个问题，对于(str == "abc")这个表达式，如果你正在使用CLion，你应该会得到一个warning: Result of comparison against a string literal is unspecified (use strcmp instead)。左侧是char *（指向了char数组的第一个元素），右侧也是char *（指向了字符串字面量的第一个元素），也就是书中所说的这是在比较指针。</p>
-<p>另外，我还看见有大一同学写(str == "")这样的表达式来判断字符串是否为空，这样的比较正如上文所说，自然不能成功。如果真的需要比较，应当使用strcmp()函数。如果是为了判断字符串是否为空，可以这样：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">str</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">))</span> <span class="p">{</span> <span class="p">}</span>
+<p>另外，我还看见有大一同学写(str == "")这样的表达式来判断字符串是否为空，这样的比较正如上文所说，自然不能成功。如果真的需要比较，应当使用strcmp()函数。如果是为了判断字符串是否为空，可以这样：
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">str</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">))</span> <span class="p">{</span> <span class="p">}</span>
 </pre></div>
 </td></tr></table>
-
-<p>或者对初始化后的char型数组：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">strlen</span><span class="p">(</span><span class="n">str</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+或者对初始化后的char型数组：
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">strlen</span><span class="p">(</span><span class="n">str</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
 </pre></div>
 </td></tr></table>
-
-<p>一本正经地强调要初始化...因为不初始化用这个是很危险的，然后大部分同学用的Dev-C++也不会警告变量未初始化，也就很经常没写好初始化（其实就算有警告我也敢打赌好多同学还是强行忽略），然后喜欢说“本地过了就是过了，提示WA说明OJ有问题”这样不负责任的话。讲真只要把后台数据拿出来试一下，99.9999%的锅都是学生的锅。（摊手.jpg）</p>
-<p>好吧跑题跑得有点远，回来继续看字符串...又或者，直接使用C++的STL：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+一本正经地强调要初始化...因为不初始化用这个是很危险的，然后大部分同学用的Dev-C++也不会警告变量未初始化，也就很经常没写好初始化（其实就算有警告我也敢打赌好多同学还是强行忽略），然后喜欢说“本地过了就是过了，提示WA说明OJ有问题”这样不负责任的话。讲真只要把后台数据拿出来试一下，99.9999%的锅都是学生的锅。（摊手.jpg）</p>
+<p>好吧跑题跑得有点远，回来继续看字符串...又或者，直接使用C++的STL：
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">str</span><span class="p">;</span>
 <span class="k">if</span> <span class="p">(</span><span class="n">str</span> <span class="o">==</span> <span class="s">&quot;&quot;</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
 </pre></div>
 </td></tr></table>
-
-<p>当你使用string容器时，确实可以直接使用==符号来判断是否相等。这个时候可能有人要骂我了，先别急...</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+当你使用string容器时，确实可以直接使用==符号来判断是否相等。这个时候可能有人要骂我了，先别急...
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">str</span><span class="p">;</span>
 <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">str</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span> <span class="p">{</span> <span class="p">}</span>
 </pre></div>
 </td></tr></table>
-
-<p>只需要调用empty()方法就可以判断str是否为空了。</p>
+只需要调用empty()方法就可以判断str是否为空了。</p>
 <h2 id="121">1.2.1 恶名昭著的指针究竟是什么</h2>
 <h3 id="page-16">Page 16</h3>
 <blockquote>
@@ -2900,7 +2920,7 @@
 <p>/*</p>
 <p>通常，C的字符串使用'\0'结尾，可是因为strnpy()函数在src的长度大于len的情况下没有使用'\0'来结束，所以一板一眼地写了一个整理成C的字符串形式的函数（企图）</p>
 <p>*/</p>
-<p>void my_strncpy(char <em>dest, char </em>src, int len) {</p>
+<p>void my_strncpy(char *dest, char *src, int len) {</p>
 <p>strncpy(dest, src, len);</p>
 <p>dest[len] = NULL; ←使用NULL来结束字符串！！</p>
 <p>}</p>

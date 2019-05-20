@@ -1441,7 +1441,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../szu_courses/csapp/datalab/" title="Data Lab" class="md-nav__link">
+    <a href="../../../szu_courses/csapp/data_lab/" title="Data Lab" class="md-nav__link">
       Data Lab
     </a>
   </li>
@@ -1453,8 +1453,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../szu_courses/csapp/bomblab/" title="Bomb Lab" class="md-nav__link">
+    <a href="../../../szu_courses/csapp/bomb_lab/" title="Bomb Lab" class="md-nav__link">
       Bomb Lab
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_courses/csapp/buffer_lab/" title="Buffer Lab" class="md-nav__link">
+      Buffer Lab
     </a>
   </li>
 
@@ -1501,6 +1513,18 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_courses/cn/socket_lab/" title="Socket Lab" class="md-nav__link">
+      Socket Lab
+    </a>
+  </li>
+
         
           
           
@@ -2561,10 +2585,11 @@
 
 <h2 id="_7">提示</h2>
 <h2 id="_8">解决方案</h2>
-<p>额，写完才看到标题...懒得改了，事实上只要去掉Solver类再稍加改动就可以完全符合要求。</p>
-<p>这里主要思路就是相当于有一个上帝视角：<code>std::vector&lt;Cow *&gt; cows</code>，看着所有的牛。每次循环意味着过去一年，于是让所有牛成长、出生或是死亡。</p>
-<p>另外每次改动容器时会让迭代器失效，太久没看《Effective STL》了，有空找来这里补上一点东西。</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<p>额，写完才看到标题...懒得改了，事实上只要去掉Solver类再稍加改动就可以符合要求。</p>
+<p>这里主要思路就是相当于有一个上帝视角：<code class="codehilite"><span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Cow</span> <span class="o">*&gt;</span> <span class="n">cows</span></code>，看着所有的牛。每次循环意味着过去一年，于是让所有牛成长、出生或是死亡。</p>
+<p>更新：突然发现还忘记<code class="codehilite"><span class="k">delete</span></code>，别锤我...</p>
+<p>另外每次改动容器时某些情况会让迭代器失效，太久没看《Effective STL》了，有空找来这里补上一点东西。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4

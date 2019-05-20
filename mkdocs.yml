@@ -80,10 +80,12 @@ nav:
       - 前言: szu_courses/web/first.md
       - 工欲善其事: szu_courses/web/tools.md
     - 计算机系统:
-      - Data Lab: szu_courses/csapp/datalab.md
-      - Bomb Lab: szu_courses/csapp/bomblab.md
+      - Data Lab: szu_courses/csapp/data_lab.md
+      - Bomb Lab: szu_courses/csapp/bomb_lab.md
+      - Buffer Lab: szu_courses/csapp/buffer_lab.md
     - 计算机网络:
       - 实验:
+        - Socket Lab: szu_courses/cn/socket_lab.md
         - VLAN Lab: szu_courses/cn/vlan_lab.md
         - Router Lab: szu_courses/cn/router_lab.md
       - 传输层: szu_courses/cn/transport_layer.md
@@ -167,5 +169,23 @@ extra_javascript:
   - 'js/extra.js'
 
 markdown_extensions:
+  - admonition
   - codehilite:
       linenums: true
+  - footnotes
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: none
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde

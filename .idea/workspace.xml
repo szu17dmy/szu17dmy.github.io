@@ -2,8 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7fadf15-9a4e-436f-a63f-e9707723dbd9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/szu_oj/oop/1226.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/szu_courses/cn/socket_lab.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/szu_courses/csapp/buffer_lab.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/embedded/clion-2019.1.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/embedded/clion-2019.1.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/links.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/links.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/misc/git_clone_via_ssh.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/misc/git_clone_via_ssh.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/misc/secure_public_wireless_network_at_school_szu.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/misc/secure_public_wireless_network_at_school_szu.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/szu_courses/csapp/bomblab.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/szu_courses/csapp/bomb_lab.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/szu_courses/csapp/datalab.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/szu_courses/csapp/data_lab.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/szu_courses/csapp/img/BOMB-LAB_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/szu_courses/csapp/img/BOMB_LAB_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/szu_courses/csapp/img/BOMB-LAB_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/szu_courses/csapp/img/BOMB-LAB_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/szu_oj/oop/1226.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/szu_oj/oop/1226.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mkdocs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mkdocs.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,44 +34,66 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/szu_courses/cn/socket_lab.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="2835">
+                <caret line="135" column="4" selection-start-line="135" selection-start-column="4" selection-end-line="135" selection-end-column="4" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/misc/cmake_source_and_binary_directory.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/szu_courses/csapp/buffer_lab.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="407">
+                <caret line="561" selection-start-line="561" selection-end-line="561" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/links.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="294">
+                <caret line="14" selection-start-line="14" selection-end-line="14" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mkdocs.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="97" column="50" selection-start-line="97" selection-start-column="50" selection-end-line="97" selection-end-column="50" />
+            <state relative-caret-position="3885">
+              <caret line="185" column="17" selection-start-line="185" selection-start-column="17" selection-end-line="185" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/reading_notes/understanding_and_using_c_pointers/introduction.md">
+        <entry file="file://$PROJECT_DIR$/docs/ctf_tools/pwntools.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="21">
-                <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/szu_courses/csapp/datalab.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="21">
-                <caret line="14" column="60" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/ctf_writeup/ciscn2019/24c.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="434">
-                <caret line="30" selection-start-line="30" selection-end-line="30" />
+              <first_editor relative-caret-position="210">
+                <caret line="10" selection-start-line="10" selection-end-line="10" />
               </first_editor>
               <second_editor />
             </state>
@@ -71,7 +104,7 @@
         <entry file="file://$PROJECT_DIR$/docs/szu_courses/cn/transport_layer.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="434">
+              <first_editor relative-caret-position="714">
                 <caret line="34" selection-start-line="34" selection-end-line="34" />
               </first_editor>
               <second_editor />
@@ -83,20 +116,8 @@
         <entry file="file://$PROJECT_DIR$/docs/reading_notes/tcp_ip_illustrated/user_datagram_protocol_and_ip_fragmentation.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="434">
+              <first_editor relative-caret-position="903">
                 <caret line="43" column="2" selection-start-line="43" selection-start-column="2" selection-end-line="43" selection-end-column="2" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/docs/szu_oj/oop/1226.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="336">
-                <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
               </first_editor>
               <second_editor />
             </state>
@@ -132,6 +153,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>：</find>
+      <find>**</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -141,9 +163,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/docs/misc/git_clone_via_ssh.md" />
-        <option value="$PROJECT_DIR$/docs/embedded/clion-2019.1.md" />
-        <option value="$PROJECT_DIR$/docs/misc/secure_public_wireless_network_at_school_szu.md" />
         <option value="$PROJECT_DIR$/docs/szu_courses/csapp/datalab.md" />
         <option value="$PROJECT_DIR$/docs/reading_notes/computer_systems_a_programmer_s_perspective/machine-level_representation_of_programs.md" />
         <option value="$PROJECT_DIR$/docs/ctf_writeup/pctf2019/exorcism.md" />
@@ -157,7 +176,6 @@
         <option value="$PROJECT_DIR$/docs/szu_courses/cn/transport_layer.md" />
         <option value="$PROJECT_DIR$/docs/ctf_writeup/ciscn2019/24c.md" />
         <option value="$PROJECT_DIR$/docs/ctf_writeup/ciscn2019/usbasp.md" />
-        <option value="$PROJECT_DIR$/docs/links.md" />
         <option value="$PROJECT_DIR$/docs/reading_notes/understanding_and_using_c_pointers/introduction.md" />
         <option value="$PROJECT_DIR$/docs/reading_notes/docker_cookbook/getting_started_with_docker.md" />
         <option value="$PROJECT_DIR$/docs/js/extra.js" />
@@ -167,8 +185,16 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/docs/szu_courses/cn/router_lab.md" />
         <option value="$PROJECT_DIR$/docs/szu_courses/cn/vlan_lab.md" />
-        <option value="$PROJECT_DIR$/mkdocs.yml" />
         <option value="$PROJECT_DIR$/docs/szu_oj/oop/1226.md" />
+        <option value="$PROJECT_DIR$/docs/szu_courses/cn/socket_lab.md" />
+        <option value="$PROJECT_DIR$/docs/ctf_tools/pwntools.md" />
+        <option value="$PROJECT_DIR$/mkdocs.yml" />
+        <option value="$PROJECT_DIR$/docs/embedded/clion-2019.1.md" />
+        <option value="$PROJECT_DIR$/docs/misc/git_clone_via_ssh.md" />
+        <option value="$PROJECT_DIR$/docs/misc/secure_public_wireless_network_at_school_szu.md" />
+        <option value="$PROJECT_DIR$/docs/szu_courses/csapp/bomb_lab.md" />
+        <option value="$PROJECT_DIR$/docs/links.md" />
+        <option value="$PROJECT_DIR$/docs/szu_courses/csapp/buffer_lab.md" />
       </list>
     </option>
   </component>
@@ -176,10 +202,10 @@
     <servers />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="325" />
-    <option name="y" value="139" />
-    <option name="width" value="1490" />
-    <option name="height" value="848" />
+    <option name="x" value="89" />
+    <option name="y" value="138" />
+    <option name="width" value="1601" />
+    <option name="height" value="832" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -187,6 +213,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -198,6 +225,12 @@
               <item name="szu17dmy.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="szu17dmy.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="docs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="szu17dmy.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="szu17dmy.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="ctf_tools" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="szu17dmy.github.io" type="b2602c69:ProjectViewProjectNode" />
@@ -288,7 +321,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -381,7 +413,13 @@
       <workItem from="1558013590587" duration="1266000" />
       <workItem from="1558020429045" duration="2678000" />
       <workItem from="1558057582584" duration="18250000" />
-      <workItem from="1558105592695" duration="504000" />
+      <workItem from="1558105592695" duration="782000" />
+      <workItem from="1558161819481" duration="5254000" />
+      <workItem from="1558232850579" duration="16894000" />
+      <workItem from="1558317712156" duration="5202000" />
+      <workItem from="1558333837512" duration="657000" />
+      <workItem from="1558334870432" duration="9454000" />
+      <workItem from="1558354884463" duration="6258000" />
     </task>
     <task id="LOCAL-00001" summary="ADD misc/git_clone_via_ssh">
       <created>1554895305064</created>
@@ -509,17 +547,23 @@
       <option name="project" value="LOCAL" />
       <updated>1558097834749</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="ADD szu_oj/oop/1226">
+      <created>1558106159759</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1558106159759</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="185374000" />
+    <option name="totallyTimeSpent" value="229371000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="546" y="146" width="1490" height="848" extended-state="0" />
-    <editor active="true" />
+    <frame x="89" y="138" width="1601" height="832" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15953039" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14047466" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -536,7 +580,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3297546" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49075976" visible="true" weight="0.24157304" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49075976" visible="true" weight="0.12212644" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50924027" side_tool="true" weight="0.6400966" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -566,40 +610,11 @@
     <MESSAGE value="ADD szu_courses/cn/router_lab" />
     <MESSAGE value="ADD seo keywords" />
     <MESSAGE value="FIX" />
-    <option name="LAST_COMMIT_MESSAGE" value="FIX" />
+    <MESSAGE value="ADD szu_oj/oop/1226" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADD szu_oj/oop/1226" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/docs/embedded/clion-2019.1.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="75">
-            <caret line="78" selection-start-line="78" selection-end-line="78" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/misc/git_clone_via_ssh.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="172">
-            <caret line="51" selection-start-line="51" selection-end-line="51" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/szu_courses/cn.md" />
-    <entry file="file://$PROJECT_DIR$/docs/misc/secure_public_wireless_network_at_school_szu.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="343">
-            <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/ctf_writeup/pctf2019/cookie_monster.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -684,16 +699,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/szu_courses/csapp/bomblab.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor>
-            <caret lean-forward="true" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/ctf_writeup/ciscn2019/saleae.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -742,16 +747,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/links.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="252">
-            <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/lib64/python3.7/site-packages/material/partials/integrations/disqus.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
@@ -779,56 +774,6 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/ctf_writeup/ciscn2019/24c.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="434">
-            <caret line="30" selection-start-line="30" selection-end-line="30" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/szu_courses/csapp/datalab.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="21">
-            <caret line="14" column="60" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/reading_notes/understanding_and_using_c_pointers/introduction.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="21">
-            <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/reading_notes/computer_systems_a_programmer_s_perspective/machine-level_representation_of_programs.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="378">
-            <caret line="18" selection-start-line="18" selection-end-line="18" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/reading_notes/tcp_ip_illustrated/the_transmission_control_protocol_preliminaries.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="126">
-            <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/szu_courses/cn/vlan_lab.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -849,11 +794,114 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/reading_notes/tcp_ip_illustrated/user_datagram_protocol_and_ip_fragmentation.md">
+    <entry file="file://$PROJECT_DIR$/docs/szu_oj/oop/1226.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="434">
-            <caret line="43" column="2" selection-start-line="43" selection-start-column="2" selection-end-line="43" selection-end-column="2" />
+          <first_editor relative-caret-position="777">
+            <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/reading_notes/understanding_and_using_c_pointers/introduction.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="21">
+            <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/szu_courses/csapp/data_lab.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="294">
+            <caret line="14" column="60" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/ctf_writeup/ciscn2019/24c.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="630">
+            <caret line="30" selection-start-line="30" selection-end-line="30" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/misc/python_http_server.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/embedded/clion-2019.1.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="21">
+            <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/misc/git_clone_via_ssh.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="336">
+            <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/misc/secure_public_wireless_network_at_school_szu.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-272">
+            <caret line="100" selection-start-line="100" selection-end-line="100" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/szu_courses/cn/socket_lab.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="2835">
+            <caret line="135" column="4" selection-start-line="135" selection-start-column="4" selection-end-line="135" selection-end-column="4" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/misc/cmake_source_and_binary_directory.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mkdocs.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3885">
+          <caret line="185" column="17" selection-start-line="185" selection-start-column="17" selection-end-line="185" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/ctf_tools/pwntools.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="210">
+            <caret line="10" selection-start-line="10" selection-end-line="10" />
           </first_editor>
           <second_editor />
         </state>
@@ -862,25 +910,68 @@
     <entry file="file://$PROJECT_DIR$/docs/szu_courses/cn/transport_layer.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="434">
+          <first_editor relative-caret-position="714">
             <caret line="34" selection-start-line="34" selection-end-line="34" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mkdocs.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="97" column="50" selection-start-line="97" selection-start-column="50" selection-end-line="97" selection-end-column="50" />
+    <entry file="file://$PROJECT_DIR$/docs/reading_notes/tcp_ip_illustrated/user_datagram_protocol_and_ip_fragmentation.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="903">
+            <caret line="43" column="2" selection-start-line="43" selection-start-column="2" selection-end-line="43" selection-end-column="2" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/szu_oj/oop/1226.md">
+    <entry file="file://$PROJECT_DIR$/docs/reading_notes/tcp_ip_illustrated/the_transmission_control_protocol_preliminaries.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="336">
-            <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
+          <first_editor relative-caret-position="126">
+            <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/reading_notes/computer_systems_a_programmer_s_perspective/machine-level_representation_of_programs.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="378">
+            <caret line="18" selection-start-line="18" selection-end-line="18" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/szu_courses/csapp/bomb_lab.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="337">
+            <caret line="1576" column="7" selection-start-line="1576" selection-start-column="7" selection-end-line="1576" selection-end-column="7" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/links.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="294">
+            <caret line="14" selection-start-line="14" selection-end-line="14" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/szu_courses/csapp/buffer_lab.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="407">
+            <caret line="561" selection-start-line="561" selection-end-line="561" />
           </first_editor>
           <second_editor />
         </state>
@@ -903,6 +994,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
+          <last-edited>No facets are configured</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

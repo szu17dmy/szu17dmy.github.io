@@ -1493,7 +1493,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../csapp/datalab/" title="Data Lab" class="md-nav__link">
+    <a href="../../csapp/data_lab/" title="Data Lab" class="md-nav__link">
       Data Lab
     </a>
   </li>
@@ -1505,8 +1505,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../csapp/bomblab/" title="Bomb Lab" class="md-nav__link">
+    <a href="../../csapp/bomb_lab/" title="Bomb Lab" class="md-nav__link">
       Bomb Lab
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../csapp/buffer_lab/" title="Buffer Lab" class="md-nav__link">
+      Buffer Lab
     </a>
   </li>
 
@@ -1553,6 +1565,18 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cn/socket_lab/" title="Socket Lab" class="md-nav__link">
+      Socket Lab
+    </a>
+  </li>
+
         
           
           
@@ -2471,14 +2495,13 @@
                 
                 <p>这大概是记录一下自己使用vector容器的经历吧，希望可以对大家有所启发。如果你还不会使用vector容器，你可以找到很多非常好的资源，不管是从书上还是从互联网上。</p>
 <p>没有办法把所有的方法都写一遍，你可以看<a href="http://www.cplusplus.com/reference/vector/">参考手册</a>或其他资料。下述代码在openSUSE Tumbleweed + JetBrains CLion 2018.3.4 + gcc 8.2.1上构建并测试运行通过。</p>
-<p>更新：对不起，忘记说了，项目标准是C++11：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">set</span><span class="p">(</span><span class="n">CMAKE_CXX_STANDARD</span> <span class="mi">11</span><span class="p">)</span>
+<p>更新：对不起，忘记说了，项目标准是C++11：
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">set</span><span class="p">(</span><span class="n">CMAKE_CXX_STANDARD</span> <span class="mi">11</span><span class="p">)</span>
 </pre></div>
-</td></tr></table>
-
+</td></tr></table></p>
 <h2 id="_1">刚开始学习的时候</h2>
-<p>大概是能勉强使用一些基本的成员函数，比如：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<p>大概是能勉强使用一些基本的成员函数，比如：
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2515,9 +2538,8 @@
 <span class="p">}</span>
 </pre></div>
 </td></tr></table>
-
-<p>构建并运行可以得到：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+构建并运行可以得到：
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">/</span><span class="nv">home</span><span class="o">/</span><span class="nv">domain</span><span class="o">/</span><span class="nv">CLionProjects</span><span class="o">/</span><span class="nv">untitled_cpp11</span><span class="o">/</span><span class="nv">cmake</span><span class="o">-</span><span class="nv">build</span><span class="o">-</span><span class="nv">debug</span><span class="o">/</span><span class="nv">untitled_cpp11</span>
@@ -2525,10 +2547,9 @@
 
 <span class="nv">Process</span> <span class="nv">finished</span> <span class="nv">with</span> <span class="k">exit</span> <span class="nv">code</span> <span class="mi">0</span>
 </pre></div>
-</td></tr></table>
-
-<p>还有其它的一些例如插入、删除等操作：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+</td></tr></table></p>
+<p>还有其它的一些例如插入、删除等操作：
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2577,9 +2598,8 @@
 <span class="p">}</span>
 </pre></div>
 </td></tr></table>
-
-<p>构建并运行可以得到：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+构建并运行可以得到：
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2593,11 +2613,10 @@
 
 <span class="nv">Process</span> <span class="nv">finished</span> <span class="nv">with</span> <span class="k">exit</span> <span class="nv">code</span> <span class="mi">0</span>
 </pre></div>
-</td></tr></table>
-
+</td></tr></table></p>
 <h2 id="_2">学会使用一些算法</h2>
-<p>后来是会使用一些排序等算法：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<p>后来是会使用一些排序等算法：
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2648,9 +2667,8 @@
 <span class="p">}</span>
 </pre></div>
 </td></tr></table>
-
-<p>可以得到：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+可以得到：
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2663,11 +2681,10 @@
 <span class="nv">Process</span> <span class="nv">finished</span> <span class="nv">with</span> <span class="k">exit</span> <span class="nv">code</span> <span class="mi">0</span>
 </pre></div>
 </td></tr></table>
-
-<p>还有大量算法可以在<a href="http://www.cplusplus.com/reference/algorithm/">这里</a>查阅。</p>
+还有大量算法可以在<a href="http://www.cplusplus.com/reference/algorithm/">这里</a>查阅。</p>
 <h2 id="_3">构造函数</h2>
-<p>最早大概是这样子糊弄一维数组的：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<p>最早大概是这样子糊弄一维数组的：
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2690,9 +2707,8 @@
 <span class="p">}</span>
 </pre></div>
 </td></tr></table>
-
-<p>看到IDE的建议，于是Alt+Enter，为vector预留空间：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+看到IDE的建议，于是Alt+Enter，为vector预留空间：
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2717,9 +2733,8 @@
 <span class="p">}</span>
 </pre></div>
 </td></tr></table>
-
-<p>但是到后来才知道应该利用构造函数：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+但是到后来才知道应该利用构造函数：
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2736,9 +2751,8 @@
 <span class="p">}</span>
 </pre></div>
 </td></tr></table>
-
-<p>具体可查看<a href="http://www.cplusplus.com/reference/vector/vector/vector/">参考</a>。对，即使是这样，也还是有黑历史，比如二维数组：(反例请勿模仿)</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+具体可查看<a href="http://www.cplusplus.com/reference/vector/vector/vector/">参考</a>。对，即使是这样，也还是有黑历史，比如二维数组：(反例请勿模仿)
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2773,9 +2787,8 @@
 <span class="p">}</span>
 </pre></div>
 </td></tr></table>
-
-<p>后来才慢慢悟出应该这样：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+后来才慢慢悟出应该这样：
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2792,8 +2805,7 @@
 <span class="p">}</span>
 </pre></div>
 </td></tr></table>
-
-<p>未完待续</p>
+未完待续</p>
                 
                   
                 

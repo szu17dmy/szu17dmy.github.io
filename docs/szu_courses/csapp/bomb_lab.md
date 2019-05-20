@@ -6,10 +6,11 @@
 
 因为我是实机Linux，所以“Remote” Linux debugger其实是在本地调试。如果你正在Windows下使用IDA，那么可能需要Linux虚拟机来进行调试。不管怎样，有可以实现的可靠的方法就行。
 
-注意，下文中，由我手动还原的C代码仅供参考，并没有进行测试，可能存在问题。如果你发现了其中的问题，麻烦告诉我。
+!!! warning
+    下文中由我手动还原的C代码并没有进行测试，可能存在问题，仅供参考。如果你发现了其中的问题，麻烦告诉我。
 
 ## main
-其实题目已经给出了main函数的相关内容：
+其实题目已经给出了`main()`函数的相关内容：
 
 ``` c
 /* Do all sorts of secret stuff that makes the bomb harder to defuse. */
@@ -66,14 +67,14 @@ return 0;
 
 看起来是有6个关卡，每次都需要有一段输入，合法则拆除炸弹，非法则炸弹爆炸。虽然已经知道是这样，但是我还是要F5一下：
 
-![BOMB-LAB_1.png](./img/BOMB-LAB_1.png)
+![BOMB_LAB_1.png](./img/BOMB_LAB_1.png)
 
 先在初始化`initialize_bomb()`后面加个断点，然后启动动态调试。
 
 ## phase_1
 F8步进，在`phase_1()`函数前要求输入，我们先双击`phase_1`进去看看：
 
-``` c
+``` c tab="C, decompiled by IDA"
 __int64 __fastcall phase_1(__int64 a1)
 {
   __int64 result; // rax
@@ -85,15 +86,7 @@ __int64 __fastcall phase_1(__int64 a1)
 }
 ```
 
-非常明显，调用`strings_not_equal()`比较字符串，双击进入可看出要求输入的字符串和下述字符串
-
-    Science isn't about why, it's about why not?
-
-相等，如果不相等则调用`explode_bomb()`引爆炸弹。
-
-再看看反汇编代码：
-
-``` asm
+``` asm tab="ASM"
 .text:0000000000400E70 ; =============== S U B R O U T I N E =======================================
 .text:0000000000400E70
 .text:0000000000400E70
@@ -116,15 +109,19 @@ __int64 __fastcall phase_1(__int64 a1)
 .text:0000000000400E8B
 ```
 
-粗略地还原一下应该是：
-
-``` c
+``` c tab="C, decompiled by me"
 void phase_1(char str[]) {
     if (strings_not_equal(str, "Science isn't about why, it's about why not?")) {
         explode_bomb();
     }
 }
 ```
+
+非常明显，调用`strings_not_equal()`比较字符串，双击进入可看出要求输入的字符串和下述字符串
+
+    Science isn't about why, it's about why not?
+
+相等，如果不相等则调用`explode_bomb()`引爆炸弹。
 
 其中，
 
@@ -147,7 +144,44 @@ cmp     eax, 0
 
 对于`strings_not_equal()`来说：
 
-``` asm
+``` c tab="C, decompiled by IDA"
+__int64 __fastcall strings_not_equal(_BYTE *a1, _BYTE *a2)
+{
+  int v2; // er12
+  int v3; // eax
+  unsigned int flag; // edx
+  __int64 v5; // rax
+  char v6; // dl
+
+  v2 = string_length(a1);
+  v3 = string_length(a2);
+  flag = 1;
+  if ( v2 == v3 )
+  {
+    LOBYTE(flag) = 0;
+    if ( *a1 )
+    {
+      LOBYTE(flag) = 1;
+      if ( *a1 == *a2 )
+      {
+        v5 = 0LL;
+        do
+        {
+          v6 = a1[v5 + 1];
+          if ( !v6 )
+            return 0;
+          ++v5;
+        }
+        while ( v6 == a2[v5] );
+        flag = 1;
+      }
+    }
+  }
+  return flag;
+}
+```
+
+``` asm tab="ASM"
 .text:000000000040123D ; =============== S U B R O U T I N E =======================================
 .text:000000000040123D
 .text:000000000040123D
@@ -213,9 +247,7 @@ cmp     eax, 0
 .text:00000000004012BA
 ```
 
-勉强还原成这样，看着十分别扭，也好像有很多废话：
-
-``` c
+``` c tab="C, decompiled by me"
 int strings_not_equal(char str1[], char str2[]) {
     int str1_length = string_length(str1);
     int str2_length = string_length(str2);
@@ -241,7 +273,25 @@ int strings_not_equal(char str1[], char str2[]) {
 
 对于`string_length()`来说：
 
-``` asm
+``` c tab="C, decompiled by IDA"
+__int64 __fastcall string_length(_BYTE *a1)
+{
+  __int64 result; // rax
+  _BYTE *v2; // rdx
+
+  result = 0LL;
+  if ( *a1 )
+  {
+    v2 = a1;
+    do
+      result = (unsigned int)((_DWORD)++v2 - (_DWORD)a1);
+    while ( *v2 );
+  }
+  return result;
+}
+```
+
+``` asm tab="ASM"
 .text:0000000000401221 ; =============== S U B R O U T I N E =======================================
 .text:0000000000401221
 .text:0000000000401221
@@ -268,9 +318,7 @@ int strings_not_equal(char str1[], char str2[]) {
 .text:000000000040123B
 ```
 
-大概可以还原成：
-
-``` c
+``` c tab="C, decompiled by me"
 int string_length(char str[]) {
     int length = 0;
     if (str[0] != '\0') {
@@ -291,9 +339,12 @@ int string_length(char str[]) {
 就可以通过第一个check。
 
 ## phase_2
-先F5看看：
+先双击进来看看，看了个大概，然后随便输6个数开始慢慢调：
 
-``` c
+!!! tip
+    嗯，没错，就是先随便给6个数。即使这6个数本身不能通过check也无所谓，我们的主要目的是调试的时候看它如何进行比较等运算的。如果它要炸了，你只需要改变相应的跳转flag让它回归正轨就可以了，但是别忘记了要记下它的算法，你需要记下来才能在没有调试器的时候通过check。
+
+``` c tab="C, decompiled by IDA"
 __int64 __fastcall phase_2(__int64 a1)
 {
   char *v1; // rbp
@@ -320,9 +371,7 @@ __int64 __fastcall phase_2(__int64 a1)
 }
 ```
 
-看起来似乎很简单...但是除了`read_six_numbers()`我似乎没看懂什么。还是来看看汇编好了：
-
-``` asm
+``` asm tab="ASM"
 .text:0000000000400E8C ; =============== S U B R O U T I N E =======================================
 .text:0000000000400E8C
 .text:0000000000400E8C
@@ -377,11 +426,7 @@ __int64 __fastcall phase_2(__int64 a1)
 .text:0000000000400EF8
 ```
 
-可以这样还原：
-
-对了，希望你已经知道了`a[i]`是`*(a+i)`的语法糖。
-
-``` c
+``` c tab="C, decompiled by me"
 void phase_2() {
     int array[6];
     read_six_numbers(arg1, array);
@@ -400,11 +445,25 @@ void phase_2() {
 }
 ```
 
+对了，希望你已经知道了`a[i]`是`*(a+i)`的语法糖。
+
 看起来像是输入6个数字，前三个和后三个需要分别相等，并且不能全为0。
 
-看看`read_six_numbers()`：
+另外，再看看`read_six_numbers()`：
 
-``` asm
+``` c tab="C, decompiled by IDA"
+__int64 __fastcall read_six_numbers(__int64 a1, __int64 a2)
+{
+  __int64 result; // rax
+
+  result = __isoc99_sscanf(a1, &unk_401EB2, a2, a2 + 4, a2 + 8, a2 + 12);
+  if ( (signed int)result <= 5 )
+    explode_bomb(a1, &unk_401EB2);
+  return result;
+}
+```
+
+``` asm tab="ASM"
 .text:0000000000401743 ; =============== S U B R O U T I N E =======================================
 .text:0000000000401743
 .text:0000000000401743
@@ -440,9 +499,8 @@ void phase_2() {
 .text:0000000000401784
 ```
 
-应该可以还原成：（省略了部分内容）
-
-``` c
+``` c tab="C, decompiled by me"
+// （省略了部分内容）
 void read_six_numbers(char arg1[], int array[]) {
     if (scanf("%d %d %d %d %d %d", array, array + 1, array + 2, array + 3, array + 4, array + 5) <= 5) {
         explode_bomb();
@@ -457,9 +515,9 @@ void read_six_numbers(char arg1[], int array[]) {
 应该能通过第二个check。
 
 ## phase_3
-还是先进来F5：
+这关主要是`switch`和跳转表。
 
-``` c
+``` c tab="C, decompiled by IDA"
 signed __int64 __fastcall phase_3(__int64 a1, __int64 a2, __int64 a3, __int64 a4, __int64 a5, __int64 a6)
 {
   signed __int64 result; // rax
@@ -504,9 +562,7 @@ signed __int64 __fastcall phase_3(__int64 a1, __int64 a2, __int64 a3, __int64 a4
 }
 ```
 
-这一关已经看得相当清楚了目前，不过我们还是来看看汇编：
-
-``` asm
+``` asm tab="ASM"
 .text:0000000000400EF9 ; =============== S U B R O U T I N E =======================================
 .text:0000000000400EF9
 .text:0000000000400EF9
@@ -603,7 +659,23 @@ signed __int64 __fastcall phase_3(__int64 a1, __int64 a2, __int64 a3, __int64 a4
 .text:0000000000400F83
 ```
 
-已经不需要我再复原一遍了。当前关卡需要输入两个整数，这两个整数需要为：
+!!! warning
+    跳转表内的地址的“顺序”不总是和你想象的一样。:-)
+
+附上跳转表，各位自行对照着上面看吧。
+
+```
+.rodata:0000000000401B60 off_401B60      dq offset loc_400F32    ; DATA XREF: phase_3+32↑r
+.rodata:0000000000401B60                 dq offset loc_400F6F    ; jump table for switch statement
+.rodata:0000000000401B60                 dq offset loc_400F39
+.rodata:0000000000401B60                 dq offset loc_400F40
+.rodata:0000000000401B60                 dq offset loc_400F47
+.rodata:0000000000401B60                 dq offset loc_400F4E
+.rodata:0000000000401B60                 dq offset loc_400F55
+.rodata:0000000000401B60                 dq offset loc_400F5C
+```
+
+综上，当前关卡需要输入两个整数，这两个整数需要为：
 
     0 535
     1 926
@@ -619,9 +691,9 @@ signed __int64 __fastcall phase_3(__int64 a1, __int64 a2, __int64 a3, __int64 a4
 所以，给出上述整数对中的任意一对即可通过第三个check。
 
 ## phase_4
-继续步进，还是F5：
+继续步进：
 
-``` c
+``` c tab="C, decompiled by IDA"
 __int64 __fastcall phase_4(__int64 a1, __int64 a2, __int64 a3, __int64 a4, __int64 a5, __int64 a6)
 {
   __int64 v6; // rdi
@@ -638,31 +710,7 @@ __int64 __fastcall phase_4(__int64 a1, __int64 a2, __int64 a3, __int64 a4, __int
 }
 ```
 
-这看起来像是需要输入一个非负整数，让它经过`func4()`计算后得到`55`，否则就会触发`explode_bomb()`引爆炸弹。所以我们来看看`func4()`里面有什么：
-
-嗯，还是F5。
-
-``` c
-signed __int64 __fastcall func4(signed int a1, __int64 a2)
-{
-  signed __int64 result; // rax
-  int v3; // ebp
-
-  result = 1LL;
-  if ( a1 > 1 )
-  {
-    v3 = func4((unsigned int)(a1 - 1), a2);
-    result = v3 + (unsigned int)func4((unsigned int)(a1 - 2), a2);
-  }
-  return result;
-}
-```
-
-相当明显了，这应该是一个递归计算斐波纳契数列的函数。
-
-还是来看看汇编：
-
-``` asm
+``` asm tab="ASM"
 .text:0000000000400FC1 ; =============== S U B R O U T I N E =======================================
 .text:0000000000400FC1
 .text:0000000000400FC1
@@ -702,9 +750,7 @@ signed __int64 __fastcall func4(signed int a1, __int64 a2)
 .text:0000000000401001
 ```
 
-可能可以是这样：
-
-``` c
+``` c tab="C, decompiled by me"
 void phase_4() {
     int number;
     if (scanf("%d", &number) != 1 || number <= 0) {
@@ -716,9 +762,25 @@ void phase_4() {
 }
 ```
 
-至于`func4()`函数：
+这看起来像是需要输入一个非负整数，让它经过`func4()`计算后得到`55`，否则就会触发`explode_bomb()`引爆炸弹。所以我们来看看`func4()`里面有什么：
 
-``` asm
+``` c tab="C, decompiled by IDA"
+signed __int64 __fastcall func4(signed int a1, __int64 a2)
+{
+  signed __int64 result; // rax
+  int v3; // ebp
+
+  result = 1LL;
+  if ( a1 > 1 )
+  {
+    v3 = func4((unsigned int)(a1 - 1), a2);
+    result = v3 + (unsigned int)func4((unsigned int)(a1 - 2), a2);
+  }
+  return result;
+}
+```
+
+``` asm tab="ASM"
 .text:0000000000400F84 ; =============== S U B R O U T I N E =======================================
 .text:0000000000400F84
 .text:0000000000400F84
@@ -754,9 +816,7 @@ void phase_4() {
 .text:0000000000400FC0
 ```
 
-可能是这样：
-
-``` c
+``` c tab="C, decompiled by me"
 int func4(int number) {
     if (number == 1) {
         return 1;
@@ -764,6 +824,8 @@ int func4(int number) {
     return func4(number - 1) + func4(number - 2);
 }
 ```
+
+相当明显了，这应该是一个递归计算斐波纳契数列的函数。
 
 综上，由于斐波那契数列是：
 
@@ -776,9 +838,9 @@ int func4(int number) {
 ，即第9个数字，就可通过第四个check。
 
 ## phase_5
-还是先F5一下：
+继续前进：
 
-``` c
+``` c tab="C, decompiled by IDA"
 __int64 __fastcall phase_5(__int64 a1, __int64 a2, __int64 a3, __int64 a4, __int64 a5, __int64 a6)
 {
   __int64 result; // rax
@@ -810,9 +872,7 @@ LABEL_11:
 }
 ```
 
-有点长，有点复杂，看看汇编分析一下：
-
-``` asm
+``` asm tab="ASM"
 .text:0000000000401002 ; =============== S U B R O U T I N E =======================================
 .text:0000000000401002
 .text:0000000000401002
@@ -869,9 +929,34 @@ LABEL_11:
 .text:000000000040106E
 ```
 
-还有一个数组：
+``` c tab="C, decompiled by me"
+int array[] = {0xA, 0x2, 0xE, 0x7, 
+               0x8, 0xC, 0xF, 0xB, 
+               0x0, 0x4, 0x1, 0xD, 
+               0x3, 0x9, 0x6, 0x5, };
 
-``` asm
+void phase_5() {
+    int number1, number2;
+    if (scanf("%d %d", &number1, &number2) <= 1) {
+        explode_bomb();
+    }
+    number1 = number1 & 0xF;
+    if (number1 == 0xF) {
+        explode_bomb();
+    }
+    int i = 0, sum = 0;
+    do {
+        i += 1;
+        number1 = array[number1];
+        sum += number1;
+    } while (number1 != 0xF)
+    if (i != 0xC && sum != number2) {
+        explode_bomb();
+    }
+}
+```
+
+``` asm tab="array, raw"
 .rodata:0000000000401BA0 ; int array_3014[16]
 .rodata:0000000000401BA0 array_3014 dd 0Ah                       ; DATA XREF: phase_5+46↑r
 .rodata:0000000000401BA4 db    2
@@ -936,35 +1021,6 @@ LABEL_11:
 .rodata:0000000000401BDF db    0
 ```
 
-尝试着还原一下：
-
-``` c
-int array[] = {0xA, 0x2, 0xE, 0x7, 
-               0x8, 0xC, 0xF, 0xB, 
-               0x0, 0x4, 0x1, 0xD, 
-               0x3, 0x9, 0x6, 0x5, };
-
-void phase_5() {
-    int number1, number2;
-    if (scanf("%d %d", &number1, &number2) <= 1) {
-        explode_bomb();
-    }
-    number1 = number1 & 0xF;
-    if (number1 == 0xF) {
-        explode_bomb();
-    }
-    int i = 0, sum = 0;
-    do {
-        i += 1;
-        number1 = array[number1];
-        sum += number1;
-    } while (number1 != 0xF)
-    if (i != 0xC && sum != number2) {
-        explode_bomb();
-    }
-}
-```
-
 然后就发现自己逆的跟IDA的好像差不多...现在看起来已经很明确了，题目预置了一个16个整数的数组，要求输入两个整数。
 
 其中，会先取第一个整数的二进制的后4位，也就是被截断后最大值是15，这个数值会被当作数组下标去查找数组中存储的值，随后累加查找到的值。并且，会用查找到的值继续当作数组下标去找到新的值，如此循环，直到取到`0xF`时停止。
@@ -1000,9 +1056,9 @@ void phase_5() {
 >
 > try phase 6 for extra credit, you can continue.  Just beware!
 
-看起来题目说第六关是附加题？还是F5来看看：
+看起来题目说第六关是附加题？还是来看看：
 
-``` c
+``` c tab="C, decompiled by IDA"
 _DWORD *__fastcall phase_6(const char *a1)
 {
   _DWORD *result; // rax
@@ -1015,9 +1071,7 @@ _DWORD *__fastcall phase_6(const char *a1)
 }
 ```
 
-真令人害怕，好像是链表？
-
-``` asm
+``` asm tab="ASM"
 .text:00000000004010D9 ; =============== S U B R O U T I N E =======================================
 .text:00000000004010D9
 .text:00000000004010D9
@@ -1048,9 +1102,7 @@ _DWORD *__fastcall phase_6(const char *a1)
 .text:000000000040111B
 ```
 
-还有各个节点：
-
-``` asm
+``` asm tab="node, raw"
 .data:0000000000602780 public node0
 .data:0000000000602780 node0 dd 0                              ; DATA XREF: phase_6+13↑w
 .data:0000000000602780                                         ; phase_6+19↑o ...
@@ -1211,9 +1263,7 @@ _DWORD *__fastcall phase_6(const char *a1)
 .data:000000000060281F db    0
 ```
 
-注意到这段数据区的每个node的后8个字节似乎正好是下一个node的地址，按D转换成像这样：
-
-``` asm
+``` asm tab="node"
 .data:0000000000602780                 public node0
 .data:0000000000602780 node0           dd 0                    ; DATA XREF: phase_6+13↑w
 .data:0000000000602780                                         ; phase_6+19↑o ...
@@ -1229,6 +1279,8 @@ _DWORD *__fastcall phase_6(const char *a1)
 .data:00000000006027A8                 dq offset node3
 .data:00000000006027B0                 public node3
 ```
+
+注意到`node, raw`标签内，这段数据区的每个node的后8个字节似乎正好是下一个node的地址，按D转换成上面的`node`标签里那样：
 
 基本上可以看出来，一个节点里有一个数据和序号，还有一个指向下一个节点的指针。于是到`Structures`里添加一个结构体`Node`，就像这个样子：
 
@@ -1382,7 +1434,7 @@ void __fastcall phase_defused(__int64 a1, __int64 a2, __int64 a3, __int64 a4, __
 }
 ```
 
-动态调试的时候能发现第四关时需要输入：
+动态调试的时候能发现{==第四关==}时需要输入：
 
     9 austinpowers
     
@@ -1498,7 +1550,7 @@ signed __int64 __fastcall fun7(BiTree *a1, int a2)
 
 > 用[VisuAlgo - 二叉搜索树，高度平衡树](https://visualgo.net/zh/bst)画的图
 
-![BOMB-LAB_2.png](./img/BOMB-LAB_2.png)
+![BOMB_LAB_2.png](./img/BOMB_LAB_2.png)
 
 看函数的递归调用可以知道：输入的数据比节点大则访问左孩子，小于则访问右孩子，相等会返回0。由于结果需要为`3`，结合上面递归调用的算法，所以应该是`2 × (2 × 0 + 1) + 1`，访问顺序应该是（输入的数据通过影响遍历的路径来影响结果）：
 
@@ -1522,7 +1574,7 @@ Science isn't about why, it's about why not?
 
 ```
 
-![BOMB-LAB_3.png](./img/BOMB-LAB_3.png)
+![BOMB_LAB_3.png](./img/BOMB_LAB_3.png)
 
 完结撒花...
 
@@ -1531,3 +1583,16 @@ Science isn't about why, it's about why not?
 ![MITAO.jpg](./img/MITAO.jpg)
 
 有问题可以评论区或是邮箱告诉我。感恩。
+
+## 常见问题
+> 为什么是在第四关后面加上字符串触发隐藏关？我看到了上面有个6，不应该是第六关的时候输入吗？
+
+额这个...你仔细看一下就会发现它的含义应该是第六关的时候才开始检查是否进入隐藏关。而输入数据的地址正好是第四关的地方，你在静态看的时候不是那么容易看出来，但是调试的时候就会容易得多。
+
+> 为什么第三关的跳转表那么奇怪？
+
+![BOMB_LAB_4.jpg](./img/BOMB_LAB_4.jpg)
+
+![BOMB_LAB_5.jpg](./img/BOMB_LAB_5.jpg)
+
+有关文章：[Does the order of case in Switch statement can vary the performance?](https://stackoverflow.com/questions/2815983/does-the-order-of-case-in-switch-statement-can-vary-the-performance)

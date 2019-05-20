@@ -1676,7 +1676,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../szu_courses/csapp/datalab/" title="Data Lab" class="md-nav__link">
+    <a href="../../../szu_courses/csapp/data_lab/" title="Data Lab" class="md-nav__link">
       Data Lab
     </a>
   </li>
@@ -1688,8 +1688,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../szu_courses/csapp/bomblab/" title="Bomb Lab" class="md-nav__link">
+    <a href="../../../szu_courses/csapp/bomb_lab/" title="Bomb Lab" class="md-nav__link">
       Bomb Lab
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_courses/csapp/buffer_lab/" title="Buffer Lab" class="md-nav__link">
+      Buffer Lab
     </a>
   </li>
 
@@ -1736,6 +1748,18 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../szu_courses/cn/socket_lab/" title="Socket Lab" class="md-nav__link">
+      Socket Lab
+    </a>
+  </li>
+
         
           
           
@@ -2850,14 +2874,14 @@
 
 <blockquote>
 <p>命令，该命令用于列出所有运行中的容器。</p>
-<p>首先，你想启动一个容器。让我们立即开始，执行<code>docker run</code>命令，如下所示。</p>
+<p>首先，你想启动一个容器。让我们立即开始，执行<code class="codehilite"><span class="n">docker</span> <span class="n">run</span></code>命令，如下所示。</p>
 </blockquote>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ docker run busybox <span class="nb">echo</span> hello world
 </pre></div>
 </td></tr></table>
 
 <blockquote>
-<p>容器来源于镜像。<code>docker run</code>命令与需要一个参数来指定使用哪个镜像。</p>
+<p>容器来源于镜像。<code class="codehilite"><span class="n">docker</span> <span class="n">run</span></code>命令与需要一个参数来指定使用哪个镜像。</p>
 </blockquote>
 <h3 id="1113">1.11.3 讨论</h3>
 <blockquote>
@@ -2892,7 +2916,7 @@
 
 <blockquote>
 <p>命令来删除这个镜像。</p>
-<p>运行echo命令虽然很有趣，但是获得一个终端会话会更好。要想在容器中运行<code>/bin/bash</code>，你需要使用<code>-t</code>和<code>-i</code>参数来获得一个交互式会话，下面以使用Ubuntu镜像为例进行说明。</p>
+<p>运行echo命令虽然很有趣，但是获得一个终端会话会更好。要想在容器中运行<code class="codehilite"><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">bash</span></code>，你需要使用<code class="codehilite"><span class="o">-</span><span class="n">t</span></code>和<code class="codehilite"><span class="o">-</span><span class="n">i</span></code>参数来获得一个交互式会话，下面以使用Ubuntu镜像为例进行说明。</p>
 </blockquote>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ docker run -t -i ubuntu:14.04 /bin/bash
 </pre></div>
@@ -2908,7 +2932,7 @@
 </blockquote>
 <h3 id="1122">1.12.2 解决方案</h3>
 <blockquote>
-<p>使用<code>docker run</code>的<code>-d</code>选项。</p>
+<p>使用<code class="codehilite"><span class="n">docker</span> <span class="n">run</span></code>的<code class="codehilite"><span class="o">-</span><span class="n">d</span></code>选项。</p>
 <p>运行下面的命令，将会在容器中启动一个简单的基于Python的HTTP服务器。</p>
 </blockquote>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ docker run -d -p <span class="m">1234</span>:1234 python:2.7 python -m SimpleHTTPServer <span class="m">1234</span>
@@ -2917,14 +2941,14 @@
 
 <h3 id="1123">1.12.3 讨论</h3>
 <blockquote>
-<p>这个<code>-d</code>参数会让容器在后台运行。你可以通过运行<code>exec</code>命令来启动一个bash shell，再次进入到该容器中，如下所示。</p>
+<p>这个<code class="codehilite"><span class="o">-</span><span class="n">d</span></code>参数会让容器在后台运行。你可以通过运行<code class="codehilite"><span class="k">exec</span></code>命令来启动一个bash shell，再次进入到该容器中，如下所示。</p>
 </blockquote>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ <span class="nv">docker</span> <span class="k">exec</span> <span class="o">-</span><span class="nv">ti</span> <span class="mi">9</span><span class="nv">d7cebd75dcf</span> <span class="o">/</span><span class="nv">bin</span><span class="o">/</span><span class="nv">bash</span>
 </pre></div>
 </td></tr></table>
 
 <blockquote>
-<p>在官方文档（<a href="https://docs.docker.com/reference/run/">https://docs.docker.com/reference/run/</a>）[^1]中还有<code>docker run</code>的其他很多选项。</p>
+<p>在官方文档（<a href="https://docs.docker.com/reference/run/">https://docs.docker.com/reference/run/</a>）[^1]中还有<code class="codehilite"><span class="n">docker</span> <span class="n">run</span></code>的其他很多选项。</p>
 </blockquote>
 <p>[^1] 原文如此，现在应该是<a href="https://docs.docker.com/engine/reference/commandline/run/">https://docs.docker.com/engine/reference/commandline/run/</a></p>
 <h2 id="113">1.13 创建、启动、停止和移除容器</h2>
@@ -2934,11 +2958,11 @@
 </blockquote>
 <h3 id="1132">1.13.2 解决方案</h3>
 <blockquote>
-<p>使用 Docker 命令行的<code>create</code>、<code>start</code>、<code>stop</code>、<code>kill</code>和<code>rm</code>命令。你可以在这些命令后面加上<code>-h</code>或者<code>——h</code>选项来查看它们的使用方法，或者只输入命令而不指定任何参数（比如<code>docker create</code>）。</p>
+<p>使用 Docker 命令行的<code class="codehilite"><span class="k">create</span></code>、<code class="codehilite"><span class="k">start</span></code>、<code class="codehilite"><span class="n">stop</span></code>、<code class="codehilite"><span class="n">kill</span></code>和<code class="codehilite"><span class="n">rm</span></code>命令。你可以在这些命令后面加上<code class="codehilite"><span class="o">-</span><span class="n">h</span></code>或者<code class="codehilite"><span class="err">——</span><span class="n">h</span></code>选项来查看它们的使用方法，或者只输入命令而不指定任何参数（比如<code class="codehilite"><span class="n">docker</span> <span class="k">create</span></code>）。</p>
 </blockquote>
 <h3 id="1133">1.13.3 讨论</h3>
 <blockquote>
-<p>在范例 1.12 中，你通过<code>docker run</code>自动启动了一个容器。你也可以通过<code>docker create</code>命令来创建一个容器。继续使用上面简单的HTTP服务器的例子，唯一的区别就是这里没有指定<code>-d</code>选项。当创建容器之后，你需要运行<code>docker start</code>来启动这个容器，如下所示。</p>
+<p>在范例 1.12 中，你通过<code class="codehilite"><span class="n">docker</span> <span class="n">run</span></code>自动启动了一个容器。你也可以通过<code class="codehilite"><span class="n">docker</span> <span class="k">create</span></code>命令来创建一个容器。继续使用上面简单的HTTP服务器的例子，唯一的区别就是这里没有指定<code class="codehilite"><span class="o">-</span><span class="n">d</span></code>选项。当创建容器之后，你需要运行<code class="codehilite"><span class="n">docker</span> <span class="k">start</span></code>来启动这个容器，如下所示。</p>
 </blockquote>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -2951,7 +2975,7 @@ $ docker ps
 </td></tr></table>
 
 <blockquote>
-<p>要想停止一个正在运行中的容器，可以选择使用<code>docker kill</code>（这个命令会发送SIGKILL信号到容器）或者<code>docker stop</code>（这个命令会发送SIGTERM到容器，如果在一定时间内容器还没有停止，则会再发送SIGKILL信号强制停止）。这两个命令最终的结果是停止容器的运行，该容器将不会出现在<code>docker ps</code>返回的运行中容器列表中。但是，容器还没有完全消失（比如容器的文件系统还在）。你可以通过<code>docker restart</code>来重启这个容器，或者通过<code>docker rm</code>移除这个容器，如下所示。</p>
+<p>要想停止一个正在运行中的容器，可以选择使用<code class="codehilite"><span class="n">docker</span> <span class="n">kill</span></code>（这个命令会发送SIGKILL信号到容器）或者<code class="codehilite"><span class="n">docker</span> <span class="n">stop</span></code>（这个命令会发送SIGTERM到容器，如果在一定时间内容器还没有停止，则会再发送SIGKILL信号强制停止）。这两个命令最终的结果是停止容器的运行，该容器将不会出现在<code class="codehilite"><span class="n">docker</span> <span class="n">ps</span></code>返回的运行中容器列表中。但是，容器还没有完全消失（比如容器的文件系统还在）。你可以通过<code class="codehilite"><span class="n">docker</span> <span class="k">restart</span></code>来重启这个容器，或者通过<code class="codehilite"><span class="n">docker</span> <span class="n">rm</span></code>移除这个容器，如下所示。</p>
 </blockquote>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -2966,7 +2990,7 @@ $ docker ps -a
 </td></tr></table>
 
 <blockquote>
-<p>如果你有很多停止中的容器待删除，可以在一条命令中使用嵌套的 shell 来删除所有容器。<code>docker ps</code>的<code>-q</code>选项只会返回容器的 ID 信息，如下所示。</p>
+<p>如果你有很多停止中的容器待删除，可以在一条命令中使用嵌套的 shell 来删除所有容器。<code class="codehilite"><span class="n">docker</span> <span class="n">ps</span></code>的<code class="codehilite"><span class="o">-</span><span class="n">q</span></code>选项只会返回容器的 ID 信息，如下所示。</p>
 </blockquote>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ docker rm <span class="k">$(</span>docker ps -a -q<span class="k">)</span>
 </pre></div>
@@ -2989,14 +3013,14 @@ $ docker ps -a
 </td></tr></table>
 
 <blockquote>
-<p>可以通过<code>docker build</code>命令来构建一个新镜像，并命名为<code>busybox2</code>，如下所示。</p>
+<p>可以通过<code class="codehilite"><span class="n">docker</span> <span class="n">build</span></code>命令来构建一个新镜像，并命名为<code class="codehilite"><span class="n">busybox2</span></code>，如下所示。</p>
 </blockquote>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ docker build -t busybox2 .
 </pre></div>
 </td></tr></table>
 
 <blockquote>
-<p>构建结束之后，你就能通过<code>docker images</code>命令看到新构建的镜像了。可以基于这个新镜像启动一个容器，检查一下其中是否有一个名为<code>foo</code>的环境变量，并且其值被设置为了<code>bar</code>，如下所示。</p>
+<p>构建结束之后，你就能通过<code class="codehilite"><span class="n">docker</span> <span class="n">images</span></code>命令看到新构建的镜像了。可以基于这个新镜像启动一个容器，检查一下其中是否有一个名为<code class="codehilite"><span class="n">foo</span></code>的环境变量，并且其值被设置为了<code class="codehilite"><span class="n">bar</span></code>，如下所示。</p>
 </blockquote>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ docker images
@@ -3024,7 +3048,7 @@ $ docker run busybox2 env <span class="p">|</span> grep foo
 <p>为了运行WordPress，你需要安装MySQL、Apache 2（即httpd）、PHP以及最新版本的WordPress。你将需要创建一个用于WordPress的数据库。在该范例的配置文件中，WordPress数据库用户名为root，密码也是root，数据库名为wordpress。如果你想对数据库的配置进行修改，需要同时修改wp-config.php和Dockerfile这两个文件，并让它们的设置保持一致。</p>
 <p>Dockerfile文件用来描述一个Docker镜像是如何构建的，后面章节会有关于Dockerfile的详细说明。如果这是你第一次使用Dockerfile文件，那么你可以直接使用下面的文件，以后再学习Dockerfile（参见范例2.3对Dockerfile的介绍）。</p>
 </blockquote>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -3092,7 +3116,7 @@ $ docker run busybox2 env <span class="p">|</span> grep foo
 </td></tr></table>
 
 <blockquote>
-<p>这里定义了两个被监控和运行的服务：mysqld和httpd。每个程序都可以使用诸如autorestart和autostart等选项。最重要的指令是command，其定义了如何运行每个程序。在这个例子中，Docker容器只需要运行一个前台进程：supervisord。从Dockerfile中的<code>CMD ["/usr/bin/supervisord"]</code>这一行也能看出来。</p>
+<p>这里定义了两个被监控和运行的服务：mysqld和httpd。每个程序都可以使用诸如autorestart和autostart等选项。最重要的指令是command，其定义了如何运行每个程序。在这个例子中，Docker容器只需要运行一个前台进程：supervisord。从Dockerfile中的<code class="codehilite"><span class="n">CMD</span> <span class="p">[</span><span class="ss">&quot;/usr/bin/supervisord&quot;</span><span class="p">]</span></code>这一行也能看出来。</p>
 <p>在你的Docker主机上，构建该镜像并启动一个后台容器。如果按照例子中的配置文件使用了基于Vagrant的虚拟机，可以执行如下命令。</p>
 </blockquote>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
@@ -3104,7 +3128,7 @@ $ docker run -d -p <span class="m">80</span>：80 wordpress
 </td></tr></table>
 
 <blockquote>
-<p>容器启动后还会在宿主机和Docker容器之间为80端口进行端口映射。现在只需要在浏览器中打开http://＜ip_of_docker_host＞，就可以进入到WordPress的配置页面了。</p>
+<p>容器启动后还会在宿主机和Docker容器之间为80端口进行端口映射。现在只需要在浏览器中打开http://＜ip<em>of</em>docker_host＞，就可以进入到WordPress的配置页面了。</p>
 </blockquote>
 <h3 id="1153">1.15.3 讨论</h3>
 <blockquote>
@@ -3122,7 +3146,7 @@ $ docker run -d -p <span class="m">80</span>：80 wordpress
 </blockquote>
 <h3 id="1162">1.16.2 解决方案</h3>
 <blockquote>
-<p>启动两个容器：一个运行来自Docker Hub（<a href="http://hub.docker.com/">http://hub.docker.com/</a>）的官方WordPress，另一个运行MySQL数据库。这两个容器通过Docker命令行工具的<code>——link</code>选项链接在一起。</p>
+<p>启动两个容器：一个运行来自Docker Hub（<a href="http://hub.docker.com/">http://hub.docker.com/</a>）的官方WordPress，另一个运行MySQL数据库。这两个容器通过Docker命令行工具的<code class="codehilite"><span class="err">——</span><span class="n">link</span></code>选项链接在一起。</p>
 <p>开始下载最新的WordPress（<a href="https://hub.docker.com/_/wordpress">https://hub.docker.com/_/wordpress</a>）和MySQL（<a href="https://hub.docker.com/_/mysql/">https://hub.docker.com/_/mysql/</a>）镜像，如下所示。</p>
 </blockquote>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1

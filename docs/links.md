@@ -4,6 +4,8 @@
 
 Apeng [https://apeng.fun/](https://apeng.fun/)
 
+obliviate [https://cp32.github.io](https://cp32.github.io)
+
 小白 [https://imxiaobai.cool/](https://imxiaobai.cool/) || [https://wulidecade.cn/](https://wulidecade.cn/)
 
 ## 其它

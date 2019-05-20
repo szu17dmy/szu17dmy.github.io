@@ -1441,7 +1441,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../szu_courses/csapp/datalab/" title="Data Lab" class="md-nav__link">
+    <a href="../../szu_courses/csapp/data_lab/" title="Data Lab" class="md-nav__link">
       Data Lab
     </a>
   </li>
@@ -1453,8 +1453,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../szu_courses/csapp/bomblab/" title="Bomb Lab" class="md-nav__link">
+    <a href="../../szu_courses/csapp/bomb_lab/" title="Bomb Lab" class="md-nav__link">
       Bomb Lab
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_courses/csapp/buffer_lab/" title="Buffer Lab" class="md-nav__link">
+      Buffer Lab
     </a>
   </li>
 
@@ -1501,6 +1513,18 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_courses/cn/socket_lab/" title="Socket Lab" class="md-nav__link">
+      Socket Lab
+    </a>
+  </li>
+
         
           
           
@@ -2467,7 +2491,7 @@
                 
                   <h1>git clone 通过ssh</h1>
                 
-                <p>这回我们来讨论一下Linux下通过SSH来git clone。还是写给小白看的，大佬可以无视了。</p>
+                <p>这回我们来讨论一下Linux下通过SSH来git clone。还是写给小白看的，大佬们可以无视了。</p>
 <p>现在的环境是openSUSE Tumbleweed（其实这并不重要，也适用于macOS等操作系统），代码托管站点是Azure DevOps（每个站点的具体操作应该大同小异，网站一般会提供相应的文档）。另外，如果你在使用一些利用SSH key进行连接的主机上遇到问题，可能也可以参考这里。</p>
 <p>我还是/*很懒地*/先把文档先放上来：<a href="https://docs.microsoft.com/en-us/azure/devops/repos/git/use-ssh-keys-to-authenticate?view=azure-devops">Use SSH key authentication</a></p>
 <p>这里的原理大概是这样的（首先你可能要对<a href="https://zh.wikipedia.org/wiki/%E5%85%AC%E5%BC%80%E5%AF%86%E9%92%A5%E5%8A%A0%E5%AF%86">公开密钥加密</a>的原理有稍微的理解）：你需要先生成一对公钥和私钥，公钥用来加密、可以随意公开，但是信息一旦被公钥加密，只有持有对应的私钥才能解开，当然，私钥需要妥善保管。</p>
@@ -2482,7 +2506,10 @@
 <p>来生成密钥对。拥有.pub后缀的文件是你的public key，请根据<a href="https://docs.microsoft.com/en-us/azure/devops/repos/git/use-ssh-keys-to-authenticate?view=azure-devops#step-2--add-the-public-key-to-azure-devops-servicestfs">文档中的第二步</a>来将它上传到服务器上。</p>
 <p>好了，我们可以准备来连接了。</p>
 <h2 id="git-clone">git clone</h2>
-<p>// 我猜这个时候已经有同学去直接去git clone了然后发现还是要输入密码（或者报一些奇奇怪怪的错）...</p>
+<div class="admonition failure">
+<p class="admonition-title">Failure</p>
+<p>我猜这个时候已经有同学去直接去git clone了然后发现还是要输入密码（或者报一些奇奇怪怪的错）...</p>
+</div>
 <p>现在我们来把private key的路径填入ssh的一个配置文件。但在这之前，我们需要来保证private key的权限是仅有自己可读的，否则你应该会得到一个错误提示private key权限不安全。你可以通过</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">ls</span> <span class="o">-</span><span class="n">l</span>
 </pre></div>
@@ -2513,7 +2540,7 @@
 <p>这个可就要根据实际情况灵活变通了，可别照抄出了问题。如果你使用的是nano，你可以<strong>Ctrl+X</strong>退出，然后<strong>y</strong>确认保存，<strong>Enter</strong>写入。</p>
 <p>这个时候，你应该可以正常地进行git clone（通过SSH）了。</p>
 <h2 id="_1">最后的废话</h2>
-<p>如果你对密码学感兴趣的话，有很多不错的资料，比如...<a href="https://item.jd.com/11942019.html">图解密码技术</a>，<a href="https://ctf-wiki.github.io/ctf-wiki/crypto/introduction/">密码学简介 - CTF Wiki</a>之类的，想了解更多请去找优秀的资料，最好别在这里看我瞎扯...（虽然好像也没啥关联）</p>
+<p>如果你对密码学感兴趣的话，有很多不错的资料，比如...<a href="https://item.jd.com/11942019.html">图解密码技术</a>，<a href="https://ctf-wiki.github.io/ctf-wiki/crypto/introduction/">密码学简介 - CTF Wiki</a>之类的，想了解更多请去找优秀的资料，最好别在这里看我瞎扯...（虽然好像和本文没啥关联）</p>
                 
                   
                 
