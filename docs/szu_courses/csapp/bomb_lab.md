@@ -9,7 +9,7 @@
 !!! warning
     下文中由我手动还原的C代码并没有进行测试，可能存在问题，仅供参考。如果你发现了其中的问题，麻烦告诉我。
 
-## main
+## main()
 其实题目已经给出了`main()`函数的相关内容：
 
 ``` c
@@ -71,7 +71,7 @@ return 0;
 
 先在初始化`initialize_bomb()`后面加个断点，然后启动动态调试。
 
-## phase_1
+## phase_1()
 F8步进，在`phase_1()`函数前要求输入，我们先双击`phase_1`进去看看：
 
 ``` c tab="C, decompiled by IDA"
@@ -338,7 +338,7 @@ int string_length(char str[]) {
 
 就可以通过第一个check。
 
-## phase_2
+## phase_2()
 先双击进来看看，看了个大概，然后随便输6个数开始慢慢调：
 
 !!! tip
@@ -514,7 +514,7 @@ void read_six_numbers(char arg1[], int array[]) {
 
 应该能通过第二个check。
 
-## phase_3
+## phase_3()
 这关主要是`switch`和跳转表。
 
 ``` c tab="C, decompiled by IDA"
@@ -690,7 +690,7 @@ signed __int64 __fastcall phase_3(__int64 a1, __int64 a2, __int64 a3, __int64 a4
 
 所以，给出上述整数对中的任意一对即可通过第三个check。
 
-## phase_4
+## phase_4()
 继续步进：
 
 ``` c tab="C, decompiled by IDA"
@@ -837,7 +837,7 @@ int func4(int number) {
 
 ，即第9个数字，就可通过第四个check。
 
-## phase_5
+## phase_5()
 继续前进：
 
 ``` c tab="C, decompiled by IDA"
@@ -1049,7 +1049,7 @@ void phase_5() {
 
     7 93
 
-## phase_6
+## phase_6()
 > Congratulations! You've (mostly) defused the bomb!
 >
 > Hit Control-C to escape phase 6 (for free!), but if you want to
@@ -1411,7 +1411,7 @@ LABEL_8:
 
     600
 
-## secret_phase
+## secret_phase()
 其实在IDA左侧栏能看到一个隐藏关`secret_phase()`，双击它，然后按X查找引用。可以看到，在每关`phase_defused()`时都会检查是否触发隐藏关：
 
 ``` asm

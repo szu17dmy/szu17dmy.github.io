@@ -2,20 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7fadf15-9a4e-436f-a63f-e9707723dbd9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/szu_courses/cn/socket_lab.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/szu_courses/csapp/buffer_lab.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/embedded/clion-2019.1.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/embedded/clion-2019.1.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/links.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/links.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/misc/git_clone_via_ssh.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/misc/git_clone_via_ssh.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/misc/secure_public_wireless_network_at_school_szu.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/misc/secure_public_wireless_network_at_school_szu.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/szu_courses/csapp/bomblab.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/szu_courses/csapp/bomb_lab.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/szu_courses/csapp/datalab.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/szu_courses/csapp/data_lab.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/szu_courses/csapp/img/BOMB-LAB_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/szu_courses/csapp/img/BOMB_LAB_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/szu_courses/csapp/img/BOMB-LAB_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/szu_courses/csapp/img/BOMB-LAB_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/szu_oj/oop/1226.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/szu_oj/oop/1226.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mkdocs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mkdocs.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/szu_courses/csapp/bomb_lab.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/szu_courses/csapp/bomb_lab.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/szu_courses/csapp/buffer_lab.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/szu_courses/csapp/buffer_lab.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/search/search_index.json" beforeDir="false" afterPath="$PROJECT_DIR$/site/search/search_index.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/site/sitemap.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/sitemap.xml.gz" beforeDir="false" afterPath="$PROJECT_DIR$/site/sitemap.xml.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_courses/csapp/bomb_lab/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_courses/csapp/bomb_lab/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/szu_courses/csapp/buffer_lab/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/szu_courses/csapp/buffer_lab/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,18 +28,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/szu_courses/cn/socket_lab.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="2835">
-                <caret line="135" column="4" selection-start-line="135" selection-start-column="4" selection-end-line="135" selection-end-column="4" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/misc/cmake_source_and_binary_directory.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -59,8 +41,8 @@
         <entry file="file://$PROJECT_DIR$/docs/szu_courses/csapp/buffer_lab.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="407">
-                <caret line="561" selection-start-line="561" selection-end-line="561" />
+              <first_editor relative-caret-position="376">
+                <caret line="603" selection-start-line="603" selection-end-line="603" />
               </first_editor>
               <second_editor />
             </state>
@@ -154,6 +136,7 @@
     <findStrings>
       <find>：</find>
       <find>**</find>
+      <find>python</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -192,8 +175,8 @@
         <option value="$PROJECT_DIR$/docs/embedded/clion-2019.1.md" />
         <option value="$PROJECT_DIR$/docs/misc/git_clone_via_ssh.md" />
         <option value="$PROJECT_DIR$/docs/misc/secure_public_wireless_network_at_school_szu.md" />
-        <option value="$PROJECT_DIR$/docs/szu_courses/csapp/bomb_lab.md" />
         <option value="$PROJECT_DIR$/docs/links.md" />
+        <option value="$PROJECT_DIR$/docs/szu_courses/csapp/bomb_lab.md" />
         <option value="$PROJECT_DIR$/docs/szu_courses/csapp/buffer_lab.md" />
       </list>
     </option>
@@ -201,19 +184,17 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="89" />
-    <option name="y" value="138" />
-    <option name="width" value="1601" />
-    <option name="height" value="832" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="178" />
+    <option name="y" value="16" />
+    <option name="width" value="1220" />
+    <option name="height" value="716" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -321,6 +302,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -419,7 +402,10 @@
       <workItem from="1558317712156" duration="5202000" />
       <workItem from="1558333837512" duration="657000" />
       <workItem from="1558334870432" duration="9454000" />
-      <workItem from="1558354884463" duration="6258000" />
+      <workItem from="1558354884463" duration="7151000" />
+      <workItem from="1558405470852" duration="1955000" />
+      <workItem from="1558408817142" duration="599000" />
+      <workItem from="1558419762374" duration="232000" />
     </task>
     <task id="LOCAL-00001" summary="ADD misc/git_clone_via_ssh">
       <created>1554895305064</created>
@@ -554,16 +540,23 @@
       <option name="project" value="LOCAL" />
       <updated>1558106159759</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="ADD szu_courses/csapp/buffer_lab">
+      <created>1558361224245</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1558361224245</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="229371000" />
+    <option name="totallyTimeSpent" value="233062000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="89" y="138" width="1601" height="832" extended-state="0" />
+    <frame x="0" y="0" width="1366" height="732" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14047466" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14577039" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -580,7 +573,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3297546" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49075976" visible="true" weight="0.12212644" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49075976" visible="true" weight="0.19127516" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50924027" side_tool="true" weight="0.6400966" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -611,7 +604,8 @@
     <MESSAGE value="ADD seo keywords" />
     <MESSAGE value="FIX" />
     <MESSAGE value="ADD szu_oj/oop/1226" />
-    <option name="LAST_COMMIT_MESSAGE" value="ADD szu_oj/oop/1226" />
+    <MESSAGE value="ADD szu_courses/csapp/buffer_lab" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADD szu_courses/csapp/buffer_lab" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/docs/szu_courses/cn.md" />
@@ -882,10 +876,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/docs/szu_courses/csapp/bomb_lab.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-1953" />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/docs/misc/cmake_source_and_binary_directory.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/links.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="294">
+            <caret line="14" selection-start-line="14" selection-end-line="14" />
+          </first_editor>
           <second_editor />
         </state>
       </provider>
@@ -947,31 +959,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/szu_courses/csapp/bomb_lab.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="337">
-            <caret line="1576" column="7" selection-start-line="1576" selection-start-column="7" selection-end-line="1576" selection-end-column="7" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/links.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="294">
-            <caret line="14" selection-start-line="14" selection-end-line="14" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/szu_courses/csapp/buffer_lab.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="407">
-            <caret line="561" selection-start-line="561" selection-end-line="561" />
+          <first_editor relative-caret-position="376">
+            <caret line="603" selection-start-line="603" selection-end-line="603" />
           </first_editor>
           <second_editor />
         </state>

