@@ -545,6 +545,17 @@ void __noreturn bang()
 
 没有问题。完结撒花。
 
+!!! tip
+    好吧我还是，再说几句关于不用pwntools的情况。由于有两次输入，似乎只调用一次`sendstring`没法搞定payload。于是就不得不这样：
+    
+        ./sendstring < ./payload > ./converted
+        echo "c374fd6d" | ./sendstring >> ./converted
+        ./bufbomb -t domain < ./converted
+    
+    第二行就是把第二次要输入给全局变量的Cookie塞到转换后的payload文件里。
+    
+    或许你有更好的办法，总之能搞定就行。不过我还是推荐用pwntools。
+
 ### Nitro mode
 其实我们的实验没要求这个，我还没空去看这是干嘛的，昨晚在大佬的指导下搞了这个getshell：
 
