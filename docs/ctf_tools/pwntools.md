@@ -61,7 +61,7 @@
 ### 对于PyCharm Professional
 嗯，先抛下刚刚上面可能翻车的问题，我们来看看PyCharm如何折腾。
 
-由于我没有装PyCharm，所以...失陪了，看[这里](https://www.jetbrains.com/help/pycharm/using-wsl-as-a-remote-interpreter-1.html)！
+由于我没有装PyCharm，所以...请看[这里](https://www.jetbrains.com/help/pycharm/using-wsl-as-a-remote-interpreter-1.html)。
 
 也是找到**Project Structure**然后**Add Python Interpreter**，只是这次可以直接选择**WSL**，似乎可以省去很多事。同样，安装好包之后就可以回到编辑器开始工作了。
 

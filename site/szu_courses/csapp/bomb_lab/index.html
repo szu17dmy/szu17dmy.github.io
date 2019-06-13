@@ -2636,7 +2636,7 @@
 <p>下文中由我手动还原的C代码并没有进行测试，可能存在问题，仅供参考。如果你发现了其中的问题，麻烦告诉我。</p>
 </div>
 <h2 id="main">main()</h2>
-<p>其实题目已经给出了<code class="codehilite"><span class="n">main</span><span class="p">()</span></code>函数的相关内容：</p>
+<p>其实题目已经给出了<code>main()</code>函数的相关内容：</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -2741,9 +2741,9 @@
 
 <p>看起来是有6个关卡，每次都需要有一段输入，合法则拆除炸弹，非法则炸弹爆炸。虽然已经知道是这样，但是我还是要F5一下：</p>
 <p><img alt="BOMB_LAB_1.png" src="../img/BOMB_LAB_1.png" /></p>
-<p>先在初始化<code class="codehilite"><span class="n">initialize_bomb</span><span class="p">()</span></code>后面加个断点，然后启动动态调试。</p>
+<p>先在初始化<code>initialize_bomb()</code>后面加个断点，然后启动动态调试。</p>
 <h2 id="phase_1">phase_1()</h2>
-<p>F8步进，在<code class="codehilite"><span class="n">phase_1</span><span class="p">()</span></code>函数前要求输入，我们先双击<code class="codehilite"><span class="n">phase_1</span></code>进去看看：</p>
+<p>F8步进，在<code>phase_1()</code>函数前要求输入，我们先双击<code>phase_1</code>进去看看：</p>
 <div class="superfences-tabs">
 <input name="__tabs_1" type="radio" id="__tab_1_0" checked="checked" />
 <label for="__tab_1_0">C, decompiled by IDA</label>
@@ -2823,12 +2823,12 @@
 </pre></div>
 </td></tr></table></div>
 </div>
-<p>非常明显，调用<code class="codehilite"><span class="n">strings_not_equal</span><span class="p">()</span></code>比较字符串，双击进入可看出要求输入的字符串和下述字符串</p>
+<p>非常明显，调用<code>strings_not_equal()</code>比较字符串，双击进入可看出要求输入的字符串和下述字符串</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">Science</span> <span class="n">isn</span><span class="s1">&#39;t about why, it&#39;</span><span class="n">s</span> <span class="n">about</span> <span class="n">why</span> <span class="k">not</span><span class="o">?</span>
 </pre></div>
 </td></tr></table>
 
-<p>相等，如果不相等则调用<code class="codehilite"><span class="n">explode_bomb</span><span class="p">()</span></code>引爆炸弹。</p>
+<p>相等，如果不相等则调用<code>explode_bomb()</code>引爆炸弹。</p>
 <p>其中，</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">test</span>    <span class="no">eax</span><span class="p">,</span> <span class="no">eax</span>
@@ -2841,12 +2841,12 @@
 </pre></div>
 </td></tr></table>
 
-<p><a href="https://stackoverflow.com/questions/147173/testl-eax-against-eax"><code class="codehilite"><span class="n">testl</span></code> eax against eax?</a></p>
+<p><a href="https://stackoverflow.com/questions/147173/testl-eax-against-eax"><code>testl</code> eax against eax?</a></p>
 <blockquote>
-<p>The meaning of <code class="codehilite"><span class="n">test</span></code> is to AND the arguments together, and check the result for zero. So this code tests if EAX is zero or not. <code class="codehilite"><span class="n">je</span></code> will jump if zero.</p>
-<p>BTW, this generates a smaller instruction than <code class="codehilite"><span class="n">cmp</span> <span class="n">eax</span><span class="p">,</span> <span class="mi">0</span></code> which is the reason that compilers will generally do it this way.</p>
+<p>The meaning of <code>test</code> is to AND the arguments together, and check the result for zero. So this code tests if EAX is zero or not. <code>je</code> will jump if zero.</p>
+<p>BTW, this generates a smaller instruction than <code>cmp eax, 0</code> which is the reason that compilers will generally do it this way.</p>
 </blockquote>
-<p>对于<code class="codehilite"><span class="n">strings_not_equal</span><span class="p">()</span></code>来说：</p>
+<p>对于<code>strings_not_equal()</code>来说：</p>
 <div class="superfences-tabs">
 <input name="__tabs_2" type="radio" id="__tab_2_0" checked="checked" />
 <label for="__tab_2_0">C, decompiled by IDA</label>
@@ -3094,7 +3094,7 @@
 </pre></div>
 </td></tr></table></div>
 </div>
-<p>对于<code class="codehilite"><span class="n">string_length</span><span class="p">()</span></code>来说：</p>
+<p>对于<code>string_length()</code>来说：</p>
 <div class="superfences-tabs">
 <input name="__tabs_3" type="radio" id="__tab_3_0" checked="checked" />
 <label for="__tab_3_0">C, decompiled by IDA</label>
@@ -3413,9 +3413,9 @@
 </pre></div>
 </td></tr></table></div>
 </div>
-<p>对了，希望你已经知道了<code class="codehilite"><span class="n">a</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"></span></code>是<code class="codehilite"><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">i</span><span class="p">)</span></code>的语法糖。</p>
+<p>对了，希望你已经知道了<code>a[i]</code>是<code>*(a+i)</code>的语法糖。</p>
 <p>看起来像是输入6个数字，前三个和后三个需要分别相等，<del class="critic">并且不能全为0</del>更新：6个数累加和不能为0（感谢提醒）。</p>
-<p>另外，再看看<code class="codehilite"><span class="n">read_six_numbers</span><span class="p">()</span></code>：</p>
+<p>另外，再看看<code>read_six_numbers()</code>：</p>
 <div class="superfences-tabs">
 <input name="__tabs_5" type="radio" id="__tab_5_0" checked="checked" />
 <label for="__tab_5_0">C, decompiled by IDA</label>
@@ -3530,7 +3530,7 @@
 
 <p>应该能通过第二个check。</p>
 <h2 id="phase_3">phase_3()</h2>
-<p>这关主要是<code class="codehilite"><span class="n">switch</span></code>和跳转表。</p>
+<p>这关主要是<code>switch</code>和跳转表。</p>
 <div class="superfences-tabs">
 <input name="__tabs_6" type="radio" id="__tab_6_0" checked="checked" />
 <label for="__tab_6_0">C, decompiled by IDA</label>
@@ -3853,7 +3853,7 @@
 </pre></div>
 </td></tr></table>
 
-<p>中的一对，否则将会调用<code class="codehilite"><span class="n">explode_bomb</span><span class="p">()</span></code>引爆炸弹。</p>
+<p>中的一对，否则将会调用<code>explode_bomb()</code>引爆炸弹。</p>
 <p>所以，给出上述整数对中的任意一对即可通过第三个check。</p>
 <h2 id="phase_4">phase_4()</h2>
 <p>继续步进：</p>
@@ -3988,7 +3988,7 @@
 </pre></div>
 </td></tr></table></div>
 </div>
-<p>这看起来像是需要输入一个非负整数，让它经过<code class="codehilite"><span class="n">func4</span><span class="p">()</span></code>计算后得到<code class="codehilite"><span class="mi">55</span></code>，否则就会触发<code class="codehilite"><span class="n">explode_bomb</span><span class="p">()</span></code>引爆炸弹。所以我们来看看<code class="codehilite"><span class="n">func4</span><span class="p">()</span></code>里面有什么：</p>
+<p>这看起来像是需要输入一个非负整数，让它经过<code>func4()</code>计算后得到<code>55</code>，否则就会触发<code>explode_bomb()</code>引爆炸弹。所以我们来看看<code>func4()</code>里面有什么：</p>
 <div class="superfences-tabs">
 <input name="__tabs_8" type="radio" id="__tab_8_0" checked="checked" />
 <label for="__tab_8_0">C, decompiled by IDA</label>
@@ -4471,9 +4471,9 @@
 </td></tr></table></div>
 </div>
 <p>然后就发现自己逆的跟IDA的好像差不多...现在看起来已经很明确了，题目预置了一个16个整数的数组，要求输入两个整数。</p>
-<p>其中，会先取第一个整数的二进制的后4位，也就是被截断后最大值是15，这个数值会被当作数组下标去查找数组中存储的值，随后累加查找到的值。并且，会用查找到的值继续当作数组下标去找到新的值，如此循环，直到取到<code class="codehilite"><span class="mi">0</span><span class="n">xF</span></code>时停止。</p>
+<p>其中，会先取第一个整数的二进制的后4位，也就是被截断后最大值是15，这个数值会被当作数组下标去查找数组中存储的值，随后累加查找到的值。并且，会用查找到的值继续当作数组下标去找到新的值，如此循环，直到取到<code>0xF</code>时停止。</p>
 <p>注意到，停止的时候要求查找了12次，并且每次查找到的值的累加和应当与输入的第二个数相等。</p>
-<p>所以我们可以从数组的第6个（从0开始），也就是<code class="codehilite"><span class="mi">0</span><span class="n">xF</span></code>开始，逆向查找回去，于是可以得到正确的顺序应该是：</p>
+<p>所以我们可以从数组的第6个（从0开始），也就是<code>0xF</code>开始，逆向查找回去，于是可以得到正确的顺序应该是：</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -4506,7 +4506,7 @@
 </pre></div>
 </td></tr></table>
 
-<p>也就是说，第一个数字应当是<code class="codehilite"><span class="mi">7</span></code>，并且，累加和应当是<code class="codehilite"><span class="mi">93</span></code>（我偷偷加好了）。所以第五部分的flag是：</p>
+<p>也就是说，第一个数字应当是<code>7</code>，并且，累加和应当是<code>93</code>（我偷偷加好了）。所以第五部分的flag是：</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="mi">7</span> <span class="mi">93</span>
 </pre></div>
 </td></tr></table>
@@ -4952,8 +4952,8 @@
 </pre></div>
 </td></tr></table></div>
 </div>
-<p>注意到<code class="codehilite"><span class="n">node</span><span class="p">,</span> <span class="n">raw</span></code>标签内，这段数据区的每个node的后8个字节似乎正好是下一个node的地址，按D转换成上面的<code class="codehilite"><span class="n">node</span></code>标签里那样：</p>
-<p>基本上可以看出来，一个节点里有一个数据和序号，还有一个指向下一个节点的指针。于是到<code class="codehilite"><span class="n">Structures</span></code>里添加一个结构体<code class="codehilite"><span class="n">Node</span></code>，就像这个样子：</p>
+<p>注意到<code>node, raw</code>标签内，这段数据区的每个node的后8个字节似乎正好是下一个node的地址，按D转换成上面的<code>node</code>标签里那样：</p>
+<p>基本上可以看出来，一个节点里有一个数据和序号，还有一个指向下一个节点的指针。于是到<code>Structures</code>里添加一个结构体<code>Node</code>，就像这个样子：</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -5055,7 +5055,7 @@
 </pre></div>
 </td></tr></table>
 
-<p>好了，每个数据都相当清楚了。来看看<code class="codehilite"><span class="n">phase_6</span><span class="p">()</span></code>吧，由于我们已经知道了参数是一个<code class="codehilite"><span class="n">Node</span> <span class="o">*</span></code>，所以还是对着参数按Y把类型改成<code class="codehilite"><span class="n">Node</span> <span class="o">*</span></code>。这个时候只要再按一下F5（似乎只是为了刷新一下），就会发现已经...：</p>
+<p>好了，每个数据都相当清楚了。来看看<code>phase_6()</code>吧，由于我们已经知道了参数是一个<code>Node *</code>，所以还是对着参数按Y把类型改成<code>Node *</code>。这个时候只要再按一下F5（似乎只是为了刷新一下），就会发现已经...：</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -5175,13 +5175,13 @@
 </pre></div>
 </td></tr></table>
 
-<p>这个时候我已经累了，不想再写了...经过尝试输入链表中的数据动态调试可以发现，函数对链表进行了排序，应该输入第四大的数据<code class="codehilite"><span class="mi">258</span><span class="n">h</span></code>就可以了。所以：</p>
+<p>这个时候我已经累了，不想再写了...经过尝试输入链表中的数据动态调试可以发现，函数对链表进行了排序，应该输入第四大的数据<code>258h</code>就可以了。所以：</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="mi">600</span>
 </pre></div>
 </td></tr></table>
 
 <h2 id="secret_phase">secret_phase()</h2>
-<p>其实在IDA左侧栏能看到一个隐藏关<code class="codehilite"><span class="n">secret_phase</span><span class="p">()</span></code>，双击它，然后按X查找引用。可以看到，在每关<code class="codehilite"><span class="n">phase_defused</span><span class="p">()</span></code>时都会检查是否触发隐藏关：</p>
+<p>其实在IDA左侧栏能看到一个隐藏关<code>secret_phase()</code>，双击它，然后按X查找引用。可以看到，在每关<code>phase_defused()</code>时都会检查是否触发隐藏关：</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -5416,11 +5416,11 @@
 <p>用<a href="https://visualgo.net/zh/bst">VisuAlgo - 二叉搜索树，高度平衡树</a>画的图</p>
 </blockquote>
 <p><img alt="BOMB_LAB_2.png" src="../img/BOMB_LAB_2.png" /></p>
-<p>看函数的递归调用可以知道：输入的数据比节点大则访问左孩子，小于则访问右孩子，相等会返回0。由于结果需要为<code class="codehilite"><span class="mi">3</span></code>，结合上面递归调用的算法，所以应该是<code class="codehilite"><span class="mi">2</span> <span class="err">×</span> <span class="p">(</span><span class="mi">2</span> <span class="err">×</span> <span class="mi">0</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span></code>，访问顺序应该是（输入的数据通过影响遍历的路径来影响结果）：</p>
+<p>看函数的递归调用可以知道：输入的数据比节点大则访问左孩子，小于则访问右孩子，相等会返回0。由于结果需要为<code>3</code>，结合上面递归调用的算法，所以应该是<code>2 × (2 × 0 + 1) + 1</code>，访问顺序应该是（输入的数据通过影响遍历的路径来影响结果）：</p>
 <blockquote>
 <p>24h 32h 6Bh</p>
 </blockquote>
-<p>也就是说，可以输入<code class="codehilite"><span class="mi">6</span><span class="n">Bh</span></code>通过check：</p>
+<p>也就是说，可以输入<code>6Bh</code>通过check：</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="mi">107</span>
 </pre></div>
 </td></tr></table>
