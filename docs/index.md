@@ -8,7 +8,7 @@
 你可以在这里更改网站主题的颜色。
 
 ### Primary Colors 主色
-> 默认是 `teal`
+> 默认是 `White`
 
 点按色块以更改主题的主色
 
@@ -43,7 +43,7 @@
 </script>
 
 ### Accent Colors 辅助色
-> 默认是 `teal`
+> 默认是 `Lime`
 
 点按色块以更改主题的辅助色
 

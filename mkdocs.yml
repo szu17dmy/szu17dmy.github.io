@@ -80,6 +80,7 @@ nav:
     - Web开发及人机交互导论:
       - 前言: szu_courses/web/first.md
       - 工欲善其事: szu_courses/web/tools.md
+      - Dockerize: szu_courses/web/docker.md
     - 计算机系统:
       - Data Lab: szu_courses/csapp/data_lab.md
       - Bomb Lab: szu_courses/csapp/bomb_lab.md
@@ -157,8 +158,8 @@ theme:
     icon: 'flight_takeoff'
   name: 'material'
   palette:
-    primary: 'teal'
-    accent: 'teal'
+    primary: 'white'
+    accent: 'lime'
 
 extra:
   social:

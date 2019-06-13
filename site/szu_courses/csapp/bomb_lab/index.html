@@ -49,7 +49,7 @@
       
         
         
-        <meta name="theme-color" content="#009688">
+        <meta name="theme-color" content="">
       
     
     
@@ -73,7 +73,7 @@
   
     
     
-    <body dir="ltr" data-md-color-primary="teal" data-md-color-accent="teal">
+    <body dir="ltr" data-md-color-primary="white" data-md-color-accent="lime">
   
     <svg class="md-svg">
       <defs>
@@ -1421,6 +1421,18 @@
   <li class="md-nav__item">
     <a href="../../web/tools/" title="工欲善其事" class="md-nav__link">
       工欲善其事
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../web/docker/" title="Dockerize" class="md-nav__link">
+      Dockerize
     </a>
   </li>
 
@@ -3402,7 +3414,7 @@
 </td></tr></table></div>
 </div>
 <p>对了，希望你已经知道了<code class="codehilite"><span class="n">a</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"></span></code>是<code class="codehilite"><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">i</span><span class="p">)</span></code>的语法糖。</p>
-<p>看起来像是输入6个数字，前三个和后三个需要分别相等，并且不能全为0。</p>
+<p>看起来像是输入6个数字，前三个和后三个需要分别相等，<del class="critic">并且不能全为0</del>更新：6个数累加和不能为0（感谢提醒）。</p>
 <p>另外，再看看<code class="codehilite"><span class="n">read_six_numbers</span><span class="p">()</span></code>：</p>
 <div class="superfences-tabs">
 <input name="__tabs_5" type="radio" id="__tab_5_0" checked="checked" />
@@ -3511,7 +3523,7 @@
 </pre></div>
 </td></tr></table></div>
 </div>
-<p>综上，随意构造前三个和后三个数字相等且不全为0的六个数字即可，例如：</p>
+<p>综上，随意构造前三个和后三个数字分别相等且<del class="critic">不全为0</del>累加和不为0的六个数字即可，例如：</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span>
 </pre></div>
 </td></tr></table>
@@ -4084,7 +4096,7 @@
 4
 5
 6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">func4</span><span class="p">(</span><span class="kt">int</span> <span class="n">number</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">number</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">number</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
     <span class="p">}</span>
     <span class="k">return</span> <span class="n">func4</span><span class="p">(</span><span class="n">number</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">func4</span><span class="p">(</span><span class="n">number</span> <span class="o">-</span> <span class="mi">2</span><span class="p">);</span>
@@ -4092,6 +4104,7 @@
 </pre></div>
 </td></tr></table></div>
 </div>
+<p>更新：代码更正了一下，感谢提醒。但我还是建议看IDA逆的而不是我的。另外，配合着调试效果更佳，有关如何调试的文章已经发布。</p>
 <p>相当明显了，这应该是一个递归计算斐波纳契数列的函数。</p>
 <p>综上，由于斐波那契数列是：</p>
 <blockquote>

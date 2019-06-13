@@ -2,11 +2,21 @@
 
 我在修这门课期间完全没有使用上述软件，在下面我会讲述我的方法。我不会去比较两种方式优劣与否，我始终认为适合自己的、能提高生产力的方法才是优秀的。啊？你说我是JetBrains家的死忠，又来推销他家的IDE？呵呵，要不是JetBrains给学生免费的教育授权...我早就...掏钱买他家正版全家桶了...（诶诶我擦...别扔砖头...）
 
-开个玩笑，言归正传，我们来看看怎么愉快地玩（zhuang）耍（bi）：
+开个玩笑，言归正传，我们来看看怎么愉快地玩耍：
 
 ## IntelliJ IDEA Ultimate / PhpStorm
 
-你知道吗？IDEA装上相应的插件之后，就可以愉快地开发PHP、Python等项目而不再需要安装PhpStorm、PyCharm等工具了。虽然有些功能不在它原来的位置上，或者其它一些小问题可能造成一些困扰。如果你未来并不打算使用IDEA或者你觉得你暂时无法驾驭，那么你可以先考虑使用PhpStorm。申请学生授权、下载和安装的过程我就不多说了，如果你在使用其他工具时已经申请教育授权则不必重复申请（废话）；如果你正在使用JetBrains Toolbox的话，那么你的下载安装将会变得特别简单，仅需一键即可完成（好像也是废话）。
+你知道吗？IDEA装上相应的插件之后，就可以愉快地开发PHP、Python等项目而不再需要安装PhpStorm、PyCharm等工具了。虽然有些功能不在它原来的位置上，或者其它一些小问题可能造成一些困扰。
+
+如果你未来并不打算使用IDEA或者你觉得你暂时无法驾驭，那么你可以先考虑使用PhpStorm。
+
+> PhpStorm = WebStorm + PHP + DB/SQL
+>
+> All the features in WebStorm are included into PhpStorm, with full-fledged support for PHP and Databases/SQL support added on top.
+>
+> [PhpStorm: The Lightning-Smart IDE for PHP Programming by JetBrains](https://www.jetbrains.com/phpstorm/)
+
+申请学生授权、下载和安装的过程我就不多说了，如果你在使用其他工具时已经申请教育授权则不必重复申请（废话）；如果你正在使用JetBrains Toolbox的话，那么你的下载安装将会变得特别简单，仅需一键即可完成（好像也是废话）。
 
 ### 外观和编辑器
 初次启动即可选择主题，即使你错过了它，仍然可以在Settings->Appearance中找到。至于代码的颜色，你可以在Settings->Editor->Color Scheme中选择一种你喜欢的。更多选项你可以查阅官方文档。另外，我正在使用插件Material Theme UI，如果你感兴趣的话不妨安装尝试。
@@ -42,6 +52,14 @@
 ## 关于服务
 你应该很快会发现这种直接在浏览器打开你的网页的方式不能满足你了，你会希望有后端来处理各种事务，有数据库来保存各类数据...关于服务器的方案，你可能听说了很多，比如老师可能会推荐你使用XAMPP，又如你可能听说过WAMP，但接下来我会介绍一些完全不同的方案。
 
+!!! danger
+    不管你使用何种方式，包括但不限于安装并启动上面的服务全家桶（XAMPP）、还是按照下面的过程逐一安装服务，都是把你的电脑当成服务器来使用。
+    
+    在开发过程中如果你的电脑处于校园网中并且没有一层路由器NAT保护，并且也没有合理地配置防火墙，你所开放的服务可能被他人访问。如果配置不当或是程序存在漏洞，这将会带来严重的问题，例如信息泄漏或甚至是主机被控制。
+
+### Docker
+**强烈推荐使用这种方式，特别是部署你的应用的时候。我会特别地在另一篇文章中描述这种方法。**
+
 ### PHP Built-in Web Server
 > As of PHP 5.4.0, the CLI SAPI provides a built-in web server.
 > 
@@ -49,7 +67,12 @@
 
 有关内置Web Server的更多信息，请访问[这里](http://php.net/manual/en/features.commandline.webserver.php)。
 
-个人认为这是一个相对简单得多的方案，特别是你可以直接通过IDE来启动服务器。首先你应先有一个PHP解释器，如果还没有安装，请前往[官网](http://www.php.net/)下载。这里就假设你已经部署好了你的PHP解释器，你只需要在Run/Debug Configurations里添加一个**PHP Built-in Web Server**，请注意指定根目录和解释器，
+个人认为这是一个相对简单得多的方案，特别是你可以直接通过IDE来启动服务器。
+
+!!! warning
+    官方文档已经指出，它只应该用于开发，而不应在实际生产环境中使用。
+
+首先你应先有一个PHP解释器，如果还没有安装，请前往[官网](http://www.php.net/)下载。这里就假设你已经部署好了你的PHP解释器，你只需要在Run/Debug Configurations里添加一个**PHP Built-in Web Server**，请注意指定根目录和解释器，
 
 ![TOOLS-1.png](./img/TOOLS-1.png)
 
@@ -67,11 +90,9 @@
 
 你应该可以看到你写好的index，如果不是index，请记得在地址栏输入你所希望请求的文件名。
 
-如果你问我数据库的话...其实这个不是特别重要，你可以选择MySQL、MariaDB、PostgreSQL等等众多数据库的Windows版本，或者在子系统上安装。
+!!! tip
+    这个时候的服务器是只监听本机请求的，也就是说不会受到来自其他主机的攻击。不过，其他人也就无法在他们的电脑上直接访问并查看你的成果了。
 
-### Windows Subsystem for Linux (WSL) on Windows 10 适用于Linux的Windows子系统
-WSL真香，真的。
+如果你问我数据库的话...其实这个不是特别重要，你可以选择MySQL、MariaDB、PostgreSQL等等众多数据库的Windows版本，或者在子系统上安装。随后你只要启动了服务器，你就可以通过客户端或是PHP来访问了。
 
-安装各种服务也同样简单，下面以搭建Nginx+MariaDB+PHP为例。
-
-好吧拖延症又犯了 晚点继续更新
+这里本来是打算写在子系统上安装服务的，但是考虑到安全性之类的还是删掉了。还是建议搞个云主机来跑Docker，下一篇慢慢讲。
