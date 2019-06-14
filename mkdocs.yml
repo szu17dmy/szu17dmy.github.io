@@ -91,6 +91,7 @@ nav:
         - Socket Lab: szu_courses/cn/socket_lab.md
         - VLAN Lab: szu_courses/cn/vlan_lab.md
         - Router Lab: szu_courses/cn/router_lab.md
+        - Tunnel Lab: szu_courses/cn/tunnel_lab.md
       - 传输层: szu_courses/cn/transport_layer.md
   - SZU ONLINEJUDGE:
     - 专题 What's wrong with my code?:
