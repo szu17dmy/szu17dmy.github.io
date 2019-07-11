@@ -98,14 +98,14 @@ $ sudo systemctl start docker
 
 [docker run | Docker Documentation](https://docs.docker.com/engine/reference/commandline/run/)
 
-有本书不错：[Docker Cookbook - O'Reilly Media](http://shop.oreilly.com/product/0636920036791.do)。中文版书名是Docker经典实例。
+有本书不错：[Docker Cookbook - O'Reilly Media](http://shop.oreilly.com/product/0636920036791.do)。中文版书名是**Docker经典实例**。
 
 ## 启动
 好的我特意写了一个很基础的、甚至没有HTTPS的、但是含有PHP和MySQL的很简单的LNMP的docker-compose：
 
 [szu17dmy/docker-compose-lnmp](https://github.com/szu17dmy/docker-compose-lnmp)
 
-顺便说一下...如果想要HTTPS也很简单，稍微加点东西就可以了，有空再搞。不过我一般没让docker上HTTPS，并且只允许本地访问，然后再用主机上的nginx反向代理它们。
+顺便说一下...如果想要HTTPS也很简单，稍微加点东西就可以了，有空再搞。不过我一般没让docker上HTTPS，并且只允许localhost访问，然后再用本地主机上的nginx反向代理它们。
 
 好了直入正题。如果你的主机上有git的话（希望你不用问我没有怎么办...没有就装啊...用包管理器直接装就好了），你就可以直接：
 

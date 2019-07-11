@@ -5,11 +5,97 @@ repo_name: 'szu17dmy.github.io'
 repo_url: 'https://github.com/szu17dmy/szu17dmy.github.io'
 
 nav:
-  - HOMEPAGE:
-    - HOME: index.md
-    - ABOUT: about.md
-    - LINKS: links.md
-  - CTF TOOLS:
+  - 主页:
+    - 首页和调色板: index.md
+    - 相关信息: about.md
+    - 相关链接: links.md
+  - 读书笔记:
+    - 《计算机网络：自顶向下方法》读书笔记:
+      - 第3章 传输层: reading_notes/computer_networking_a_top_down_approach/transport_layer.md
+      - 第4章 网络层: reading_notes/computer_networking_a_top_down_approach/the_network_layer.md
+    - 《深入理解计算机系统》读书笔记:
+      - 第3章 程序的机器级表示: reading_notes/computer_systems_a_programmer_s_perspective/machine-level_representation_of_programs.md
+      - 第7章 链接: reading_notes/computer_systems_a_programmer_s_perspective/linking.md
+    - 《Docker经典实例》读书笔记:
+      - 第1章 Docker入门: reading_notes/docker_cookbook/getting_started_with_docker.md
+    - 《TCP/IP详解》读书笔记:
+      - 卷1：协议:
+        - 第10章 用户数据报协议和IP分片: reading_notes/tcp_ip_illustrated/user_datagram_protocol_and_ip_fragmentation.md
+        - 第12章 TCP：传输控制协议（初步）: reading_notes/tcp_ip_illustrated/the_transmission_control_protocol_preliminaries.md
+    - 《征服C指针》读书笔记:
+      - 第0章 本书的目标与结构——引言: reading_notes/pointer/0.md
+      - 第1章 从基础开始——预备知识和复习: reading_notes/pointer/1.md
+    - 《揭秘家用路由器0day漏洞挖掘技术》读书笔记:
+      - 第1章 基础准备与工具: reading_notes/routers/1.md
+  - SZU课程:
+    - 程序设计基础:
+      - 前言: szu_courses/cpp/first.md
+      - 一些C语言相关的书目: szu_courses/cpp/books.md
+      - JetBrains CLion 安装与配置: szu_courses/cpp/clion_conf.md
+      - 一些使用CLion的技巧: szu_courses/cpp/clion_hotkeys.md
+      - 浅谈vector容器: szu_courses/cpp/vector.md
+    - Web开发及人机交互导论:
+      - 前言: szu_courses/web/first.md
+      - 工欲善其事: szu_courses/web/tools.md
+      - Dockerize: szu_courses/web/docker.md
+    - 计算机系统:
+      - Data Lab: szu_courses/csapp/data_lab.md
+      - Bomb Lab: szu_courses/csapp/bomb_lab.md
+      - Buffer Lab: szu_courses/csapp/buffer_lab.md
+      - 动态调试: szu_courses/csapp/debug.md
+    - 计算机网络:
+      - Socket Lab: szu_courses/cn/socket_lab.md
+      - VLAN Lab: szu_courses/cn/vlan_lab.md
+      - Router Lab: szu_courses/cn/router_lab.md
+      - Tunnel Lab: szu_courses/cn/tunnel_lab.md
+  - SZU OJ:
+    - 专题 What's wrong with my code?:
+      - 前言: szu_oj/what_s_wrong_with_my_code/first.md
+      - 初始化的姿势: szu_oj/what_s_wrong_with_my_code/initialize.md
+    - 面向对象程序设计:
+      - 三串合一（指针与字符数组）: szu_oj/oop/1038.md
+      - 动态矩阵（指针与堆内存分配）: szu_oj/oop/1044.md
+      - 矩阵类模板（类模板）: szu_oj/oop/1156.md
+      - 扑克牌排序（结构体）: szu_oj/oop/1190.md
+      - 母牛生小牛问题(静态数据成员与静态成员函数): szu_oj/oop/1226.md
+      - 集合（运算符重载）: szu_oj/oop/1237.md
+    - 程序设计基础:
+      - 求矩阵的最大和最小值: szu_oj/cpp/1084.md
+      - 单词统计: szu_oj/cpp/1295.md
+      - 计算字符串的长度: szu_oj/cpp/1341.md
+    - 程序设计基础 UOOC:
+      - 分类排序(函数): szu_oj/uooc/1334.md
+      - 鸡蛋队列（数组，函数）: szu_oj/uooc/1438.md
+    - 数据结构:
+      - DS单链表--类实现: szu_oj/ds/1199.md
+      - DS堆栈--逆序输出（STL栈使用）: szu_oj/ds/1202.md
+      - DS堆栈--行编辑: szu_oj/ds/1204.md
+      - DS堆栈--括号匹配: szu_oj/ds/1205.md
+      - DS队列之银行排队: szu_oj/ds/1207.md
+      - DS二叉树--二叉树构建与遍历: szu_oj/ds/1213.md
+      - DS二叉树--叶子数量: szu_oj/ds/1214.md
+      - DS二叉树--左叶子数量: szu_oj/ds/1215.md
+      - DS二叉树——二叉树之父子结点: szu_oj/ds/1216.md
+      - DS二叉树——二叉树之数组存储: szu_oj/ds/1217.md
+      - DS图遍历--深度优先搜索: szu_oj/ds/1223.md
+      - DS图遍历--广度优先搜索: szu_oj/ds/1224.md
+      - DS哈希查找--链地址法: szu_oj/ds/1239.md
+      - DS排序--快速排序: szu_oj/ds/1241.md
+      - DS链表—学生宿舍管理: szu_oj/ds/1245.md
+      - DS二叉树——Huffman编码与解码: szu_oj/ds/1250.md
+      - DS图—图的邻接矩阵存储及度计算: szu_oj/ds/1253.md
+      - 哈希查找与增补: szu_oj/ds/1260.md
+      - DS内排—直插排序: szu_oj/ds/1264.md
+      - DS内排—2-路归并排序: szu_oj/ds/1268.md
+      - DS哈希查找—线性探测再散列: szu_oj/ds/1269.md
+      - 冒泡排序 (Ver. I): szu_oj/ds/1309.md
+      - DS哈希查找—二次探测再散列: szu_oj/ds/1318.md
+  - 杂项:
+    - CMake指定源码目录和构建目录: misc/cmake_source_and_binary_directory.md
+    - git clone 通过ssh: misc/git_clone_via_ssh.md
+    - Python SimpleHTTPServer: misc/python_http_server.md
+    - 在开放的校园无线网络中加密自己的数据传输: misc/secure_public_wireless_network_at_school_szu.md
+  - CTF工具:
     - Windows下利用WSL使用pwntools: ctf_tools/pwntools.md
     - 在线BASE64加解密（实验性）: ctf_tools/base64.md
   - CTF WRITEUP:
@@ -53,89 +139,9 @@ nav:
     - CG-CTF:
       - Web:
         - 签到题: ctf_writeup/cg_ctf/easyweb.md
-  - EMBEDDED:
+  - 嵌入式:
     - 尝鲜CLion 2019.1（Windows）: embedded/clion-2019.1.md
-  - READING NOTES:
-    - 《深入理解计算机系统》读书笔记:
-      - 第3章 程序的机器级表示: reading_notes/computer_systems_a_programmer_s_perspective/machine-level_representation_of_programs.md
-      - 第7章 链接: reading_notes/computer_systems_a_programmer_s_perspective/linking.md
-    - 《Docker经典实例》读书笔记:
-      - 第1章 Docker入门: reading_notes/docker_cookbook/getting_started_with_docker.md
-    - 《TCP/IP详解》读书笔记:
-      - 卷1：协议:
-        - 第10章 用户数据报协议和IP分片: reading_notes/tcp_ip_illustrated/user_datagram_protocol_and_ip_fragmentation.md
-        - 第12章 TCP：传输控制协议（初步）: reading_notes/tcp_ip_illustrated/the_transmission_control_protocol_preliminaries.md
-    - 《征服C指针》读书笔记:
-      - 第0章 本书的目标与结构——引言: reading_notes/pointer/0.md
-      - 第1章 从基础开始——预备知识和复习: reading_notes/pointer/1.md
-    - 《揭秘家用路由器0day漏洞挖掘技术》读书笔记:
-      - 第1章 基础准备与工具: reading_notes/routers/1.md
-  - SZU COURSES:
-    - 程序设计基础:
-      - 前言: szu_courses/cpp/first.md
-      - 一些C语言相关的书目: szu_courses/cpp/books.md
-      - JetBrains CLion 安装与配置: szu_courses/cpp/clion_conf.md
-      - 一些使用CLion的技巧: szu_courses/cpp/clion_hotkeys.md
-      - 浅谈vector容器: szu_courses/cpp/vector.md
-    - Web开发及人机交互导论:
-      - 前言: szu_courses/web/first.md
-      - 工欲善其事: szu_courses/web/tools.md
-      - Dockerize: szu_courses/web/docker.md
-    - 计算机系统:
-      - Data Lab: szu_courses/csapp/data_lab.md
-      - Bomb Lab: szu_courses/csapp/bomb_lab.md
-      - Buffer Lab: szu_courses/csapp/buffer_lab.md
-      - 动态调试: szu_courses/csapp/debug.md
-    - 计算机网络:
-      - 实验:
-        - Socket Lab: szu_courses/cn/socket_lab.md
-        - VLAN Lab: szu_courses/cn/vlan_lab.md
-        - Router Lab: szu_courses/cn/router_lab.md
-        - Tunnel Lab: szu_courses/cn/tunnel_lab.md
-      - 传输层: szu_courses/cn/transport_layer.md
-  - SZU ONLINEJUDGE:
-    - 专题 What's wrong with my code?:
-      - 前言: szu_oj/what_s_wrong_with_my_code/first.md
-      - 初始化的姿势: szu_oj/what_s_wrong_with_my_code/initialize.md
-    - 面向对象程序设计:
-      - 三串合一（指针与字符数组）: szu_oj/oop/1038.md
-      - 动态矩阵（指针与堆内存分配）: szu_oj/oop/1044.md
-      - 矩阵类模板（类模板）: szu_oj/oop/1156.md
-      - 扑克牌排序（结构体）: szu_oj/oop/1190.md
-      - 母牛生小牛问题(静态数据成员与静态成员函数): szu_oj/oop/1226.md
-      - 集合（运算符重载）: szu_oj/oop/1237.md
-    - 程序设计基础:
-      - 求矩阵的最大和最小值: szu_oj/cpp/1084.md
-      - 单词统计: szu_oj/cpp/1295.md
-      - 计算字符串的长度: szu_oj/cpp/1341.md
-    - 程序设计基础 UOOC:
-      - 分类排序(函数): szu_oj/uooc/1334.md
-      - 鸡蛋队列（数组，函数）: szu_oj/uooc/1438.md
-    - 数据结构:
-      - DS单链表--类实现: szu_oj/ds/1199.md
-      - DS堆栈--逆序输出（STL栈使用）: szu_oj/ds/1202.md
-      - DS堆栈--行编辑: szu_oj/ds/1204.md
-      - DS堆栈--括号匹配: szu_oj/ds/1205.md
-      - DS队列之银行排队: szu_oj/ds/1207.md
-      - DS二叉树--二叉树构建与遍历: szu_oj/ds/1213.md
-      - DS二叉树--叶子数量: szu_oj/ds/1214.md
-      - DS二叉树--左叶子数量: szu_oj/ds/1215.md
-      - DS二叉树——二叉树之父子结点: szu_oj/ds/1216.md
-      - DS二叉树——二叉树之数组存储: szu_oj/ds/1217.md
-      - DS图遍历--深度优先搜索: szu_oj/ds/1223.md
-      - DS图遍历--广度优先搜索: szu_oj/ds/1224.md
-      - DS哈希查找--链地址法: szu_oj/ds/1239.md
-      - DS排序--快速排序: szu_oj/ds/1241.md
-      - DS链表—学生宿舍管理: szu_oj/ds/1245.md
-      - DS二叉树——Huffman编码与解码: szu_oj/ds/1250.md
-      - DS图—图的邻接矩阵存储及度计算: szu_oj/ds/1253.md
-      - 哈希查找与增补: szu_oj/ds/1260.md
-      - DS内排—直插排序: szu_oj/ds/1264.md
-      - DS内排—2-路归并排序: szu_oj/ds/1268.md
-      - DS哈希查找—线性探测再散列: szu_oj/ds/1269.md
-      - 冒泡排序 (Ver. I): szu_oj/ds/1309.md
-      - DS哈希查找—二次探测再散列: szu_oj/ds/1318.md
-  - UOOC:
+  - 慕课相关:
     - Java:
       - 1 概述: uooc/java/1.md
       - 2 数据类型、运算符、表达式和跳转语句: uooc/java/2.md
@@ -148,11 +154,6 @@ nav:
       - 9 图形用户界面设计: uooc/java/9.md
       - 10 线程: uooc/java/10.md
       - 11 Java网络编程: uooc/java/11.md
-  - MISC:
-    - CMake指定源码目录和构建目录: misc/cmake_source_and_binary_directory.md
-    - git clone 通过ssh: misc/git_clone_via_ssh.md
-    - Python SimpleHTTPServer: misc/python_http_server.md
-    - 在开放的校园无线网络中加密自己的数据传输: misc/secure_public_wireless_network_at_school_szu.md
 
 theme:
   favicon: 'img/favicon.ico'

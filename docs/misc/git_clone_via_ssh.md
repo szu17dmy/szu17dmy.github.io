@@ -1,4 +1,6 @@
-这回我们来讨论一下Linux下通过SSH来git clone。还是写给小白看的，大佬们可以无视了。
+这回我们来讨论一下通过SSH来git clone。还是写给小白看的，大佬们可以无视了。
+
+更新：加入Windows下的少许提示。
 
 现在的环境是openSUSE Tumbleweed（其实这并不重要，也适用于macOS等操作系统），代码托管站点是Azure DevOps（每个站点的具体操作应该大同小异，网站一般会提供相应的文档）。另外，如果你在使用一些利用SSH key进行连接的主机上遇到问题，可能也可以参考这里。
 
@@ -15,7 +17,12 @@
 
     ssh-keygen
 
-来生成密钥对。拥有.pub后缀的文件是你的public key，请根据[文档中的第二步](https://docs.microsoft.com/en-us/azure/devops/repos/git/use-ssh-keys-to-authenticate?view=azure-devops#step-2--add-the-public-key-to-azure-devops-servicestfs)来将它上传到服务器上。
+来生成密钥对。
+
+!!! tip
+    如果你正在使用Windows，可以使用WSL中的`ssh-keygen`，也可以使用Putty提供的工具（印象中需要转换一下）。
+
+拥有.pub后缀的文件是你的public key，请根据[文档中的第二步](https://docs.microsoft.com/en-us/azure/devops/repos/git/use-ssh-keys-to-authenticate?view=azure-devops#step-2--add-the-public-key-to-azure-devops-servicestfs)来将它上传到服务器上。
 
 好了，我们可以准备来连接了。
 
@@ -27,6 +34,9 @@
 现在我们来把private key的路径填入ssh的一个配置文件。但在这之前，我们需要来保证private key的权限是仅有自己可读的，否则你应该会得到一个错误提示private key权限不安全。你可以通过
 
     ls -l
+
+!!! tip
+    在Windows下，你可以在Git Bash中设置它们。当然，你也可以选择使用WSL的Git，只是某些应用可能暂时只支持调用Windows版的Git。
 
 来查看当前目录下文件的权限，然后通过
 
