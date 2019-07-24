@@ -5,11 +5,11 @@ repo_name: 'szu17dmy.github.io'
 repo_url: 'https://github.com/szu17dmy/szu17dmy.github.io'
 
 nav:
-  - 主页:
+  - Homepage:
     - 首页和调色板: index.md
     - 相关信息: about.md
     - 相关链接: links.md
-  - 读书笔记:
+  - Reading Notes:
     - 《计算机网络：自顶向下方法》读书笔记:
       - 第3章 传输层: reading_notes/computer_networking_a_top_down_approach/transport_layer.md
       - 第4章 网络层: reading_notes/computer_networking_a_top_down_approach/the_network_layer.md
@@ -27,7 +27,7 @@ nav:
       - 第1章 从基础开始——预备知识和复习: reading_notes/pointer/1.md
     - 《揭秘家用路由器0day漏洞挖掘技术》读书笔记:
       - 第1章 基础准备与工具: reading_notes/routers/1.md
-  - SZU课程:
+  - SZU Courses:
     - 程序设计基础:
       - 前言: szu_courses/cpp/first.md
       - 一些C语言相关的书目: szu_courses/cpp/books.md
@@ -48,7 +48,7 @@ nav:
       - VLAN Lab: szu_courses/cn/vlan_lab.md
       - Router Lab: szu_courses/cn/router_lab.md
       - Tunnel Lab: szu_courses/cn/tunnel_lab.md
-  - SZU OJ:
+  - SZU OJ Solutions:
     - 专题 What's wrong with my code?:
       - 前言: szu_oj/what_s_wrong_with_my_code/first.md
       - 初始化的姿势: szu_oj/what_s_wrong_with_my_code/initialize.md
@@ -90,16 +90,16 @@ nav:
       - DS哈希查找—线性探测再散列: szu_oj/ds/1269.md
       - 冒泡排序 (Ver. I): szu_oj/ds/1309.md
       - DS哈希查找—二次探测再散列: szu_oj/ds/1318.md
-  - 杂项:
+  - Miscellaneous:
     - CMake指定源码目录和构建目录: misc/cmake_source_and_binary_directory.md
     - git clone 通过ssh: misc/git_clone_via_ssh.md
     - Python SimpleHTTPServer: misc/python_http_server.md
     - 在开放的校园无线网络中加密自己的数据传输: misc/secure_public_wireless_network_at_school_szu.md
     - Windows和Ubuntu双系统下的时间问题: misc/time_issue_when_dual_systems_windows_and_ubuntu.md
-  - CTF工具:
+  - CTF Tools:
     - Windows下利用WSL使用pwntools: ctf_tools/pwntools.md
     - 在线BASE64加解密（实验性）: ctf_tools/base64.md
-  - CTF WRITEUP:
+  - CTF Write-Up:
     - CISCN 2019:
       - MISC:
         - 签到: ctf_writeup/ciscn2019/qiandao.md
@@ -140,9 +140,9 @@ nav:
     - CG-CTF:
       - Web:
         - 签到题: ctf_writeup/cg_ctf/easyweb.md
-  - 嵌入式:
+  - Embedded System:
     - 尝鲜CLion 2019.1（Windows）: embedded/clion-2019.1.md
-  - 慕课相关:
+  - MOOC Solutions:
     - Java:
       - 1 概述: uooc/java/1.md
       - 2 数据类型、运算符、表达式和跳转语句: uooc/java/2.md
