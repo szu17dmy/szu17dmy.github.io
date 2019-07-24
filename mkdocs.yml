@@ -95,6 +95,7 @@ nav:
     - git clone 通过ssh: misc/git_clone_via_ssh.md
     - Python SimpleHTTPServer: misc/python_http_server.md
     - 在开放的校园无线网络中加密自己的数据传输: misc/secure_public_wireless_network_at_school_szu.md
+    - Windows和Ubuntu双系统下的时间问题: misc/time_issue_when_dual_systems_windows_and_ubuntu.md
   - CTF工具:
     - Windows下利用WSL使用pwntools: ctf_tools/pwntools.md
     - 在线BASE64加解密（实验性）: ctf_tools/base64.md
