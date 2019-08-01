@@ -41,7 +41,7 @@
 
 你可能有一定使用Linux的基础，不过也请不要先急着直接用你的包管理工具直接开始安装Docker。请参阅这里开始安装：
 
-对于CentOS，请查看这里：[Get Docker CE for CentOS | Docker Documentation](https://docs.docker.com/install/linux/docker-ce/centos/)
+对于CentOS，请查看这里：[Get Docker Engine - Community for CentOS | Docker Documentation](https://docs.docker.com/install/linux/docker-ce/centos/)
 
 其他Linux发行版例如Debian、Ubuntu等，可以在上述链接的左侧目录中找到对应系统的安装指南。
 

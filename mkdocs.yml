@@ -1,5 +1,5 @@
 site_name: 'Keep Evolving'
-site_url: 'https://blog.52szu.tech'
+site_url: 'https://chikorita.fun'
 
 repo_name: 'szu17dmy.github.io'
 repo_url: 'https://github.com/szu17dmy/szu17dmy.github.io'
@@ -175,6 +175,10 @@ extra:
 
 extra_javascript:
   - 'js/extra.js'
+
+google_analytics:
+  - 'UA-144844998-1'
+  - 'auto'
 
 markdown_extensions:
   - admonition

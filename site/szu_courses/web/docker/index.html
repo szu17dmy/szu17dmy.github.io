@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://blog.52szu.tech/szu_courses/web/docker/">
+        <link rel="canonical" href="https://chikorita.fun/szu_courses/web/docker/">
       
       
       
@@ -67,6 +67,31 @@
     
     
       
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-144844998-1", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
     
     
   </head>
@@ -96,7 +121,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://blog.52szu.tech" title="Keep Evolving" class="md-header-nav__button md-logo">
+        <a href="https://chikorita.fun" title="Keep Evolving" class="md-header-nav__button md-logo">
           
             <i class="md-icon">flight_takeoff</i>
           
@@ -188,7 +213,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="https://blog.52szu.tech" title="Keep Evolving" class="md-nav__button md-logo">
+    <a href="https://chikorita.fun" title="Keep Evolving" class="md-nav__button md-logo">
       
         <i class="md-icon">flight_takeoff</i>
       
@@ -2613,7 +2638,7 @@
 <p>你应该会连接你的主机吧？你可以选择通过主机商的WebShell进行连接并进行控制，或是通过SSH使用密钥进行连接。如果你正在使用Windows，我建议使用Xshell通过SSH来连接并控制你的服务器、用Xftp来传输文件。</p>
 </div>
 <p>你可能有一定使用Linux的基础，不过也请不要先急着直接用你的包管理工具直接开始安装Docker。请参阅这里开始安装：</p>
-<p>对于CentOS，请查看这里：<a href="https://docs.docker.com/install/linux/docker-ce/centos/">Get Docker CE for CentOS | Docker Documentation</a></p>
+<p>对于CentOS，请查看这里：<a href="https://docs.docker.com/install/linux/docker-ce/centos/">Get Docker Engine - Community for CentOS | Docker Documentation</a></p>
 <p>其他Linux发行版例如Debian、Ubuntu等，可以在上述链接的左侧目录中找到对应系统的安装指南。</p>
 <p>我废话几句翻译一下...主要过程就是删掉旧版：</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
