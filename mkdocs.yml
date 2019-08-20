@@ -100,11 +100,14 @@ nav:
     - Windows下利用WSL使用pwntools: ctf_tools/pwntools.md
     - 在线BASE64加解密（实验性）: ctf_tools/base64.md
   - CTF Write-Up:
+    - SUCTF 2019:
+      - MISC:
+        - homerouter: ctf_writeup/suctf_2019/homerouter.md
     - CISCN 2019:
       - MISC:
-        - 签到: ctf_writeup/ciscn2019/qiandao.md
-        - saleae: ctf_writeup/ciscn2019/saleae.md
-        - 24c: ctf_writeup/ciscn2019/24c.md
+        - 签到: ctf_writeup/ciscn_2019/qiandao.md
+        - saleae: ctf_writeup/ciscn_2019/saleae.md
+        - 24c: ctf_writeup/ciscn_2019/24c.md
     - BugKu:
       - MISC:
         - MISC 50: ctf_writeup/bugku/misc_50.md
@@ -121,22 +124,22 @@ nav:
         - 好多数值: ctf_writeup/bugku/好多数值.md
     - Pragyan CTF 19:
       - Forensics:
-        - Welcome: ctf_writeup/pctf2019/welcome.md
-        - Magic PNGs: ctf_writeup/pctf2019/magic_pngs.md
-        - Save Earth: ctf_writeup/pctf2019/save_earth.md
-        - Slow Realization: ctf_writeup/pctf2019/slow_realization.md
-        - Late PR: ctf_writeup/pctf2019/late_pr.md
+        - Welcome: ctf_writeup/pctf_2019/welcome.md
+        - Magic PNGs: ctf_writeup/pctf_2019/magic_pngs.md
+        - Save Earth: ctf_writeup/pctf_2019/save_earth.md
+        - Slow Realization: ctf_writeup/pctf_2019/slow_realization.md
+        - Late PR: ctf_writeup/pctf_2019/late_pr.md
       - Miscellaneous:
-        - EXORcism: ctf_writeup/pctf2019/exorcism.md
+        - EXORcism: ctf_writeup/pctf_2019/exorcism.md
       - Web:
-        - Cookie Monster: ctf_writeup/pctf2019/cookie_monster.md
-        - Game of Faces: ctf_writeup/pctf2019/game_of_faces.md
+        - Cookie Monster: ctf_writeup/pctf_2019/cookie_monster.md
+        - Game of Faces: ctf_writeup/pctf_2019/game_of_faces.md
     - Hackergame 2018:
-      - 签到题: ctf_writeup/hackergame2018/hello_world.md
-      - 猫咪问答: ctf_writeup/hackergame2018/ustc_quiz.md
-      - 游园会的集章卡片: ctf_writeup/hackergame2018/card.md
-      - 猫咪遥控器: ctf_writeup/hackergame2018/cat_remote.md
-      - 猫咪克星: ctf_writeup/hackergame2018/python_simulator.md
+      - 签到题: ctf_writeup/hackergame_2018/hello_world.md
+      - 猫咪问答: ctf_writeup/hackergame_2018/ustc_quiz.md
+      - 游园会的集章卡片: ctf_writeup/hackergame_2018/card.md
+      - 猫咪遥控器: ctf_writeup/hackergame_2018/cat_remote.md
+      - 猫咪克星: ctf_writeup/hackergame_2018/python_simulator.md
     - CG-CTF:
       - Web:
         - 签到题: ctf_writeup/cg_ctf/easyweb.md
