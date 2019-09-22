@@ -48,25 +48,15 @@ nav:
       - VLAN Lab: szu_courses/cn/vlan_lab.md
       - Router Lab: szu_courses/cn/router_lab.md
       - Tunnel Lab: szu_courses/cn/tunnel_lab.md
+#    - 计算机图形学:
+#      - 环境配置建议:
+#        - FreeGLUT和GLEW在CLion上: szu_courses/cg/freeglut_glew_clion_windows.md
   - SZU OJ Solutions:
     - 专题 What's wrong with my code?:
       - 前言: szu_oj/what_s_wrong_with_my_code/first.md
       - 初始化的姿势: szu_oj/what_s_wrong_with_my_code/initialize.md
-    - 面向对象程序设计:
-      - 三串合一（指针与字符数组）: szu_oj/oop/1038.md
-      - 动态矩阵（指针与堆内存分配）: szu_oj/oop/1044.md
-      - 矩阵类模板（类模板）: szu_oj/oop/1156.md
-      - 扑克牌排序（结构体）: szu_oj/oop/1190.md
-      - 母牛生小牛问题(静态数据成员与静态成员函数): szu_oj/oop/1226.md
-      - 集合（运算符重载）: szu_oj/oop/1237.md
-    - 程序设计基础:
-      - 求矩阵的最大和最小值: szu_oj/cpp/1084.md
-      - 单词统计: szu_oj/cpp/1295.md
-      - 计算字符串的长度: szu_oj/cpp/1341.md
-    - 程序设计基础 UOOC:
-      - 分类排序(函数): szu_oj/uooc/1334.md
-      - 鸡蛋队列（数组，函数）: szu_oj/uooc/1438.md
     - 数据结构:
+      - DS线性表—多项式相加: szu_oj/ds/1024-19.md
       - DS单链表--类实现: szu_oj/ds/1199.md
       - DS堆栈--逆序输出（STL栈使用）: szu_oj/ds/1202.md
       - DS堆栈--行编辑: szu_oj/ds/1204.md
@@ -90,6 +80,20 @@ nav:
       - DS哈希查找—线性探测再散列: szu_oj/ds/1269.md
       - 冒泡排序 (Ver. I): szu_oj/ds/1309.md
       - DS哈希查找—二次探测再散列: szu_oj/ds/1318.md
+    - 面向对象程序设计:
+      - 三串合一（指针与字符数组）: szu_oj/oop/1038.md
+      - 动态矩阵（指针与堆内存分配）: szu_oj/oop/1044.md
+      - 矩阵类模板（类模板）: szu_oj/oop/1156.md
+      - 扑克牌排序（结构体）: szu_oj/oop/1190.md
+      - 母牛生小牛问题(静态数据成员与静态成员函数): szu_oj/oop/1226.md
+      - 集合（运算符重载）: szu_oj/oop/1237.md
+    - 程序设计基础:
+      - 求矩阵的最大和最小值: szu_oj/cpp/1084.md
+      - 单词统计: szu_oj/cpp/1295.md
+      - 计算字符串的长度: szu_oj/cpp/1341.md
+    - 程序设计基础 UOOC:
+      - 分类排序(函数): szu_oj/uooc/1334.md
+      - 鸡蛋队列（数组，函数）: szu_oj/uooc/1438.md
   - Miscellaneous:
     - CMake指定源码目录和构建目录: misc/cmake_source_and_binary_directory.md
     - git clone 通过ssh: misc/git_clone_via_ssh.md
@@ -178,6 +182,7 @@ extra:
 
 extra_javascript:
   - 'js/extra.js'
+  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
 
 google_analytics:
   - 'UA-144844998-1'
