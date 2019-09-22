@@ -2929,10 +2929,7 @@
 113
 114
 115
-116
-117
-118
-119</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+116</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp"></span>
 
@@ -2976,11 +2973,8 @@
     <span class="k">explicit</span> <span class="nf">Poly</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">poly</span><span class="p">)</span> <span class="o">:</span> <span class="n">poly</span><span class="p">(</span><span class="n">poly</span><span class="p">)</span> <span class="p">{}</span>
 
     <span class="kt">void</span> <span class="nf">setFromCin</span><span class="p">()</span> <span class="p">{</span>
-        <span class="kt">int</span> <span class="n">coefficient</span><span class="p">,</span> <span class="n">exponent</span><span class="p">;</span>
         <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="o">&amp;</span><span class="nl">item</span> <span class="p">:</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">poly</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">std</span><span class="o">::</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">coefficient</span> <span class="o">&gt;&gt;</span> <span class="n">exponent</span><span class="p">;</span>
-            <span class="n">item</span><span class="p">.</span><span class="n">coefficient</span> <span class="o">=</span> <span class="n">coefficient</span><span class="p">;</span>
-            <span class="n">item</span><span class="p">.</span><span class="n">exponent</span> <span class="o">=</span> <span class="n">exponent</span><span class="p">;</span>
+            <span class="n">std</span><span class="o">::</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">item</span><span class="p">.</span><span class="n">coefficient</span> <span class="o">&gt;&gt;</span> <span class="n">item</span><span class="p">.</span><span class="n">exponent</span><span class="p">;</span>
         <span class="p">}</span>
     <span class="p">}</span>
 
