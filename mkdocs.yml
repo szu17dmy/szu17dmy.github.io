@@ -57,6 +57,7 @@ nav:
       - 初始化的姿势: szu_oj/what_s_wrong_with_my_code/initialize.md
     - 数据结构:
       - DS线性表—多项式相加: szu_oj/ds/1024-19.md
+      - DS线性表—多项式运算: szu_oj/ds/1110-19.md
       - DS单链表--类实现: szu_oj/ds/1199.md
       - DS堆栈--逆序输出（STL栈使用）: szu_oj/ds/1202.md
       - DS堆栈--行编辑: szu_oj/ds/1204.md
