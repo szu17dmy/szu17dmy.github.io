@@ -140,6 +140,6 @@ curl localhost/YOUR_WEB_PAGE_HERE
 
 你一定不想每次访问你的网站或是向同学展（xuan）示（yao）都要输一长串IP地址吧，这个时候该来把一个域名解析到你的服务器上了。
 
-根据你的需求和经济条件，选择一个适合自己的域名。托管网站有很多，[阿里云](https://wanwang.aliyun.com/)、[腾讯云](https://dnspod.cloud.tencent.com/)、[GoDaddy](https://www.godaddy.com/)、[name.com](https://www.name.com/)等等，自行选择即可。买下一个域名后，就可以到域名控制台里添加解析记录了。你可以尝试着添加一条指向你的服务器IP的记录，一旦添加成功，你应该就可以通过域名来访问你的服务器了。
+根据你的需求和经济条件，选择一个适合自己的域名。托管网站有很多，[namecheap](https://www.namecheap.com/)、[阿里云](https://wanwang.aliyun.com/)、[腾讯云](https://dnspod.cloud.tencent.com/)、[GoDaddy](https://www.godaddy.com/)、[name.com](https://www.name.com/)等等，自行选择即可。买下一个域名后，就可以到域名控制台里添加解析记录了。你可以尝试着添加一条指向你的服务器IP的记录，一旦添加成功，你应该就可以通过域名来访问你的服务器了。
 
 在这之后，你可以尝试一下申请免费的SSL证书，来开启你的站点的HTTPS访问。并且，你还可以尝试一下使用[Cloudflare](https://www.cloudflare.com/)的服务来保护你的网站的安全，或是一定程度上降低你的服务器的压力。

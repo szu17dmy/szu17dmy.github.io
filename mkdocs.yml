@@ -9,6 +9,8 @@ nav:
     - 首页和调色板: index.md
     - 相关信息: about.md
     - 相关链接: links.md
+#    - 给我也整一个系列:
+#      - Mkdocs篇: how_to_build_a_site_like_this.md
   - Reading Notes:
     - 《计算机网络：自顶向下方法》读书笔记:
       - 第3章 传输层: reading_notes/computer_networking_a_top_down_approach/transport_layer.md
@@ -31,7 +33,7 @@ nav:
     - 程序设计基础:
       - 前言: szu_courses/cpp/first.md
       - 一些C语言相关的书目: szu_courses/cpp/books.md
-      - JetBrains CLion 安装与配置: szu_courses/cpp/clion_conf.md
+      - JetBrains CLion 安装与配置: szu_courses/cpp/clion_configuration.md
       - 一些使用CLion的技巧: szu_courses/cpp/clion_hotkeys.md
       - 浅谈vector容器: szu_courses/cpp/vector.md
     - Web开发及人机交互导论:
@@ -166,6 +168,7 @@ nav:
 
 theme:
   favicon: 'img/favicon.ico'
+  fonts: 'consolas'
   language: 'zh'
   logo:
     icon: 'flight_takeoff'

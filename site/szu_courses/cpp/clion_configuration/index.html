@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://chikorita.fun/szu_courses/cpp/clion_conf/">
+        <link rel="canonical" href="https://chikorita.fun/szu_courses/cpp/clion_configuration/">
       
       
       
@@ -749,6 +749,19 @@
     Mingw-w64
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="常见问题" class="md-nav__link">
+    常见问题
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -760,7 +773,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" title="常见问题" class="md-nav__link">
+  <a href="#_4" title="常见问题" class="md-nav__link">
     常见问题
   </a>
   
@@ -2727,6 +2740,19 @@
     Mingw-w64
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="常见问题" class="md-nav__link">
+    常见问题
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -2738,7 +2764,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" title="常见问题" class="md-nav__link">
+  <a href="#_4" title="常见问题" class="md-nav__link">
     常见问题
   </a>
   
@@ -2770,7 +2796,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/szu17dmy/szu17dmy.github.io/edit/master/docs/szu_courses/cpp/clion_conf.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/szu17dmy/szu17dmy.github.io/edit/master/docs/szu_courses/cpp/clion_configuration.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
                   <h1>JetBrains CLion 安装与配置</h1>
@@ -2788,28 +2814,35 @@
 <li>你可以比较方便地在考试机房的电脑上安装并使用，而不需要花费很长时间，然而你可能需要等待较长时间才能把Visual Studio 2017（或者未来的更高版本）部署好。</li>
 </ul>
 <p>接下来的内容我并不打算把官网上已经写得很好的安装和配置教程再重复一遍，重复造这种轮子没有意义，何况我这拙劣的技术和文笔也不见得能写出更好的教程。我只会在下面列出文档的相关地址和我被频繁地问到的问题。</p>
+<p>此外，和<a href="https://www.jetbrains.com/resharper/">ReSharper Ultimate</a>一起使用Visual Studio也是个很棒的主意。</p>
 <h2 id="_1">申请教育版授权</h2>
-<p>学生可以获取到免费的教育版，当然，不能用于商业用途。目前，你可以在JetBrains官方网站的首页上方导航栏中的Support找到Education，你会看到APPLY FOR FREE STUDENT PACK：</p>
-<p><img alt="3-1.PNG" src="../img/3-1.PNG" /></p>
+<p>学生可以获取到免费的教育版，当然，不能用于商业用途。目前，你可以在JetBrains官方网站的首页上方导航栏中的Support找到<a href="https://www.jetbrains.com/community/education/">Education</a>，你会看到APPLY FOR FREE STUDENT PACK：</p>
+<p><img alt="CLION_CONFIGURATION_1.PNG" src="../img/CLION_CONFIGURATION_1.png" /></p>
 <p>提供你的学生邮箱并完成申请，你将会得到1年的教育版授权。只要你持续持有学生邮箱，每年在该许可证过期前你都会收到续期提醒邮件，点击该邮件中的续期即可完成，正常情况下不需要额外操作。</p>
 <blockquote>
 <p>How can I renew my free educational license for another year?</p>
 <p>If you're still studying/teaching at a full-time educational program, you can renew your free license for another year. To do so, use the dedicated link in your JetBrains account, or use a link from the automatic email reminder we send out one week before your subscription expires.</p>
 </blockquote>
-<p>如果你只打算使用JetBrains家的CLion，并不打算使用例如为Java等准备的IntelliJ或是为Python准备的PyCharm等工具，那么直接单独下载并安装CLion即可。</p>
-<p>但如果你希望使用JetBrains家的多个IDE，那么我推荐你下载安装JetBrains Toolbox，然后在Toolbox中安装你需要的工具。有关Toolbox的更多信息，你可以在<a href="https://www.jetbrains.com/toolbox/app/">这里</a>找到。</p>
+<p>如果你只打算使用JetBrains家的CLion，并不打算使用例如为Java等准备的IntelliJ IDEA或是为Python准备的PyCharm等工具，那么直接单独下载并安装CLion即可。</p>
+<p>但如果你希望使用JetBrains家的多个IDE，那么我推荐你下载安装JetBrains Toolbox，然后在Toolbox中安装你需要的工具。有关Toolbox的更多信息，你可以在<a href="https://www.jetbrains.com/toolbox/app/">这里</a>找到。我很推荐这么做。</p>
 <h2 id="toolchain">配置Toolchain</h2>
 <p>安装完成后，第一次运行CLion的时候，会有向导指引你完成对主题、工具链（Toolchain）等的配置。我能猜到很多同学的坏习惯就是一路Next，然后进入了主界面，找到Run就想开始跑程序，然后就发现根本不能用，到处乱点半天发现解决不了于是启动了卸载程序。（摊手.jpg）IDE本身并没有集成编译器，你需要安装一个IDE支持的编译器，然后告诉IDE这个编译器的位置在哪里才能让它调用。</p>
 <p>接下来的内容主要是针对Windows平台说明的：</p>
 <h3 id="windows-subsystem-for-linux-wsl-on-windows-10-linuxwindows">（推荐） Windows Subsystem for Linux (WSL) on Windows 10 适用于Linux的Windows子系统</h3>
 <p>目前，这是Windows 10或者Windows Server 2019上的功能。更多信息你可以在<a href="https://zh.wikipedia.org/wiki/%E9%80%82%E7%94%A8%E4%BA%8E_Linux_%E7%9A%84_Windows_%E5%AD%90%E7%B3%BB%E7%BB%9F">这里</a>找到。</p>
 <p>具体的配置方法你可以看官方的文档：<a href="https://www.jetbrains.com/help/clion/how-to-use-wsl-development-environment-in-clion.html">WSL - Help | CLion - JetBrains</a>。</p>
+<p>大致的过程就是使用<code>apt</code>安装<code>cmake</code>、<code>make</code>、<code>gcc</code>、<code>g++</code>、<code>gdb</code>用于构建和调试你的项目；还有<code>openssh-server</code>用于连接WSL，使得CLion可以调用它们。</p>
 <p>这可能是当前在Windows上较好的解决方案，有相对较高的编译速度、提示速度，并且更重要的是IDE集成的控制台上输入输出都是比较正常的（如果你使用过MinGW作为工具链一段时间的话就会有这种感受）。</p>
 <h4 id="_2">常见问题</h4>
 <blockquote>
 <p>我已经在应用商店里下载了Ubuntu，但是为什么打开Ubuntu后不能用？它提示：The Windows Subsystem for Linux optional component is not enabled. Please enable it and try again.</p>
 </blockquote>
 <p>这个...人家说得很明白了。你没有在Windows中启用WSL功能，你应该在<strong>启用或关闭Windows功能</strong>中打开它。如果你找不到它的话...它具体在<strong>控制面板-&gt;程序-&gt;启用或关闭Windows功能-&gt;适用于Linux的Windows子系统</strong>里。什么？你说你不知道Windows的控制面板在哪里？我想你应该先学会如何使用搜索引擎。</p>
+<p>还要指出的是，这么做和直接在PowerShell中输入下面命令是等效的：</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">Enable</span><span class="o">-</span><span class="n">WindowsOptionalFeature</span> <span class="o">-</span><span class="n">Online</span> <span class="o">-</span><span class="n">FeatureName</span> <span class="n">Microsoft</span><span class="o">-</span><span class="n">Windows</span><span class="o">-</span><span class="n">Subsystem</span><span class="o">-</span><span class="n">Linux</span>
+</pre></div>
+</td></tr></table>
+
 <blockquote>
 <p>我已经按照上面的答案启用了WSL功能，但是再次打开Ubuntu还是没有变化？</p>
 </blockquote>
@@ -2817,18 +2850,71 @@
 <blockquote>
 <p>Ubuntu是装好了，但是我还是不能使用CLion，打开Toolchain设置后，有很多红色的错误，比如：Cannot establish connection。</p>
 </blockquote>
-<p>你是否已经按照上述官方文档中所要求的内容进行了相应的操作？当你执行<strong>sudo apt install cmake gcc gdb</strong>前你可能需要先执行<strong>sudo apt update</strong>和<strong>sudo apt upgrade</strong>。还有一个问题是：我发现有同学执行了安装命令后没有注意到成功与否就继续下一步，这可能会对后续带来一些错误，如果你所在的网络环境较为恶劣，那么你可能需要使用代理。此外，如果你使用了官方文档中的安装脚本，你的SSH端口号可能是2222。
-在这里你可能会遇到其它问题，你可以尝试在互联网上搜索（Google is always your good friend.），或者在JetBrains IDE Support中寻求帮助。你可以把有价值的问题的详细情况在评论区中告诉我，我将在这里补充。</p>
+<p>事实上，这通常是因为无法通过SSH连接子系统，其实你要是去搜索SSH连接相关的问题可能更有帮助。你需要检查配置，这可能要分情况来讨论。我特意增加了这里的篇幅，一个是因为来问的同学有点多，另一个是根据分析，访问本站的用户似乎都是冲着这个问题来的...</p>
+<p>如果是配置成功前出现的，我建议你先执行：</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ssh your_username@localhost -p22
+</pre></div>
+</td></tr></table>
+
+<p>这么做是因为通常IDE里连接不上通常不会给出足够的信息，不利于发现问题并修复。</p>
+<p>别忘了改成你的用户名和端口号（默认是22，如果使用了上面文档中的脚本，可能是2222）。请注意，使用不同账户登录可能会有不同的结果（例如通常是禁止root用户使用密码登录的）！这是<code>/etc/ssh/sshd_config</code>中决定的策略，你可以随时改变它，不过记得通过</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo service ssh restart
+</pre></div>
+</td></tr></table>
+
+<p>来重启。</p>
+<p>如果出现<code>Connection refused</code>这种信息，说明你可能根本没启动<code>openssh-server</code>或是端口等连接信息有问题。</p>
+<p><img alt="CLION_CONFIGURATION_2.png" src="../img/CLION_CONFIGURATION_2.png" /></p>
+<p>如果你的第一次连接的时候连密钥交换都不成功的话（就是还没有问你密钥是否接受就已经失败了），通常是因为你的<code>openssh-server</code>配置不正确。这种情况高发于刚装好的子系统、从来没有执行过<code>sudo apt upgrade</code>或是没有变动过<code>openssh-server</code>的情况。这个时候你可以直接自己用<code>ssh-keygen</code>生成密钥，具体看你启动服务的时候的Warning。或是是直接这么粗暴地：</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo apt remove openssh-server
+sudo apt install openssh-server
+</pre></div>
+</td></tr></table>
+
+<p>当然，直接升级应该也可以：</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo apt upgrade
+</pre></div>
+</td></tr></table>
+
+<p>好了，这么做应该重启之后是能交换密钥了，如果这么做之后出现认证失败的问题，我建议你检查一下<code>/etc/ssh/sshd_config</code>中的认证相关的策略。</p>
+<p><img alt="CLION_CONFIGURATION_3.png" src="../img/CLION_CONFIGURATION_3.png" /></p>
+<p><img alt="CLION_CONFIGURATION_4.png" src="../img/CLION_CONFIGURATION_4.png" /></p>
+<p>如果你正在使用非root用户并且使用密码登录，你可以看看<code>PasswordAuthentication</code>后面跟的状态。如果它是<code>no</code>或是被注释状态，你可以去掉注释并“明示”它应当是<code>yes</code>。同理，你可以根据你的实际情况自行修改你的配置文件。</p>
+<p>修改后别忘了重启。当然，在修改的时候也请注意安全，如果因为错误的配置导致不怀好意的人连接上了你的子系统，这将会是非常危险的！</p>
+<p>差不多了，我们来看看配置成功后出现的问题，特别是重启后被问得最多的：</p>
+<p><img alt="CLION_CONFIGURATION_5.png" src="../img/CLION_CONFIGURATION_5.png" /></p>
+<p>大概率是因为你的子系统中的<code>ssh-server</code>没有启动，你可以通过</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo service ssh status
+</pre></div>
+</td></tr></table>
+
+<p>来查看<code>ssh-server</code>的状态，</p>
+<p><img alt="CLION_CONFIGURATION_6.png" src="../img/CLION_CONFIGURATION_6.png" /></p>
+<p>如果它没有启动，就使用</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo service ssh start
+</pre></div>
+</td></tr></table>
+
+<p>或其它等效的命令来启动它。这个时候在Settings-&gt;Toolchain中应该能看到已经能够建立连接了。</p>
+<p>更重要的是，记得点按<strong>Reload CMake Project</strong>，随后你的CLion应该已经能按照预期正常工作。</p>
+<p><img alt="CLION_CONFIGURATION_7.png" src="../img/CLION_CONFIGURATION_7.png" /></p>
+<p>最后其实我想说，我实在不可能把所有可能的问题一一列举。这里应该是我看到的大部分同学会经常遇到的问题了吧。此外，我发现有同学执行了安装命令后没有注意到成功与否就继续下一步这种低级错误，这通常都是后续问题的来源。最后再废话两句，如果你的<code>apt</code>缓存过时了，请及时使用<code>sudo apt update</code>再进行操作。如果你所在的网络环境较为恶劣，那么你可能需要使用代理，并且确保你需要被代理的应用已经走了代理（这点非常重要），比如子系统是不会走在本地环回上的那种系统代理的。</p>
+<p>在这里你可能会遇到其它问题，你可以尝试在互联网上搜索（Google is always your good friend.），或者在JetBrains IDE Support中寻求帮助。你可以把有价值的问题的详细情况在评论区中告诉我，我将在这里补充。</p>
 <h3 id="mingw-w64">Mingw-w64</h3>
-<p>如果出于某些原因你不能使用WSL，你可以尝试<a href="https://mingw-w64.org/">Mingw-w64</a>。注意，我说的并不是<a href="http://www.mingw.org/">MinGW</a>，虽然它是被支持的。如果你好奇它们的区别请记得用搜索引擎找到答案。</p>
-<p>如果使用在线安装，并且没有变更默认路径，那么你直接回到CLion的Toolchain配置页面选择MinGW可能可以直接检测到，如果不能或者你下载后自行解压到了其他位置，你只需要在配置页面中指定相应的路径即可。</p>
+<p>如果出于某些原因你不能使用WSL，你可以尝试<a href="https://mingw-w64.org/">Mingw-w64</a>（推荐）。注意，我说的并不是<a href="http://www.mingw.org/">MinGW</a>，虽然它是被支持的。如果你好奇它们的区别请记得用搜索引擎找到答案。</p>
+<p>如果使用在线安装（推荐），并且没有变更默认路径，那么你直接回到CLion的Toolchain配置页面选择MinGW应该可以直接检测到，如果不能或者你下载后自行解压到了其他位置，你只需要在配置页面中指定相应的路径即可。</p>
+<h4 id="_3">常见问题</h4>
+<p>不说了，麻烦看这里下载：</p>
+<p><img alt="CLION_CONFIGURATION_8.png" src="../img/CLION_CONFIGURATION_8.png" /></p>
 <h3 id="cygwin">Cygwin</h3>
 <p>具体的方法请看<a href="https://www.jetbrains.com/help/clion/quick-tutorial-on-configuring-clion-on-windows.html#Cygwin">这里</a>。</p>
-<h4 id="_3">常见问题</h4>
+<p>其实就是个下载安装的过程，不过要注意的是安装过程中记得选择你需要的包，不然你就需要再装一次。</p>
+<h4 id="_4">常见问题</h4>
 <blockquote>
 <p>我已经安装好了，为什么Toolchain设置页面中还是有错误？</p>
 </blockquote>
-<p>你是否确认已经安装好了<strong>make</strong>、<strong>gcc-core</strong>、<strong>gcc-g++</strong>和<strong>gdb</strong>？</p>
+<p>如果是有部分包没有检测到，你是否确认已经安装好了<code>make</code>、<code>gcc-core</code>、<code>gcc-g++</code>和<code>gdb</code>？看着Toolchain设置页面中缺啥补啥吧。</p>
                 
                   
                 
