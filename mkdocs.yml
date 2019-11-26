@@ -52,7 +52,7 @@ nav:
       - Tunnel Lab: szu_courses/cn/tunnel_lab.md
 #    - 计算机图形学:
 #      - 环境配置建议:
-#        - FreeGLUT和GLEW在CLion上: szu_courses/cg/freeglut_glew_clion_windows.md
+#        - FreeGLUT和GLEW在CLion上: szu_courses/cg/freeglut_glew_clion_on_windows.md
   - SZU OJ Solutions:
     - 专题 What's wrong with my code?:
       - 前言: szu_oj/what_s_wrong_with_my_code/first.md
@@ -107,6 +107,11 @@ nav:
     - Windows下利用WSL使用pwntools: ctf_tools/pwntools.md
     - 在线BASE64加解密（实验性）: ctf_tools/base64.md
   - CTF Write-Up:
+    - RedHat 2019:
+      - MISC:
+        - 签到: ctf_writeup/redhat_2019/qiandao.md
+        - Advertising for Marriage: ctf_writeup/redhat_2019/advertising_for_marriage.md
+        - 恶臭的数据包: ctf_writeup/redhat_2019/恶臭的数据包.md
     - SUCTF 2019:
       - MISC:
         - homerouter: ctf_writeup/suctf_2019/homerouter.md

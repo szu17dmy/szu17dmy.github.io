@@ -43,6 +43,24 @@
 
 大致的过程就是使用`apt`安装`cmake`、`make`、`gcc`、`g++`、`gdb`用于构建和调试你的项目；还有`openssh-server`用于连接WSL，使得CLion可以调用它们。
 
+你可以从开始菜单中进入Windows Store，搜索WSL并安装你需要的Linux发行版。目前看起来Ubuntu做得好一些。
+
+成功打开子系统后，我建议先：（如果有必要请先更改`apt`的源，例如[阿里巴巴开源镜像站](https://opsx.alibaba.com/mirror)）
+
+``` bash
+sudo apt update
+sudo apt install cmake make clang gcc g++ build-essential gdb
+```
+
+随后处理`openssh-server`：
+
+``` bash
+sudo apt remove openssh-server
+sudo apt install openssh-server
+```
+
+这样之后应该就安装好了，如果有其它需求可以自行调整配置文件并重启相关服务。
+
 这可能是当前在Windows上较好的解决方案，有相对较高的编译速度、提示速度，并且更重要的是IDE集成的控制台上输入输出都是比较正常的（如果你使用过MinGW作为工具链一段时间的话就会有这种感受）。
 
 #### 常见问题
@@ -132,6 +150,8 @@ sudo service ssh start
 更重要的是，记得点按**Reload CMake Project**，随后你的CLion应该已经能按照预期正常工作。
 
 ![CLION_CONFIGURATION_7.png](./img/CLION_CONFIGURATION_7.png)
+
+补充一下，如果你的系统用户名含有非ASCII字符，例如含有中文，可能导致错误。对此的解决方案可以看官方文档，印象中下面有给出解决方案。
 
 最后其实我想说，我实在不可能把所有可能的问题一一列举。这里应该是我看到的大部分同学会经常遇到的问题了吧。此外，我发现有同学执行了安装命令后没有注意到成功与否就继续下一步这种低级错误，这通常都是后续问题的来源。最后再废话两句，如果你的`apt`缓存过时了，请及时使用`sudo apt update`再进行操作。如果你所在的网络环境较为恶劣，那么你可能需要使用代理，并且确保你需要被代理的应用已经走了代理（这点非常重要），比如子系统是不会走在本地环回上的那种系统代理的。
 

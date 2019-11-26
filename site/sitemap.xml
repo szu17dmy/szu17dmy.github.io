@@ -2,582 +2,597 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://chikorita.fun/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/about/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/links/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/reading_notes/computer_networking_a_top_down_approach/transport_layer/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/reading_notes/computer_networking_a_top_down_approach/the_network_layer/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/reading_notes/computer_systems_a_programmer_s_perspective/machine-level_representation_of_programs/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/reading_notes/computer_systems_a_programmer_s_perspective/linking/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/reading_notes/docker_cookbook/getting_started_with_docker/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/reading_notes/tcp_ip_illustrated/user_datagram_protocol_and_ip_fragmentation/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/reading_notes/tcp_ip_illustrated/the_transmission_control_protocol_preliminaries/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/reading_notes/pointer/0/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/reading_notes/pointer/1/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/reading_notes/routers/1/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_courses/cpp/first/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_courses/cpp/books/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_courses/cpp/clion_configuration/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_courses/cpp/clion_hotkeys/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_courses/cpp/vector/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_courses/web/first/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_courses/web/tools/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_courses/web/docker/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_courses/csapp/data_lab/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_courses/csapp/bomb_lab/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_courses/csapp/buffer_lab/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_courses/csapp/debug/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_courses/cn/socket_lab/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_courses/cn/vlan_lab/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_courses/cn/router_lab/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_courses/cn/tunnel_lab/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_oj/what_s_wrong_with_my_code/first/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_oj/what_s_wrong_with_my_code/initialize/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_oj/ds/1024-19/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_oj/ds/1110-19/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_oj/ds/1199/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_oj/ds/1202/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_oj/ds/1204/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_oj/ds/1205/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_oj/ds/1207/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_oj/ds/1213/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_oj/ds/1214/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_oj/ds/1215/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_oj/ds/1216/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_oj/ds/1217/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_oj/ds/1223/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_oj/ds/1224/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_oj/ds/1239/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_oj/ds/1241/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_oj/ds/1245/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_oj/ds/1250/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_oj/ds/1253/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_oj/ds/1260/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_oj/ds/1264/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_oj/ds/1268/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_oj/ds/1269/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_oj/ds/1309/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_oj/ds/1318/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_oj/oop/1038/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_oj/oop/1044/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_oj/oop/1156/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_oj/oop/1190/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_oj/oop/1226/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_oj/oop/1237/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_oj/cpp/1084/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_oj/cpp/1295/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_oj/cpp/1341/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_oj/uooc/1334/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/szu_oj/uooc/1438/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/misc/cmake_source_and_binary_directory/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/misc/git_clone_via_ssh/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/misc/python_http_server/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/misc/secure_public_wireless_network_at_school_szu/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/misc/time_issue_when_dual_systems_windows_and_ubuntu/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/ctf_tools/pwntools/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/ctf_tools/base64/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://chikorita.fun/ctf_writeup/redhat_2019/qiandao/</loc>
+     <lastmod>2019-11-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://chikorita.fun/ctf_writeup/redhat_2019/advertising_for_marriage/</loc>
+     <lastmod>2019-11-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://chikorita.fun/ctf_writeup/redhat_2019/恶臭的数据包/</loc>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/ctf_writeup/suctf_2019/homerouter/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/ctf_writeup/ciscn_2019/qiandao/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/ctf_writeup/ciscn_2019/saleae/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/ctf_writeup/ciscn_2019/24c/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/ctf_writeup/bugku/misc_50/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/ctf_writeup/bugku/misc_60/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/ctf_writeup/bugku/misc_80/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/ctf_writeup/bugku/想蹭网先解开密码/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/ctf_writeup/bugku/Linux2/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/ctf_writeup/bugku/细心的大象/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/ctf_writeup/bugku/普通的二维码/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/ctf_writeup/bugku/乌云邀请码/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/ctf_writeup/bugku/图穷匕见/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/ctf_writeup/bugku/convert/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/ctf_writeup/bugku/听首音乐/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/ctf_writeup/bugku/好多数值/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/ctf_writeup/pctf_2019/welcome/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/ctf_writeup/pctf_2019/magic_pngs/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/ctf_writeup/pctf_2019/save_earth/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/ctf_writeup/pctf_2019/slow_realization/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/ctf_writeup/pctf_2019/late_pr/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/ctf_writeup/pctf_2019/exorcism/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/ctf_writeup/pctf_2019/cookie_monster/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/ctf_writeup/pctf_2019/game_of_faces/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/ctf_writeup/hackergame_2018/hello_world/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/ctf_writeup/hackergame_2018/ustc_quiz/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/ctf_writeup/hackergame_2018/card/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/ctf_writeup/hackergame_2018/cat_remote/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/ctf_writeup/hackergame_2018/python_simulator/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/ctf_writeup/cg_ctf/easyweb/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/embedded/clion-2019.1/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/uooc/java/1/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/uooc/java/2/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/uooc/java/3/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/uooc/java/4/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/uooc/java/5/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/uooc/java/6/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/uooc/java/7/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/uooc/java/8/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/uooc/java/9/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/uooc/java/10/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://chikorita.fun/uooc/java/11/</loc>
-     <lastmod>2019-10-27</lastmod>
+     <lastmod>2019-11-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>

@@ -86,19 +86,19 @@
 
 首先你应先有一个PHP解释器，如果还没有安装，请前往[官网](http://www.php.net/)下载。这里就假设你已经部署好了你的PHP解释器，你只需要在Run/Debug Configurations里添加一个**PHP Built-in Web Server**，请注意指定根目录和解释器，
 
-![TOOLS-1.png](./img/TOOLS-1.png)
+![TOOLS_1.png](./img/TOOLS_1.png)
 
 请根据实际情况设定根目录：
 
-![TOOLS-2.png](./img/TOOLS-2.png)
+![TOOLS_2.png](./img/TOOLS_2.png)
 
 同理，如果下方出现警告指出未指定PHP解释器，你可以点击FIX后在新窗口中设置好。另外，也请留意一下监听地址。
 
-![TOOLS-3.png](./img/TOOLS-3.png)
+![TOOLS_3.png](./img/TOOLS_3.png)
 
 保存后点击Run即可启动Web服务器，在浏览器中访问刚才记住的地址即可。
 
-![TOOLS-4.png](./img/TOOLS-4.png)
+![TOOLS_4.png](./img/TOOLS_4.png)
 
 你应该可以看到你写好的index，如果不是index，请记得在地址栏输入你所希望请求的文件名。
 
