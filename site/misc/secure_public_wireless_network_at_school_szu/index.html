@@ -1,0 +1,3019 @@
+
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+        <link rel="canonical" href="https://chikorita.fun/misc/secure_public_wireless_network_at_school_szu/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="ja">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+    
+    
+      
+        <title>在开放的校园无线网络中加密自己的数据传输 - Keep Evolving</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.0284f74d.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.01803549.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-144844998-1", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="white" data-md-color-accent="lime">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#_1" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://chikorita.fun" title="Keep Evolving" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">flight_takeoff</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Keep Evolving
+            </span>
+            <span class="md-header-nav__topic">
+              
+                在开放的校园无线网络中加密自己的数据传输
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/szu17dmy/szu17dmy.github.io/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    szu17dmy.github.io
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://chikorita.fun" title="Keep Evolving" class="md-nav__button md-logo">
+      
+        <i class="md-icon">flight_takeoff</i>
+      
+    </a>
+    Keep Evolving
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/szu17dmy/szu17dmy.github.io/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    szu17dmy.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      Homepage
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Homepage
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="首页和调色板" class="md-nav__link">
+      首页和调色板
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../about/" title="相关信息" class="md-nav__link">
+      相关信息
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../links/" title="相关链接" class="md-nav__link">
+      相关链接
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Reading Notes
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Reading Notes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+    
+    <label class="md-nav__link" for="nav-2-1">
+      《计算机网络：自顶向下方法》读书笔记
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        《计算机网络：自顶向下方法》读书笔记
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../reading_notes/computer_networking_a_top_down_approach/transport_layer/" title="第3章 传输层" class="md-nav__link">
+      第3章 传输层
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../reading_notes/computer_networking_a_top_down_approach/the_network_layer/" title="第4章 网络层" class="md-nav__link">
+      第4章 网络层
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
+    
+    <label class="md-nav__link" for="nav-2-2">
+      《深入理解计算机系统》读书笔记
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-2">
+        《深入理解计算机系统》读书笔记
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../reading_notes/computer_systems_a_programmer_s_perspective/machine-level_representation_of_programs/" title="第3章 程序的机器级表示" class="md-nav__link">
+      第3章 程序的机器级表示
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../reading_notes/computer_systems_a_programmer_s_perspective/linking/" title="第7章 链接" class="md-nav__link">
+      第7章 链接
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3">
+    
+    <label class="md-nav__link" for="nav-2-3">
+      《Docker经典实例》读书笔记
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-3">
+        《Docker经典实例》读书笔记
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../reading_notes/docker_cookbook/getting_started_with_docker/" title="第1章 Docker入门" class="md-nav__link">
+      第1章 Docker入门
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4">
+    
+    <label class="md-nav__link" for="nav-2-4">
+      《TCP/IP详解》读书笔记
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-4">
+        《TCP/IP详解》读书笔记
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4-1" type="checkbox" id="nav-2-4-1">
+    
+    <label class="md-nav__link" for="nav-2-4-1">
+      卷1：协议
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-4-1">
+        卷1：协议
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../reading_notes/tcp_ip_illustrated/user_datagram_protocol_and_ip_fragmentation/" title="第10章 用户数据报协议和IP分片" class="md-nav__link">
+      第10章 用户数据报协议和IP分片
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../reading_notes/tcp_ip_illustrated/the_transmission_control_protocol_preliminaries/" title="第12章 TCP：传输控制协议（初步）" class="md-nav__link">
+      第12章 TCP：传输控制协议（初步）
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5">
+    
+    <label class="md-nav__link" for="nav-2-5">
+      《征服C指针》读书笔记
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-5">
+        《征服C指针》读书笔记
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../reading_notes/pointer/0/" title="第0章 本书的目标与结构——引言" class="md-nav__link">
+      第0章 本书的目标与结构——引言
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../reading_notes/pointer/1/" title="第1章 从基础开始——预备知识和复习" class="md-nav__link">
+      第1章 从基础开始——预备知识和复习
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-6" type="checkbox" id="nav-2-6">
+    
+    <label class="md-nav__link" for="nav-2-6">
+      《揭秘家用路由器0day漏洞挖掘技术》读书笔记
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-6">
+        《揭秘家用路由器0day漏洞挖掘技术》读书笔记
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../reading_notes/routers/1/" title="第1章 基础准备与工具" class="md-nav__link">
+      第1章 基础准备与工具
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      SZU Courses
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        SZU Courses
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      程序设计基础
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        程序设计基础
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_courses/cpp/first/" title="前言" class="md-nav__link">
+      前言
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_courses/cpp/books/" title="一些C语言相关的书目" class="md-nav__link">
+      一些C语言相关的书目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_courses/cpp/clion_configuration/" title="JetBrains CLion 安装与配置" class="md-nav__link">
+      JetBrains CLion 安装与配置
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_courses/cpp/clion_hotkeys/" title="一些使用CLion的技巧" class="md-nav__link">
+      一些使用CLion的技巧
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_courses/cpp/vector/" title="浅谈vector容器" class="md-nav__link">
+      浅谈vector容器
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      Web开发及人机交互导论
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        Web开发及人机交互导论
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_courses/web/first/" title="前言" class="md-nav__link">
+      前言
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_courses/web/tools/" title="工欲善其事" class="md-nav__link">
+      工欲善其事
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_courses/web/docker/" title="Dockerize" class="md-nav__link">
+      Dockerize
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      计算机系统
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        计算机系统
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_courses/csapp/data_lab/" title="Data Lab" class="md-nav__link">
+      Data Lab
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_courses/csapp/bomb_lab/" title="Bomb Lab" class="md-nav__link">
+      Bomb Lab
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_courses/csapp/buffer_lab/" title="Buffer Lab" class="md-nav__link">
+      Buffer Lab
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_courses/csapp/debug/" title="动态调试" class="md-nav__link">
+      动态调试
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
+      计算机网络
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        计算机网络
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_courses/cn/socket_lab/" title="Socket Lab" class="md-nav__link">
+      Socket Lab
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_courses/cn/vlan_lab/" title="VLAN Lab" class="md-nav__link">
+      VLAN Lab
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_courses/cn/router_lab/" title="Router Lab" class="md-nav__link">
+      Router Lab
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_courses/cn/tunnel_lab/" title="Tunnel Lab" class="md-nav__link">
+      Tunnel Lab
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      SZU OJ Solutions
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        SZU OJ Solutions
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+    
+    <label class="md-nav__link" for="nav-4-1">
+      专题 What's wrong with my code?
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        专题 What's wrong with my code?
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_oj/what_s_wrong_with_my_code/first/" title="前言" class="md-nav__link">
+      前言
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_oj/what_s_wrong_with_my_code/initialize/" title="初始化的姿势" class="md-nav__link">
+      初始化的姿势
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      数据结构
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        数据结构
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_oj/ds/1024-19/" title="DS线性表—多项式相加" class="md-nav__link">
+      DS线性表—多项式相加
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_oj/ds/1110-19/" title="DS线性表—多项式运算" class="md-nav__link">
+      DS线性表—多项式运算
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_oj/ds/1199/" title="DS单链表--类实现" class="md-nav__link">
+      DS单链表--类实现
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_oj/ds/1202/" title="DS堆栈--逆序输出（STL栈使用）" class="md-nav__link">
+      DS堆栈--逆序输出（STL栈使用）
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_oj/ds/1204/" title="DS堆栈--行编辑" class="md-nav__link">
+      DS堆栈--行编辑
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_oj/ds/1205/" title="DS堆栈--括号匹配" class="md-nav__link">
+      DS堆栈--括号匹配
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_oj/ds/1207/" title="DS队列之银行排队" class="md-nav__link">
+      DS队列之银行排队
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_oj/ds/1213/" title="DS二叉树--二叉树构建与遍历" class="md-nav__link">
+      DS二叉树--二叉树构建与遍历
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_oj/ds/1214/" title="DS二叉树--叶子数量" class="md-nav__link">
+      DS二叉树--叶子数量
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_oj/ds/1215/" title="DS二叉树--左叶子数量" class="md-nav__link">
+      DS二叉树--左叶子数量
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_oj/ds/1216/" title="DS二叉树——二叉树之父子结点" class="md-nav__link">
+      DS二叉树——二叉树之父子结点
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_oj/ds/1217/" title="DS二叉树——二叉树之数组存储" class="md-nav__link">
+      DS二叉树——二叉树之数组存储
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_oj/ds/1223/" title="DS图遍历--深度优先搜索" class="md-nav__link">
+      DS图遍历--深度优先搜索
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_oj/ds/1224/" title="DS图遍历--广度优先搜索" class="md-nav__link">
+      DS图遍历--广度优先搜索
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_oj/ds/1239/" title="DS哈希查找--链地址法" class="md-nav__link">
+      DS哈希查找--链地址法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_oj/ds/1241/" title="DS排序--快速排序" class="md-nav__link">
+      DS排序--快速排序
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_oj/ds/1245/" title="DS链表—学生宿舍管理" class="md-nav__link">
+      DS链表—学生宿舍管理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_oj/ds/1250/" title="DS二叉树——Huffman编码与解码" class="md-nav__link">
+      DS二叉树——Huffman编码与解码
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_oj/ds/1253/" title="DS图—图的邻接矩阵存储及度计算" class="md-nav__link">
+      DS图—图的邻接矩阵存储及度计算
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_oj/ds/1260/" title="哈希查找与增补" class="md-nav__link">
+      哈希查找与增补
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_oj/ds/1264/" title="DS内排—直插排序" class="md-nav__link">
+      DS内排—直插排序
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_oj/ds/1268/" title="DS内排—2-路归并排序" class="md-nav__link">
+      DS内排—2-路归并排序
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_oj/ds/1269/" title="DS哈希查找—线性探测再散列" class="md-nav__link">
+      DS哈希查找—线性探测再散列
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_oj/ds/1309/" title="冒泡排序 (Ver. I)" class="md-nav__link">
+      冒泡排序 (Ver. I)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_oj/ds/1318/" title="DS哈希查找—二次探测再散列" class="md-nav__link">
+      DS哈希查找—二次探测再散列
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+    
+    <label class="md-nav__link" for="nav-4-3">
+      面向对象程序设计
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        面向对象程序设计
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_oj/oop/1038/" title="三串合一（指针与字符数组）" class="md-nav__link">
+      三串合一（指针与字符数组）
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_oj/oop/1044/" title="动态矩阵（指针与堆内存分配）" class="md-nav__link">
+      动态矩阵（指针与堆内存分配）
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_oj/oop/1156/" title="矩阵类模板（类模板）" class="md-nav__link">
+      矩阵类模板（类模板）
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_oj/oop/1190/" title="扑克牌排序（结构体）" class="md-nav__link">
+      扑克牌排序（结构体）
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_oj/oop/1226/" title="母牛生小牛问题(静态数据成员与静态成员函数)" class="md-nav__link">
+      母牛生小牛问题(静态数据成员与静态成员函数)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_oj/oop/1237/" title="集合（运算符重载）" class="md-nav__link">
+      集合（运算符重载）
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
+    
+    <label class="md-nav__link" for="nav-4-4">
+      程序设计基础
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-4">
+        程序设计基础
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_oj/cpp/1084/" title="求矩阵的最大和最小值" class="md-nav__link">
+      求矩阵的最大和最小值
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_oj/cpp/1295/" title="单词统计" class="md-nav__link">
+      单词统计
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_oj/cpp/1341/" title="计算字符串的长度" class="md-nav__link">
+      计算字符串的长度
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-5" type="checkbox" id="nav-4-5">
+    
+    <label class="md-nav__link" for="nav-4-5">
+      程序设计基础 UOOC
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-5">
+        程序设计基础 UOOC
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_oj/uooc/1334/" title="分类排序(函数)" class="md-nav__link">
+      分类排序(函数)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../szu_oj/uooc/1438/" title="鸡蛋队列（数组，函数）" class="md-nav__link">
+      鸡蛋队列（数组，函数）
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      Miscellaneous
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Miscellaneous
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cmake_source_and_binary_directory/" title="CMake指定源码目录和构建目录" class="md-nav__link">
+      CMake指定源码目录和构建目录
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../git_clone_via_ssh/" title="git clone 通过ssh" class="md-nav__link">
+      git clone 通过ssh
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_http_server/" title="Python SimpleHTTPServer" class="md-nav__link">
+      Python SimpleHTTPServer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        在开放的校园无线网络中加密自己的数据传输
+      </label>
+    
+    <a href="./" title="在开放的校园无线网络中加密自己的数据传输" class="md-nav__link md-nav__link--active">
+      在开放的校园无线网络中加密自己的数据传输
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="准备好路由器上的配置" class="md-nav__link">
+    准备好路由器上的配置
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows" title="Windows下连接" class="md-nav__link">
+    Windows下连接
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ddnsip" title="利用DDNS来让你不需要再记忆IP地址" class="md-nav__link">
+    利用DDNS来让你不需要再记忆IP地址
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="额外的加成" class="md-nav__link">
+    额外的加成
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../time_issue_when_dual_systems_windows_and_ubuntu/" title="Windows和Ubuntu双系统下的时间问题" class="md-nav__link">
+      Windows和Ubuntu双系统下的时间问题
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      CTF Tools
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        CTF Tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_tools/pwntools/" title="Windows下利用WSL使用pwntools" class="md-nav__link">
+      Windows下利用WSL使用pwntools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_tools/base64/" title="在线BASE64加解密（实验性）" class="md-nav__link">
+      在线BASE64加解密（实验性）
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      CTF Write-Up
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        CTF Write-Up
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-1" type="checkbox" id="nav-7-1">
+    
+    <label class="md-nav__link" for="nav-7-1">
+      RedHat 2019
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-1">
+        RedHat 2019
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-1-1" type="checkbox" id="nav-7-1-1">
+    
+    <label class="md-nav__link" for="nav-7-1-1">
+      MISC
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-7-1-1">
+        MISC
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_writeup/redhat_2019/qiandao/" title="签到" class="md-nav__link">
+      签到
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_writeup/redhat_2019/advertising_for_marriage/" title="Advertising for Marriage" class="md-nav__link">
+      Advertising for Marriage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_writeup/redhat_2019/恶臭的数据包/" title="恶臭的数据包" class="md-nav__link">
+      恶臭的数据包
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-2" type="checkbox" id="nav-7-2">
+    
+    <label class="md-nav__link" for="nav-7-2">
+      SUCTF 2019
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-2">
+        SUCTF 2019
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-2-1" type="checkbox" id="nav-7-2-1">
+    
+    <label class="md-nav__link" for="nav-7-2-1">
+      MISC
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-7-2-1">
+        MISC
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_writeup/suctf_2019/homerouter/" title="homerouter" class="md-nav__link">
+      homerouter
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-3" type="checkbox" id="nav-7-3">
+    
+    <label class="md-nav__link" for="nav-7-3">
+      CISCN 2019
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-3">
+        CISCN 2019
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-3-1" type="checkbox" id="nav-7-3-1">
+    
+    <label class="md-nav__link" for="nav-7-3-1">
+      MISC
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-7-3-1">
+        MISC
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_writeup/ciscn_2019/qiandao/" title="签到" class="md-nav__link">
+      签到
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_writeup/ciscn_2019/saleae/" title="saleae" class="md-nav__link">
+      saleae
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_writeup/ciscn_2019/24c/" title="24c" class="md-nav__link">
+      24c
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-4" type="checkbox" id="nav-7-4">
+    
+    <label class="md-nav__link" for="nav-7-4">
+      BugKu
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-4">
+        BugKu
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-4-1" type="checkbox" id="nav-7-4-1">
+    
+    <label class="md-nav__link" for="nav-7-4-1">
+      MISC
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-7-4-1">
+        MISC
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_writeup/bugku/misc_50/" title="MISC 50" class="md-nav__link">
+      MISC 50
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_writeup/bugku/misc_60/" title="MISC 60" class="md-nav__link">
+      MISC 60
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_writeup/bugku/misc_80/" title="MISC 80" class="md-nav__link">
+      MISC 80
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_writeup/bugku/想蹭网先解开密码/" title="想蹭网先解开密码" class="md-nav__link">
+      想蹭网先解开密码
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_writeup/bugku/Linux2/" title="Linux2" class="md-nav__link">
+      Linux2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_writeup/bugku/细心的大象/" title="细心的大象" class="md-nav__link">
+      细心的大象
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_writeup/bugku/普通的二维码/" title="普通的二维码" class="md-nav__link">
+      普通的二维码
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_writeup/bugku/乌云邀请码/" title="乌云邀请码" class="md-nav__link">
+      乌云邀请码
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_writeup/bugku/图穷匕见/" title="图穷匕见" class="md-nav__link">
+      图穷匕见
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_writeup/bugku/convert/" title="convert" class="md-nav__link">
+      convert
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_writeup/bugku/听首音乐/" title="听首音乐" class="md-nav__link">
+      听首音乐
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_writeup/bugku/好多数值/" title="好多数值" class="md-nav__link">
+      好多数值
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-5" type="checkbox" id="nav-7-5">
+    
+    <label class="md-nav__link" for="nav-7-5">
+      Pragyan CTF 19
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-5">
+        Pragyan CTF 19
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-5-1" type="checkbox" id="nav-7-5-1">
+    
+    <label class="md-nav__link" for="nav-7-5-1">
+      Forensics
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-7-5-1">
+        Forensics
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_writeup/pctf_2019/welcome/" title="Welcome" class="md-nav__link">
+      Welcome
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_writeup/pctf_2019/magic_pngs/" title="Magic PNGs" class="md-nav__link">
+      Magic PNGs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_writeup/pctf_2019/save_earth/" title="Save Earth" class="md-nav__link">
+      Save Earth
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_writeup/pctf_2019/slow_realization/" title="Slow Realization" class="md-nav__link">
+      Slow Realization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_writeup/pctf_2019/late_pr/" title="Late PR" class="md-nav__link">
+      Late PR
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-5-2" type="checkbox" id="nav-7-5-2">
+    
+    <label class="md-nav__link" for="nav-7-5-2">
+      Miscellaneous
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-7-5-2">
+        Miscellaneous
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_writeup/pctf_2019/exorcism/" title="EXORcism" class="md-nav__link">
+      EXORcism
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-5-3" type="checkbox" id="nav-7-5-3">
+    
+    <label class="md-nav__link" for="nav-7-5-3">
+      Web
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-7-5-3">
+        Web
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_writeup/pctf_2019/cookie_monster/" title="Cookie Monster" class="md-nav__link">
+      Cookie Monster
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_writeup/pctf_2019/game_of_faces/" title="Game of Faces" class="md-nav__link">
+      Game of Faces
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-6" type="checkbox" id="nav-7-6">
+    
+    <label class="md-nav__link" for="nav-7-6">
+      Hackergame 2018
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-6">
+        Hackergame 2018
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_writeup/hackergame_2018/hello_world/" title="签到题" class="md-nav__link">
+      签到题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_writeup/hackergame_2018/ustc_quiz/" title="猫咪问答" class="md-nav__link">
+      猫咪问答
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_writeup/hackergame_2018/card/" title="游园会的集章卡片" class="md-nav__link">
+      游园会的集章卡片
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_writeup/hackergame_2018/cat_remote/" title="猫咪遥控器" class="md-nav__link">
+      猫咪遥控器
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_writeup/hackergame_2018/python_simulator/" title="猫咪克星" class="md-nav__link">
+      猫咪克星
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7" type="checkbox" id="nav-7-7">
+    
+    <label class="md-nav__link" for="nav-7-7">
+      CG-CTF
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-7">
+        CG-CTF
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7-1" type="checkbox" id="nav-7-7-1">
+    
+    <label class="md-nav__link" for="nav-7-7-1">
+      Web
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-7-7-1">
+        Web
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ctf_writeup/cg_ctf/easyweb/" title="签到题" class="md-nav__link">
+      签到题
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Embedded System
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Embedded System
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../embedded/clion-2019.1/" title="尝鲜CLion 2019.1（Windows）" class="md-nav__link">
+      尝鲜CLion 2019.1（Windows）
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      MOOC Solutions
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        MOOC Solutions
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1" type="checkbox" id="nav-9-1">
+    
+    <label class="md-nav__link" for="nav-9-1">
+      Java
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-9-1">
+        Java
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../uooc/java/1/" title="1 概述" class="md-nav__link">
+      1 概述
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../uooc/java/2/" title="2 数据类型、运算符、表达式和跳转语句" class="md-nav__link">
+      2 数据类型、运算符、表达式和跳转语句
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../uooc/java/3/" title="3 类和对象" class="md-nav__link">
+      3 类和对象
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../uooc/java/4/" title="4 继承与接口" class="md-nav__link">
+      4 继承与接口
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../uooc/java/5/" title="5 字符串及其应用" class="md-nav__link">
+      5 字符串及其应用
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../uooc/java/6/" title="6 泛型与集合" class="md-nav__link">
+      6 泛型与集合
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../uooc/java/7/" title="7 例外处理" class="md-nav__link">
+      7 例外处理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../uooc/java/8/" title="8 File类与输入输出流" class="md-nav__link">
+      8 File类与输入输出流
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../uooc/java/9/" title="9 图形用户界面设计" class="md-nav__link">
+      9 图形用户界面设计
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../uooc/java/10/" title="10 线程" class="md-nav__link">
+      10 线程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../uooc/java/11/" title="11 Java网络编程" class="md-nav__link">
+      11 Java网络编程
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="准备好路由器上的配置" class="md-nav__link">
+    准备好路由器上的配置
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows" title="Windows下连接" class="md-nav__link">
+    Windows下连接
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ddnsip" title="利用DDNS来让你不需要再记忆IP地址" class="md-nav__link">
+    利用DDNS来让你不需要再记忆IP地址
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="额外的加成" class="md-nav__link">
+    额外的加成
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/szu17dmy/szu17dmy.github.io/edit/master/docs/misc/secure_public_wireless_network_at_school_szu.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>在开放的校园无线网络中加密自己的数据传输</h1>
+                
+                <p>这回来讨论一下某个路由器固件中附带的功能。</p>
+<p><img alt="SECURE_PUBLIC_WIRELESS_NETWORK_AT_SCHOOL_SZU-1.png" src="../img/SECURE_PUBLIC_WIRELESS_NETWORK_AT_SCHOOL_SZU-1.png" /></p>
+<p>呐，就是这货。别误会，我们不会讨论任何科学上网相关的内容，仅仅只是利用这玩意儿来保护自己在校内开放无线网络中的安全。</p>
+<p>众所周知，在开放的无线网络中传输的数据可能被他人看到。</p>
+<p><img alt="SECURE_PUBLIC_WIRELESS_NETWORK_AT_SCHOOL_SZU-2.png" src="../img/SECURE_PUBLIC_WIRELESS_NETWORK_AT_SCHOOL_SZU-2.png" /></p>
+<p>可别忘了我们学校的选课系统等诸多服务都没有启用或是没有强制使用HTTPS，这就意味着我们的很多数据（包括某些密码）都是在网络上裸奔的，学校又这么开放，谁知道哪天会不会有人进来开个监听模式抓一波密码呢...不指望着等学校把无线网络改成企业认证了，还是利用一些工具先来保护自己比较好。</p>
+<p>关于这个固件的具体详情可以看<a href="https://www.right.com.cn/forum/thread-161324-1-1.html">这里</a>，应该不需要我再扯了。我之所以用这个...主要是因为集成了很多功能，不需要自己再费劲去装了，当然，你要是想折腾，条条大路通罗马是吧。</p>
+<h2 id="_1">准备好路由器上的配置</h2>
+<p>首先，让我们先启动一下这个服务器。</p>
+<p><img alt="SECURE_PUBLIC_WIRELESS_NETWORK_AT_SCHOOL_SZU-3.png" src="../img/SECURE_PUBLIC_WIRELESS_NETWORK_AT_SCHOOL_SZU-3.png" /></p>
+<p>加密方式选择后要记住，之后要连接的时候要填。密码尽量够长够复杂，并且尽量不要与其它密码重复。还有UDP转发。</p>
+<p>打开开关，应用本页面设置。应该基本的设置是完成了。</p>
+<h2 id="windows">Windows下连接</h2>
+<p>假设你正在使用Windows。有个似乎有点年头的软件：SS-Tap，这似乎不是个很好的选择？但是平常用用体验还是可以的。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>最新版本（1.1.0.1）去掉了全局规则，开始专心地做一个游戏加速器了（？），自行添加的全局规则也会被改掉。为了让我们全部的流量都不会暴露在开放的无线公共网络上，所以需要溜到程序的规则目录下把规则改了。当然，你也可以选择旧版，据传版本号为1.0.9.7的程序仍然有全局规则。</p>
+</div>
+<p>假装你已经把它装好了并且没有遇到什么问题。那么让我们来配置一下：</p>
+<p><img alt="SECURE_PUBLIC_WIRELESS_NETWORK_AT_SCHOOL_SZU-4.png" src="../img/SECURE_PUBLIC_WIRELESS_NETWORK_AT_SCHOOL_SZU-4.png" /></p>
+<p>由于我们在路由端启动的是ss，所以，添加一个S/R：</p>
+<p><img alt="SECURE_PUBLIC_WIRELESS_NETWORK_AT_SCHOOL_SZU-5.png" src="../img/SECURE_PUBLIC_WIRELESS_NETWORK_AT_SCHOOL_SZU-5.png" /></p>
+<p>现在学校IP地址的租约竟然是10分钟，希望你在出门前已经事先看好并记住了路由器的IP地址（当然，我这么懒，肯定是不会这样做的，下文会分享我的解tou决lan方法），把它填进<strong>服务器IP</strong>一栏，<strong>端口</strong>、<strong>密码</strong>、<strong>加密方式</strong>和路由器上保持一致即可。</p>
+<p>因为我们需要数据在开放的网络中保证安全，所以我们自然更希望这是全局的代理。可惜这软件的最后一个版本没有，我们来创一个：</p>
+<p><img alt="SECURE_PUBLIC_WIRELESS_NETWORK_AT_SCHOOL_SZU-6.png" src="../img/SECURE_PUBLIC_WIRELESS_NETWORK_AT_SCHOOL_SZU-6.png" /></p>
+<p>中英文名字随便起，记住就好。别忘了类型得是<strong>代理</strong>。规则先填上<strong>0.0.0.0/0</strong>。然后保存。</p>
+<p>印象中，这个自己写的有点问题的全局的规则会被改写。我们到它所在的地方（应该在个人文件夹下的/AppData/Local/SSTap-beta/rules中）直接改它：</p>
+<p><img alt="SECURE_PUBLIC_WIRELESS_NETWORK_AT_SCHOOL_SZU-7.png" src="../img/SECURE_PUBLIC_WIRELESS_NETWORK_AT_SCHOOL_SZU-7.png" /></p>
+<p>好了，忙活了半天，终于可以开始连接了。正常情况下，如果你已经连接上SZU_WLAN并通过了无线准入认证，点击主界面的连接就可以连上了。这个时候，如果能访问路由器的管理页面，说明配置应该是正确的。</p>
+<h2 id="ddnsip">利用DDNS来让你不需要再记忆IP地址</h2>
+<p>其实我一直在想一件事：那些天天在用内网IP远程控制的同学们，每天出门看IP、提心吊胆怕IP变动、实在不行还要开个TeamViewer来看看IP，不是很累吗...</p>
+<p>你可能按照上文配置好了服务，但是每天要连接的时候都要改一下软件中的服务器IP。更要命的是，出门要检查的不仅是手机校卡，还得看看今天的IP是啥，要是今天运气不好IP变化了，不回宿舍一趟好像还就都连不上了。别慌，这个固件里有这个东西：</p>
+<p><img alt="SECURE_PUBLIC_WIRELESS_NETWORK_AT_SCHOOL_SZU-8.png" src="../img/SECURE_PUBLIC_WIRELESS_NETWORK_AT_SCHOOL_SZU-8.png" /></p>
+<p>如果你有一个域名，就可以利用这个程序来帮你在IP地址变动时，自动地将域名的某个解析记录更新成新的IP地址。这就意味着，平时只需要记住自己的域名，剩下的就交给DDNS来解决就好了。</p>
+<p>这个固件有实现了多个厂商的DDNS的程序。你可以选择一个对应的来用。我正在用Aliddns，首先需要到阿里的控制台上<strong>新增一条解析记录</strong>（先随便指向一个内网地址），然后要有<strong>accesskeys</strong>，这些阿里云的官方文档里都有，应该不用我说了...先把这些信息填进Aliddns保存。</p>
+<p>对了，如果你连域名都没有，先去买一个吧。最好是固件里那些脚本支持的，不然可能要折腾半天...</p>
+<p>然后，点开下方获取IP的脚本，我们需要修改它。原本的脚本应该是获取了IPv4出口地址，但是这并不是我们目前这个情况下想要的。我们希望它是内网的地址，所以，把它改成从本地获取地址，并过滤一下，就像这样:</p>
+<p>从：</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># 自行测试哪个代码能获取正确的IP，删除前面的#可生效</span>
+arIpAddress <span class="o">()</span> <span class="o">{</span>
+<span class="c1"># IPv4地址获取</span>
+<span class="c1"># 获得外网地址</span>
+<span class="c1">#curltest=`which curl`</span>
+<span class="c1">#if [ -z &quot;$curltest&quot; ] || [ ! -s &quot;`which curl`&quot; ] ; then</span>
+    <span class="c1">#wget --no-check-certificate --quiet --output-document=- &quot;https://www.ipip.net&quot; | grep &quot;IP地址&quot; | grep -E -o &#39;([0-9]+\.){3}[0-9]+&#39; | head -n1 | cut -d&#39; &#39; -f1</span>
+    <span class="c1">#wget --no-check-certificate --quiet --output-document=- &quot;http://members.3322.org/dyndns/getip&quot; | grep -E -o &#39;([0-9]+\.){3}[0-9]+&#39; | head -n1 | cut -d&#39; &#39; -f1</span>
+    <span class="c1">#wget --no-check-certificate --quiet --output-document=- &quot;ip.6655.com/ip.aspx&quot; | grep -E -o &#39;([0-9]+\.){3}[0-9]+&#39; | head -n1 | cut -d&#39; &#39; -f1</span>
+    <span class="c1">#wget --no-check-certificate --quiet --output-document=- &quot;ip.3322.net&quot; | grep -E -o &#39;([0-9]+\.){3}[0-9]+&#39; | head -n1 | cut -d&#39; &#39; -f1</span>
+<span class="c1">#else</span>
+    <span class="c1">#curl -L -k -s &quot;https://www.ipip.net&quot; | grep &quot;IP地址&quot; | grep -E -o &#39;([0-9]+\.){3}[0-9]+&#39; | head -n1 | cut -d&#39; &#39; -f1</span>
+    <span class="c1">#curl -k -s &quot;http://members.3322.org/dyndns/getip&quot; | grep -E -o &#39;([0-9]+\.){3}[0-9]+&#39; | head -n1 | cut -d&#39; &#39; -f1</span>
+    <span class="c1">#curl -k -s ip.6655.com/ip.aspx | grep -E -o &#39;([0-9]+\.){3}[0-9]+&#39; | head -n1 | cut -d&#39; &#39; -f1</span>
+    <span class="c1">#curl -k -s ip.3322.net | grep -E -o &#39;([0-9]+\.){3}[0-9]+&#39; | head -n1 | cut -d&#39; &#39; -f1</span>
+<span class="c1">#fi</span>
+<span class="o">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>变成：</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>arIpAddress <span class="o">()</span> <span class="o">{</span>
+    ifconfig <span class="p">|</span> grep inet <span class="p">|</span> grep -oE <span class="s1">&#39;172\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}&#39;</span> <span class="p">|</span> head -n1
+<span class="o">}</span>
+</pre></div>
+</td></tr></table>
+
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>由于内网网段是172开头的，这样子过滤可以比较省事。当然你要是所处的网络环境不一样的话，这样做是没法得到正确结果的，你可以改一下正则然后到控制台上尝试一下再把可用的命令填到这里。</p>
+</div>
+<p>有点投机取巧的样子，不过你有更好的方法的话可以把它换掉，能顺便告诉我就更好啦。</p>
+<p>别忘记了先测试是否可行，比如在<strong>系统管理-控制台</strong>或是SSH上测试好，确认已经能返回正确的内网地址，再把它填进脚本中保存。</p>
+<p>这个时候你应该可以启动DDNS了。</p>
+<p>正常情况下，你能从<strong>右上方的日志按钮</strong>或是左侧栏的<strong>系统日志</strong>进入并看到有关Aliddns的信息，例如检测到本地IP与DNS解析记录不符，并且正确地更新了域名指向。这应该证明配置是正确的。</p>
+<p>应该能在日志里找到类似这样的内容：</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">Month</span> <span class="k">Day</span> <span class="n">Hour</span><span class="p">:</span><span class="k">Minute</span><span class="p">:</span><span class="k">Second</span> <span class="err">【</span><span class="n">AliDDNS动态域名</span><span class="err">】</span><span class="p">:</span> <span class="err">开始更新</span> <span class="n">xxx</span><span class="p">.</span><span class="n">xxx</span><span class="p">.</span><span class="n">xxx</span> <span class="err">域名</span> <span class="n">IP</span> <span class="err">指向</span>
+<span class="k">Month</span> <span class="k">Day</span> <span class="n">Hour</span><span class="p">:</span><span class="k">Minute</span><span class="p">:</span><span class="k">Second</span> <span class="err">【</span><span class="n">AliDDNS动态域名</span><span class="err">】</span><span class="p">:</span> <span class="err">目前</span> <span class="n">IP</span><span class="p">:</span> <span class="n">xxx</span><span class="p">.</span><span class="n">xxx</span><span class="p">.</span><span class="n">xxx</span><span class="p">.</span><span class="n">xxx</span>
+<span class="k">Month</span> <span class="k">Day</span> <span class="n">Hour</span><span class="p">:</span><span class="k">Minute</span><span class="p">:</span><span class="k">Second</span> <span class="err">【</span><span class="n">AliDDNS动态域名</span><span class="err">】</span><span class="p">:</span> <span class="err">上次</span> <span class="n">IP</span><span class="p">:</span> 
+<span class="k">Month</span> <span class="k">Day</span> <span class="n">Hour</span><span class="p">:</span><span class="k">Minute</span><span class="p">:</span><span class="k">Second</span> <span class="err">【</span><span class="n">AliDDNS动态域名</span><span class="err">】</span><span class="p">:</span> <span class="err">更新的记录</span>  <span class="n">xxxxxxxxxxxxxxxxx</span>
+<span class="k">Month</span> <span class="k">Day</span> <span class="n">Hour</span><span class="p">:</span><span class="k">Minute</span><span class="p">:</span><span class="k">Second</span> <span class="err">【</span><span class="n">AliDDNS动态域名</span><span class="err">】</span><span class="p">:</span> <span class="err">成功更新：</span> <span class="n">xxx</span><span class="p">.</span><span class="n">xxx</span><span class="p">.</span><span class="n">xxx</span><span class="p">.</span><span class="n">xxx</span>
+<span class="k">Month</span> <span class="k">Day</span> <span class="n">Hour</span><span class="p">:</span><span class="k">Minute</span><span class="p">:</span><span class="k">Second</span> <span class="err">【</span><span class="n">AliDDNS动态域名</span><span class="err">】</span><span class="p">:</span> <span class="err">更新动态</span><span class="n">DNS记录成功</span><span class="err">！</span>
+<span class="k">Month</span> <span class="k">Day</span> <span class="n">Hour</span><span class="p">:</span><span class="k">Minute</span><span class="p">:</span><span class="k">Second</span> <span class="err">【</span><span class="n">AliDDNS动态域名</span><span class="err">】</span><span class="p">:</span> <span class="err">守护进程启动</span>
+</pre></div>
+</td></tr></table>
+
+<p>这就大功告成了。</p>
+<p>废话一句，你可以利用这个方法来避免远程控制还需要记忆IP，不管你是否在用路由器，道理是差不多的。</p>
+<h2 id="_2">额外的加成</h2>
+<p>或许你已经知道教学区域内限制每人出口最高20M下行4M上行，宿舍区域是上下行对等的。一旦使用上述方法，在教学区也能有和在宿舍一样的速度。另外，在某些情况下，机房的外网出口拥挤时，这个方法也能获得正常的网络速度。</p>
+                
+                  
+                
+              
+              
+                
+
+
+
+<h2 id="__comments">评论</h2>
+<form id="gitalk-form" onsubmit="return false;">
+    <div id="gitalk-container"></div>
+</form>
+<link rel="stylesheet" href="https://chikorita.fun/css/gitalk.css">
+<script src="https://chikorita.fun/js/gitalk.min.js"></script>
+<script src="https://chikorita.fun/js/md5.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: '47cbdcb78708efcedf52',
+        clientSecret: 'e22cda14ad8bb219e7f4f1619bc6fcf5b66e22ef',
+        repo: 'comments',
+        owner: 'szu17dmy',
+        admin: ['szu17dmy'],
+        id: md5(location.pathname), // Ensure uniqueness and length less than 50
+        distractionFreeMode: false // Facebook-like distraction free mode
+    })
+    gitalk.render('gitalk-container')
+</script>
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../python_http_server/" title="Python SimpleHTTPServer" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  上一页
+                </span>
+                Python SimpleHTTPServer
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../time_issue_when_dual_systems_windows_and_ubuntu/" title="Windows和Ubuntu双系统下的时间问题" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  下一页
+                </span>
+                Windows和Ubuntu双系统下的时间问题
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/szu17dmy" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://t.me/szu17dmy" class="md-footer-social__link fa fa-telegram"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.245445c6.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../../assets/javascripts/lunr/lunr.ja.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
