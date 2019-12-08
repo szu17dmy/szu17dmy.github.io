@@ -9,26 +9,13 @@ nav:
     - 首页和调色板: index.md
     - 相关信息: about.md
     - 相关链接: links.md
-#    - 给我也整一个系列:
-#      - Mkdocs篇: how_to_build_a_site_like_this.md
-  - Reading Notes:
-    - 《计算机网络：自顶向下方法》读书笔记:
-      - 第3章 传输层: reading_notes/computer_networking_a_top_down_approach/transport_layer.md
-      - 第4章 网络层: reading_notes/computer_networking_a_top_down_approach/the_network_layer.md
-    - 《深入理解计算机系统》读书笔记:
-      - 第3章 程序的机器级表示: reading_notes/computer_systems_a_programmer_s_perspective/machine-level_representation_of_programs.md
-      - 第7章 链接: reading_notes/computer_systems_a_programmer_s_perspective/linking.md
-    - 《Docker经典实例》读书笔记:
-      - 第1章 Docker入门: reading_notes/docker_cookbook/getting_started_with_docker.md
-    - 《TCP/IP详解》读书笔记:
-      - 卷1：协议:
-        - 第10章 用户数据报协议和IP分片: reading_notes/tcp_ip_illustrated/user_datagram_protocol_and_ip_fragmentation.md
-        - 第12章 TCP：传输控制协议（初步）: reading_notes/tcp_ip_illustrated/the_transmission_control_protocol_preliminaries.md
-    - 《征服C指针》读书笔记:
-      - 第0章 本书的目标与结构——引言: reading_notes/pointer/0.md
-      - 第1章 从基础开始——预备知识和复习: reading_notes/pointer/1.md
-    - 《揭秘家用路由器0day漏洞挖掘技术》读书笔记:
-      - 第1章 基础准备与工具: reading_notes/routers/1.md
+  - Cheat Sheet:
+    - Python SimpleHTTPServer: misc/python_http_server.md
+  - Miscellaneous:
+    - CMake指定源码目录和构建目录: misc/cmake_source_and_binary_directory.md
+    - git clone 通过ssh: misc/git_clone_via_ssh.md
+    - 在开放的校园无线网络中加密自己的数据传输: misc/secure_public_wireless_network_at_school_szu.md
+    - Windows和Ubuntu双系统下的时间问题: misc/time_issue_when_dual_systems_windows_and_ubuntu.md
   - SZU Courses:
     - 程序设计基础:
       - 前言: szu_courses/cpp/first.md
@@ -50,9 +37,6 @@ nav:
       - VLAN Lab: szu_courses/cn/vlan_lab.md
       - Router Lab: szu_courses/cn/router_lab.md
       - Tunnel Lab: szu_courses/cn/tunnel_lab.md
-#    - 计算机图形学:
-#      - 环境配置建议:
-#        - FreeGLUT和GLEW在CLion上: szu_courses/cg/freeglut_glew_clion_on_windows.md
   - SZU OJ Solutions:
     - 专题 What's wrong with my code?:
       - 前言: szu_oj/what_s_wrong_with_my_code/first.md
@@ -97,12 +81,6 @@ nav:
     - 程序设计基础 UOOC:
       - 分类排序(函数): szu_oj/uooc/1334.md
       - 鸡蛋队列（数组，函数）: szu_oj/uooc/1438.md
-  - Miscellaneous:
-    - CMake指定源码目录和构建目录: misc/cmake_source_and_binary_directory.md
-    - git clone 通过ssh: misc/git_clone_via_ssh.md
-    - Python SimpleHTTPServer: misc/python_http_server.md
-    - 在开放的校园无线网络中加密自己的数据传输: misc/secure_public_wireless_network_at_school_szu.md
-    - Windows和Ubuntu双系统下的时间问题: misc/time_issue_when_dual_systems_windows_and_ubuntu.md
   - CTF Tools:
     - Windows下利用WSL使用pwntools: ctf_tools/pwntools.md
     - 在线BASE64加解密（实验性）: ctf_tools/base64.md
@@ -155,6 +133,28 @@ nav:
     - CG-CTF:
       - Web:
         - 签到题: ctf_writeup/cg_ctf/easyweb.md
+  - Reading Notes:
+    - 《计算机网络：自顶向下方法》读书笔记:
+      - 第3章 传输层: reading_notes/computer_networking_a_top_down_approach/transport_layer.md
+      - 第4章 网络层: reading_notes/computer_networking_a_top_down_approach/the_network_layer.md
+    - 《深入理解计算机系统》读书笔记:
+      - 第3章 程序的机器级表示: reading_notes/computer_systems_a_programmer_s_perspective/machine-level_representation_of_programs.md
+      - 第7章 链接: reading_notes/computer_systems_a_programmer_s_perspective/linking.md
+    - 《Docker经典实例》读书笔记:
+      - 第1章 Docker入门: reading_notes/docker_cookbook/getting_started_with_docker.md
+    - 《网络安全基础：应用与标准（第5版）》读书笔记:
+      - 第1章 引言: reading_notes/network_security_essentials_applications_and_standards/introduction.md
+      - 第2章 对称加密和消息机密性: reading_notes/network_security_essentials_applications_and_standards/symmetric_encryption_and_message_confidentiality.md
+#      -
+    - 《TCP/IP详解》读书笔记:
+      - 卷1：协议:
+        - 第10章 用户数据报协议和IP分片: reading_notes/tcp_ip_illustrated/user_datagram_protocol_and_ip_fragmentation.md
+        - 第12章 TCP：传输控制协议（初步）: reading_notes/tcp_ip_illustrated/the_transmission_control_protocol_preliminaries.md
+    - 《征服C指针》读书笔记:
+      - 第0章 本书的目标与结构——引言: reading_notes/pointer/0.md
+      - 第1章 从基础开始——预备知识和复习: reading_notes/pointer/1.md
+    - 《揭秘家用路由器0day漏洞挖掘技术》读书笔记:
+      - 第1章 基础准备与工具: reading_notes/routers/1.md
   - Embedded System:
     - 尝鲜CLion 2019.1（Windows）: embedded/clion-2019.1.md
   - MOOC Solutions:
